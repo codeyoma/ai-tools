@@ -1,0 +1,2963 @@
+[
+  {
+    "id": "gen-claude-code",
+    "name": "Claude Code",
+    "vendor": "Anthropic",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Claude 구독으로 쓰는 공식 코딩 에이전트",
+    "description": "Anthropic의 공식 코딩 에이전트로 CLI, Desktop 앱, VS Code·JetBrains 확장, 웹/클라우드 세션, GitHub Actions에서 실행됩니다. claude.ai 계정(Pro/Max)으로 로그인하면 구독 한도 안에서 쓰며, Claude 채팅과 같은 5시간·주간 한도를 공유합니다. 로컬 MCP(.mcp.json), claude.ai 커넥터, 플러그인·스킬을 붙여 거의 모든 개발 도구를 다룰 수 있는 가장 강력한 호스트입니다.",
+    "connect": [
+      "cli",
+      "ide",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "Claude Pro $20/월부터 (Max 5x·20x)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://code.claude.com/docs",
+    "repo": "anthropics/claude-code",
+    "install": null,
+    "caveats": [
+      "ANTHROPIC_API_KEY가 설정돼 있으면 구독 대신 API로 과금 — /status로 확인",
+      "Max 월간 API 크레딧은 대화형 Claude Code에는 적용되지 않음",
+      "CVE-2026-21852(2.0.65 미만) 등 보안 패치가 잦아 업데이트 필수"
+    ],
+    "korea": "한국 App Store 기준 Pro ₩33,000, Max 5x ₩199,000, Max 20x ₩449,000/월(VAT 포함). 웹 결제 가격과 먼저 비교하는 것이 좋습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude Code 인증 문서",
+        "url": "https://code.claude.com/docs/en/authentication"
+      },
+      {
+        "label": "Claude Help: Pro/Max로 Claude Code 사용",
+        "url": "https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan"
+      },
+      {
+        "label": "OpenTheRank: Claude 한국 가격",
+        "url": "https://opentherank.com/ko/ai-pricing/claude/south-korea/"
+      }
+    ]
+  },
+  {
+    "id": "gen-claude-desktop",
+    "name": "Claude Desktop",
+    "vendor": "Anthropic",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "원클릭 .mcpb 확장으로 로컬 MCP 연결",
+    "description": "Claude 데스크톱 앱은 Desktop Extensions(.mcpb)로 로컬 MCP 서버를 원클릭 설치합니다. 앱 안의 디렉터리나 직접 받은 .mcpb 파일로 설치하며, Node.js 런타임이 내장되어 있고 민감한 설정값은 macOS 키체인에 저장됩니다. Claude 구독 계정으로 로그인해 그대로 쓰므로 추가 AI 비용이 들지 않습니다.",
+    "connect": [
+      "signin",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "Claude 구독에 포함",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "직접 받은 .mcpb 파일은 자동 업데이트되지 않아 수동 갱신 필요",
+      "SANDWORM_MODE 웜이 Claude Desktop 설정에 숨은 MCP 서버를 심은 사례 — 설정 파일 변경 감시"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude Help: Desktop 로컬 MCP",
+        "url": "https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop"
+      },
+      {
+        "label": "Infosecurity Magazine: SANDWORM_MODE",
+        "url": "https://infosecurity-magazine.com/news/shai-hulud-like-worm-devs-npm-ai"
+      }
+    ]
+  },
+  {
+    "id": "gen-claude-connectors",
+    "name": "Claude custom connectors",
+    "vendor": "Anthropic",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "claude.ai에 원격 MCP 서버를 붙이는 커넥터",
+    "description": "claude.ai 웹·Desktop·모바일·Cowork에서 원격 MCP 서버를 커넥터로 추가하는 기능으로, Free부터 Enterprise까지 쓸 수 있지만 Free는 커스텀 커넥터 1개로 제한됩니다. OAuth나 고정 헤더로 인증하며, 연결이 사용자 기기가 아니라 Anthropic 클라우드에서 출발하므로 사설 서버는 Anthropic IP 대역을 허용해야 합니다. claude.ai에 추가한 커넥터는 Claude Code에서도 불러 쓸 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "signin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "Claude Free부터 (Free는 1개 제한)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "setup-token·API 키 등으로 로그인하면 Claude Code에서 커넥터를 쓸 수 없음",
+      "Research 모드는 승인 없이 커넥터 도구를 호출 — 쓰기 도구는 꺼두기",
+      "서버 개발자가 도구 동작을 예고 없이 바꿀 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude Help: 커스텀 커넥터",
+        "url": "https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp"
+      },
+      {
+        "label": "Claude Code MCP 문서",
+        "url": "https://code.claude.com/docs/en/mcp"
+      }
+    ]
+  },
+  {
+    "id": "gen-claude-agent-sdk",
+    "name": "Claude Agent SDK",
+    "vendor": "Anthropic",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Claude Code 엔진으로 나만의 에이전트 제작",
+    "description": "Claude Code와 같은 에이전트 루프를 Python·TypeScript 라이브러리로 제공해 자체 에이전트와 스크립트를 만들 수 있습니다. 개인 용도로는 구독 한도 안에서 쓸 수 있고, 2026년 10월 7일부터 Max(월 $100/$200)·Team 플랜은 연결한 Console 조직의 API 키로 실행하면 월간 API 크레딧에서 차감됩니다. 다른 사람에게 배포하는 제품은 API 키 인증을 써야 합니다.",
+    "connect": [
+      "library",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 8300,
+    "updated": "2026-10",
+    "homepage": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan",
+    "repo": "anthropics/claude-agent-sdk-python",
+    "install": null,
+    "caveats": [
+      "타사 앱이 Claude.ai 로그인을 제공하거나 구독 자격증명을 중계하는 것은 금지",
+      "Free·Pro·Enterprise는 월간 API 크레딧 대상이 아님",
+      "크레딧은 이월되지 않고 소진되면 요청이 멈춤"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: claude-agent-sdk-python",
+        "url": "https://github.com/anthropics/claude-agent-sdk-python"
+      },
+      {
+        "label": "Claude Help: 월간 API 크레딧",
+        "url": "https://support.claude.com/en/articles/17154008"
+      },
+      {
+        "label": "Claude Code 법률·준수",
+        "url": "https://code.claude.com/docs/en/legal-and-compliance"
+      }
+    ]
+  },
+  {
+    "id": "gen-codex",
+    "name": "Codex",
+    "vendor": "OpenAI",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "ChatGPT 구독으로 쓰는 OpenAI 코딩 에이전트",
+    "description": "OpenAI의 코딩 에이전트로 데스크톱 앱, CLI, IDE 확장, 클라우드, iOS에서 실행되며 ChatGPT Plus($20)부터 포함됩니다. Pro는 $100/$200/$500 티어로 현재 5시간 한도가 없고, Plus는 GPT-6.1 Sol 기준 5시간에 로컬 메시지 15–160개 수준입니다. MCP 서버는 앱·CLI·IDE가 공유하는 ~/.codex/config.toml에 등록하고 codex mcp login으로 OAuth를 처리합니다.",
+    "connect": [
+      "cli",
+      "ide",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "ChatGPT Plus $20/월부터 (Pro $100·$200·$500)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 130700,
+    "updated": "2026-10",
+    "homepage": "https://learn.chatgpt.com/docs/pricing",
+    "repo": "openai/codex",
+    "install": null,
+    "caveats": [
+      "GPT-5.5는 2026-10-14 ChatGPT 로그인 Codex에서 퇴역",
+      "기존 Pro 200 사용량이 10/30부터 Plus의 10배로 준다는 사용자 보고(공식 미확인)",
+      "config.toml에 OAuth 클라이언트 시크릿이 저장되므로 비공개 유지"
+    ],
+    "korea": "한국 App Store 기준 Plus ₩29,000, Pro 100 ₩159,000, Pro 200 ₩299,000, Pro 500 ₩790,000/월(VAT 포함).",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Codex 요금제",
+        "url": "https://learn.chatgpt.com/docs/pricing"
+      },
+      {
+        "label": "Codex MCP 문서",
+        "url": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli"
+      },
+      {
+        "label": "OpenTheRank: ChatGPT 한국 가격",
+        "url": "https://opentherank.com/ko/ai-pricing/chatgpt/south-korea/"
+      }
+    ]
+  },
+  {
+    "id": "gen-codex-plugin-cc",
+    "name": "Codex plugin for Claude Code",
+    "vendor": "OpenAI",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Claude Code 안에서 Codex로 교차 리뷰",
+    "description": "OpenAI가 공식 배포하는 Claude Code 플러그인으로 /codex:review, /codex:adversarial-review, /codex:rescue 명령을 추가합니다. ChatGPT 구독(Free 포함)이나 OpenAI API 키가 필요하며 사용량은 Codex 한도에서 차감됩니다. 두 구독을 모두 가진 개발자가 Claude 작업물에 Codex의 두 번째 의견을 받는 가장 간단한 다리이며, 마켓플레이스를 추가한 뒤 /plugin install codex@openai-codex로 설치합니다.",
+    "connect": [
+      "plugin",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (ChatGPT Free 계정도 가능)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 34500,
+    "updated": "2026-07",
+    "homepage": "https://github.com/openai/codex-plugin-cc",
+    "repo": "openai/codex-plugin-cc",
+    "install": "/plugin marketplace add openai/codex-plugin-cc",
+    "caveats": [
+      "Claude 한도와 별개로 Codex 사용량 한도를 소모"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: openai/codex-plugin-cc",
+        "url": "https://github.com/openai/codex-plugin-cc"
+      }
+    ]
+  },
+  {
+    "id": "gen-antigravity",
+    "name": "Antigravity",
+    "vendor": "Google",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Google AI 구독용 에이전트 앱과 agy CLI",
+    "description": "Google AI Pro/Ultra 구독자가 쓰는 공식 에이전트로, Antigravity 2.0 데스크톱 앱과 Go로 작성된 agy CLI가 같은 하네스를 공유합니다. 2026년 6월 18일 Gemini CLI가 개인 구독 로그인을 끊으면서 이쪽으로 옮겨왔고, Agent Skills·Hooks·Subagents를 지원하며 기존 확장은 'Antigravity plugins'로 이름이 바뀌었습니다. Pro/Ultra 한도는 5시간마다 갱신되고 주간 상한이 있으며, 무료 사용자는 주간 한도를 받습니다.",
+    "connect": [
+      "cli",
+      "signin",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "Google AI Pro/Ultra 포함 (무료는 주간 한도)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 2600,
+    "updated": "2026-10",
+    "homepage": "https://antigravity.google/docs/plans/",
+    "repo": "google-antigravity/antigravity-cli",
+    "install": "curl -fsSL https://antigravity.google/cli/install.sh | bash",
+    "caveats": [
+      "타사 도구로 Antigravity OAuth를 쓰면 정지 — 2회 위반 시 영구 차단되고 Gemini CLI도 막힘",
+      "BYOK 미지원, agy CLI는 오픈소스 라이선스가 없음",
+      "Interactions 데이터 수집이 기본값(옵트아웃 가능)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Google Developers Blog: Antigravity CLI 전환",
+        "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/"
+      },
+      {
+        "label": "Antigravity 약관",
+        "url": "https://antigravity.google/terms"
+      },
+      {
+        "label": "GitHub: antigravity-cli",
+        "url": "https://github.com/google-antigravity/antigravity-cli"
+      }
+    ]
+  },
+  {
+    "id": "gen-gemini-cli",
+    "name": "Gemini CLI",
+    "vendor": "Google",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "API 키·기업용으로만 남은 오픈소스 Gemini CLI",
+    "description": "Google의 오픈소스 터미널 에이전트로 계속 유지보수되지만, 2026년 6월 18일부터 Google AI Pro·Ultra와 무료 개인 사용자 요청은 처리하지 않습니다. 지금은 Gemini Code Assist Standard/Enterprise 고객과 유료 API 키 사용자만 쓸 수 있습니다. 개인 구독자는 Antigravity 앱이나 agy CLI로 옮기고 agy plugin import gemini로 기존 확장을 변환하면 됩니다.",
+    "connect": [
+      "cli",
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "무료 (오픈소스), 모델은 API 과금",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 107600,
+    "updated": "2026-10",
+    "homepage": "https://github.com/google-gemini/gemini-cli",
+    "repo": "google-gemini/gemini-cli",
+    "install": null,
+    "caveats": [
+      "2026-06-18부터 Google AI Pro·Ultra·무료 개인 로그인 중단",
+      "예전 할당량 문서(AI Pro 하루 1,500회 등)는 더 이상 유효하지 않음",
+      "Antigravity 약관 위반으로 정지되면 Gemini CLI도 함께 막힘"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Google Developers Blog: Gemini CLI 전환",
+        "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/"
+      },
+      {
+        "label": "GitHub: gemini-cli",
+        "url": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "label": "gemini-cli discussion #20632",
+        "url": "https://github.com/google-gemini/gemini-cli/discussions/20632"
+      }
+    ]
+  },
+  {
+    "id": "gen-jules",
+    "name": "Jules",
+    "vendor": "Google",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "클라우드에서 비동기로 일하는 Google 코딩 에이전트",
+    "description": "작업을 맡기면 클라우드에서 비동기로 코드를 고치는 Google의 코딩 에이전트입니다. 기본 플랜은 24시간에 작업 15개·동시 3개, Google AI Pro는 하루 100개·동시 15개, Ultra는 300개·동시 60개까지 구독 안에서 쓸 수 있습니다. REST API와 'Jules Tools' CLI도 제공합니다.",
+    "connect": [
+      "signin",
+      "cli"
+    ],
+    "worksWith": [
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "기본 하루 15개 작업, AI Pro 100개·Ultra 300개",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://jules.google/docs/usage-limits/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "유료 티어는 개인 @gmail.com 계정만 지원"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Jules 사용 한도",
+        "url": "https://jules.google/docs/usage-limits/"
+      }
+    ]
+  },
+  {
+    "id": "gen-copilot-cli",
+    "name": "GitHub Copilot CLI",
+    "vendor": "GitHub",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "MCP·스킬·훅을 지원하는 Copilot 터미널 에이전트",
+    "description": "2026년 2월 정식 출시된 GitHub Copilot의 터미널 에이전트로 macOS·Linux·Windows에서 실행되며 MCP(/mcp), 커스텀 에이전트, 스킬, 훅, Copilot Memory를 지원합니다. Copilot 구독의 AI Credits(Pro $15, Pro+ $70 포함)를 쓰고, 환경변수로 OpenAI 호환·Azure·Anthropic·Ollama 같은 BYOK 공급자도 붙일 수 있습니다. /sandbox enable로 로컬 샌드박스를, copilot --cloud로 클라우드 샌드박스(프리뷰)를 씁니다.",
+    "connect": [
+      "cli",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "copilot",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "Copilot Pro/Pro+ (AI Credits $15/$70 포함)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 11300,
+    "updated": "2026-10",
+    "homepage": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli",
+    "repo": "github/copilot-cli",
+    "install": null,
+    "caveats": [
+      "2026-06-01부터 토큰 단위 AI Credits 과금",
+      "--allow-all-tools·/yolo는 모든 셸 명령을 허용 — 샌드박스 밖에서는 피하기",
+      "$HOME에서 실행 비권장, 신뢰 디렉터리 판정은 휴리스틱일 뿐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub Docs: Copilot CLI",
+        "url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli"
+      },
+      {
+        "label": "GitHub community #197089",
+        "url": "https://github.com/orgs/community/discussions/197089"
+      },
+      {
+        "label": "GitHub: copilot-cli",
+        "url": "https://github.com/github/copilot-cli"
+      }
+    ]
+  },
+  {
+    "id": "gen-vscode",
+    "name": "Visual Studio Code",
+    "vendor": "Microsoft",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Copilot 구독 또는 BYOK로 쓰는 에디터 AI 채팅",
+    "description": "VS Code의 AI 채팅은 Copilot 구독으로 쓰거나, Azure·Anthropic·Gemini·OpenAI 등 내장 공급자와 Chat Completions·Responses·Messages 호환 엔드포인트를 BYOK로 연결할 수 있습니다. BYOK는 Copilot 플랜과 GitHub 계정 없이도 동작하지만 채팅과 유틸리티 작업에만 해당하고, 인라인 완성·시맨틱 검색·임베딩은 여전히 GitHub가 필요합니다. 로컬 모델은 Ollama 확장으로 연결합니다.",
+    "connect": [
+      "ide",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "copilot",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Copilot 별도)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://code.visualstudio.com/docs/copilot/customization/language-models",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "내장 Ollama 공급자는 지원 중단 — Ollama 확장 사용",
+      "Copilot 플랜에서 BYOK가 AI Credits를 쓰는지는 문서에 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "VS Code: 언어 모델",
+        "url": "https://code.visualstudio.com/docs/copilot/customization/language-models"
+      }
+    ]
+  },
+  {
+    "id": "gen-zed",
+    "name": "Zed",
+    "vendor": "Zed Industries",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "구독 에이전트를 그대로 띄우는 ACP 에디터",
+    "description": "ACP(Agent Client Protocol) 'External Agents'로 Claude Agent, Codex, OpenCode, Copilot, Cursor, Pi, Poolside, Gemini CLI를 에디터 안에서 실행합니다. 각 에이전트가 자체 인증과 과금을 맡고 Zed는 External Agents에 요금을 받지 않으므로 Claude 구독이나 ChatGPT 로그인을 그대로 쓸 수 있습니다. Claude Agent는 공식 Claude 에이전트를 실행하는 방식이라 Anthropic 약관상 허용되는 쪽으로 해석됩니다.",
+    "connect": [
+      "ide",
+      "signin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (External Agents 과금 없음)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 92100,
+    "updated": null,
+    "homepage": "https://zed.dev/docs/ai/external-agents",
+    "repo": "zed-industries/zed",
+    "install": null,
+    "caveats": [
+      "Anthropic은 허용 호스트 목록을 공개하지 않아 해석에 기댄 판단",
+      "Codex의 ChatGPT 로그인은 '지원할 수 있음' 수준으로만 표기"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Zed External Agents",
+        "url": "https://zed.dev/docs/ai/external-agents"
+      },
+      {
+        "label": "GitHub: zed",
+        "url": "https://github.com/zed-industries/zed"
+      },
+      {
+        "label": "Claude Code 법률·준수",
+        "url": "https://code.claude.com/docs/en/legal-and-compliance"
+      }
+    ]
+  },
+  {
+    "id": "gen-jetbrains-acp",
+    "name": "JetBrains AI Assistant",
+    "vendor": "JetBrains",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "JetBrains AI 구독 없이 ACP 에이전트 실행",
+    "description": "JetBrains IDE의 AI Assistant는 ACP 레지스트리나 acp.json으로 Claude Agent, Codex 같은 외부 에이전트를 추가할 수 있고, 이 기능은 JetBrains AI 구독 없이 동작합니다. 커스텀 에이전트는 보통 터미널에서 자체 인증하므로 Claude·ChatGPT 구독을 그대로 씁니다. 기업은 JetBrains IDE Services로 허용할 ACP 에이전트를 제한할 수 있습니다.",
+    "connect": [
+      "ide",
+      "signin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "ACP는 JetBrains AI 구독 불필요 (IDE 라이선스 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.jetbrains.com/help/ai-assistant/acp.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "WSL에서는 ACP 에이전트 미지원"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "JetBrains ACP 도움말",
+        "url": "https://www.jetbrains.com/help/ai-assistant/acp.html"
+      }
+    ]
+  },
+  {
+    "id": "gen-junie",
+    "name": "Junie",
+    "vendor": "JetBrains",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Copilot 구독도 BYOK로 받는 JetBrains 에이전트",
+    "description": "JetBrains의 코딩 에이전트로, BYOK 공급자로 GitHub Copilot 구독을 받아들입니다. 그래서 Copilot Pro/Pro+ 사용자가 기존 구독으로 JetBrains 쪽 에이전트를 쓸 수 있는 통로가 됩니다. 요금제와 세부 기능은 이번 조사에서 확인하지 못했습니다.",
+    "connect": [
+      "byok",
+      "signin"
+    ],
+    "worksWith": [
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/JetBrains/junie",
+    "repo": "JetBrains/junie",
+    "install": null,
+    "caveats": [
+      "요금·기능 세부는 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: JetBrains/junie",
+        "url": "https://github.com/JetBrains/junie"
+      }
+    ]
+  },
+  {
+    "id": "gen-cursor",
+    "name": "Cursor",
+    "vendor": "Cursor",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "자체 플랜과 BYOK만 쓰는 AI 코드 에디터",
+    "description": "자체 모델과 Tab 자동완성을 갖춘 AI 코드 에디터로, Claude나 ChatGPT 구독 로그인은 지원하지 않습니다. OpenAI·Anthropic·Google·Azure OpenAI·Bedrock 키를 BYOK로 넣어도 채팅 모델에만 적용되고 Tab은 항상 Cursor 모델을 씁니다. 개인 플랜에서는 BYOK 비용을 공급자가 직접 청구하지만, Teams/Enterprise는 100만 토큰당 $0.25의 'Cursor Token Rate'가 추가됩니다.",
+    "connect": [
+      "app",
+      "ide",
+      "byok"
+    ],
+    "worksWith": [
+      "cursor"
+    ],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://cursor.com/docs/settings/api-keys",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "BYOK 키가 Cursor 백엔드를 거치며 ZDR이 적용되지 않음",
+      "MCPoison(CVE-2025-54136) 등 MCP 설정 신뢰 취약점 이력 — 최신 버전 유지"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cursor API 키 문서",
+        "url": "https://cursor.com/docs/settings/api-keys"
+      },
+      {
+        "label": "NVD CVE-2025-54136",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54136"
+      }
+    ]
+  },
+  {
+    "id": "gen-devin-desktop",
+    "name": "Devin Desktop",
+    "vendor": "Cognition",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "옛 Windsurf, ChatGPT 플랜을 공유하는 에이전트 IDE",
+    "description": "Windsurf가 Devin Desktop으로 이름을 바꾼 에이전트 IDE로, 패키지 이름도 devin-desktop이 되었고 windsurf.com은 devin.ai로 연결됩니다. Pro $20·Max $200 플랜의 Devin 할당량으로 Cloud·CLI·Desktop을 쓰며, ChatGPT Go/Plus/Pro를 연결하면 GPT 모델 요청은 ChatGPT 플랜으로 청구되고 Devin 할당량은 쓰지 않습니다. Devin은 Sign in with ChatGPT 플랜 사용 파트너이기도 합니다.",
+    "connect": [
+      "app",
+      "ide",
+      "cli",
+      "signin"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "credits",
+    "price": "Free / Pro $20 / Max $200 (월)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.devin.ai/desktop/getting-started",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "ChatGPT 토큰 공유는 Pro·Max·Teams만, GPT 외 모델·머신 시간은 Devin 할당량 사용",
+      "Claude·Copilot 구독 연결은 확인되지 않음",
+      "Cascade는 2026-07-01 종료되고 Devin Local로 대체(2차 출처)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Devin Desktop 시작하기",
+        "url": "https://docs.devin.ai/desktop/getting-started"
+      },
+      {
+        "label": "Devin docs: ChatGPT 플랜 사용",
+        "url": "https://docs.devin.ai/admin/billing/chatgpt.md"
+      },
+      {
+        "label": "Devin self-serve 플랜",
+        "url": "https://docs.devin.ai/admin/billing/self-serve.md"
+      }
+    ]
+  },
+  {
+    "id": "gen-kiro",
+    "name": "Kiro",
+    "vendor": "AWS",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "자체 크레딧만 쓰는 AWS의 에이전트 IDE",
+    "description": "AWS의 에이전트 IDE로 CLI와 웹에서도 쓰며, Free(50 크레딧), Pro $20(1,000), Pro+ $40(2,000), Pro Max $100(5,000), Power $200(10,000) 같은 자체 크레딧 플랜만 판매합니다. BYOK나 Claude·ChatGPT·Copilot 구독 로그인은 없고, 크레딧은 IDE·CLI·웹 어디서든 같은 방식으로 차감됩니다. 소셜 로그인이나 AWS Builder ID로 가입합니다.",
+    "connect": [
+      "app",
+      "ide",
+      "cli"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Free 50크레딧 / Pro $20 / Power $200",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://kiro.dev/pricing/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "OpenClaw 같은 타사 자동화 하네스 사용 금지",
+      "월 크레딧은 이월되지 않고 추가 팩은 12개월 후 만료"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Kiro 요금제",
+        "url": "https://kiro.dev/pricing/"
+      }
+    ]
+  },
+  {
+    "id": "gen-factory",
+    "name": "Factory",
+    "vendor": "Factory",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "개인 플랜에 무료 BYOK 허용치를 주는 Droid 에이전트",
+    "description": "Droid 코딩 에이전트를 CLI와 데스크톱 앱으로 제공하며, Pro $20·Plus $100·Max $200 플랜에 5시간·7일·30일 사용 창이 있습니다. 모든 개인 플랜에서 Anthropic·OpenAI·OpenAI 호환 엔드포인트(Ollama, LM Studio 포함) BYOK를 허용치까지 무료로 쓸 수 있고, 키는 로컬 ~/.factory/settings.json에 남습니다. Claude·ChatGPT 구독 로그인은 문서에서 찾지 못했습니다.",
+    "connect": [
+      "cli",
+      "app",
+      "byok"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "credits",
+    "price": "Pro $20 / Plus $100 / Max $200 (월)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://factory.com/pricing",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "BYOK 무료 허용치의 크기는 공개되지 않음",
+      "구독 로그인 미지원"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Factory 개인 플랜",
+        "url": "https://docs.factory.com/pricing/individuals.md"
+      },
+      {
+        "label": "Factory BYOK",
+        "url": "https://docs.factory.com/model-independence/byok.md"
+      }
+    ]
+  },
+  {
+    "id": "gen-warp",
+    "name": "Warp",
+    "vendor": "Warp",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "ChatGPT 연결과 CLI 에이전트 호스팅을 갖춘 터미널",
+    "description": "에이전트 기능을 갖춘 터미널로 Build $20·Max $200 플랜에 같은 금액의 에이전트 사용량이 포함되고, 'Continue with ChatGPT'로 연결하면 요청이 ChatGPT 한도에서 차감됩니다. Claude 소비자 구독은 연결할 수 없지만 Claude Code, Codex, OpenCode를 CLI 에이전트로 띄우고 .claude/skills/·.codex/skills/ 스킬도 읽으므로, Claude 사용자는 이 방식으로 쓰면 됩니다. 무료 플랜에서도 OpenAI·Anthropic·Google BYOK가 가능합니다.",
+    "connect": [
+      "app",
+      "cli",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "chatgpt",
+      "claude"
+    ],
+    "aiCost": "credits",
+    "price": "Free / Build $20 / Max $200 (월)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.warp.dev/agents/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "BYOK 프롬프트와 키가 Warp 서버를 거쳐 전달됨",
+      "Claude 소비자 구독은 연결 불가 — Claude Code를 CLI 에이전트로 실행"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Warp 요금제",
+        "url": "https://www.warp.dev/pricing"
+      },
+      {
+        "label": "Warp docs: ChatGPT 구독",
+        "url": "https://docs.warp.dev/agents/inference/chatgpt-subscription/"
+      },
+      {
+        "label": "Warp docs: BYOK",
+        "url": "https://docs.warp.dev/agents/inference/bring-your-own-api-key/"
+      }
+    ]
+  },
+  {
+    "id": "gen-opencode",
+    "name": "OpenCode",
+    "vendor": "anomalyco",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "ChatGPT·Copilot 로그인을 받는 오픈소스 에이전트",
+    "description": "MIT 라이선스의 오픈소스 터미널 코딩 에이전트로, /connect에서 ChatGPT Plus/Pro(Sign in with ChatGPT 공식 파트너), GitHub Copilot 기기 로그인, GitLab Duo(실험적)를 고를 수 있습니다. Anthropic은 Console API 키로만 연결됩니다. Zed와 Warp 안에서도 실행할 수 있어 ChatGPT 구독을 여러 도구에서 쓰는 통로 역할을 합니다.",
+    "connect": [
+      "cli",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 220900,
+    "updated": "2026-10",
+    "homepage": "https://opencode.ai/docs/providers",
+    "repo": "anomalyco/opencode",
+    "install": null,
+    "caveats": [
+      "2026-02-19 Anthropic 법적 요청으로 Claude Pro/Max 로그인 제거",
+      "커뮤니티 opencode-antigravity-auth 플러그인은 Google 약관 위반 — 계정 정지 위험",
+      "자격증명이 ~/.local/share/opencode/auth.json에 저장됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OpenCode 공급자 문서",
+        "url": "https://opencode.ai/docs/providers"
+      },
+      {
+        "label": "GitHub: anomalyco/opencode",
+        "url": "https://github.com/anomalyco/opencode"
+      },
+      {
+        "label": "The Register: Anthropic 제3자 접근 금지",
+        "url": "https://www.theregister.com/software/2026/02/20/anthropic-clarifies-ban-on-third-party-tool-access-to-claude/5014546"
+      }
+    ]
+  },
+  {
+    "id": "gen-cline",
+    "name": "Cline",
+    "vendor": "Cline",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "ChatGPT OAuth를 먼저 지원한 오픈소스 에이전트",
+    "description": "SDK, IDE 확장, CLI로 쓰는 Apache-2.0 오픈소스 코딩 에이전트입니다. 2026년 1월부터 'OpenAI Codex' 공급자에서 'Sign in with OpenAI'를 누르면 ChatGPT 구독으로 쓸 수 있고, 다른 공급자는 API 키(BYOK)로 연결합니다. 공식 Sign in with ChatGPT 파트너 목록에는 이름이 없습니다.",
+    "connect": [
+      "ide",
+      "cli",
+      "library",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 70800,
+    "updated": "2026-10",
+    "homepage": "https://cline.bot/blog/introducing-openai-codex-oauth",
+    "repo": "cline/cline",
+    "install": null,
+    "caveats": [
+      "BYOK로 쓰면 공급자 API 요금이 구독과 별도로 청구"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cline 블로그: OpenAI Codex OAuth",
+        "url": "https://cline.bot/blog/introducing-openai-codex-oauth"
+      },
+      {
+        "label": "GitHub: cline/cline",
+        "url": "https://github.com/cline/cline"
+      }
+    ]
+  },
+  {
+    "id": "gen-kilo-code",
+    "name": "Kilo Code",
+    "vendor": "Kilo-Org",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "ChatGPT 플랜 사용량으로 도는 오픈소스 에이전트",
+    "description": "MIT 라이선스의 오픈소스 코딩 에이전트로, OpenAI Sign in with ChatGPT의 플랜 사용 파트너입니다. ChatGPT Plus/Pro로 로그인하면 요청이 플랜 사용량에서 차감되고, ChatGPT 설정 > Usage에서 앱별 주간 상한(10–100%)을 정할 수 있습니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 27700,
+    "updated": "2026-10",
+    "homepage": "https://github.com/Kilo-Org/kilocode",
+    "repo": "Kilo-Org/kilocode",
+    "install": null,
+    "caveats": [
+      "Plus에서는 5시간 한도를 Codex 등 모든 연결 앱이 공유"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Sign in with ChatGPT 파트너 목록",
+        "url": "https://learn.chatgpt.com/docs/sign-in-with-chatgpt"
+      },
+      {
+        "label": "GitHub: Kilo-Org/kilocode",
+        "url": "https://github.com/Kilo-Org/kilocode"
+      }
+    ]
+  },
+  {
+    "id": "gen-pi",
+    "name": "Pi",
+    "vendor": "earendil-works",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "/login openai로 ChatGPT 구독을 쓰는 오픈소스 에이전트",
+    "description": "Sign in with ChatGPT의 오픈소스 파트너인 코딩 에이전트로, /login openai 한 번이면 ChatGPT Plus/Pro 플랜으로 동작합니다. 저장소는 badlogic/pi-mono에서 earendil-works/pi로 옮겨졌고, Zed의 ACP External Agents로도 실행할 수 있습니다.",
+    "connect": [
+      "cli",
+      "signin"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 117500,
+    "updated": "2026-10",
+    "homepage": "https://github.com/earendil-works/pi",
+    "repo": "earendil-works/pi",
+    "install": "/login openai",
+    "caveats": [
+      "Plus에서는 5시간 한도를 Codex와 공유"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: earendil-works/pi",
+        "url": "https://github.com/earendil-works/pi"
+      },
+      {
+        "label": "flaviocopes: Sign in with ChatGPT",
+        "url": "https://flaviocopes.com/sign-in-with-chatgpt/"
+      },
+      {
+        "label": "Zed External Agents",
+        "url": "https://zed.dev/docs/ai/external-agents"
+      }
+    ]
+  },
+  {
+    "id": "gen-goose",
+    "name": "Goose",
+    "vendor": "aaif-goose",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "어떤 LLM과도 쓰는 Apache-2.0 오픈소스 에이전트",
+    "description": "'with any LLM'을 내건 Apache-2.0 오픈소스 에이전트로, 저장소가 aaif-goose 조직으로 옮겨졌습니다. skills.sh 지원 에이전트 목록에 들어 있어 SKILL.md 스킬을 다른 에이전트와 공유할 수 있습니다. 구독 로그인 지원은 확인되지 않았으므로 API 키 과금을 전제로 보는 것이 안전합니다.",
+    "connect": [
+      "cli",
+      "byok",
+      "skills"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 55600,
+    "updated": "2026-10",
+    "homepage": "https://github.com/aaif-goose/goose",
+    "repo": "aaif-goose/goose",
+    "install": null,
+    "caveats": [
+      "Claude·ChatGPT·Copilot 구독 로그인 지원 여부 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: aaif-goose/goose",
+        "url": "https://github.com/aaif-goose/goose"
+      },
+      {
+        "label": "skills.sh",
+        "url": "https://skills.sh/"
+      }
+    ]
+  },
+  {
+    "id": "gen-amp",
+    "name": "Amp",
+    "vendor": "Amp",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "ChatGPT 플랜 사용량을 쓰는 코딩 에이전트",
+    "description": "OpenAI의 Sign in with ChatGPT 플랜 사용 파트너 목록에 'Amp Code'로 올라 있는 코딩 에이전트입니다. ChatGPT Plus/Pro로 로그인하면 요청이 플랜에서 차감되고 앱별 주간 상한을 정할 수 있으며, skills.sh 지원 에이전트에도 포함됩니다. 자체 요금제는 이번 조사에서 확인하지 못했습니다.",
+    "connect": [
+      "signin",
+      "skills"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "자체 요금·BYOK 정보 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Sign in with ChatGPT 파트너 목록",
+        "url": "https://learn.chatgpt.com/docs/sign-in-with-chatgpt"
+      },
+      {
+        "label": "skills.sh",
+        "url": "https://skills.sh/"
+      }
+    ]
+  },
+  {
+    "id": "gen-openclaw",
+    "name": "OpenClaw",
+    "vendor": "OpenClaw",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "구독 OAuth 논쟁의 중심, ChatGPT 공식 지원 하네스",
+    "description": "39만 개가 넘는 스타를 받은 오픈소스 에이전트 하네스로, Sign in with ChatGPT의 오픈소스 파트너라 ChatGPT Plus/Pro로 공식 로그인할 수 있습니다. 반면 Anthropic은 2026년 4월 4일부터 OpenClaw 같은 타사 하네스에 구독 한도 적용을 끊고 별도 과금인 extra usage로 돌렸고, Google Antigravity와 AWS Kiro 약관도 이런 사용을 명시적으로 금지합니다. Claude는 API 키로 연결하는 것이 안전합니다.",
+    "connect": [
+      "cli",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 392900,
+    "updated": "2026-10",
+    "homepage": "https://docs.openclaw.ai/providers/anthropic",
+    "repo": "openclaw/openclaw",
+    "install": "openclaw models auth login --provider openai --method siwc",
+    "caveats": [
+      "Antigravity OAuth로 쓰면 Google 계정 정지(2회 위반 시 영구)",
+      "ClawHub 스킬 341개에서 macOS 정보 탈취 악성코드 발견(2026-02)",
+      "CVE-2026-25253(2026.1.29 미만) 원클릭 토큰 탈취 — 최신 버전 유지"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "TechCrunch: Anthropic의 OpenClaw 지원 중단",
+        "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/"
+      },
+      {
+        "label": "Antigravity 약관",
+        "url": "https://antigravity.google/terms"
+      },
+      {
+        "label": "NVD CVE-2026-25253",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25253"
+      }
+    ]
+  },
+  {
+    "id": "gen-roo-code",
+    "name": "Roo Code",
+    "vendor": "RooCodeInc",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "저장소가 아카이브된 오픈소스 코딩 에이전트",
+    "description": "한때 인기 있던 오픈소스 코딩 에이전트지만 GitHub 저장소가 아카이브되어(마지막 푸시 2026-05-15) 더 이상 업데이트되지 않습니다. 새로 도입하기보다 Cline이나 Kilo Code처럼 활발히 유지되는 대안을 쓰는 편이 낫습니다.",
+    "connect": [
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "archived",
+    "stars": 24300,
+    "updated": "2026-05",
+    "homepage": "https://github.com/RooCodeInc/Roo-Code",
+    "repo": "RooCodeInc/Roo-Code",
+    "install": null,
+    "caveats": [
+      "아카이브됨 — 보안 패치·업데이트 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: RooCodeInc/Roo-Code",
+        "url": "https://github.com/RooCodeInc/Roo-Code"
+      }
+    ]
+  },
+  {
+    "id": "gen-claude-agent-acp",
+    "name": "claude-agent-acp",
+    "vendor": "Agent Client Protocol",
+    "domain": "general",
+    "category": "호스트·에이전트",
+    "tagline": "Claude 에이전트를 ACP 에디터에 붙이는 어댑터",
+    "description": "Zed 등 ACP 클라이언트가 Claude Agent를 실행할 때 쓰는 어댑터로, zed-industries/claude-code-acp에서 agentclientprotocol 조직으로 옮겨졌습니다. 공식 Claude 에이전트를 Anthropic 로그인 흐름 그대로 띄우는 방식이라 에디터 안에서 Claude 구독을 쓰는 통로가 됩니다.",
+    "connect": [
+      "ide",
+      "signin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 2700,
+    "updated": null,
+    "homepage": "https://github.com/agentclientprotocol/claude-agent-acp",
+    "repo": "agentclientprotocol/claude-agent-acp",
+    "install": null,
+    "caveats": [
+      "Anthropic이 허용 목록을 공개하지 않아 정책 해석에 기댐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: claude-agent-acp",
+        "url": "https://github.com/agentclientprotocol/claude-agent-acp"
+      },
+      {
+        "label": "Zed External Agents",
+        "url": "https://zed.dev/docs/ai/external-agents"
+      }
+    ]
+  },
+  {
+    "id": "gen-mcp-registry",
+    "name": "MCP Registry",
+    "vendor": "Model Context Protocol",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "MCP 서버를 찾는 공식 메타레지스트리",
+    "description": "Model Context Protocol 프로젝트가 운영하는 API 중심의 공식 MCP 서버 레지스트리로, 항목마다 원격 전송 방식(streamable-http)과 공식 상태 메타데이터가 붙습니다. API는 v0.1로 동결된 상태이며 2026-10-23 v1.8.4가 나왔습니다. 서버는 구독과 무관하게 Claude Code의 .mcp.json이나 Codex의 config.toml에 똑같이 쓸 수 있어, 벤더 공식 URL을 찾는 가장 안전한 출발점입니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "preview",
+    "stars": 7400,
+    "updated": "2026-10",
+    "homepage": "https://github.com/modelcontextprotocol/registry",
+    "repo": "modelcontextprotocol/registry",
+    "install": null,
+    "caveats": [
+      "README상 아직 프리뷰·API 동결 단계로 GA 여부는 불명"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: modelcontextprotocol/registry",
+        "url": "https://github.com/modelcontextprotocol/registry"
+      },
+      {
+        "label": "MCP Registry API",
+        "url": "https://registry.modelcontextprotocol.io/v0.1/servers?limit=2"
+      }
+    ]
+  },
+  {
+    "id": "gen-claude-plugin-marketplaces",
+    "name": "Claude plugin marketplaces",
+    "vendor": "Anthropic",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "Anthropic 공식·커뮤니티 플러그인 마켓플레이스",
+    "description": "Anthropic은 자동 추가되는 공식 마켓플레이스(claude-plugins-official), 커뮤니티(claude-community), 데모 마켓플레이스와 anthropics/skills 같은 주제별 마켓플레이스를 운영합니다. 플러그인 하나에 스킬, 에이전트, 훅, MCP·LSP 서버를 묶을 수 있고, claude.com/marketplace/plugins 웹 카탈로그에서 설치 수와 'Anthropic verified' 배지를 볼 수 있습니다. claude.ai 디렉터리에서 추가한 플러그인은 Claude Code로 동기화됩니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 44200,
+    "updated": "2026-10",
+    "homepage": "https://code.claude.com/docs/en/plugins/anthropic-marketplaces",
+    "repo": "anthropics/claude-plugins-official",
+    "install": "/plugin marketplace add anthropics/claude-plugins-community",
+    "caveats": [
+      "플러그인은 사용자 권한으로 임의 코드를 실행하며 훅·MCP는 샌드박스 밖에서 동작",
+      "자동 업데이트가 검토한 파일을 바꿀 수 있음 — claude plugin details로 확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Anthropic 마켓플레이스 문서",
+        "url": "https://code.claude.com/docs/en/plugins/anthropic-marketplaces"
+      },
+      {
+        "label": "플러그인 보안 문서",
+        "url": "https://code.claude.com/docs/en/plugins/security"
+      },
+      {
+        "label": "GitHub: claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official"
+      }
+    ]
+  },
+  {
+    "id": "gen-anthropic-skills",
+    "name": "anthropics/skills",
+    "vendor": "Anthropic",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "Anthropic 공식 Agent Skills 모음 저장소",
+    "description": "Anthropic이 공개한 Agent Skills 저장소로 18만 개가 넘는 스타를 받은 가장 큰 스킬 모음입니다. Claude Code에서는 주제별 마켓플레이스로 바로 설치할 수 있고, SKILL.md 폴더 형식이라 같은 표준을 따르는 Codex·Copilot·Antigravity 등에서도 재사용할 수 있습니다.",
+    "connect": [
+      "skills",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 183400,
+    "updated": null,
+    "homepage": "https://github.com/anthropics/skills",
+    "repo": "anthropics/skills",
+    "install": null,
+    "caveats": [
+      "스킬의 !command 줄과 allowed-tools는 승인 없이 실행될 수 있어 설치 전 검토"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: anthropics/skills",
+        "url": "https://github.com/anthropics/skills"
+      },
+      {
+        "label": "Claude Code 스킬 문서",
+        "url": "https://code.claude.com/docs/en/skills"
+      }
+    ]
+  },
+  {
+    "id": "gen-skills-sh",
+    "name": "skills.sh",
+    "vendor": "Vercel",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "SKILL.md를 20여 개 에이전트에 설치하는 허브",
+    "description": "Vercel이 운영하는 Agent Skills 디렉터리이자 설치 도구로, npx skills add 한 줄로 스킬 폴더를 Claude Code, Codex, Cursor, GitHub Copilot, Gemini, Cline, Amp, Antigravity, OpenCode, Zed 등 약 20개 에이전트에 넣어 줍니다. 설치 수 리더보드(find-skills 약 400만 회 등)와 'Audits' 섹션이 있습니다.",
+    "connect": [
+      "skills",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 36300,
+    "updated": null,
+    "homepage": "https://skills.sh/",
+    "repo": "vercel-labs/skills",
+    "install": "npx skills add <owner/repo>",
+    "caveats": [
+      "'Audits'가 무엇을 검사하는지 설명이 없음",
+      "스킬의 가짜 Prerequisites로 악성코드를 설치시킨 ClawHub 사례 — 설치 전 SKILL.md 확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "skills.sh",
+        "url": "https://skills.sh/"
+      },
+      {
+        "label": "GitHub: vercel-labs/skills",
+        "url": "https://github.com/vercel-labs/skills"
+      }
+    ]
+  },
+  {
+    "id": "gen-openai-skills",
+    "name": "openai/skills",
+    "vendor": "OpenAI",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "Codex용 공식 스킬 카탈로그",
+    "description": "OpenAI가 운영하는 Codex 스킬 카탈로그 저장소로 SKILL.md 형식의 스킬을 모아 둡니다. ChatGPT 구독으로 쓰는 Codex에 바로 넣을 수 있고, Agent Skills 표준을 따르는 다른 에이전트와 형식이 같아 재사용이 쉽습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 28300,
+    "updated": "2026-09",
+    "homepage": "https://github.com/openai/skills",
+    "repo": "openai/skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: openai/skills",
+        "url": "https://github.com/openai/skills"
+      }
+    ]
+  },
+  {
+    "id": "gen-chatgpt-directory",
+    "name": "ChatGPT Directory",
+    "vendor": "OpenAI",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "ChatGPT·Codex 플러그인을 찾고 제출하는 디렉터리",
+    "description": "OpenAI의 플러그인은 스킬, MCP 서버, 선택적 UI를 묶은 형태로 ChatGPT(ChatGPT Work 포함)와 Codex에서 함께 동작하며, ChatGPT Directory에 제출해 심사를 받습니다. DevDay 2026에서는 Adobe, Canva, Figma, Notion, Salesforce, Vercel, Zendesk가 참여한 'OpenAI Marketplace'도 공개되었습니다. ChatGPT 웹은 로컬 Codex 설정을 읽지 않으므로 웹에서는 설치한 플러그인으로 도구를 씁니다.",
+    "connect": [
+      "connector",
+      "plugin"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "무료 (플러그인별 서비스 요금 별도)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developers.openai.com/plugins",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "문서에서 'Apps SDK' 명칭이 사라지고 플러그인으로 통합됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OpenAI Plugins 문서",
+        "url": "https://developers.openai.com/plugins"
+      },
+      {
+        "label": "Simon Willison: DevDay 2026",
+        "url": "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/"
+      },
+      {
+        "label": "Codex MCP 문서",
+        "url": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli"
+      }
+    ]
+  },
+  {
+    "id": "gen-sign-in-with-chatgpt",
+    "name": "Sign in with ChatGPT",
+    "vendor": "OpenAI",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "ChatGPT 플랜으로 타사 앱을 쓰는 공식 로그인",
+    "description": "타사 앱이 ChatGPT 로그인을 붙여 사용자의 ChatGPT 플랜으로 AI 요청을 처리하게 하는 OpenAI 공식 프로그램으로, 2026년 9월 29일 DevDay부터 플랜 사용량 공유가 시작되었습니다. 플랜 사용 파트너는 Amp Code, Conductor, Devin, Kilo Code, Notion, Vercel, Warp 등 상용 앱 12개와 OpenClaw, OpenCode, Pi, T3 오픈소스 4개이고, Airtable, Canva, GitLab, HubSpot, Supabase는 로그인만 지원합니다. Plus·Pro가 대상이며 앱별 주간 상한을 10–100%로 정할 수 있지만, 상한일 뿐 별도 할당량이 생기지는 않습니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "ChatGPT Plus/Pro에 포함",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://learn.chatgpt.com/docs/sign-in-with-chatgpt",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Business·Enterprise 좌석은 로그인만 되고 플랜 사용량 공유 불가(2차 출처)",
+      "SIWC 요청은 이미지 생성·파일 검색·Code Interpreter·호스티드 MCP 미지원",
+      "Go 플랜 자격은 문서마다 엇갈림 — Devin은 Go도 연결 가능"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "learn.chatgpt.com: Sign in with ChatGPT",
+        "url": "https://learn.chatgpt.com/docs/sign-in-with-chatgpt"
+      },
+      {
+        "label": "SIWC 프리뷰 제한",
+        "url": "https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations"
+      },
+      {
+        "label": "Devin docs: ChatGPT 플랜 사용",
+        "url": "https://docs.devin.ai/admin/billing/chatgpt.md"
+      }
+    ]
+  },
+  {
+    "id": "gen-docker-mcp-catalog",
+    "name": "Docker MCP Catalog",
+    "vendor": "Docker",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "컨테이너로 포장된 300여 개 검증 MCP 서버",
+    "description": "버전 관리, 출처 정보, 보안 업데이트를 갖춘 컨테이너 이미지 형태의 MCP 서버 300여 개를 제공하는 Docker의 카탈로그로, Toolkit과 Gateway로 여러 클라이언트에 한꺼번에 연결합니다. 프로필로 서버를 묶을 수 있고 Claude Code, Cursor, Zed가 지원 클라이언트로 명시되어 있습니다. 로컬 MCP 서버를 격리된 컨테이너로 돌리고 싶을 때 좋은 선택입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": 1600,
+    "updated": null,
+    "homepage": "https://docs.docker.com/ai/mcp-catalog-and-toolkit/",
+    "repo": "docker/mcp-gateway",
+    "install": null,
+    "caveats": [
+      "Gateway 거버넌스 기능은 엔터프라이즈 초대 전용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Docker MCP Catalog 문서",
+        "url": "https://docs.docker.com/ai/mcp-catalog-and-toolkit/"
+      },
+      {
+        "label": "GitHub: docker/mcp-gateway",
+        "url": "https://github.com/docker/mcp-gateway"
+      }
+    ]
+  },
+  {
+    "id": "gen-glama",
+    "name": "Glama",
+    "vendor": "Glama",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "10만 개 넘는 MCP 서버를 모은 최대 인덱스",
+    "description": "109,522개 MCP 서버를 색인한 가장 큰 디렉터리로, 라이선스·품질·유지보수에 A–D 등급을 매기고 Claimed·Official 배지를 붙입니다. 원격 가능·로컬 전용·하이브리드로 호스팅 유형을 나누고, /v1/servers 디렉터리 API와 MCP Gateway, Hosting, Inspector, Chat 같은 인프라 상품도 판매합니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "디렉터리 무료 (Gateway·Hosting 요금 미공개)",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://glama.ai/mcp/servers",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "등급 산정 방법이 공개되지 않음",
+      "배지는 출처 표시일 뿐 보안 검사가 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama MCP 서버 목록",
+        "url": "https://glama.ai/mcp/servers"
+      },
+      {
+        "label": "Glama 요금 페이지",
+        "url": "https://glama.ai/pricing"
+      }
+    ]
+  },
+  {
+    "id": "gen-smithery",
+    "name": "Smithery",
+    "vendor": "Arcade",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "10/31 호스팅 종료, 디렉터리만 남는 MCP 허브",
+    "description": "MCP 서버 디렉터리이자 호스팅 서비스였지만 2026년 8월 5일 Arcade에 인수된 뒤, 2026년 10월 31일 프록시, server.smithery.ai·run.tools 호스팅 URL, API, CLI·SDK, 계정을 모두 종료합니다. 이후에는 27,365개 이상을 담은 공개 디렉터리로만 남고, 검증된 서버는 벤더의 직접 MCP URL을 보여 줍니다. Claude Code나 Codex 설정에 Smithery URL이 있다면 그 전에 벤더 URL이나 Arcade로 옮겨야 합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "디렉터리 무료 (8/5 이후 유료 결제는 환불)",
+    "free": true,
+    "official": "third-party",
+    "status": "deprecated",
+    "stars": 849,
+    "updated": "2026-05",
+    "homepage": "https://smithery.ai/future",
+    "repo": "arcadeai-labs/smithery-cli",
+    "install": null,
+    "caveats": [
+      "2026-10-31 호스팅 URL·API·CLI·계정 종료",
+      "2025년 호스팅 경로 탐색 취약점으로 3,000여 앱의 토큰이 노출될 수 있었음(악용 증거 없음)",
+      "'verified' 배지 기준이 정의되지 않음"
+    ],
+    "korea": "korea-stock-mcp처럼 Smithery URL로 쓰던 한국 주식 MCP는 10월 31일 전에 로컬 실행으로 옮겨야 합니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Smithery: 서비스 종료 안내",
+        "url": "https://smithery.ai/future"
+      },
+      {
+        "label": "Arcade: Smithery 인수",
+        "url": "https://arcade.dev/blog/smithery-joins-arcade"
+      },
+      {
+        "label": "GitGuardian: MCP 호스팅 취약점",
+        "url": "https://blog.gitguardian.com/breaking-mcp-server-hosting/"
+      }
+    ]
+  },
+  {
+    "id": "gen-pulsemcp",
+    "name": "PulseMCP",
+    "vendor": "PulseMCP",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "신규 등록이 멈춘 2만여 MCP 서버 디렉터리",
+    "description": "21,643개 서버를 'Anthropic References', 'Official Providers', 'Community'로 나눠 보여 주는 디렉터리로, 주간 방문자 추정치로 인기도를 매깁니다. 운영진이 공식 MCP Registry 워킹그룹에 참여하지만, 수집 방식을 손보느라 새 서버 등록과 목록 변경을 중단했고 가장 최근 릴리스 날짜는 2026-05-02입니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "third-party",
+    "status": "stale",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.pulsemcp.com/servers",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "신규 등록·목록 변경 일시 중단 — 최신 서버가 빠져 있을 수 있음",
+      "배지는 출처 표시일 뿐 보안 검사가 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "PulseMCP 서버 목록",
+        "url": "https://www.pulsemcp.com/servers"
+      },
+      {
+        "label": "GitHub: modelcontextprotocol/registry",
+        "url": "https://github.com/modelcontextprotocol/registry"
+      }
+    ]
+  },
+  {
+    "id": "gen-mcp-so",
+    "name": "mcp.so",
+    "vendor": "mcp.so",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "검토 후 게시하는 커뮤니티 MCP 디렉터리",
+    "description": "서드파티 MCP 서버를 모으는 커뮤니티 디렉터리로, 목록은 검토를 거친 뒤 공개되고 'Featured'에는 엄선한 서버가 올라갑니다. 클라이언트, CLI 도구, 스킬도 함께 다루며 광고·파트너 링크가 있습니다. 자동 보안 스캔은 하지 않고, 보안 FAQ에서 공식 서버와 최소 권한 사용을 권합니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 2100,
+    "updated": "2025-03",
+    "homepage": "https://mcp.so/",
+    "repo": "chatmcp/mcpso",
+    "install": null,
+    "caveats": [
+      "자동 보안 스캔 없음",
+      "운영 주체가 명시되지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "mcp.so",
+        "url": "https://mcp.so/"
+      },
+      {
+        "label": "GitHub: chatmcp/mcpso",
+        "url": "https://github.com/chatmcp/mcpso"
+      }
+    ]
+  },
+  {
+    "id": "gen-awesome-mcp-servers",
+    "name": "awesome-mcp-servers",
+    "vendor": "punkpeye",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "스타가 가장 많은 MCP 서버 큐레이션 목록",
+    "description": "MCP 서버를 분야별로 정리한 GitHub 'awesome' 목록으로, 약 9.7만 개의 스타를 받은 대표 탐색 창구입니다. 목록 자체는 보안 검증을 하지 않으므로 공식 마켓플레이스, 벤더 공식 서버, MCP Registry를 먼저 확인하고 여기서 찾은 서버는 직접 검토한 뒤 쓰는 것이 안전합니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 96800,
+    "updated": null,
+    "homepage": "https://github.com/punkpeye/awesome-mcp-servers",
+    "repo": "punkpeye/awesome-mcp-servers",
+    "install": null,
+    "caveats": [
+      "보안 검증 없음 — 비공식 서버는 직접 검토",
+      "appcypher/awesome-mcp-servers 등 일부 목록은 아카이브됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: punkpeye/awesome-mcp-servers",
+        "url": "https://github.com/punkpeye/awesome-mcp-servers"
+      },
+      {
+        "label": "GitHub: appcypher/awesome-mcp-servers",
+        "url": "https://github.com/appcypher/awesome-mcp-servers"
+      }
+    ]
+  },
+  {
+    "id": "gen-awesome-claude-code",
+    "name": "awesome-claude-code",
+    "vendor": "hesreallyhim",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "Claude Code 관련 자료 큐레이션 목록",
+    "description": "Claude Code와 함께 쓸 자료를 모은 GitHub 'awesome' 목록으로 5.6만 개가 넘는 스타를 받았습니다. 공식 마켓플레이스에 없는 커뮤니티 도구를 찾을 때 출발점으로 쓰되, 설치 전에 hooks와 .mcp.json 내용을 직접 확인하는 것이 좋습니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 56400,
+    "updated": null,
+    "homepage": "https://github.com/hesreallyhim/awesome-claude-code",
+    "repo": "hesreallyhim/awesome-claude-code",
+    "install": null,
+    "caveats": [
+      "목록 항목은 보안 검증을 거치지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: awesome-claude-code",
+        "url": "https://github.com/hesreallyhim/awesome-claude-code"
+      }
+    ]
+  },
+  {
+    "id": "gen-awesome-claude-skills",
+    "name": "awesome-claude-skills",
+    "vendor": "ComposioHQ",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "Claude 스킬을 모은 큐레이션 목록",
+    "description": "Claude용 Agent Skills를 모은 GitHub 'awesome' 목록으로 7.7만 개가 넘는 스타를 받았습니다. SKILL.md 형식 스킬은 Claude Code뿐 아니라 같은 표준을 따르는 Codex 등에서도 쓸 수 있습니다. 비슷한 이름의 travisvn/awesome-claude-skills는 2026년 4월 이후 푸시가 없습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 77800,
+    "updated": null,
+    "homepage": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "repo": "ComposioHQ/awesome-claude-skills",
+    "install": null,
+    "caveats": [
+      "스킬의 Prerequisites 단계는 실행 전에 직접 읽어 볼 것"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills"
+      },
+      {
+        "label": "GitHub: travisvn/awesome-claude-skills",
+        "url": "https://github.com/travisvn/awesome-claude-skills"
+      }
+    ]
+  },
+  {
+    "id": "gen-acp-registry",
+    "name": "ACP Registry",
+    "vendor": "Agent Client Protocol",
+    "domain": "general",
+    "category": "탐색·레지스트리",
+    "tagline": "Zed·JetBrains에 에이전트를 설치하는 레지스트리",
+    "description": "Agent Client Protocol(ACP) 에이전트를 Zed와 JetBrains 같은 에디터 안에서 바로 설치하는 레지스트리입니다. ACP 클라이언트는 Zed, JetBrains, Neovim, Emacs, Obsidian, VS Code용 ACP 클라이언트, 모바일·메신저 브리지까지 이어져 있어, Claude·Codex 에이전트를 기존 구독 그대로 여러 도구에서 쓸 수 있습니다.",
+    "connect": [
+      "ide"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://agentclientprotocol.com/overview/clients",
+    "repo": null,
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "ACP 클라이언트 목록",
+        "url": "https://agentclientprotocol.com/overview/clients"
+      },
+      {
+        "label": "Zed External Agents",
+        "url": "https://zed.dev/docs/ai/external-agents"
+      },
+      {
+        "label": "JetBrains ACP 도움말",
+        "url": "https://www.jetbrains.com/help/ai-assistant/acp.html"
+      }
+    ]
+  },
+  {
+    "id": "gen-github-mcp",
+    "name": "GitHub MCP Server",
+    "vendor": "GitHub",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "저장소·PR·이슈를 다루는 GitHub 공식 MCP",
+    "description": "GitHub이 직접 만든 공식 MCP 서버로 저장소, PR, 이슈 작업을 에이전트에 맡길 수 있으며 로컬 또는 원격으로 연결합니다. GitHub 토큰이나 OAuth가 필요하고, Claude Code, Codex, Copilot, Cursor 등 어떤 MCP 클라이언트에서도 같은 서버를 씁니다. 도메인과 상관없이 모든 설정에 먼저 넣을 기본 서버로 꼽힙니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 33900,
+    "updated": "2026-10",
+    "homepage": "https://github.com/github/github-mcp-server",
+    "repo": "github/github-mcp-server",
+    "install": null,
+    "caveats": [
+      "악성 공개 이슈로 비공개 저장소 데이터가 공개 PR로 새는 공격이 시연됨 — 외부 입력과 쓰기 도구를 한 세션에 섞지 않기",
+      "토큰 권한은 필요한 저장소·범위로 최소화"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: github-mcp-server",
+        "url": "https://github.com/github/github-mcp-server"
+      },
+      {
+        "label": "Invariant Labs: GitHub MCP 취약 흐름",
+        "url": "https://invariantlabs.ai/blog/mcp-github-vulnerability"
+      }
+    ]
+  },
+  {
+    "id": "gen-gitlab-mcp",
+    "name": "GitLab MCP server",
+    "vendor": "GitLab",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "GitLab 19.5에서 정식 출시된 공식 MCP",
+    "description": "GitLab 19.5에서 정식 출시된 공식 MCP 서버로, GitLab.com·Self-Managed·Dedicated의 /api/v4/mcp 엔드포인트로 제공됩니다. mcp 스코프 OAuth 토큰이나 세분화된 PAT로 인증하고, X-Gitlab-Enabled-Mcp-Server-Toolsets 헤더로 merge_requests, ci 같은 도구 묶음을 고릅니다. Claude Code, Claude Desktop, Codex, Cursor, Copilot(VS Code), Kiro, OpenCode, Zed 연결이 문서화되어 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "GitLab Free부터 (일부 도구는 Ultimate)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "GitLab.com Free는 분당 60회·시간당 3,600회 제한",
+      "레거시 PAT는 403, 관리자나 최상위 그룹 소유자가 접근을 허용해야 함",
+      "커뮤니티 @zereight/mcp-gitlab은 인증 없는 전송 CVE(9.6–9.8) — 공식 서버 사용"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitLab docs: MCP 서버",
+        "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/"
+      },
+      {
+        "label": "NVD CVE-2026-61560",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61560"
+      }
+    ]
+  },
+  {
+    "id": "gen-linear-mcp",
+    "name": "Linear MCP",
+    "vendor": "Linear",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "읽기 전용 엔드포인트도 있는 Linear 공식 MCP",
+    "description": "Linear가 운영하는 공식 원격 MCP로 https://mcp.linear.app/mcp(읽기·쓰기)와 /mcp/readonly(읽기 전용) 두 엔드포인트를 제공합니다. OAuth 2.1 동적 클라이언트 등록이나 Bearer 토큰(읽기 전용 API 키 포함)으로 인증하고, Okta 기반 기업 인증도 지원합니다. Codex에서는 codex mcp add linear --url https://mcp.linear.app/mcp 후 codex mcp login linear로 연결합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "Linear 계정 필요 (요금 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://linear.app/docs/mcp",
+    "repo": null,
+    "install": "claude mcp add --transport http linear-server https://mcp.linear.app/mcp",
+    "caveats": [
+      "SSE 엔드포인트(/sse)는 지원 중단"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Linear docs: MCP",
+        "url": "https://linear.app/docs/mcp"
+      }
+    ]
+  },
+  {
+    "id": "gen-atlassian-mcp",
+    "name": "Atlassian Remote MCP Server",
+    "vendor": "Atlassian",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "Jira·Confluence를 잇는 Atlassian 공식 원격 MCP",
+    "description": "Jira, Confluence, JSM, Bitbucket, Compass를 다루는 Atlassian 공식 원격 MCP 서버로 OAuth 2.1이나 API 토큰으로 인증합니다. Claude, ChatGPT, Cursor, VS Code에서 쓸 수 있다고 명시되어 있습니다. 같은 기능의 커뮤니티 서버보다 이 공식 원격 서버를 쓰는 것이 안전합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "Atlassian 계정 필요 (요금 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 1100,
+    "updated": "2026-10",
+    "homepage": "https://github.com/atlassian/atlassian-mcp-server",
+    "repo": "atlassian/atlassian-mcp-server",
+    "install": null,
+    "caveats": [
+      "커뮤니티 mcp-atlassian은 인증 없이 운영자 자격증명을 쓰는 CVSS 10.0 CVE-2026-77244 — 공식 서버 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: atlassian-mcp-server",
+        "url": "https://github.com/atlassian/atlassian-mcp-server"
+      },
+      {
+        "label": "NVD CVE-2026-77244",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77244"
+      }
+    ]
+  },
+  {
+    "id": "gen-notion-mcp",
+    "name": "Notion MCP",
+    "vendor": "Notion",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "원격 엔드포인트를 제공하는 Notion 공식 MCP",
+    "description": "Notion의 공식 MCP 서버로, 원격 엔드포인트 https://mcp.notion.com/mcp를 Claude Code에 바로 추가할 수 있고 로컬 서버 저장소도 공개되어 있습니다. Notion 앱 자체도 Sign in with ChatGPT 플랜 사용 파트너입니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "Notion 계정 필요 (요금 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 4700,
+    "updated": "2026-09",
+    "homepage": "https://github.com/makenotion/notion-mcp-server",
+    "repo": "makenotion/notion-mcp-server",
+    "install": "claude mcp add --transport http notion https://mcp.notion.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: notion-mcp-server",
+        "url": "https://github.com/makenotion/notion-mcp-server"
+      },
+      {
+        "label": "Claude Code MCP 문서",
+        "url": "https://code.claude.com/docs/en/mcp"
+      }
+    ]
+  },
+  {
+    "id": "gen-context7",
+    "name": "Context7",
+    "vendor": "Upstash",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "최신 라이브러리 문서를 에이전트에 넣어 주는 MCP",
+    "description": "Upstash가 만든 MCP 서버로, 에이전트가 오래된 학습 데이터 대신 최신 라이브러리 문서를 참고하게 해 줍니다. npx -y @upstash/context7-mcp로 로컬(stdio) 실행하거나 호스티드 버전을 쓰며, OpenAI Codex MCP 문서의 예제 서버이기도 합니다. 무료 티어와 유료 플랫폼이 있습니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료 티어 + 유료 플랜 (요금 확인 필요)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 63600,
+    "updated": "2026-10",
+    "homepage": "https://github.com/upstash/context7",
+    "repo": "upstash/context7",
+    "install": "codex mcp add context7 -- npx -y @upstash/context7-mcp",
+    "caveats": [
+      "스코프가 붙은 공식 패키지(@upstash/context7-mcp)를 쓰고 버전 고정 권장"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: upstash/context7",
+        "url": "https://github.com/upstash/context7"
+      },
+      {
+        "label": "Codex MCP 문서",
+        "url": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli"
+      }
+    ]
+  },
+  {
+    "id": "gen-serena",
+    "name": "Serena",
+    "vendor": "oraios",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "시맨틱 코드 검색·편집을 주는 MCP 툴킷",
+    "description": "코딩 에이전트에 시맨틱 검색과 편집 기능을 더하는 오픈소스 MCP 툴킷입니다. 어떤 MCP 클라이언트에서도 쓸 수 있어, 큰 코드베이스를 다룰 때 Claude Code나 Codex 기본 세트에 추가하기 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 30700,
+    "updated": "2026-10",
+    "homepage": "https://github.com/oraios/serena",
+    "repo": "oraios/serena",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: oraios/serena",
+        "url": "https://github.com/oraios/serena"
+      }
+    ]
+  },
+  {
+    "id": "gen-superpowers",
+    "name": "Superpowers",
+    "vendor": "obra",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "에이전트용 스킬 프레임워크이자 개발 방법론",
+    "description": "'agentic skills framework & software development methodology'를 내건 스킬·플러그인 묶음으로, 30만 개가 넘는 스타를 받은 생태계 최상위 인기 저장소입니다. 에이전트가 따를 개발 절차를 스킬로 제공하므로 Claude Code, Codex 같은 구독 에이전트에 추가 AI 비용 없이 얹어 쓸 수 있습니다.",
+    "connect": [
+      "skills",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 304400,
+    "updated": null,
+    "homepage": "https://github.com/obra/superpowers",
+    "repo": "obra/superpowers",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: obra/superpowers",
+        "url": "https://github.com/obra/superpowers"
+      }
+    ]
+  },
+  {
+    "id": "gen-spec-kit",
+    "name": "Spec Kit",
+    "vendor": "GitHub",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "스펙 주도 개발을 위한 GitHub 툴킷",
+    "description": "GitHub이 만든 스펙 주도 개발(spec-driven development) 툴킷으로, 사양을 먼저 정리하고 에이전트가 그에 맞춰 구현하도록 이끕니다. 무료 오픈소스 방법론 팩이라 구독 에이전트 위에서 추가 AI 비용 없이 동작하며 14만 개가 넘는 스타를 받았습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 142700,
+    "updated": null,
+    "homepage": "https://github.com/github/spec-kit",
+    "repo": "github/spec-kit",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: github/spec-kit",
+        "url": "https://github.com/github/spec-kit"
+      }
+    ]
+  },
+  {
+    "id": "gen-bmad-method",
+    "name": "BMAD Method",
+    "vendor": "bmad-code-org",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "에이전트 개발 절차를 담은 방법론 팩",
+    "description": "Superpowers, Spec Kit과 함께 많이 쓰이는 워크플로·방법론 팩으로 5.4만 개가 넘는 스타를 받았습니다. 무료 오픈소스이며, 구독 에이전트에 얹어 개발 절차를 표준화하는 데 씁니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 54500,
+    "updated": null,
+    "homepage": "https://github.com/bmad-code-org/BMAD-METHOD",
+    "repo": "bmad-code-org/BMAD-METHOD",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: BMAD-METHOD",
+        "url": "https://github.com/bmad-code-org/BMAD-METHOD"
+      }
+    ]
+  },
+  {
+    "id": "gen-agent-skills",
+    "name": "Agent Skills",
+    "vendor": "agentskills",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "여러 에이전트가 공유하는 SKILL.md 개방형 표준",
+    "description": "YAML 프런트매터가 있는 SKILL.md 폴더를 필요할 때만 불러오는 개방형 스킬 표준으로, Claude Code 스킬이 이 형식을 따르고 커스텀 슬래시 명령도 스킬로 통합되었습니다. Claude Code 밖에서는 name, description, license, compatibility, metadata, allowed-tools 필드만 인정됩니다. 스킬 폴더 하나를 Codex, Copilot, Antigravity(.agents/skills/) 등에서 재사용할 수 있어 가장 이식성 높은 자산입니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료 (개방형 표준)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 26500,
+    "updated": null,
+    "homepage": "https://agentskills.io",
+    "repo": "agentskills/agentskills",
+    "install": null,
+    "caveats": [
+      "allowed-tools는 매번 승인 없이 도구 사용을 허용 — 저장소에 들어 있는 스킬은 검토"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: agentskills/agentskills",
+        "url": "https://github.com/agentskills/agentskills"
+      },
+      {
+        "label": "Claude Code 스킬 문서",
+        "url": "https://code.claude.com/docs/en/skills"
+      }
+    ]
+  },
+  {
+    "id": "gen-ccusage",
+    "name": "ccusage",
+    "vendor": "ccusage",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "구독 사용량과 비용을 분석하는 CLI",
+    "description": "npx ccusage 한 줄로 구독 사용량과 비용을 분석해 보여 주는 무료 오픈소스 CLI입니다. Anthropic이 5시간·주간 한도의 절대 수치를 공개하지 않기 때문에, 실제로 얼마나 쓰고 있는지 가늠하는 데 유용합니다.",
+    "connect": [
+      "cli"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 19200,
+    "updated": null,
+    "homepage": "https://github.com/ccusage/ccusage",
+    "repo": "ccusage/ccusage",
+    "install": "npx ccusage",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: ccusage",
+        "url": "https://github.com/ccusage/ccusage"
+      },
+      {
+        "label": "claude.com/pricing",
+        "url": "https://claude.com/pricing"
+      }
+    ]
+  },
+  {
+    "id": "gen-mcp-inspector",
+    "name": "MCP Inspector",
+    "vendor": "Model Context Protocol",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "MCP 서버를 시각적으로 테스트하는 공식 도구",
+    "description": "MCP 서버를 시각적으로 테스트하는 공식 도구로, 서버를 직접 만들거나 연결 문제를 디버깅할 때 씁니다. AI 모델 없이 동작하므로 추가 비용이 없습니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 11100,
+    "updated": null,
+    "homepage": "https://github.com/modelcontextprotocol/inspector",
+    "repo": "modelcontextprotocol/inspector",
+    "install": null,
+    "caveats": [
+      "0.14.1 미만은 인증 없는 원격 코드 실행 취약점(CVE-2025-49596, 9.4) — 최신 버전 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: modelcontextprotocol/inspector",
+        "url": "https://github.com/modelcontextprotocol/inspector"
+      },
+      {
+        "label": "NVD CVE-2025-49596",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49596"
+      }
+    ]
+  },
+  {
+    "id": "gen-mcp-remote",
+    "name": "mcp-remote",
+    "vendor": "punkpeye",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "stdio 전용 클라이언트에 원격 MCP를 붙이는 브리지",
+    "description": "로컬(stdio) 서버만 지원하는 클라이언트가 원격 MCP 서버를 쓸 수 있게 이어 주는 브리지입니다. Linear 문서도 VS Code, Windsurf, Zed에서 원격 MCP를 연결할 때 이 방식을 안내합니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 1600,
+    "updated": null,
+    "homepage": "https://github.com/punkpeye/mcp-remote",
+    "repo": "punkpeye/mcp-remote",
+    "install": null,
+    "caveats": [
+      "CVE-2025-6514(9.6): 신뢰할 수 없는 서버의 authorization_endpoint로 OS 명령 실행 — 최신 버전과 신뢰 서버만 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: punkpeye/mcp-remote",
+        "url": "https://github.com/punkpeye/mcp-remote"
+      },
+      {
+        "label": "NVD CVE-2025-6514",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6514"
+      },
+      {
+        "label": "Linear docs: MCP",
+        "url": "https://linear.app/docs/mcp"
+      }
+    ]
+  },
+  {
+    "id": "gen-mcp-reference-servers",
+    "name": "MCP reference servers",
+    "vendor": "Model Context Protocol",
+    "domain": "general",
+    "category": "공통 MCP·스킬",
+    "tagline": "Filesystem·Git 등 MCP 공식 참조 서버 모음",
+    "description": "MCP 프로젝트가 관리하는 참조 서버 모노레포로 Filesystem, Git 같은 기본 서버를 담고 있으며 9만 개가 넘는 스타를 받았습니다. 출발점으로 좋지만 Filesystem 서버의 심볼릭 링크 탈출, Git 서버의 인자 주입 같은 CVE가 여러 번 나왔으므로 최신 버전으로 고정해 쓰는 것이 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 91500,
+    "updated": "2026-10",
+    "homepage": "https://github.com/modelcontextprotocol/servers",
+    "repo": "modelcontextprotocol/servers",
+    "install": null,
+    "caveats": [
+      "npx -y mcp-server-fetch처럼 스코프 없는 이름은 타이포스쿼팅 표적 — @modelcontextprotocol/server-* 사용",
+      "Filesystem(CVE-2025-53109/53110)·Git(CVE-2025-68143~68145) 서버 취약점 이력"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: modelcontextprotocol/servers",
+        "url": "https://github.com/modelcontextprotocol/servers"
+      },
+      {
+        "label": "OSV MAL-2026-5478",
+        "url": "https://osv.dev/vulnerability/MAL-2026-5478"
+      },
+      {
+        "label": "NVD CVE-2025-68145",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68145"
+      }
+    ]
+  },
+  {
+    "id": "gen-exa-mcp",
+    "name": "Exa MCP Server",
+    "vendor": "Exa",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "웹 검색·크롤링을 붙이는 Exa 공식 MCP",
+    "description": "Exa의 웹 검색과 웹 크롤링을 에이전트 도구로 붙이는 MIT 라이선스 공식 MCP 서버입니다. Exa API 키가 필요하고 검색 비용은 Exa가 따로 청구하며, 에이전트의 추론은 기존 구독으로 처리됩니다. 기본 세트에 웹 검색 MCP를 하나 넣을 때 유력한 후보입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "Exa API 요금 별도 (확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 5200,
+    "updated": "2026-10",
+    "homepage": "https://github.com/exa-labs/exa-mcp-server",
+    "repo": "exa-labs/exa-mcp-server",
+    "install": null,
+    "caveats": [
+      "웹 검색 결과는 프롬프트 인젝션 통로 — 비공개 데이터·쓰기 도구와 한 세션에 섞지 않기"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: exa-mcp-server",
+        "url": "https://github.com/exa-labs/exa-mcp-server"
+      },
+      {
+        "label": "Simon Willison: lethal trifecta",
+        "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
+      }
+    ]
+  },
+  {
+    "id": "gen-tavily-mcp",
+    "name": "Tavily MCP",
+    "vendor": "Tavily",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "실시간 검색·추출·크롤링용 Tavily MCP",
+    "description": "실시간 검색, 추출(extract), 사이트 맵, 크롤링을 제공하는 Tavily의 MIT 라이선스 MCP 서버입니다. Tavily API 키가 필요하고 사용료는 Tavily가 별도로 청구하며, 어떤 MCP 클라이언트에서도 같은 설정으로 쓸 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "Tavily API 요금 별도 (확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 2500,
+    "updated": null,
+    "homepage": "https://github.com/tavily-ai/tavily-mcp",
+    "repo": "tavily-ai/tavily-mcp",
+    "install": null,
+    "caveats": [
+      "웹 콘텐츠를 가져오는 서버는 프롬프트 인젝션에 노출됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: tavily-mcp",
+        "url": "https://github.com/tavily-ai/tavily-mcp"
+      }
+    ]
+  },
+  {
+    "id": "gen-firecrawl-mcp",
+    "name": "Firecrawl MCP Server",
+    "vendor": "Firecrawl",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "웹 검색·스크래핑·크롤링을 묶은 Firecrawl MCP",
+    "description": "웹 검색, 스크래핑, 파싱, 크롤링, 사이트 맵, Agent·Monitor 기능을 제공하는 Firecrawl의 MIT 라이선스 MCP 서버입니다. Firecrawl API 키가 필요하고 사용료는 Firecrawl이 청구하며, 본체인 Firecrawl 저장소는 19만 개가 넘는 스타를 받았습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "Firecrawl API 요금 별도 (확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 7700,
+    "updated": "2026-10",
+    "homepage": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "repo": "firecrawl/firecrawl-mcp-server",
+    "install": null,
+    "caveats": [
+      "마지막 태그 릴리스는 v3.2.1(2025-09)이지만 커밋은 계속됨 — 버전 고정 시 확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: firecrawl-mcp-server",
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+      },
+      {
+        "label": "GitHub: firecrawl",
+        "url": "https://github.com/firecrawl/firecrawl"
+      }
+    ]
+  },
+  {
+    "id": "gen-brave-search-mcp",
+    "name": "Brave Search MCP Server",
+    "vendor": "Brave",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "Brave 검색을 에이전트에 붙이는 공식 MCP",
+    "description": "Brave 검색을 에이전트 도구로 쓰게 해 주는 Brave의 MIT 라이선스 MCP 서버입니다. Brave API 키가 필요하고 검색 요금은 Brave가 따로 청구하며, 추론은 기존 AI 구독으로 처리됩니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "Brave API 요금 별도 (확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 1500,
+    "updated": "2026-10",
+    "homepage": "https://github.com/brave/brave-search-mcp-server",
+    "repo": "brave/brave-search-mcp-server",
+    "install": null,
+    "caveats": [
+      "웹 검색 결과는 프롬프트 인젝션 통로가 될 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: brave-search-mcp-server",
+        "url": "https://github.com/brave/brave-search-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "gen-e2b",
+    "name": "E2B",
+    "vendor": "E2B",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "에이전트용 오픈소스 보안 실행 환경",
+    "description": "실제 도구를 갖춘 오픈소스 보안 실행 환경으로, 에이전트가 만든 코드를 격리된 샌드박스에서 돌릴 때 씁니다. 다만 독립 MCP 서버 저장소는 2026-04-16 아카이브되었으므로 현재 공식 연결 방식을 다시 확인해야 합니다. 가벼운 용도라면 Claude Code의 샌드박스 Bash나 Copilot CLI의 /sandbox 같은 내장 기능도 대안입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 14500,
+    "updated": null,
+    "homepage": "https://github.com/e2b-dev/E2B",
+    "repo": "e2b-dev/E2B",
+    "install": null,
+    "caveats": [
+      "독립 MCP 서버(e2b-dev/mcp-server)는 아카이브됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: e2b-dev/E2B",
+        "url": "https://github.com/e2b-dev/E2B"
+      },
+      {
+        "label": "GitHub: e2b-dev/mcp-server",
+        "url": "https://github.com/e2b-dev/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "gen-daytona",
+    "name": "Daytona",
+    "vendor": "Daytona",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "메인 저장소가 아카이브된 AI 코드 실행 인프라",
+    "description": "AI가 생성한 코드를 안전하고 유연하게 실행하는 인프라를 표방하며 7만 개가 넘는 스타를 받았지만, 메인 저장소가 아카이브되었습니다(마지막 푸시 2026-07-24). 아카이브 이유와 후속 저장소는 확인되지 않았으므로 새로 도입하기 전에 벤더의 현재 패키징을 확인해야 합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "archived",
+    "stars": 71500,
+    "updated": "2026-07",
+    "homepage": "https://github.com/daytonaio/daytona",
+    "repo": "daytonaio/daytona",
+    "install": null,
+    "caveats": [
+      "메인 저장소 아카이브 — 후속 저장소 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: daytonaio/daytona",
+        "url": "https://github.com/daytonaio/daytona"
+      }
+    ]
+  },
+  {
+    "id": "gen-ollama",
+    "name": "Ollama",
+    "vendor": "Ollama",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "구독 한도 밖에서 로컬 모델을 돌리는 런타임",
+    "description": "오픈 모델을 내 컴퓨터에서 실행하는 MIT 라이선스 런타임으로, Copilot CLI의 BYOK 환경변수, VS Code의 Ollama 확장, Factory BYOK 등에 로컬 공급자로 연결됩니다. 구독의 5시간·주간 한도와 무관하게 무료로 쓸 수 있어 보조 모델로 유용합니다.",
+    "connect": [
+      "cli",
+      "byok"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "none",
+    "price": "무료 (오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 184600,
+    "updated": "2026-10",
+    "homepage": "https://github.com/ollama/ollama",
+    "repo": "ollama/ollama",
+    "install": null,
+    "caveats": [
+      "VS Code 내장 Ollama 공급자는 지원 중단 — Ollama 확장 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: ollama/ollama",
+        "url": "https://github.com/ollama/ollama"
+      },
+      {
+        "label": "GitHub Docs: Copilot CLI",
+        "url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli"
+      },
+      {
+        "label": "VS Code: 언어 모델",
+        "url": "https://code.visualstudio.com/docs/copilot/customization/language-models"
+      }
+    ]
+  },
+  {
+    "id": "gen-lm-studio",
+    "name": "LM Studio",
+    "vendor": "LM Studio",
+    "domain": "general",
+    "category": "검색·실행 환경",
+    "tagline": "lms CLI로 다루는 로컬 모델 실행 도구",
+    "description": "로컬 모델을 실행하는 LM Studio를 터미널에서 다루는 lms CLI가 공개되어 있습니다. Factory BYOK처럼 OpenAI 호환 엔드포인트를 받는 도구에 로컬 공급자로 연결해 구독 한도 밖에서 쓸 수 있습니다.",
+    "connect": [
+      "cli",
+      "byok"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 5400,
+    "updated": "2026-10",
+    "homepage": "https://github.com/lmstudio-ai/lms",
+    "repo": "lmstudio-ai/lms",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: lmstudio-ai/lms",
+        "url": "https://github.com/lmstudio-ai/lms"
+      },
+      {
+        "label": "Factory BYOK",
+        "url": "https://docs.factory.com/model-independence/byok.md"
+      }
+    ]
+  },
+  {
+    "id": "gen-snyk-agent-scan",
+    "name": "Snyk Agent Scan",
+    "vendor": "Snyk",
+    "domain": "general",
+    "category": "보안",
+    "tagline": "AI 에이전트·MCP 서버·스킬 보안 스캐너",
+    "description": "AI 에이전트, MCP 서버, 에이전트 스킬을 검사하는 Snyk의 보안 스캐너로, 예전 invariantlabs-ai/mcp-scan 경로가 이 저장소로 옮겨졌습니다. ~/.claude.json, .mcp.json, ~/.codex/config.toml, Claude Desktop 설정을 diff나 체크섬으로 감시하면서 이 도구로 정기 점검하는 것이 권장됩니다.",
+    "connect": [
+      "cli"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 3200,
+    "updated": "2026-10",
+    "homepage": "https://github.com/snyk/agent-scan",
+    "repo": "snyk/agent-scan",
+    "install": null,
+    "caveats": [
+      "설정에 모르는 MCP 항목이 생기면 침해로 간주 — SANDWORM_MODE 웜 사례"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: snyk/agent-scan",
+        "url": "https://github.com/snyk/agent-scan"
+      },
+      {
+        "label": "Infosecurity Magazine: SANDWORM_MODE",
+        "url": "https://infosecurity-magazine.com/news/shai-hulud-like-worm-devs-npm-ai"
+      }
+    ]
+  },
+  {
+    "id": "gen-owasp-mcp-top10",
+    "name": "OWASP MCP Top 10",
+    "vendor": "OWASP",
+    "domain": "general",
+    "category": "보안",
+    "tagline": "MCP 서버 위험 10가지를 정리한 OWASP 목록",
+    "description": "토큰 관리·비밀 노출(MCP01), 권한 범위 확대, 도구 포이즈닝, 공급망 공격, 명령 주입, 프롬프트 인젝션, 부실한 인증, 감사 로그 부재, 섀도 MCP 서버, 컨텍스트 과다 공유까지 MCP 위험 10가지를 정리한 OWASP 프로젝트입니다. 현재 베타·파일럿 단계이며, MCP 설정과 서버를 검토할 때 체크리스트로 쓰기 좋습니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://owasp.org/www-project-mcp-top-10/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "정식(비베타) 출시일은 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OWASP MCP Top 10",
+        "url": "https://owasp.org/www-project-mcp-top-10/"
+      }
+    ]
+  },
+  {
+    "id": "gen-owasp-agentic-top10",
+    "name": "OWASP Top 10 for Agentic Applications",
+    "vendor": "OWASP",
+    "domain": "general",
+    "category": "보안",
+    "tagline": "에이전트 앱 위험 10가지를 담은 2026년판 목록",
+    "description": "2025년 12월 9일 공개된 2026년판 에이전트 애플리케이션 위험 목록으로, 목표 탈취(ASI01), 도구 오남용, 권한 남용, 에이전트 공급망, 예기치 않은 코드 실행, 메모리·컨텍스트 오염 등을 다룹니다. 여러 MCP와 스킬을 엮은 에이전트 구성을 검토할 때 체크리스트로 쓸 수 있습니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2025-12",
+    "homepage": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "항목 이름은 2차 출처 기준(공식 PDF 미확인)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OWASP Agentic Top 10",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      },
+      {
+        "label": "Speakeasy: Agentic Top 10 해설",
+        "url": "https://www.speakeasy.com/blog/owasp-agentic-top-10-explained"
+      }
+    ]
+  }
+]

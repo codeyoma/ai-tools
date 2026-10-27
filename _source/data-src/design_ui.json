@@ -1,0 +1,2028 @@
+[
+ {
+  "id": "dsu-sketch-mcp",
+  "name": "Sketch MCP server",
+  "vendor": "Sketch",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "Sketch 맥 앱에 내장된 로컬 MCP 서버",
+  "description": "Sketch 2025.2.4 이상 맥 앱에 내장된 로컬 MCP 서버로, 문서 개요·레이어 트리·심볼·스타일을 읽고 run_code 도구로 SketchAPI 스크립트를 실행해 디자인을 직접 고칩니다. Claude Code·Claude 데스크톱(확장)·Codex·Cursor·VS Code가 localhost 주소로 연결하므로 AI 비용은 쓰던 구독에서 나갑니다. sketch-hq/agents 플러그인 번들로 스킬까지 함께 설치할 수 있어 디자인 시스템 점검, 아이콘 내보내기, 다크 모드 컴포넌트 교체 같은 반복 작업에 잘 맞습니다.",
+  "connect": [
+   "local-mcp",
+   "plugin",
+   "skills",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "Standard $12/편집자·월(연간), 맥 전용 라이선스 $120",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 101,
+  "updated": "2026-06",
+  "homepage": "https://www.sketch.com/docs/mcp-server/",
+  "repo": "sketch-hq/agents",
+  "install": "claude mcp add --transport http sketch http://localhost:31126/mcp",
+  "caveats": [
+   "Mac App Store판에서는 사용 불가",
+   "기본 꺼짐 — ⌘K → Start MCP Server로 켜야 함",
+   "로컬 전용(원격 접속 불가)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Sketch MCP docs",
+    "url": "https://www.sketch.com/docs/mcp-server.md"
+   },
+   {
+    "label": "Sketch pricing",
+    "url": "https://www.sketch.com/pricing/"
+   },
+   {
+    "label": "GitHub sketch-hq/agents",
+    "url": "https://github.com/sketch-hq/agents"
+   }
+  ]
+ },
+ {
+  "id": "dsu-lunacy-mcp",
+  "name": "Lunacy MCP",
+  "vendor": "Icons8",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "Lunacy 데스크톱 앱의 로컬 MCP 서버",
+  "description": "Icons8의 그래픽 디자인 앱 Lunacy가 실행될 때 함께 뜨는 로컬 MCP 서버로, 선택한 객체·색상 변수·컴포넌트 정보·이미지 에셋을 AI에 넘겨줍니다. AI → Model Context Protocol 메뉴에서 서버를 켜고 Claude Desktop용 설정을 복사해 붙이면 구독 그대로 연결됩니다. Figma 대신 가벼운 데스크톱 툴로 디자인을 코드로 옮길 때 쓸 만합니다.",
+  "connect": [
+   "local-mcp",
+   "app"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://lunacy.docs.icons8.com/mcp",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 문서는 Claude Desktop 연결만 안내",
+   "쓰기(수정) 도구 지원 여부 미기재"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Lunacy docs: LLM Integration",
+    "url": "https://lunacy.docs.icons8.com/mcp"
+   }
+  ]
+ },
+ {
+  "id": "dsu-motiff",
+  "name": "Motiff AI",
+  "vendor": "Motiff",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "AI UI 생성 툴 — 서비스 종료",
+  "description": "텍스트·와이어프레임·스크린샷·PRD로 UI를 생성하고 React/HTML 코드로 내보내던 AI 디자인 도구입니다. 공식 사이트에 서비스 종료가 공지됐고, 데이터 내보내기는 2026-10-31까지만 됩니다. 기존 사용자라면 파일부터 백업하고 Subframe·Paper·Magic Patterns 같은 MCP 지원 대안으로 옮기는 편이 안전합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "shutdown",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://motiff.com/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "데이터 내보내기 마감 2026-10-31"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "motiff.com 종료 공지",
+    "url": "https://motiff.com/"
+   }
+  ]
+ },
+ {
+  "id": "dsu-ux-pilot-mcp",
+  "name": "UX Pilot MCP",
+  "vendor": "UX Pilot",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "UX Pilot 디자인 에이전트를 부르는 원격 MCP",
+  "description": "UX Pilot이 호스팅하는 원격 MCP(도구 87개)로, 워크스트림·페이지 생성, HTML·라이브 URL 가져오기, UX·접근성 리뷰, 버전·코멘트 관리, React 프로토타입 생성까지 대화로 처리합니다. Claude 커스텀 커넥터, ChatGPT 개발자 모드, Cursor, Codex에서 OAuth로 붙고, 헤더만 지원하는 클라이언트는 API 키를 씁니다. 다만 디자인 에이전트·리뷰·React 생성 같은 핵심 도구는 UX Pilot 크레딧을 소모합니다.",
+  "connect": [
+   "remote-mcp",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요(크레딧제)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 0,
+  "updated": "2026-10",
+  "homepage": "https://uxpilot.ai",
+  "repo": "uxpilot-ai/uxpilot-mcp",
+  "install": "https://mcp.uxpilot.net/mcp",
+  "caveats": [
+   "크레딧 소모·파괴적 작업은 명시적 확인 후 실행",
+   "ChatGPT는 개발자 모드 필요(플랜별 상이)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub uxpilot-ai/uxpilot-mcp",
+    "url": "https://github.com/uxpilot-ai/uxpilot-mcp"
+   },
+   {
+    "label": "MCP Registry: uxpilot",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=uxpilot"
+   }
+  ]
+ },
+ {
+  "id": "dsu-visily-mcp",
+  "name": "Visily MCP",
+  "vendor": "Visily",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "Visily 보드를 React 코드·테마 토큰으로 옮김",
+  "description": "프롬프트·스크린샷·URL로 UI를 만드는 Visily의 공식 원격 MCP로, 보드나 화면을 찾아 React+TypeScript+Tailwind v4+shadcn/ui 코드로 재구성하거나 테마를 shadcn·Tailwind 토큰으로 뽑아옵니다. Claude Code·Codex 플러그인 마켓플레이스가 있고, ChatGPT는 개발자 모드 커스텀 커넥터로 OAuth 연결합니다. 코드 재구성은 에이전트가 맡지만, Pro·Business 워크스페이스의 편집자만 쓸 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "Pro $14/편집자·월, Business $29",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 6,
+  "updated": "2026-07",
+  "homepage": "https://www.visily.ai",
+  "repo": "visily-app/mcp-plugins",
+  "install": "claude plugin marketplace add visily-app/mcp-plugins && claude plugin install visily@visily",
+  "caveats": [
+   "무료 워크스페이스·뷰어/게스트 권한은 MCP 사용 불가"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub visily-app/mcp-plugins",
+    "url": "https://github.com/visily-app/mcp-plugins"
+   },
+   {
+    "label": "Visily pricing",
+    "url": "https://www.visily.ai/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-banani-mcp",
+  "name": "Banani MCP",
+  "vendor": "Banani",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "선택한 화면을 HTML/CSS·토큰으로 넘기는 MCP",
+  "description": "프롬프트·이미지·PRD로 모바일·웹 멀티 화면을 생성하는 AI UI 툴 Banani의 MCP로, 에디터에서 선택한 화면의 단순화된 HTML/CSS와 색·라운드·폰트 토큰을 코딩 에이전트에 넘깁니다. 앱 사이드바의 MCP 페이지에서 Claude Code·Cursor·Codex용 API 키를 발급해 연결하고, 구현은 에이전트 구독으로 진행됩니다. 요금 페이지 기준 모든 플랜에 MCP가 포함돼 무료 플랜으로 먼저 시험해볼 수 있습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "무료(월 12크레딧), Plus $20/월, Pro $50/월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.banani.co",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "API 키는 한 번만 표시 — 분실 시 삭제 후 재발급",
+   "MCP 연결 방식(원격/로컬)은 문서에 미기재"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Banani help: Banani MCP",
+    "url": "https://intercom.help/banani/en/articles/13793261-banani-mcp"
+   },
+   {
+    "label": "Banani pricing",
+    "url": "https://www.banani.co/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-magic-patterns-mcp",
+  "name": "Magic Patterns MCP",
+  "vendor": "Magic Patterns",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "AI 프로토타입을 코드베이스로 옮기는 MCP",
+  "description": "AI로 UI 프로토타입과 디자인 시스템을 만드는 Magic Patterns의 원격 MCP로, 디자인을 내 코드베이스에 통합하거나 기존 UI를 Magic Patterns로 가져옵니다. Claude 디렉터리 공식 커넥터, ChatGPT·Codex 플러그인, Cursor 플러그인이 있고 생성·게시 도구를 뺀 읽기 전용 엔드포인트도 따로 있습니다. 디자인을 스펙으로 다루게 하는 Integration Skill을 함께 쓰면 기존 컴포넌트 규칙에 맞춰 이식해 줍니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "유료 플랜 필요(가격 확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.magicpatterns.com/docs/documentation/features/mcp-server",
+  "repo": null,
+  "install": "claude mcp add --transport http magic-patterns https://mcp.magicpatterns.com/mcp",
+  "caveats": [
+   "MCP·API 키 모두 유료 플랜 필요, 사용량은 계정 크레딧 차감",
+   "Codex 수동 설정은 OAuth 미지원 — API 키 사용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Magic Patterns MCP docs",
+    "url": "https://www.magicpatterns.com/docs/documentation/features/mcp-server/overview.md"
+   }
+  ]
+ },
+ {
+  "id": "dsu-protopie-mcp",
+  "name": "ProtoPie MCP",
+  "vendor": "ProtoPie",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "인터랙션 프로토타입을 AI로 만들고 코드로 넘김",
+  "description": "고급 인터랙션 프로토타이핑 툴 ProtoPie의 MCP로, Studio MCP는 Claude Code·Codex·Cursor·VS Code에서 자연어로 씬·레이어·인터랙션을 만들고 고칩니다. Code MCP는 변수·수식·트리거 같은 프로토타입 로직을 구조화 데이터로 바꿔 코딩 에이전트가 동작을 그대로 구현하게 돕습니다. Pro 플랜에 MCP Core가 들어 있고, 내장 ProtoPie AI는 플랜별 AI 크레딧을 따로 씁니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 플랜 있음, Pro $47/편집자·월(MCP Core 포함)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.protopie.io/features/protopie-mcp",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "Code MCP는 Enterprise(MCP Enterprise) 대상",
+   "MCP 연결 방식은 공식 설정 가이드 확인 필요"
+  ],
+  "korea": "공식 사이트 한국어판(protopie.io/ko) 제공, KRW 요금은 확인 못 함",
+  "starter": false,
+  "sources": [
+   {
+    "label": "ProtoPie MCP",
+    "url": "https://www.protopie.io/features/protopie-mcp"
+   },
+   {
+    "label": "ProtoPie pricing",
+    "url": "https://www.protopie.io/pricing"
+   },
+   {
+    "label": "ProtoPie 한국어 사이트",
+    "url": "https://www.protopie.io/ko"
+   }
+  ]
+ },
+ {
+  "id": "dsu-subframe",
+  "name": "Subframe",
+  "vendor": "Subframe",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "Claude·Codex 구독으로 도는 디자인 캔버스+MCP",
+  "description": "코드베이스와 연결되는 디자인 캔버스이자 코딩 에이전트로, 데스크톱 앱은 Claude Code·Codex 구독으로 AI를 돌리고 웹 버전에서만 자체 AI 크레딧을 씁니다. 원격 MCP와 Claude Code·Codex 플러그인(/subframe:design·develop·import 스킬)을 쓰면 외부 에이전트가 페이지·컴포넌트·테마를 만들고 React+Tailwind 코드와 Vite 프로토타입을 가져옵니다. 디자인과 구현을 계속 오가는 React 팀에 특히 실용적입니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "skills",
+   "signin",
+   "cli",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(프로젝트 1개), Pro $20/편집자·월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 450,
+  "updated": "2026-10",
+  "homepage": "https://www.subframe.com",
+  "repo": "SubframeApp/subframe",
+  "install": "claude plugin marketplace add https://github.com/SubframeApp/subframe && claude plugin install subframe@subframe",
+  "caveats": [
+   "외부 에이전트에서 design_* 도구를 부르면 Subframe 크레딧 사용",
+   "MCP는 OAuth만 지원(액세스 토큰 불가)"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Subframe MCP docs",
+    "url": "https://docs.subframe.com/mcp-server"
+   },
+   {
+    "label": "Subframe pricing",
+    "url": "https://www.subframe.com/pricing"
+   },
+   {
+    "label": "GitHub SubframeApp/subframe",
+    "url": "https://github.com/SubframeApp/subframe"
+   }
+  ]
+ },
+ {
+  "id": "dsu-onlook",
+  "name": "Onlook",
+  "vendor": "Onlook",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "코드 위에서 디자인하는 오픈소스 비주얼 에디터",
+  "description": "Next.js+Tailwind 프로젝트를 Figma 같은 캔버스에서 직접 편집하는 오픈소스 비주얼 에디터로, 화면에서 고친 내용이 그대로 코드가 됩니다. 홈페이지 기준 Claude 또는 ChatGPT 구독을 연결해 AI를 돌릴 수 있고, 결과를 로컬·GitHub로 내보내거나 링크로 호스팅합니다. 셀프 호스팅은 무료이며, 디자이너용 호스팅 신제품은 얼리 액세스로 준비 중입니다.",
+  "connect": [
+   "signin",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "오픈소스 무료(셀프 호스팅), 클라우드는 문의",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 26997,
+  "updated": "2026-10",
+  "homepage": "https://www.onlook.com/",
+  "repo": "onlook-dev/onlook",
+  "install": null,
+  "caveats": [
+   "호스팅 신제품은 웨이트리스트 얼리 액세스(README 기준)",
+   "공식 문서에 MCP 연동 언급 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "onlook.com",
+    "url": "https://www.onlook.com/"
+   },
+   {
+    "label": "GitHub onlook-dev/onlook",
+    "url": "https://github.com/onlook-dev/onlook"
+   }
+  ]
+ },
+ {
+  "id": "dsu-paper",
+  "name": "Paper",
+  "vendor": "Paper (paper.design)",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "HTML/CSS 캔버스를 에이전트가 읽고 쓰는 디자인 툴",
+  "description": "캔버스 자체가 실제 HTML/CSS로 이뤄진 디자인 툴로, Paper Desktop이 로컬 MCP 서버와 paper CLI를 띄워 에이전트가 열린 파일을 읽고 수정합니다. Claude Code·Cursor 플러그인과 Codex용 등록 명령이 있어 구독 그대로 연결되고, 프레임을 React·Tailwind 코드로 옮기는 흐름이 자연스럽습니다. 무료 플랜에도 주당 MCP 호출 100회가 있어 부담 없이 시험해볼 수 있습니다.",
+  "connect": [
+   "local-mcp",
+   "plugin",
+   "cli",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(주 100회 MCP 호출), Pro $20/편집자·월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 36,
+  "updated": "2026-09",
+  "homepage": "https://paper.design",
+  "repo": "paper-design/agent-plugins",
+  "install": "claude plugin marketplace add paper-design/agent-plugins && claude plugin install paper-desktop@paper",
+  "caveats": [
+   "Paper Desktop 실행 필요 — 열린 파일에만 읽기·쓰기",
+   "레거시 HTTP 엔드포인트(127.0.0.1:29979)는 교체 예정"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Paper MCP docs",
+    "url": "https://paper.design/docs/mcp"
+   },
+   {
+    "label": "Paper pricing",
+    "url": "https://paper.design/pricing"
+   },
+   {
+    "label": "GitHub paper-design/agent-plugins",
+    "url": "https://github.com/paper-design/agent-plugins"
+   }
+  ]
+ },
+ {
+  "id": "dsu-flowstep-mcp",
+  "name": "Flowstep MCP",
+  "vendor": "Flowstep",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "에이전트용 UI 디자인 캔버스의 원격 MCP",
+  "description": "에이전트가 만드는 소프트웨어를 위한 디자인 캔버스 Flowstep의 원격 MCP(도구 22개)로, 화면 생성·편집·검사, JSX 읽기/쓰기, Figma 프레임 가져오기를 지원합니다. Claude·Cursor·Codex에서 OAuth로 붙으며 로컬 프로세스나 API 키가 필요 없습니다. AI 디자인 도구 3종만 앱 메시지 한도를 쓰고 나머지 도구는 무료입니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "무료, Starter $15/월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-07",
+  "homepage": "https://docs.flowstep.ai/mcp/overview",
+  "repo": null,
+  "install": "https://api.flowstep.ai/mcp",
+  "caveats": [
+   "Figma 가져오기는 조직의 Figma 연결 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Flowstep MCP docs",
+    "url": "https://docs.flowstep.ai/mcp/overview"
+   },
+   {
+    "label": "Flowstep pricing",
+    "url": "https://www.flowstep.ai/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-mobbin-mcp",
+  "name": "Mobbin MCP",
+  "vendor": "Mobbin",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "실서비스 UI·플로 레퍼런스를 검색하는 MCP",
+  "description": "실제로 출시된 앱·웹의 화면, 멀티스텝 플로, 웹사이트 섹션을 검색해 이미지·제품명·링크를 돌려주는 Mobbin 공식 원격 MCP입니다. ChatGPT·Codex·Claude Code·Claude Desktop/Web·Cursor 설정 가이드가 있고, Claude와 ChatGPT에서는 MCP Apps 갤러리로 결과를 보여줍니다. 온보딩·결제·페이월 같은 패턴을 설계 전에 레퍼런스로 모을 때 유용합니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "Pro $10/월(연간)·$15/월(분기)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 65,
+  "updated": "2026-09",
+  "homepage": "https://mobbin.com/mcp",
+  "repo": "mobbin/mobbin-mcp-server",
+  "install": "https://api.mobbin.com/mcp",
+  "caveats": [
+   "Pro·Team·Enterprise 플랜 필요",
+   "사용자당 60초에 60회 요청 제한"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Mobbin MCP",
+    "url": "https://mobbin.com/mcp"
+   },
+   {
+    "label": "Mobbin pricing.md",
+    "url": "https://mobbin.com/pricing.md"
+   },
+   {
+    "label": "GitHub mobbin/mobbin-mcp-server",
+    "url": "https://github.com/mobbin/mobbin-mcp-server"
+   }
+  ]
+ },
+ {
+  "id": "dsu-refero-mcp",
+  "name": "Refero MCP",
+  "vendor": "Refero",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "디자인 스타일·실제 화면·플로 레퍼런스 MCP",
+  "description": "큐레이션된 디자인 스타일, 실제 제품 화면, 유저 플로를 검색해 근거 있는 디자인 작업을 돕는 Refero의 원격 MCP로, 공식 MCP 레지스트리에 등록돼 있습니다. Claude·ChatGPT처럼 원격 MCP를 지원하는 클라이언트에 URL을 추가해 씁니다. Mobbin과 비슷한 레퍼런스 소스이며, 요금과 플랜 조건은 확인이 필요합니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-08",
+  "homepage": "https://refero.design/mcp",
+  "repo": null,
+  "install": "https://api.refero.design/mcp",
+  "caveats": [
+   "공개 문서에서 요금·인증 방식을 확인하지 못함"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "MCP Registry: refero",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=refero"
+   }
+  ]
+ },
+ {
+  "id": "dsu-rive-editor-mcp",
+  "name": "Rive Editor MCP",
+  "vendor": "Rive",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "실행 중인 Rive 에디터를 조작하는 로컬 MCP",
+  "description": "Rive 데스크톱 에디터(얼리 액세스 앱)가 띄우는 로컬 MCP로, 아트보드·도형·레이아웃·스테이트 머신·애니메이션·데이터 바인딩·Luau 스크립트와 WGSL 셰이더까지 대화로 편집합니다. Claude Code는 claude mcp add 한 줄로, Cursor는 mcp.json으로 연결해 쓰던 구독 그대로 씁니다. 인터랙티브 UI 애니메이션의 뼈대를 빠르게 잡고 사람이 에디터에서 다듬는 흐름에 좋습니다.",
+  "connect": [
+   "local-mcp",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 플랜 있음, Cadet $9·Voyager $32/좌석·월",
+  "free": true,
+  "official": "official",
+  "status": "preview",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://rive.app/docs/editor/ai/mcp",
+  "repo": null,
+  "install": "claude mcp add --transport http rive http://127.0.0.1:9791/mcp",
+  "caveats": [
+   "Rive Early Access 앱과 아트보드가 있는 파일이 열려 있어야 함",
+   "채팅에 'End Prompt'를 입력해야 변경 적용",
+   "macOS·Windows 데스크톱 전용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Rive docs: MCP",
+    "url": "https://rive.app/docs/editor/ai/mcp.md"
+   },
+   {
+    "label": "Rive pricing",
+    "url": "https://rive.app/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-rive-cli",
+  "name": "Rive CLI·skills",
+  "vendor": "Rive",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "에이전트가 텍스트로 .riv를 빌드하는 공식 CLI",
+  "description": "코딩 에이전트가 사람이 읽을 수 있는 Rive Markup Language(.rml)를 쓰면 Rive CLI가 .riv 파일로 빌드하고, 창 없이 프레임을 렌더하거나 가상 입력으로 동작을 검증합니다. Claude Code·Codex·Cursor처럼 셸을 쓰는 에이전트라면 구독 그대로 쓸 수 있고, 공식 rive-app/skills 플러그인이 Rive를 언제 어떻게 쓸지 안내합니다. 오프라인으로 동작하며 게시·에디터 연동·무료 한도 초과 때만 로그인이 필요합니다.",
+  "connect": [
+   "cli",
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(한도 있음), Cadet $9·Voyager $32/좌석·월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 0,
+  "updated": "2026-10",
+  "homepage": "https://rive.app/agents",
+  "repo": "rive-app/skills",
+  "install": "brew install --cask rive-app/tap/rive-cli",
+  "caveats": [
+   "무료 플랜 .riv 내보내기에는 Rive 스플래시 화면 포함",
+   "게시·내보내기·에디터 열기에는 로그인 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Rive for agents",
+    "url": "https://rive.app/agents"
+   },
+   {
+    "label": "GitHub rive-app/skills",
+    "url": "https://github.com/rive-app/skills"
+   },
+   {
+    "label": "Rive pricing",
+    "url": "https://rive.app/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-rive-mcp-community",
+  "name": "rive-mcp",
+  "vendor": "ODU33104 (커뮤니티)",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "에디터 없이 .riv를 생성·편집·렌더하는 MCP",
+  "description": "Rive 에디터·클라우드·구독 없이 .riv 파일을 JSON 스펙으로 생성하고 무손실 편집·검사·GIF/영상 렌더까지 하는 커뮤니티 MCP(도구 32개)입니다. 공식 Rive 런타임(WASM)을 헤드리스 크로미움에서 돌려 결과를 검증하고, 로컬 웹 Studio, SVG 가져오기, 캐릭터 자동 리깅도 제공합니다. Claude Code 플러그인으로 설치하면 구독만으로 Rive 애니메이션을 만들 수 있습니다.",
+  "connect": [
+   "local-mcp",
+   "plugin"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 22,
+  "updated": "2026-10",
+  "homepage": "https://github.com/ODU33104/rive-mcp",
+  "repo": "ODU33104/rive-mcp",
+  "install": "/plugin marketplace add ODU33104/rive-mcp",
+  "caveats": [
+   "라이선스 표기 불명확(NOASSERTION) — 상업 이용 전 확인"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub ODU33104/rive-mcp",
+    "url": "https://github.com/ODU33104/rive-mcp"
+   }
+  ]
+ },
+ {
+  "id": "dsu-lottiefiles-mcp",
+  "name": "LottieFiles MCP",
+  "vendor": "LottieFiles",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "Lottie 라이브러리·워크스페이스 관리 원격 MCP",
+  "description": "LottieFiles가 호스팅하는 공식 원격 MCP로, 10만 개가 넘는 무료 애니메이션 라이브러리와 내 워크스페이스를 GraphQL 도구로 검색하고 관리합니다. OAuth 2.1로 연결하며 계정이 이미 가진 권한만 쓰고, 모든 LottieFiles 플랜에서 무료입니다. 애니메이션을 직접 그리지는 않으므로 제작은 Lottie Creator MCP와 함께 쓰는 구성이 일반적입니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "MCP 무료(모든 플랜), Individual $19.99/월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://lottiefiles.com/mcp",
+  "repo": null,
+  "install": "https://lottiefiles.com/mcp",
+  "caveats": [
+   "애니메이션 생성 불가 — 검색·관리 전용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "LottieFiles MCP",
+    "url": "https://lottiefiles.com/mcp"
+   },
+   {
+    "label": "LottieFiles pricing",
+    "url": "https://lottiefiles.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-lottie-creator-mcp",
+  "name": "Lottie Creator MCP",
+  "vendor": "LottieFiles",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "Lottie Creator에서 직접 그리고 움직이는 MCP",
+  "description": "브라우저의 Lottie Creator 탭에 붙는 공식 로컬 MCP로, 도형·패스 드로잉, 키프레임·이징, 마스크·매트·블렌드 모드, 테마·사이즈 변형과 Lottie·dotLottie·SVG 가져오기/내보내기를 처리합니다. Claude Code에는 npx 한 줄로 설치해 에이전트 구독으로 돌리고, 설치가 필요 없는 Creator WebMCP도 있습니다. 내장 Motion Copilot은 LottieFiles 크레딧을 쓰지만 MCP 경로는 쓰던 AI 플랜으로 작업할 수 있습니다.",
+  "connect": [
+   "local-mcp",
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "Creator 무료 사용, Individual $19.99/월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 2,
+  "updated": "2026-09",
+  "homepage": "https://lottiefiles.com/mcp",
+  "repo": "LottieFiles/creator-agent-plugin",
+  "install": "claude mcp add lottiefiles-creator -- npx -y @lottiefiles/creator-mcp@latest",
+  "caveats": [
+   "Node.js 18+와 MCP를 켠 Lottie Creator 탭이 열려 있어야 함",
+   "MCP는 플랜 권한을 넘어서지 않음"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "LottieFiles MCP",
+    "url": "https://lottiefiles.com/mcp"
+   },
+   {
+    "label": "GitHub LottieFiles/creator-agent-plugin",
+    "url": "https://github.com/LottieFiles/creator-agent-plugin"
+   }
+  ]
+ },
+ {
+  "id": "dsu-motion-ai-kit",
+  "name": "Motion AI Kit",
+  "vendor": "Motion (motion.dev)",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "Motion 애니메이션 라이브러리의 스킬·MCP 키트",
+  "description": "React·JS 애니메이션 라이브러리 Motion의 공식 AI 키트로, npx motion-ai 한 번에 /motion 스킬과 최신 문서·예제를 검색하는 호스팅 MCP를 설치합니다. Claude Code·Cursor·Gemini CLI·Copilot·OpenCode·Amp를 지원해 구독 그대로 정확한 Motion 코드를 쓰게 해 줍니다. 유료 Motion+는 CSS 스프링 생성, MotionScore 감사, 트랜지션 에디터, 프리미엄 예제 소스를 더합니다.",
+  "connect": [
+   "remote-mcp",
+   "skills",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "copilot",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "키트·문서 MCP 무료, Motion+ 유료(가격 확인 필요)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 60,
+  "updated": "2026-10",
+  "homepage": "https://motion.dev/docs/ai-kit-install",
+  "repo": "motiondivision/ai-kit",
+  "install": "npx motion-ai",
+  "caveats": [
+   "공식 지원 목록에 Codex 미기재",
+   "Motion+ MCP는 npx motion-ai --plus 후 별도 로그인"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Motion AI Kit install",
+    "url": "https://motion.dev/docs/ai-kit-install"
+   },
+   {
+    "label": "GitHub motiondivision/motion",
+    "url": "https://github.com/motiondivision/motion"
+   }
+  ]
+ },
+ {
+  "id": "dsu-gsap-skills",
+  "name": "GSAP AI Skills",
+  "vendor": "GreenSock (Webflow)",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "GSAP 공식 에이전트 스킬 — 타임라인·스크롤",
+  "description": "GSAP 공식 Agent Skills로, 코어 API·타임라인·ScrollTrigger·플러그인, React/Vue/Svelte 연동과 성능 수칙을 에이전트에게 가르쳐 잘못된 API 사용을 줄입니다. npx skills나 Claude Code 플러그인 마켓플레이스로 설치하며 Codex·Cursor·Copilot·Antigravity 등 40개 이상 에이전트에서 구독만으로 동작합니다. Webflow 인수 뒤 SplitText·MorphSVG를 포함한 모든 플러그인이 상업용까지 무료라 스크롤 인터랙션 사이트에 부담이 없습니다.",
+  "connect": [
+   "skills",
+   "plugin",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 17040,
+  "updated": "2026-07",
+  "homepage": "https://gsap.com",
+  "repo": "greensock/gsap-skills",
+  "install": "npx skills add https://github.com/greensock/gsap-skills",
+  "caveats": [],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills"
+   }
+  ]
+ },
+ {
+  "id": "dsu-svgator-mcp",
+  "name": "SVGator MCP",
+  "vendor": "SVGator",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "SVG 애니메이션을 만들고 내보내는 원격 MCP",
+  "description": "온라인 SVG 애니메이션 툴 SVGator의 공식 원격 MCP(도구 22개)로, 프로젝트 탐색·구조 검사·부분 편집·신규 생성과 CSS 전용 SVG·MP4 등으로 내보내기를 처리합니다. SVGator 계정 OAuth로 연결하고, 결과마다 에디터 딥링크를 줘 손으로 이어서 다듬을 수 있습니다. 로고 리빌·로딩 스피너 같은 가벼운 웹 모션을 구독 에이전트로 만들 때 좋습니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료, Starter $20/월·Pro $24/월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 5,
+  "updated": "2026-10",
+  "homepage": "https://www.svgator.com",
+  "repo": "SVGator/mcp",
+  "install": "https://mcp.svgator.com/mcp",
+  "caveats": [
+   "벡터 형식 내보내기는 유료 플랜(Starter 이상)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub SVGator/mcp",
+    "url": "https://github.com/SVGator/mcp"
+   },
+   {
+    "label": "SVGator pricing",
+    "url": "https://www.svgator.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-jitter",
+  "name": "Jitter",
+  "vendor": "Jitter",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "브라우저 모션 디자인 툴(자체 AI, MCP 없음)",
+  "description": "팀용 웹 기반 모션 디자인 툴로, 프롬프트로 편집 가능한 애니메이션·효과·변형을 만드는 Jitter AI와 이미지→영상, 자동 리사이즈·번역 기능을 갖췄습니다. 영상·GIF·Lottie 일괄 내보내기를 지원하지만, 외부 에이전트용 MCP나 API는 공개돼 있지 않아 AI 구독과는 연결되지 않습니다. 소셜·제품 모션을 빠르게 뽑아야 하는 디자이너에게 고려할 만한 주요 툴입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "무료 체험, 요금 확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://jitter.video/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "외부 AI 에이전트 연동(MCP·API) 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "jitter.video",
+    "url": "https://jitter.video/"
+   }
+  ]
+ },
+ {
+  "id": "dsu-cavalry-assistant",
+  "name": "WRA Cavalry Assistant",
+  "vendor": "hralet1 (커뮤니티)",
+  "domain": "design",
+  "category": "모션·인터랙션",
+  "tagline": "Claude가 Cavalry 스크립트를 바로 실행하는 MCP",
+  "description": "2D 절차적 모션 툴 Cavalry용 커뮤니티 MCP로, Stallion 브리지를 통해 Claude가 Cavalry JavaScript를 직접 실행하고 활성 씬을 읽고 저장합니다. 4만 개가 넘는 문서·씬 청크를 Ollama 로컬 임베딩으로 검색해 정확한 스크립트를 쓰게 돕습니다. 공식 MCP가 없는 Cavalry를 Claude Code 구독으로 다루는 실험적 경로입니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "local"
+  ],
+  "aiCost": "plan",
+  "price": "무료(MCP), Cavalry 라이선스 별도",
+  "free": true,
+  "official": "community",
+  "status": "experimental",
+  "stars": 20,
+  "updated": "2026-03",
+  "homepage": "https://github.com/hralet1/cavalry-assistant",
+  "repo": "hralet1/cavalry-assistant",
+  "install": null,
+  "caveats": [
+   "Cavalry Stallion 활성화, Node.js 18+·Ollama 필요",
+   "라이선스 미표기"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub hralet1/cavalry-assistant",
+    "url": "https://github.com/hralet1/cavalry-assistant"
+   }
+  ]
+ },
+ {
+  "id": "dsu-spline-mcp",
+  "name": "Spline MCP Server",
+  "vendor": "Spline",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "3D 씬·Hana 2D를 에이전트가 편집하는 공식 MCP",
+  "description": "Spline 공식 MCP로, 호스팅 서버(OAuth)나 데스크톱 앱 내장 서버를 통해 에이전트가 라이브 3D 씬과 Hana 2D 디자인을 만들고 고치며 HTML/CSS로 내보냅니다. Claude Code·Codex(플러그인 포함)·Cursor·VS Code·Claude 커스텀 커넥터·ChatGPT 플러그인 디렉터리에서 연결하고, 데스크톱 앱은 주요 클라이언트 설정을 자동으로 잡아 줍니다. 웹용 인터랙티브 3D 히어로나 제품 쇼케이스를 구독 에이전트로 만들 때 가장 강력한 선택지입니다.",
+  "connect": [
+   "remote-mcp",
+   "local-mcp",
+   "plugin",
+   "connector",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 플랜, Hobby $12·Pro $25/좌석·월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.spline.design/generate/spline-mcp-server",
+  "repo": null,
+  "install": "claude mcp add --transport http --scope user spline https://mcp.spline.design/mcp",
+  "caveats": [
+   "도구 호출은 플랜별 일일 한도·분당 제한",
+   "데스크톱 연결은 한 번에 하나, 약 60초 타임아웃",
+   "버전 복원 도구는 유료 플랜"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Spline MCP docs",
+    "url": "https://docs.spline.design/generate/spline-mcp-server"
+   },
+   {
+    "label": "Spline pricing",
+    "url": "https://spline.design/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-fusion-connector",
+  "name": "Autodesk Fusion connector",
+  "vendor": "Autodesk",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "Claude Desktop에서 실행 중인 Fusion을 조작",
+  "description": "2026년 5월 Claude 커넥터 디렉터리에 추가된 Autodesk 공식 커넥터로, 로컬에서 실행 중인 Fusion 세션에 붙어 스케치·돌출·필렛·내보내기와 지오메트리 조회를 수행합니다. Fusion 환경설정 > 일반 > API에서 MCP 서버를 켜고(기본 포트 27182) Claude Desktop에 커넥터를 설치해 포트를 맞추면 구독으로 동작합니다. Fusion Team 프로젝트 데이터를 다루는 클라우드 Fusion Data MCP가 별도로 있습니다.",
+  "connect": [
+   "local-mcp",
+   "connector",
+   "app"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "Fusion 라이선스 필요(확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://claude.com/connectors/autodesk-fusion",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "로컬 서버라 claude.ai 웹 등 브라우저 클라이언트에서는 접근 불가",
+   "현재 열려 있는 파일에만 작업",
+   "Autodesk 이용약관 적용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude connectors: Autodesk Fusion",
+    "url": "https://claude.com/connectors/autodesk-fusion"
+   },
+   {
+    "label": "Adam: Fusion MCP 해설",
+    "url": "https://adam.new/fusion-mcp"
+   }
+  ]
+ },
+ {
+  "id": "dsu-sketchup-connector",
+  "name": "SketchUp Connector for Claude",
+  "vendor": "Trimble",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "대화로 SketchUp .skp 모델을 만드는 공식 커넥터",
+  "description": "Trimble의 첫 MCP 커넥터로, 설명·스케치·사진·평면도를 바탕으로 Claude가 매싱 모델·조경·가구 같은 3D 지오메트리를 만들어 네이티브 .skp 파일로 돌려줍니다. Claude 커넥터 디렉터리에서 Trimble SketchUp을 켜고 Trimble ID로 로그인하면 되고, 결과는 SketchUp 웹·데스크톱·iPad·iPhone에서 엽니다. 세션마다 버전 기록과 다운로드 링크가 생기지만 세션이 끝나면 모델이 남지 않으니 바로 내려받아야 합니다.",
+  "connect": [
+   "connector",
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "SketchUp 구독자 대상, 신규 사용자 30개 모델 무료 저장",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://sketchup.trimble.com/en/blog/article/sketchup-claude-connector",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "세션 간 모델 미보관 — 세션 중 다운로드 필요",
+   "30개 초과 저장은 유료 권한 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "SketchUp blog: Claude connector",
+    "url": "https://sketchup.trimble.com/en/blog/article/sketchup-claude-connector"
+   }
+  ]
+ },
+ {
+  "id": "dsu-sketchup-mcp",
+  "name": "SketchupMCP",
+  "vendor": "mhyrr (커뮤니티)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "SketchUp 데스크톱을 제어하는 커뮤니티 MCP",
+  "description": "SketchUp 확장(.rbz)이 TCP 서버를 열고 Python MCP 서버가 이를 중계해, Claude가 컴포넌트 생성·변형·재질 적용·씬 조회부터 Ruby 코드 실행까지 하게 합니다. 설정에 uvx sketchup-mcp를 넣으면 PyPI 최신판이 실행돼 Claude Desktop·Claude Code 구독으로 동작합니다. 공식 커넥터와 달리 내 컴퓨터의 SketchUp 파일을 직접 다룬다는 점이 장점입니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "local"
+  ],
+  "aiCost": "plan",
+  "price": "무료(SketchUp 라이선스 별도)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 509,
+  "updated": "2026-04",
+  "homepage": "https://github.com/mhyrr/sketchup-mcp",
+  "repo": "mhyrr/sketchup-mcp",
+  "install": "uvx sketchup-mcp",
+  "caveats": [
+   "임의 Ruby 코드 실행 가능 — 프롬프트·파일 신뢰도 주의",
+   "라이선스 미표기"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub mhyrr/sketchup-mcp",
+    "url": "https://github.com/mhyrr/sketchup-mcp"
+   }
+  ]
+ },
+ {
+  "id": "dsu-rhinomcp",
+  "name": "RhinoMCP",
+  "vendor": "jingcheng-chen (커뮤니티)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "Rhino 8·Grasshopper를 대화로 모델링",
+  "description": "Rhino 8(Windows·macOS)과 Grasshopper를 AI 에이전트에 연결하는 커뮤니티 MCP로, 지오메트리 생성·불리언·로프트·스윕, 레이어 관리, 뷰포트 캡처, Grasshopper 컴포넌트 배선·슬라이더 조정까지 합니다. Claude Code·Codex에 uvx 한 줄로 등록해 구독만으로 쓸 수 있습니다. 필요하면 RhinoScript-Python이나 RhinoCommon C#도 실행해 건축·제품 디자인 자동화에 강합니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(MIT), Rhino 8 라이선스 별도",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 1169,
+  "updated": "2026-10",
+  "homepage": "https://github.com/jingcheng-chen/rhinomcp",
+  "repo": "jingcheng-chen/rhinomcp",
+  "install": "claude mcp add rhino -- uvx rhinomcp@latest",
+  "caveats": [
+   "Rhino 8 전용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub jingcheng-chen/rhinomcp",
+    "url": "https://github.com/jingcheng-chen/rhinomcp"
+   }
+  ]
+ },
+ {
+  "id": "dsu-freecad-mcp",
+  "name": "freecad-mcp",
+  "vendor": "blwfish (커뮤니티)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "무료 CAD FreeCAD를 AI와 함께 쓰는 MCP",
+  "description": "오픈소스 파라메트릭 CAD FreeCAD를 AI 에이전트와 잇는 MCP로, PartDesign 모델링, 스케치 제약 진단, CNC 툴패스, 메시 작업, STEP·G-code 내보내기까지 30개가 넘는 도구를 제공합니다. macOS에서 Claude Code로 개발됐고, 에이전트에게 AGENT-INSTALL.md를 읽히면 설치와 등록을 대신 해 줍니다. 툴과 서버 모두 무료라 3D 프린팅용 부품 설계에 부담 없이 쓸 수 있습니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 61,
+  "updated": "2026-10",
+  "homepage": "https://github.com/blwfish/freecad-mcp",
+  "repo": "blwfish/freecad-mcp",
+  "install": null,
+  "caveats": [
+   "LGPL-2.1 라이선스"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub blwfish/freecad-mcp",
+    "url": "https://github.com/blwfish/freecad-mcp"
+   }
+  ]
+ },
+ {
+  "id": "dsu-onshape-mcp",
+  "name": "onshape-mcp",
+  "vendor": "gpambrozio (커뮤니티)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "클라우드 CAD Onshape를 87개 도구로 조작",
+  "description": "클라우드 CAD Onshape의 문서·스케치·솔리드 피처·어셈블리·내보내기를 다루는 커뮤니티 MCP로, 도구 87개와 브라우저 로그인 방식의 무설정 인증을 제공합니다. Claude Code에는 npx 한 줄로 등록해 구독으로 씁니다. 아직 사용자가 적은 초기 프로젝트라 중요한 문서는 복사본으로 먼저 시험하는 편이 좋습니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "무료(MIT), Onshape 계정 별도",
+  "free": true,
+  "official": "community",
+  "status": "experimental",
+  "stars": 3,
+  "updated": "2026-09",
+  "homepage": "https://github.com/gpambrozio/onshape-mcp",
+  "repo": "gpambrozio/onshape-mcp",
+  "install": "claude mcp add onshape -- npx -y @gpambrozio/onshape-mcp",
+  "caveats": [
+   "초기 단계 커뮤니티 프로젝트"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub gpambrozio/onshape-mcp",
+    "url": "https://github.com/gpambrozio/onshape-mcp"
+   },
+   {
+    "label": "MCP Registry: onshape",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=onshape"
+   }
+  ]
+ },
+ {
+  "id": "dsu-zoo-mcp",
+  "name": "Zoo MCP",
+  "vendor": "Zoo (KittyCAD)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "AI 네이티브 CAD Zoo의 공식 MCP 유틸리티",
+  "description": "AI 네이티브 CAD인 Zoo Design Studio를 만드는 Zoo의 공식 MCP로, Zoo가 만든 CAD 유틸리티를 에이전트에 제공합니다. uvx zoo-mcp로 실행하며 Zoo 계정에서 발급한 ZOO_API_TOKEN이 필요해 Zoo API 요금제를 따릅니다. Zoo Design Studio는 스케치·프롬프트·코드를 한 작업공간에 묶은 B-rep CAD로 Mac·Windows·Linux에서 돌아갑니다.",
+  "connect": [
+   "local-mcp",
+   "byok",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Zookeeper 무료 체험, API 요금 확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 10,
+  "updated": "2026-10",
+  "homepage": "https://zoo.dev",
+  "repo": "KittyCAD/mcp",
+  "install": "uvx zoo-mcp",
+  "caveats": [
+   "ZOO_API_TOKEN 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub KittyCAD/mcp",
+    "url": "https://github.com/KittyCAD/mcp"
+   },
+   {
+    "label": "zoo.dev",
+    "url": "https://zoo.dev"
+   }
+  ]
+ },
+ {
+  "id": "dsu-shapr3d-mcp",
+  "name": "Shapr3D MCP Server",
+  "vendor": "Alfredoalv13 (커뮤니티)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "build123d로 모델링해 Shapr3D로 넘기는 MCP",
+  "description": "Shapr3D에는 공개 API나 스크립팅이 없어서, 이 커뮤니티 MCP는 build123d(OpenCascade) 커널로 실제 솔리드를 만들고 STEP으로 내보내 Shapr3D에서 편집 가능한 바디로 엽니다. 간섭 검사·모델 검사와 macOS 앱 실행·스크린샷 도구도 들어 있습니다. Claude Code에 등록해 구독으로 정밀 부품을 설계하는 우회로입니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "무료(MIT), Shapr3D 별도",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 40,
+  "updated": "2026-06",
+  "homepage": "https://github.com/Alfredoalv13/shapr3d-mcp",
+  "repo": "Alfredoalv13/shapr3d-mcp",
+  "install": null,
+  "caveats": [
+   "Shapr3D 앱을 직접 조작하지 않고 STEP 파일로 주고받는 방식"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub Alfredoalv13/shapr3d-mcp",
+    "url": "https://github.com/Alfredoalv13/shapr3d-mcp"
+   },
+   {
+    "label": "shapr3d.com",
+    "url": "https://www.shapr3d.com"
+   }
+  ]
+ },
+ {
+  "id": "dsu-plasticity-mcp",
+  "name": "Plasticity MCP",
+  "vendor": "Mesteriis (커뮤니티)",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "Plasticity CAD를 제어하는 macOS용 MCP",
+  "description": "하드서피스 모델러 Plasticity를 MCP 클라이언트에서 조작하는 커뮤니티 서버로, B-rep 정밀 측정, 실행 취소가 되는 네이티브 생성·편집, 가져오기·내보내기, 카메라 스크린샷을 지원합니다. 앱을 패치하지 않고 루프백 Electron CDP 엔드포인트로 붙으며, Codex CLI 플러그인 설치 경로를 제공합니다. macOS Apple Silicon과 Plasticity 26.1.3에 맞춘 초기 프로젝트입니다.",
+  "connect": [
+   "local-mcp",
+   "plugin"
+  ],
+  "worksWith": [
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료(MIT), Plasticity Indie $175(영구)",
+  "free": true,
+  "official": "community",
+  "status": "experimental",
+  "stars": 4,
+  "updated": "2026-10",
+  "homepage": "https://github.com/Mesteriis/plasticity-mcp",
+  "repo": "Mesteriis/plasticity-mcp",
+  "install": null,
+  "caveats": [
+   "Plasticity 26.1.3·Node 24+ 버전 고정",
+   "Claude Code용은 비공식 포크(gumayunov/plasticity-claude-mcp)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub Mesteriis/plasticity-mcp",
+    "url": "https://github.com/Mesteriis/plasticity-mcp"
+   },
+   {
+    "label": "plasticity.xyz",
+    "url": "https://www.plasticity.xyz"
+   }
+  ]
+ },
+ {
+  "id": "dsu-vectary",
+  "name": "Vectary",
+  "vendor": "Vectary",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "브라우저 3D·AR 프레젠테이션 플랫폼(MCP 없음)",
+  "description": "설치 없이 브라우저에서 인터랙티브 3D·AR 프레젠테이션과 컨피규레이터를 만드는 플랫폼으로, AI 기반 아이디에이션 공간 Vectary Canvas(베타)를 더했습니다. API는 있지만 MCP나 커넥터가 없어 AI 구독에서 직접 조작할 수는 없습니다. 제품 3D 뷰어나 웹 AR 임베드가 필요할 때 고려할 만한 주요 툴입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.vectary.com",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·에이전트 연동 없음",
+   "Vectary Canvas는 베타"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "vectary.com",
+    "url": "https://www.vectary.com"
+   }
+  ]
+ },
+ {
+  "id": "dsu-womp",
+  "name": "Womp",
+  "vendor": "Womp",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "브라우저 3D 모델링·생성·프린팅 주문",
+  "description": "무료 브라우저 3D 모델링 툴로, 한 캔버스에서 디자인·가져오기·생성을 하고 3D 프린팅 제작까지 주문할 수 있습니다. MCP나 AI 커넥터가 없어 AI 구독과 직접 연결되지는 않습니다. 키캡·키링 같은 굿즈 시제품을 빠르게 만들어 실물로 받아볼 때 쓸 만합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "무료(기본), 프린트 주문 별도",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://womp.com",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·에이전트 연동 없음",
+   "생성 기능 과금 조건 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "womp.com",
+    "url": "https://womp.com"
+   }
+  ]
+ },
+ {
+  "id": "dsu-supernova-mcp",
+  "name": "Supernova MCP",
+  "vendor": "Supernova",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "디자인 시스템 문서·토큰을 읽고 쓰는 MCP",
+  "description": "디자인 시스템 플랫폼 Supernova의 원격 MCP로, 토큰·컴포넌트·에셋·문서를 구조화 데이터로 읽고 페이지 생성, 토큰 편집, 컴포넌트 재구성, 게시 같은 쓰기 작업까지 합니다. Claude·ChatGPT·Codex·Cursor·Copilot·Gemini를 지원하며 Supernova 스킬과 함께 제공됩니다. 저장소에 하드코딩된 값을 토큰과 맞추거나 문서 공백을 감사할 때 유용합니다.",
+  "connect": [
+   "remote-mcp",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Starter 무료(월 1,000 크레딧), Pro $399/월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-08",
+  "homepage": "https://www.supernova.io/mcp",
+  "repo": null,
+  "install": "https://mcp.supernova.io/mcp",
+  "caveats": [
+   "Agent·MCP 사용은 워크스페이스 크레딧 차감"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Supernova MCP",
+    "url": "https://www.supernova.io/mcp"
+   },
+   {
+    "label": "Supernova pricing",
+    "url": "https://www.supernova.io/pricing"
+   },
+   {
+    "label": "MCP Registry: supernova",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=supernova"
+   }
+  ]
+ },
+ {
+  "id": "dsu-zeroheight-mcp",
+  "name": "zeroheight MCP",
+  "vendor": "zeroheight",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "zeroheight 스타일가이드를 AI에 연결하는 MCP",
+  "description": "디자인 시스템 문서화 툴 zeroheight의 공식 MCP로, 스타일가이드를 AI 어시스턴트에 연결해 문서화된 컴포넌트 규칙과 가이드라인을 참조하게 합니다. 원격 엔드포인트(토큰 URL 방식 포함)와 npm 패키지 @zeroheight/mcp-server를 제공해 Claude·Cursor 같은 클라이언트에서 씁니다. 이미 zeroheight로 디자인 시스템을 문서화한 팀에 잘 맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "Free 플랜, Starter $49/편집자·월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-06",
+  "homepage": "https://help.zeroheight.com/hc/en-us/articles/48004395674011-zeroheight-MCP-overview",
+  "repo": null,
+  "install": "https://mcp.zeroheight.com/mcp",
+  "caveats": [
+   "플랜별 MCP 제공 범위 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "MCP Registry: zeroheight",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=zeroheight"
+   },
+   {
+    "label": "zeroheight pricing",
+    "url": "https://www.zeroheight.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "dsu-tokens-studio",
+  "name": "Tokens Studio",
+  "vendor": "Tokens Studio",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "Figma 디자인 토큰 관리 플러그인·플랫폼",
+  "description": "Figma에서 디자인 토큰을 관리하고 원격 저장소와 동기화하는 대표 오픈소스 플러그인이자 Studio 플랫폼입니다. 공식 MCP나 AI 기능은 없지만 토큰이 저장소의 JSON 파일로 동기화되므로, 에이전트가 토큰 JSON을 고치고 sd-transforms·Style Dictionary로 코드 변수를 만드는 흐름은 가능합니다. 무료로 시작할 수 있고 테마·멀티파일 동기화·브랜치 전환은 Pro 기능입니다.",
+  "connect": [
+   "library",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "none",
+  "price": "무료, Team €39/월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 1627,
+  "updated": "2026-10",
+  "homepage": "https://tokens.studio",
+  "repo": "tokens-studio/figma-plugin",
+  "install": null,
+  "caveats": [
+   "공식 MCP·AI 기능 없음",
+   "테마·멀티파일 동기화·브랜치 전환은 Pro"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Tokens Studio docs",
+    "url": "https://docs.tokens.studio/"
+   },
+   {
+    "label": "Tokens Studio pricing",
+    "url": "https://tokens.studio/pricing"
+   },
+   {
+    "label": "GitHub tokens-studio/figma-plugin",
+    "url": "https://github.com/tokens-studio/figma-plugin"
+   }
+  ]
+ },
+ {
+  "id": "dsu-style-dictionary",
+  "name": "Style Dictionary",
+  "vendor": "Style Dictionary",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "디자인 토큰을 플랫폼별 스타일 코드로 빌드",
+  "description": "디자인 토큰을 여러 플랫폼용 스타일 코드로 변환하는 오픈소스 빌드 시스템입니다. AI 기능은 없지만 에이전트가 설정·토큰 파일을 쓰고 빌드를 돌리기 쉬워, Tokens Studio나 Figma 변수를 코드로 옮기는 표준 경로로 쓰입니다. Apache-2.0 라이선스라 상업 프로젝트에도 부담이 없습니다.",
+  "connect": [
+   "library",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "cursor",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 4869,
+  "updated": "2026-10",
+  "homepage": "https://github.com/style-dictionary/style-dictionary",
+  "repo": "style-dictionary/style-dictionary",
+  "install": null,
+  "caveats": [],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub style-dictionary",
+    "url": "https://github.com/style-dictionary/style-dictionary"
+   },
+   {
+    "label": "Tokens Studio docs (SD 연동)",
+    "url": "https://docs.tokens.studio/"
+   }
+  ]
+ },
+ {
+  "id": "dsu-designlang",
+  "name": "designlang",
+  "vendor": "Manav Arya Singh (커뮤니티)",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "웹사이트에서 디자인 시스템·토큰을 뽑는 CLI",
+  "description": "헤드리스 브라우저로 라이브 사이트의 DOM을 읽어 DTCG 토큰, Tailwind 설정, shadcn 테마, Figma 변수, 모션 토큰 등 17개 이상의 파일을 한 번에 뽑아내는 오픈소스 CLI입니다. WCAG 대비 점수, 반응형·상태별 스타일 분석, Next.js 스타터 클론까지 지원하고 저장소 설명에 Claude Code용 MCP 서버가 포함돼 있습니다. 기본 추출은 결정적이며 무료이고 API 키가 필요 없습니다.",
+  "connect": [
+   "cli",
+   "local-mcp",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료(MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 4357,
+  "updated": "2026-10",
+  "homepage": "https://github.com/Manavarya09/design-extract",
+  "repo": "Manavarya09/design-extract",
+  "install": "npx designlang https://example.com",
+  "caveats": [
+   "타사 사이트 디자인 복제는 상표·저작권 주의",
+   "--smart 분류는 별도 OpenAI 호환 API 사용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub Manavarya09/design-extract",
+    "url": "https://github.com/Manavarya09/design-extract"
+   }
+  ]
+ },
+ {
+  "id": "dsu-icons8-mcp",
+  "name": "Icons8 MCP",
+  "vendor": "Icons8",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "Icons8 아이콘·Ouch 일러스트를 가져오는 MCP",
+  "description": "Icons8의 정품 아이콘과 Ouch 일러스트를 검색해 SVG·PNG·애니메이션으로 가져오는 공식 원격 MCP로, 공식 MCP 레지스트리에 등록돼 있습니다. Claude·ChatGPT처럼 원격 MCP를 지원하는 클라이언트에 URL을 추가해 씁니다. UI 목업이나 랜딩 페이지를 일관된 스타일의 아이콘·일러스트로 채울 때 편합니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-09",
+  "homepage": "https://icons8.com/mcp",
+  "repo": null,
+  "install": "https://mcp.icons8.com/mcp/",
+  "caveats": [
+   "무료 사용 시 라이선스·출처 표기 조건 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "MCP Registry: icons8",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=icons8"
+   }
+  ]
+ },
+ {
+  "id": "dsu-hugeicons-mcp",
+  "name": "Hugeicons MCP·skill",
+  "vendor": "Hugeicons",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "아이콘 이름을 실시간 카탈로그로 확인하는 MCP·스킬",
+  "description": "6만 개 이상(무료 6천 개 이상)의 아이콘을 제공하는 Hugeicons의 공식 MCP 서버(@hugeicons/mcp-server)와 에이전트 스킬로, 아이콘을 검색하고 플랫폼별 설치·import 코드 스니펫을 돌려줍니다. 스킬은 React·Vue·Svelte·Angular·React Native·Flutter 프로젝트를 감지해 올바른 컴포넌트와 이름을 쓰게 하며 Claude Code·Codex에서 구독으로 동작합니다. 에이전트가 존재하지 않는 아이콘 이름을 지어내는 문제를 줄여 줍니다.",
+  "connect": [
+   "local-mcp",
+   "skills",
+   "plugin",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 아이콘 6,000개+, Pro 유료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 1222,
+  "updated": "2026-10",
+  "homepage": "https://github.com/hugeicons/hugeicons",
+  "repo": "hugeicons/hugeicons",
+  "install": "npx skills add hugeicons/hugeicons",
+  "caveats": [
+   "Pro 아이콘은 유료 라이선스 필요",
+   "구 hugeicons/mcp-server 저장소는 모노레포로 이동(아카이브)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub hugeicons/hugeicons",
+    "url": "https://github.com/hugeicons/hugeicons"
+   },
+   {
+    "label": "Hugeicons MCP README",
+    "url": "https://github.com/hugeicons/hugeicons/tree/main/tools/mcp-server"
+   }
+  ]
+ },
+ {
+  "id": "dsu-svgicons-mcp",
+  "name": "svgicons.com MCP",
+  "vendor": "svgicons.com",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "32만 개 오픈소스 SVG 아이콘 검색 MCP",
+  "description": "32만 개가 넘는 오픈소스 SVG 아이콘 카탈로그를 검색하고 UI에 맞는 아이콘을 추천받는 원격 MCP입니다. 로그인 없이 메타데이터 검색·추천이 되고, 원본 SVG·아이콘 컬렉션 생성과 React·Vue·Svelte 컴포넌트·Iconify JSON 내보내기에는 Pro 토큰이 필요합니다. Iconify와 비슷하지만 프로젝트 브리프로 아이콘 키트를 묶어 준다는 점이 다릅니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(메타데이터), Pro 유료(가격 확인 필요)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 0,
+  "updated": "2026-10",
+  "homepage": "https://svgicons.com/developers/mcp",
+  "repo": "svgicons-com/mcp",
+  "install": "https://svgicons.com/mcp",
+  "caveats": [
+   "아이콘별 오픈소스 라이선스 개별 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub svgicons-com/mcp",
+    "url": "https://github.com/svgicons-com/mcp"
+   },
+   {
+    "label": "MCP Registry: svgicons",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=svg"
+   }
+  ]
+ },
+ {
+  "id": "dsu-storyset",
+  "name": "Storyset",
+  "vendor": "Storyset",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "무료 커스텀·애니메이션 일러스트(AI 연동 없음)",
+  "description": "색·배경·레이어를 바꾸고 온라인 에디터로 애니메이션까지 넣을 수 있는 무료 일러스트 라이브러리로, Figma 플러그인도 제공합니다. MCP나 AI 연동이 없어 에이전트가 직접 가져오기보다는 사람이 내려받아 쓰는 에셋 소스입니다. 랜딩 페이지·앱 빈 화면·발표 자료용 일러스트가 필요할 때 무난합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://storyset.com",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·에이전트 연동 없음",
+   "출처 표기 등 라이선스 조건 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "storyset.com",
+    "url": "https://storyset.com"
+   }
+  ]
+ },
+ {
+  "id": "dsu-blush",
+  "name": "Blush",
+  "vendor": "Blush",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "아티스트 컬렉션으로 만드는 커스텀 일러스트",
+  "description": "전 세계 아티스트의 일러스트 컬렉션을 골라 요소를 조합·수정하고 PNG·SVG로 내려받는 일러스트 도구입니다. 라이선스상 개인·상업 용도 모두 출처 표기 없이 쓸 수 있습니다. MCP나 AI 연동이 없어 사람이 직접 만들어 넣는 에셋 소스로 분류됩니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "무료 사용 가능, Pro 유료(가격 확인 필요)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://blush.design",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·에이전트 연동 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "blush.design",
+    "url": "https://blush.design"
+   }
+  ]
+ },
+ {
+  "id": "dsu-stark-mcp",
+  "name": "Stark MCP·AI plugins",
+  "vendor": "Stark",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "접근성 스캔 결과를 역할별 수정으로 잇는 MCP",
+  "description": "접근성 플랫폼 Stark의 원격 MCP와 페르소나 스킬 5종(frontend·backend·mobile·design·pm)으로, 웹·코드·Storybook·Figma·iOS/Android 스캔 결과를 역할에 맞는 수정 작업으로 바꾸고 새 스캔도 설정합니다. OAuth로 로그인한 Stark 워크스페이스 범위에서만 동작하며, 슬래시 명령이나 자동 트리거로 호출합니다. 디자인 단계의 대비·색·터치 영역·토큰 점검부터 출시 전 감사까지 한 흐름으로 이어 쓸 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "beta",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.getstark.co/support/getting-started/using-ai-plugin/",
+  "repo": null,
+  "install": "https://mcp.getstark.ai/mcp",
+  "caveats": [
+   "베타 기능",
+   "Stark 워크스페이스 계정 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Stark support: AI plugin",
+    "url": "https://www.getstark.co/support/getting-started/using-ai-plugin/"
+   }
+  ]
+ },
+ {
+  "id": "dsu-a11ychk",
+  "name": "A11y Check(알리첵)",
+  "vendor": "IsaacEryn (커뮤니티)",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "WCAG 2.2·KWCAG 2.2 한국어 접근성 점검 MCP",
+  "description": "모든 위반을 WCAG 2.2 성공기준과 국내 KWCAG 2.2 검사항목(33개)에 이중 매핑하고 규칙별 한국어 개선 가이드를 주는 오픈소스 접근성 점검 엔진입니다. Claude Code 플러그인이나 npx MCP로 붙이면 로컬에서 돌기 때문에 커밋 전 localhost 개발 서버까지 검사→수정→재검사 루프를 대화 안에서 돌릴 수 있습니다. 웹 서비스·크롬 확장·GitHub Action도 같은 엔진을 씁니다.",
+  "connect": [
+   "local-mcp",
+   "plugin",
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(오픈소스)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 3,
+  "updated": "2026-10",
+  "homepage": "https://www.a11ychk.com",
+  "repo": "IsaacEryn/a11ychk",
+  "install": "claude mcp add a11ychk -- npx -y @a11ychk/mcp",
+  "caveats": [
+   "AGPL-3.0 — 서비스에 포함해 배포하면 소스 공개 의무",
+   "scan 도구는 Playwright chromium 필요"
+  ],
+  "korea": "한국형 웹 접근성 지침 KWCAG 2.2 33개 항목 매핑과 한국어 개선 가이드 제공",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub IsaacEryn/a11ychk",
+    "url": "https://github.com/IsaacEryn/a11ychk"
+   },
+   {
+    "label": "A11y Check MCP 문서",
+    "url": "https://github.com/IsaacEryn/a11ychk/blob/main/docs/mcp.md"
+   }
+  ]
+ }
+]

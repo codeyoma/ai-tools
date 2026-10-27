@@ -1,0 +1,2108 @@
+[
+ {
+  "id": "vgen-gemini-omni-app",
+  "name": "Gemini Omni (Gemini 앱 영상 생성)",
+  "vendor": "Google",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Google AI 구독에 포함된 대화형 영상 생성·편집",
+  "description": "Gemini 앱에서 Gemini Omni 모델로 텍스트·이미지·영상을 섞어 영상을 만들고, 대화로 물체 교체·카메라 앵글 변경 같은 편집을 이어갈 수 있습니다. 개인 계정은 Google AI 플랜(Plus/Pro/Ultra)에 로그인만 하면 추가 결제 없이 쓸 수 있고, @사용자명으로 내 아바타를 영상에 넣을 수 있습니다. 같은 플랜에 Google Flow 크레딧(Plus 200, Pro 1,000, Ultra 10,000~25,000)이 함께 제공됩니다.",
+  "connect": [
+   "signin"
+  ],
+  "worksWith": [
+   "gemini"
+  ],
+  "aiCost": "plan",
+  "price": "Google AI Plus ₩7,500/월~",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://support.google.com/gemini/answer/16126339?hl=en",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "플랜별 정확한 생성 개수는 비공개(5시간·주간 상대 한도)",
+   "영상 업로드 편집은 EEA·영국·스위스 등에서 불가",
+   "만 18세 미만 사용 불가"
+  ],
+  "korea": "한국 가격: Google AI Plus ₩7,500/월, Ultra ₩119,000~300,000/월. 한국어 프롬프트 품질은 공식 문서에서 확인되지 않음.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "Gemini Apps Help: 영상 생성",
+    "url": "https://support.google.com/gemini/answer/16126339?hl=en"
+   },
+   {
+    "label": "Gemini Apps 한도",
+    "url": "https://support.google.com/gemini/answer/16275805?hl=en"
+   },
+   {
+    "label": "Google AI 요금제(한국)",
+    "url": "https://gemini.google/subscriptions/?hl=ko"
+   }
+  ]
+ },
+ {
+  "id": "vgen-gemini-omni-api",
+  "name": "Gemini Omni Flash API (gemini-omni-1.1-flash)",
+  "vendor": "Google",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Gemini API로 쓰는 영상 생성·대화형 편집 모델",
+  "description": "Gemini API의 Interactions API로 gemini-omni-1.1-flash를 호출해 3~10초(360p~4K, 24fps) 영상을 만들고 대화로 수정·연장·업스케일합니다. Claude Code나 Codex가 API 키로 스크립트를 작성해 돌리는 방식이며, 요금은 Google AI 구독과 별개인 토큰 종량제입니다. Gemini API의 Veo 3.1 preview 모델은 2026-10-22 종료되어 이 모델로 이전하도록 안내됩니다.",
+  "connect": [
+   "byok",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "720p 약 $0.10/초 (유료 티어)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-08",
+  "homepage": "https://ai.google.dev/gemini-api/docs/omni",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "무료 티어 미제공(유료 티어 전용)",
+   "veo-3.1-generate-preview 등은 2026-10-22 종료",
+   "Veo 출력은 SynthID 워터마크(Omni는 문서 미기재)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Gemini Omni Flash 모델",
+    "url": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash.md.txt"
+   },
+   {
+    "label": "Gemini API 가격",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing.md.txt"
+   },
+   {
+    "label": "Veo 3.1 종료 안내",
+    "url": "https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview.md.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-sora",
+  "name": "Sora (OpenAI)",
+  "vendor": "OpenAI",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "종료됨: ChatGPT의 Sora 영상 앱·API",
+  "description": "OpenAI의 영상 생성 서비스였던 Sora 앱과 Sora 2 API는 2026년에 모두 종료되었습니다. 2026-03-24 종료가 발표되었고, 개발자 문서에는 Sora 2 모델과 Videos API가 2026-09-24에 종료되었다고 적혀 있습니다. 현재 ChatGPT 구독에는 자체 영상 생성이 없으므로 Runway·Pika·Synthesia 같은 ChatGPT 앱(플러그인)을 연결해 써야 합니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [],
+  "aiCost": "plan",
+  "price": "서비스 종료",
+  "free": false,
+  "official": "official",
+  "status": "shutdown",
+  "stars": null,
+  "updated": "2026-09",
+  "homepage": "https://developers.openai.com/api/docs/guides/video-generation",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "Sora 앱은 2026년 4월 서비스 종료(OpenAI 페이지 검색 스니펫 기준)",
+   "sora-2·sora-2-pro API는 2026-09-24 제거"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "OpenAI API 지원 종료 공지",
+    "url": "https://developers.openai.com/api/docs/deprecations.md"
+   },
+   {
+    "label": "OpenAI 영상 생성 가이드",
+    "url": "https://developers.openai.com/api/docs/guides/video-generation.md"
+   },
+   {
+    "label": "Engadget: Sora 종료",
+    "url": "https://engadget.com/ai/openai-is-shutting-down-its-sora-video-generation-app-211023358.html"
+   }
+  ]
+ },
+ {
+  "id": "vgen-m365-copilot-clips",
+  "name": "Microsoft 365 Copilot 짧은 영상 클립 (Frontier)",
+  "vendor": "Microsoft",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "M365 Copilot 앱의 4~12초 AI 영상 클립(미리보기)",
+  "description": "Microsoft 365 Copilot 앱에서 프롬프트로 4·8·12초 길이의 짧은 AI 영상 클립을 만드는 기능입니다. Copilot 애드온 라이선스가 있는 일부 M365 플랜의 Frontier 조기 체험 프로그램에서만 쓸 수 있습니다. 기존 Sora 기반 Copilot 영상 기능은 2026년 6월 종료되었고, Microsoft는 후속 영상 기능을 개발 중이라고 밝혔습니다.",
+  "connect": [
+   "signin"
+  ],
+  "worksWith": [
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "M365 Copilot 라이선스 필요",
+  "free": false,
+  "official": "official",
+  "status": "preview",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://support.microsoft.com/en-us/microsoft-365-copilot/create-ai-generated-short-clips-in-the-microsoft-365-copilot-app",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "Frontier 조기 체험 프로그램 전용",
+   "초기에는 미국·영어 사용자만",
+   "관리자가 설정하면 'AI-generated' 라벨 표시"
+  ],
+  "korea": "초기 제공 대상이 미국·영어라 한국어·한국 계정은 대상 아님.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Microsoft Support: 짧은 클립",
+    "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/create-ai-generated-short-clips-in-the-microsoft-365-copilot-app"
+   },
+   {
+    "label": "MC1384407 Sora 영상 종료",
+    "url": "https://www.itelio.com/en/microsoft-message-center/mc1384407"
+   }
+  ]
+ },
+ {
+  "id": "vgen-runway-mcp",
+  "name": "Runway MCP",
+  "vendor": "Runway",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Claude·ChatGPT에서 Runway로 영상·이미지 생성",
+  "description": "원격 MCP 서버(mcp.runwayml.com)를 Claude 커스텀 커넥터나 Cursor에 추가하고 Runway 계정으로 로그인하면, 채팅에서 바로 영상과 이미지를 생성합니다. ChatGPT에서는 앱 디렉터리의 Runway 플러그인으로 연결합니다. Runway 앱 플랜 크레딧으로 Gen-4.5, Aleph 2.0, Seedance 2.x, Kling 3.0 같은 모델을 쓰며, 요금표상 MCP는 Pro 이상 플랜 기능입니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Pro $28/월(연간)~, 무료 125 크레딧",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://runway.com/mcp",
+  "repo": null,
+  "install": "https://mcp.runwayml.com/mcp",
+  "caveats": [
+   "요금표상 Runway MCP는 Pro·Max 플랜에 포함",
+   "생성 시 Runway 플랜 크레딧 차감",
+   "Standard $12/월은 MCP 미표기"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Runway MCP 서버",
+    "url": "https://mcp.runwayml.com"
+   },
+   {
+    "label": "Runway MCP 안내",
+    "url": "https://runway.com/mcp"
+   },
+   {
+    "label": "Runway 요금",
+    "url": "https://runwayml.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "vgen-runway-dev",
+  "name": "Runway Dev (API · Dev MCP)",
+  "vendor": "Runway",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Runway·Kling·Veo·Seedance를 한 API로 호출",
+  "description": "Runway Dev API는 Gen-4.5, Aleph 2, Veo 3.1, Kling 3.0·O3, Seedance 2/2.5, Wan3, Hailuo 3, Grok Imagine, ElevenLabs 더빙까지 한 API로 제공하는 개발자 플랫폼입니다. 별도의 Runway Dev MCP(OAuth)로 Claude Code·Codex·Cursor가 작업 조회, 모델 라우터 관리, 문서 검색을 할 수 있고, 공식 에이전트 스킬도 있습니다. 비용은 앱 구독과 별개로 크레딧당 $0.01인 API 크레딧입니다.",
+  "connect": [
+   "byok",
+   "remote-mcp",
+   "skills",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "크레딧당 $0.01 (신규 600 크레딧)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 74,
+  "updated": "2026-10",
+  "homepage": "https://docs.dev.runwayml.com",
+  "repo": "runwayml/skills",
+  "install": "claude mcp add --transport http --scope user runway-dev-mcp https://dev.runwayml.com/mcp",
+  "caveats": [
+   "Dev MCP는 작업·라우터·문서용이고 생성 MCP(mcp.runwayml.com)와 별개",
+   "기존 runwayml/runway-api-mcp-server 저장소는 보관(archived)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Runway Dev 문서",
+    "url": "https://docs.dev.runwayml.com/llms-full.txt"
+   },
+   {
+    "label": "Runway Dev 가격",
+    "url": "https://docs.dev.runwayml.com/guides/pricing.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-kling",
+  "name": "Kling AI",
+  "vendor": "Kuaishou",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "쿠아이쇼우의 Kling 3.0·4.0 영상 생성 앱·API",
+  "description": "Kling은 텍스트·이미지→영상, 모션 컨트롤, 캐릭터 일관성(Elements)을 제공하는 영상 생성 서비스로, 웹 앱 구독 크레딧과 별도의 REST API(AccessKey+SecretKey)가 있습니다. 2026-10 Kling 4.0과 함께 공식 MCP·CLI 접근이 발표되었지만 공개 기술 문서는 아직 확인되지 않았습니다. Runway·Luma·Hedra 등 다른 MCP에서도 Kling 모델을 고를 수 있습니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Standard $6.99 첫 달~, API $0.084/초~",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://kling.ai",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "무료 Basic은 개인·비상업 용도",
+   "Kling 4.0 공식 MCP·CLI는 공개 문서 미확인",
+   "월 크레딧 이월 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Kling llms.txt(요금·API)",
+    "url": "https://kling.ai/llms.txt"
+   },
+   {
+    "label": "Kling 4.0·MCP·CLI 보도(remio)",
+    "url": "https://www.remio.ai/fr/post/kling-4-0-release-goes-wide-but-mcp-and-cli-access-shift-the-real-contest-fr"
+   }
+  ]
+ },
+ {
+  "id": "vgen-luma",
+  "name": "Luma (Ray3.2 · Luma Agents)",
+  "vendor": "Luma AI",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Ray3.2 영상 모델과 에이전트형 크리에이티브 앱",
+  "description": "Luma 앱에서 Ray3.2(텍스트·이미지·영상→영상, HDR·EXR 출력)와 Seedance 2.x, Kling 4.0, Veo 3.1 등 외부 모델을 크레딧으로 씁니다. Luma Agents가 여러 단계의 영상·이미지 작업을 계획하고 실행합니다. 에이전트에서는 크레딧제 Luma API를 Python·JS SDK로 호출하는 방식이 기본이며, 공식 원격 MCP는 확인되지 않았습니다.",
+  "connect": [
+   "app",
+   "byok",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Plus $30/월~",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 26,
+  "updated": "2025-04",
+  "homepage": "https://lumalabs.ai",
+  "repo": "lumalabs/luma-api-mcp",
+  "install": null,
+  "caveats": [
+   "공식 MCP 저장소(luma-api-mcp)는 2025-04 이후 갱신 없음",
+   "API는 구독과 별도인 크레딧제",
+   "API 문서에는 지원 종료된 Ray2 예시가 남아 있음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Luma 요금",
+    "url": "https://lumalabs.ai/pricing"
+   },
+   {
+    "label": "Luma LLM 정보",
+    "url": "https://lumalabs.ai/llm-info"
+   },
+   {
+    "label": "Luma API 문서",
+    "url": "https://docs.lumalabs.ai/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-pika",
+  "name": "Pika",
+  "vendor": "Pika",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Seedance·Wan·Omni를 묶은 영상 앱과 MCP",
+  "description": "Pika는 Pika 2.5와 Seedance 2.5, MiniMax H3, Wan 3.0, Gemini Omni 1.1 Flash 같은 외부 모델을 하나의 앱과 크레딧으로 제공합니다. 원격 MCP(mcp.pika.art)를 Claude, Claude Code, Codex에 연결하거나 ChatGPT 공식 플러그인을 설치하면 채팅에서 영상을 생성·연장·업스케일할 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Starter $10/월~",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://pika.art",
+  "repo": null,
+  "install": "https://mcp.pika.art/mcp",
+  "caveats": [
+   "무료 플랜은 월 크레딧 0(팩 구매)·상업 라이선스 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Pika MCP",
+    "url": "https://pika.art/mcp"
+   },
+   {
+    "label": "Pika 요금",
+    "url": "https://pika.art/pricing"
+   },
+   {
+    "label": "Pika llms.txt",
+    "url": "https://pika.art/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-minimax",
+  "name": "MiniMax CLI (mmx) · MiniMax MCP",
+  "vendor": "MiniMax",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Hailuo·MiniMax H3 영상을 CLI·MCP로 생성",
+  "description": "MiniMax(Hailuo) 영상 모델(MiniMax H3, Hailuo 2.3 등)과 음성·이미지를 터미널에서 다루는 공식 CLI(mmx)와 에이전트 스킬을 제공합니다. 공식 MCP 서버(Python/JS, 셀프 호스팅)도 있지만 MiniMax는 CLI 사용을 권장합니다. M Plan 구독 또는 API 키로 과금되며 AI 구독과는 별개입니다.",
+  "connect": [
+   "cli",
+   "skills",
+   "local-mcp",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "확인 필요 (M Plan 또는 API 종량제)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 2206,
+  "updated": "2026-10",
+  "homepage": "https://platform.minimax.io/docs/token-plan/minimax-cli",
+  "repo": "MiniMax-AI/cli",
+  "install": "npm install -g mmx-cli",
+  "caveats": [
+   "MCP 문서의 영상 모델 목록은 구버전(Hailuo-02 등) 기준",
+   "공식 MCP는 stdio/SSE 셀프 호스팅"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "MiniMax CLI",
+    "url": "https://platform.minimax.io/docs/token-plan/minimax-cli.md"
+   },
+   {
+    "label": "MiniMax MCP 가이드",
+    "url": "https://platform.minimax.io/docs/guides/mcp-guide.md"
+   },
+   {
+    "label": "MiniMax 모델 목록",
+    "url": "https://platform.minimax.io/docs/guides/models-intro.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-seedance",
+  "name": "Seedance 2.x (ByteDance)",
+  "vendor": "ByteDance",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "참조 기반 멀티샷 영상 모델(여러 플랫폼 경유)",
+  "description": "ByteDance의 Seedance 2.0·2.5는 참조 이미지·영상·오디오로 장면 일관성을 유지하는 영상 모델로, Dreamina·CapCut과 Runway, Luma, Pika, HeyGen, Hedra 같은 플랫폼에서 제공됩니다. 직접 쓸 수 있는 공식 글로벌 셀프서비스 API는 불명확하므로, 에이전트에서는 Runway·Pika·Higgsfield MCP나 Runway Dev API로 호출하는 편이 현실적입니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요 (예: Runway API seedance2 36크레딧/초)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": null,
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 글로벌 API 공개 상태 불명확",
+   "Dreamina·CapCut 제공 지역은 단계적 확대"
+  ],
+  "korea": "한국에서 Dreamina·CapCut으로 Seedance 2.x를 쓸 수 있는지는 확인 필요.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Runway Dev 가격(Seedance)",
+    "url": "https://docs.dev.runwayml.com/guides/pricing.md"
+   },
+   {
+    "label": "Seedance 제공 현황 가이드",
+    "url": "https://aividpipeline.com/blog/seedance-availability-guide-2026"
+   },
+   {
+    "label": "Luma 요금(Seedance 포함)",
+    "url": "https://lumalabs.ai/pricing"
+   }
+  ]
+ },
+ {
+  "id": "vgen-higgsfield",
+  "name": "Higgsfield MCP",
+  "vendor": "Higgsfield",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "30+ 영상·이미지 모델을 Claude에서 쓰는 MCP",
+  "description": "Higgsfield는 여러 영상·이미지 모델과 원클릭 크리에이티브 앱을 묶은 플랫폼이며, 원격 MCP(mcp.higgsfield.ai)를 Claude 등에 추가하면 API 키 없이 계정 로그인만으로 생성할 수 있습니다. 벤더 블로그에 따르면 생성은 기존 Higgsfield 크레딧에서 차감되고, Claude Code·Codex에는 CLI를 권장합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://higgsfield.ai/mcp",
+  "repo": null,
+  "install": "https://mcp.higgsfield.ai/mcp",
+  "caveats": [
+   "제공 모델·영상 길이는 벤더 자료마다 다름",
+   "MCP 페이지에 요금·CLI 명령 미기재"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Higgsfield MCP",
+    "url": "https://higgsfield.ai/mcp"
+   },
+   {
+    "label": "Higgsfield 블로그: Claude MCP",
+    "url": "https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP"
+   }
+  ]
+ },
+ {
+  "id": "vgen-firefly-video",
+  "name": "Adobe Firefly (영상 생성)",
+  "vendor": "Adobe",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Firefly 영상 모델과 Veo·Kling 등 파트너 모델",
+  "description": "Adobe Firefly 앱에서 자체 Firefly Video 모델과 Veo 3.1, Ray3, Kling 3.0, Gen-4.5 같은 파트너 모델로 영상을 만듭니다. 영상·파트너 모델 사용은 플랜의 생성 크레딧을 차감합니다. 이 항목은 AI 에이전트 연동 없이 앱에서 쓰는 분야 주요 도구로 실었으며, Adobe의 Claude·ChatGPT 커넥터는 카탈로그의 별도 항목을 참고하세요.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "Standard $9.99/월~ (2026 초 기준)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.adobe.com/uk/products/firefly/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "영상·파트너 모델은 생성 크레딧 차감, 이월 없음",
+   "가격은 제3자 요약 기준, 공식 페이지 접속(403) 실패"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "9to5Mac: Firefly 무제한 프로모션·파트너 모델",
+    "url": "https://9to5mac.com/2026/02/02/adobe-firefly-offers-unlimited-image-and-video-generations-third-party-models-included/"
+   },
+   {
+    "label": "Adobe Firefly 플랜 FAQ",
+    "url": "https://www.adobe.com/cc-shared/fragments/products/firefly/plans/faq"
+   }
+  ]
+ },
+ {
+  "id": "vgen-krea",
+  "name": "Krea (영상 · MCP)",
+  "vendor": "Krea",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Veo·Kling·Seedance 영상을 Krea MCP로 생성",
+  "description": "Krea는 자체 이미지 모델과 Veo 3.1, Kling, Hailuo, Seedance 등 영상 모델을 한곳에서 쓰는 크리에이티브 앱이며, Krea Agent가 계획부터 생성까지 대신합니다. 원격 MCP(api.krea.ai/mcp)에 OAuth로 연결하면 Claude·Cursor 등에서 모델 조회와 영상 생성을 할 수 있습니다. 과금은 선택한 워크스페이스의 컴퓨트 유닛 차감입니다.",
+  "connect": [
+   "remote-mcp",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Basic $9/월~ (프로모션가 별도)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.krea.ai",
+  "repo": null,
+  "install": "https://api.krea.ai/mcp",
+  "caveats": [
+   "OAuth는 워크스페이스 컴퓨트 유닛, API 토큰은 별도 API 잔액에서 차감",
+   "Seedance 2.5는 Pro 이상"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Krea MCP 문서",
+    "url": "https://www.krea.ai/docs/developers/mcp.md"
+   },
+   {
+    "label": "Krea 요금",
+    "url": "https://www.krea.ai/pricing"
+   },
+   {
+    "label": "Krea Agent 플랜",
+    "url": "https://www.krea.ai/docs/user-guide/agent/plans-and-credits.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-magnific-mcp",
+  "name": "Magnific MCP (Freepik)",
+  "vendor": "Magnific (Freepik)",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "이미지·영상·오디오·3D 생성과 Freepik 스톡 검색",
+  "description": "Magnific(Freepik) 원격 MCP를 Claude·ChatGPT·Cursor에 추가하면 OAuth 로그인만으로 이미지·영상·오디오·3D 생성, 캐릭터·브랜드 일관성 유지, Freepik 스톡 검색, Spaces 워크플로 실행을 할 수 있습니다. 앱과 같은 크레딧 잔액을 쓰므로 API 키 관리가 필요 없습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Premium $20/월 (연간 결제 시 $7.25/월), Premium+ $45, Pro Starter $90",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.freepik.com/modelcontextprotocol",
+  "repo": null,
+  "install": "https://mcp.magnific.com",
+  "caveats": [
+   "MCP 사용량은 앱 크레딧 잔액과 공유"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Magnific MCP 문서",
+    "url": "https://docs.freepik.com/modelcontextprotocol.md"
+   },
+   {
+    "label": "Magnific API 문서 색인",
+    "url": "https://docs.freepik.com/llms.txt"
+   },
+   {
+    "label": "Magnific 요금제",
+    "url": "https://www.magnific.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "vgen-ltx-studio",
+  "name": "LTX Studio · LTX API",
+  "vendor": "Lightricks",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "LTX-2.5 기반 스토리보드 영상 앱과 초당 과금 API",
+  "description": "LTX Studio는 LTX-2.5/2.3 모델로 스토리보드, 오디오→영상, HDR 변환 등을 하는 웹 앱이고, LTX API는 생성 영상 길이(초)에 따라 과금되는 개발자 API입니다. 에이전트에서는 API 키로 LTX API를 호출하는 방식이며, 문서용 MCP(docs.ltx.io/_mcp/server)는 문서 검색 전용입니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Lite $12/월(연간)~, API $0.09/초~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://ltx.studio",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "무료 플랜은 개인용 라이선스(상업 이용 불가)",
+   "docs MCP는 생성이 아닌 문서 검색용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "LTX Studio 요금",
+    "url": "https://ltx.studio/pricing"
+   },
+   {
+    "label": "LTX API 가격",
+    "url": "https://docs.ltx.io/pricing.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-ltx-2",
+  "name": "LTX-2 (오픈 웨이트)",
+  "vendor": "Lightricks",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "오디오 동기화 영상 생성 오픈 웨이트 모델",
+  "description": "LTX-2/2.5는 텍스트·이미지·오디오→영상과 동기화 오디오를 지원하는 오픈 웨이트 모델로, ComfyUI 템플릿이나 Python 파이프라인으로 로컬에서 돌리고 LoRA 학습도 할 수 있습니다. 에이전트가 로컬 스크립트를 작성·실행하는 방식이라 생성 크레딧은 들지 않지만 GPU 자원이 필요합니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (연매출 $10M 미만)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 9861,
+  "updated": "2026-10",
+  "homepage": "https://docs.ltx.io/open-source-model/getting-started/overview",
+  "repo": "Lightricks/LTX-2",
+  "install": null,
+  "caveats": [
+   "연매출 $10M 이상 기업은 상업용 라이선스 필요",
+   "로컬 실행 GPU·VRAM 요구사항은 문서 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "LTX-2.x 라이선스",
+    "url": "https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x"
+   },
+   {
+    "label": "LTX 오픈소스 문서",
+    "url": "https://docs.ltx.video/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-wan",
+  "name": "Wan 2.2 (오픈 모델)",
+  "vendor": "Alibaba (Wan-Video)",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Apache-2.0 오픈 영상 생성 모델",
+  "description": "Wan2.2는 Alibaba Wan 팀의 오픈 영상 생성 모델로 Apache-2.0 라이선스로 공개되어 상업적 로컬 사용이 비교적 자유롭습니다. 에이전트가 로컬 추론 스크립트나 ComfyUI 워크플로를 다루는 방식이며, 최신 Wan 3.0은 Runway Dev·Pika 같은 플랫폼에서 API로 쓸 수 있습니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 18147,
+  "updated": "2026-09",
+  "homepage": "https://github.com/Wan-Video/Wan2.2",
+  "repo": "Wan-Video/Wan2.2",
+  "install": null,
+  "caveats": [
+   "Wan 3.0의 오픈 웨이트 공개 여부는 미확인(API로만 확인)",
+   "로컬 실행에는 고성능 GPU 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Wan2.2 GitHub",
+    "url": "https://github.com/Wan-Video/Wan2.2"
+   },
+   {
+    "label": "Runway Dev 가격(wan3)",
+    "url": "https://docs.dev.runwayml.com/guides/pricing.md"
+   },
+   {
+    "label": "Pika llms.txt(Wan 3.0)",
+    "url": "https://pika.art/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-hunyuanvideo",
+  "name": "HunyuanVideo-1.5",
+  "vendor": "Tencent",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "경량 오픈 영상 모델(한국은 라이선스 제외)",
+  "description": "Tencent의 HunyuanVideo-1.5는 경량 영상 생성 모델로 가중치와 ComfyUI 지원이 공개되어 있습니다. 다만 Tencent Hunyuan 라이선스의 적용 지역(Territory)이 EU·영국·한국을 제외하므로, 한국 사용자가 쓰면 라이선스 위반이 될 수 있습니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (지역 제한 라이선스)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 4578,
+  "updated": "2026-04",
+  "homepage": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5",
+  "repo": "Tencent-Hunyuan/HunyuanVideo-1.5",
+  "install": null,
+  "caveats": [
+   "라이선스 적용 지역에서 EU·영국·한국 제외",
+   "월 1억 MAU 초과 서비스는 별도 라이선스 필요"
+  ],
+  "korea": "한국은 라이선스 Territory에서 제외되어 사용 불가. Wan2.2(Apache-2.0)나 LTX-2 같은 대안을 권장.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "HunyuanVideo-1.5 LICENSE",
+    "url": "https://raw.githubusercontent.com/Tencent-Hunyuan/HunyuanVideo-1.5/main/LICENSE"
+   },
+   {
+    "label": "HunyuanVideo-1.5 GitHub",
+    "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5"
+   }
+  ]
+ },
+ {
+  "id": "vgen-replicate-mcp",
+  "name": "Replicate MCP (공식)",
+  "vendor": "Replicate",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "Replicate의 영상 모델을 검색·실행하는 공식 MCP",
+  "description": "Replicate의 공식 MCP 서버는 HTTP API 전체(모델 검색·비교, 예측 실행·조회)를 도구로 제공해 Claude·Cursor 등에서 영상 생성 모델을 찾아 실행하게 해 줍니다. 원격 서버(mcp.replicate.com)나 로컬 npx 패키지로 쓰며, 비용은 Replicate 선불 크레딧 종량제입니다. 카탈로그의 커뮤니티 mcp-server-replicate와는 다른 공식 제품입니다.",
+  "connect": [
+   "remote-mcp",
+   "local-mcp",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "모델별 종량제 (선불 크레딧)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://replicate.com/docs/reference/mcp",
+  "repo": null,
+  "install": "npx -y replicate-mcp",
+  "caveats": [
+   "원격 서버도 인증 과정에서 Replicate API 토큰 입력 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Replicate MCP 문서",
+    "url": "https://replicate.com/docs/reference/mcp"
+   },
+   {
+    "label": "Replicate 문서 색인",
+    "url": "https://replicate.com/docs/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-wavespeed-mcp",
+  "name": "WaveSpeed MCP",
+  "vendor": "WaveSpeedAI",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "실시간 카탈로그의 영상·이미지 모델을 견적 후 실행",
+  "description": "WaveSpeedAI의 공식 MCP는 실시간 모델 카탈로그 검색, 모델별 스키마 확인, 지출 전 가격 견적, 생성 실행을 지원하며 영상·이미지·오디오·3D를 다룹니다. 원격 서버나 npm 패키지로 Claude Code·Cursor에 연결하고, 구독 없이 충전식 종량제로 과금됩니다. CLI, 에이전트 스킬, Claude Code 플러그인도 제공합니다.",
+  "connect": [
+   "remote-mcp",
+   "local-mcp",
+   "cli",
+   "skills",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "종량제 (구독 없음)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 34,
+  "updated": "2026-10",
+  "homepage": "https://wavespeed.ai/docs/mcp",
+  "repo": "WaveSpeedAI/mcp-server",
+  "install": "https://api.wavespeed.ai/mcp",
+  "caveats": [
+   "충전 잔액 기반 종량제"
+  ],
+  "korea": "크레딧 충전 시 KRW Pay 결제 지원.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "MCP Registry: ai.wavespeed/mcp",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=wavespeed"
+   },
+   {
+    "label": "WaveSpeed llms.txt",
+    "url": "https://wavespeed.ai/llms.txt"
+   },
+   {
+    "label": "GitHub",
+    "url": "https://github.com/WaveSpeedAI/mcp-server"
+   }
+  ]
+ },
+ {
+  "id": "vgen-remotion",
+  "name": "Remotion + Agent Skills",
+  "vendor": "Remotion",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "React 코드로 영상을 만드는 프레임워크와 공식 스킬",
+  "description": "Remotion은 React로 영상을 코드처럼 작성하고 렌더링하는 프레임워크이며, 공식 Agent Skills를 설치하면 Claude Code·Codex·Cursor가 모범 사례에 맞춰 컴포지션을 만듭니다. 생성 AI 크레딧 없이 모션 그래픽, 자막, 데이터 영상 같은 결과물을 로컬에서 만들 수 있습니다.",
+  "connect": [
+   "skills",
+   "library",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "개인·3인 이하 기업 무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 67006,
+  "updated": "2026-10",
+  "homepage": "https://www.remotion.dev",
+  "repo": "remotion-dev/remotion",
+  "install": "npx skills add remotion-dev/skills",
+  "caveats": [
+   "직원 4인 이상 영리 기업은 회사 라이선스 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Remotion 라이선스",
+    "url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md"
+   },
+   {
+    "label": "Remotion Agent Skills",
+    "url": "https://github.com/remotion-dev/skills"
+   }
+  ]
+ },
+ {
+  "id": "vgen-hyperframes",
+  "name": "HyperFrames",
+  "vendor": "HeyGen",
+  "domain": "video",
+  "category": "영상 생성",
+  "tagline": "HTML을 MP4로 렌더링하는 에이전트용 영상 프레임워크",
+  "description": "HyperFrames는 HTML·CSS·미디어·애니메이션을 결정적인 MP4로 렌더링하는 오픈소스(Apache-2.0) 프레임워크로, 에이전트가 쓰도록 설계되었습니다. Claude Code 플러그인이나 스킬을 설치하면 '영상 만들어 줘' 한 마디로 프로젝트를 만들고 로컬에서 렌더링합니다. 설치 없이 쓰는 HeyGen 계정 기반 호스팅 MCP 커넥터(베타)도 있습니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "cli",
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot",
+   "gemini",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (오픈소스)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 71259,
+  "updated": "2026-10",
+  "homepage": "https://hyperframes.heygen.com",
+  "repo": "heygen-com/hyperframes",
+  "install": "claude plugin marketplace add heygen-com/hyperframes",
+  "caveats": [
+   "호스팅 MCP(mcp.heygen.com/mcp/hyperframes/)는 베타이며 HeyGen 계정 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "HyperFrames GitHub",
+    "url": "https://github.com/heygen-com/hyperframes"
+   },
+   {
+    "label": "HyperFrames MCP 가이드",
+    "url": "https://hyperframes.heygen.com/guides/mcp.md"
+   },
+   {
+    "label": "HyperFrames 빠른 시작",
+    "url": "https://hyperframes.heygen.com/quickstart.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-google-vids",
+  "name": "Google Vids",
+  "vendor": "Google",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "Veo 3.1 아바타로 설명 영상을 만드는 Workspace 앱",
+  "description": "Google Vids는 Docs처럼 쓰는 영상 편집기로, Veo 3.1 기반 AI 아바타가 프롬프트대로 말하고 움직이는 설명·교육 영상을 만듭니다. Google AI Pro·Ultra 구독자와 여러 Workspace 에디션에 포함되어 AI 구독 로그인만으로 쓸 수 있습니다.",
+  "connect": [
+   "signin"
+  ],
+  "worksWith": [
+   "gemini"
+  ],
+  "aiCost": "plan",
+  "price": "Google AI Pro/Ultra·Workspace 포함",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://workspaceupdates.googleblog.com/2026/04/direct-avatar-to-speak-and-act-anywhere-with-a-consistent-face-and-voice.html",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "Workspace에서는 영어로 설정된 계정만 아바타 기능 사용",
+   "프로모션 한도 이후 사용자별 한도 적용 예정",
+   "무료 계정 한도(월 10회 등)는 2차 보도 기준"
+  ],
+  "korea": "Workspace 계정 기준 아바타는 영어 설정 계정 전용으로 안내됨.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Workspace Updates: Vids 아바타",
+    "url": "https://workspaceupdates.googleblog.com/2026/04/direct-avatar-to-speak-and-act-anywhere-with-a-consistent-face-and-voice.html"
+   },
+   {
+    "label": "PPC Land: Vids 무료 Veo",
+    "url": "https://ppc.land/google-vids-gets-free-veo-3-1-video-generation-music-and-ai-avatars/"
+   }
+  ]
+ },
+ {
+  "id": "vgen-heygen",
+  "name": "HeyGen (MCP · CLI · Skills)",
+  "vendor": "HeyGen",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "AI 아바타·번역 더빙 영상을 MCP·CLI로 생성",
+  "description": "HeyGen은 AI 아바타, 음성 복제, 립싱크 번역, Video Agent를 제공하는 영상 플랫폼입니다. 원격 MCP를 Claude·Claude Code·Gemini CLI·OpenAI 클라이언트에 OAuth로 연결하면 기존 HeyGen 플랜 크레딧으로 영상을 만들고, 대량 작업에는 공식 CLI와 Agent Skills(heygen-video, heygen-avatar, heygen-translate)를 API 키와 함께 씁니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Creator $29/월~, 무료 월 3개",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 516,
+  "updated": "2026-07",
+  "homepage": "https://developers.heygen.com/mcp/overview",
+  "repo": "heygen-com/skills",
+  "install": "claude mcp add --transport http -s user heygen https://mcp.heygen.com/mcp/v1/",
+  "caveats": [
+   "MCP로 만드는 HeyGen Video는 5~15초",
+   "무료는 워터마크·영상당 1분",
+   "MCP는 체험용, 반복 작업은 API 키(API 요금제) 권장"
+  ],
+  "korea": "175개 이상 언어·방언 지원, 한국어 사이트(/ko-kr) 제공.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "HeyGen MCP 개요",
+    "url": "https://developers.heygen.com/mcp/overview.md"
+   },
+   {
+    "label": "HeyGen For AI Agents",
+    "url": "https://developers.heygen.com/docs/for-ai-agents.md"
+   },
+   {
+    "label": "HeyGen 요금",
+    "url": "https://www.heygen.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "vgen-synthesia",
+  "name": "Synthesia",
+  "vendor": "Synthesia",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "기업 교육용 AI 아바타 영상과 Claude·ChatGPT MCP",
+  "description": "Synthesia는 아바타 프레젠터, 더빙, 영상 번역을 제공하는 기업용 AI 영상 플랫폼입니다. 호스팅 MCP(mcp.synthesia.io/mcp)나 ChatGPT 마켓플레이스 앱으로 채팅에서 스크립트를 브랜드 템플릿 기반 영상 초안으로 만들고 렌더링까지 할 수 있습니다. API, Zapier 연동도 제공합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "credits",
+  "price": "Starter $29/월~, 무료 500 크레딧",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.synthesia.io/reference/synthesia-mcp",
+  "repo": null,
+  "install": "https://mcp.synthesia.io/mcp",
+  "caveats": [
+   "MCP는 공개 베타이며 Starter·Pro·Enterprise 계정 필요",
+   "무료 Basic 영상은 워터마크",
+   "음성 복제는 동의·안전 통제 적용"
+  ],
+  "korea": "160개 이상 언어로 영상·음성 제작 지원 표기.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Synthesia MCP 문서",
+    "url": "https://docs.synthesia.io/reference/synthesia-mcp.md"
+   },
+   {
+    "label": "Synthesia 요금",
+    "url": "https://www.synthesia.io/pricing"
+   },
+   {
+    "label": "Synthesia llms.txt",
+    "url": "https://www.synthesia.io/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-captions-mirage",
+  "name": "Captions · Mirage Tesseract",
+  "vendor": "Mirage",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "자동 자막·더빙 앱과 ChatGPT용 영상 편집 엔진",
+  "description": "Captions는 자동 컷 편집, 100+개 언어 자막, 30+개 언어 립싱크 더빙, AI 배우 생성을 제공하는 모바일·웹 앱입니다. 같은 회사(Mirage)의 Tesseract는 ChatGPT 공식 플러그인과 로컬 에이전트용 편집 엔진으로, 채팅에서 편집 가능한 영상 프로젝트를 만듭니다. 개발자용 Mirage API도 있습니다.",
+  "connect": [
+   "app",
+   "connector",
+   "byok"
+  ],
+  "worksWith": [
+   "chatgpt"
+  ],
+  "aiCost": "credits",
+  "price": "Pro $9.99/월~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.captions.ai",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "무료 플랜은 내보내기 영상에 워터마크"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Captions llms.txt",
+    "url": "https://www.captions.ai/llms.txt"
+   },
+   {
+    "label": "Mirage llms.txt",
+    "url": "https://mirage.app/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-d-id",
+  "name": "D-ID",
+  "vendor": "D-ID",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "말하는 아바타·대화형 에이전트 영상 API",
+  "description": "D-ID는 사진·아바타를 말하는 영상으로 만들고 실시간 대화형 비주얼 에이전트를 구축하는 플랫폼입니다. Mintlify 호스팅 MCP(docs.d-id.com/mcp)를 Cursor·Claude Desktop에 연결하면 D-ID API와 문서를 에이전트가 참조해 연동 코드를 작성할 수 있습니다. 실제 생성은 D-ID API 키나 Studio 플랜으로 과금됩니다.",
+  "connect": [
+   "remote-mcp",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요 (Trial 제공)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.d-id.com/docs/mcp",
+  "repo": null,
+  "install": "https://docs.d-id.com/mcp",
+  "caveats": [
+   "Trial·Lite 플랜 영상은 D-ID 워터마크",
+   "MCP는 API·문서 연동용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "D-ID MCP 문서",
+    "url": "https://docs.d-id.com/docs/mcp.md"
+   },
+   {
+    "label": "D-ID Studio 요금 FAQ",
+    "url": "https://www.d-id.com/pricing/studio/"
+   }
+  ]
+ },
+ {
+  "id": "vgen-hedra",
+  "name": "Hedra MCP",
+  "vendor": "Hedra",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "말하는 캐릭터·멀티모델 영상 생성 MCP",
+  "description": "Hedra는 캐릭터 립싱크 영상과 Kling O3, LTX-2.5, Seedance 2.0, Vidu Q3 같은 외부 모델을 제공하는 멀티모달 추론 플랫폼입니다. 원격 MCP(mcp.hedra.com)를 Claude 커넥터, Claude Code, Codex, Cursor에 추가하고 로그인하면 모델 탐색, 비용 견적, 미디어 작업 실행을 할 수 있습니다. 과금은 MCP 설정에서 고른 구독 또는 종량제 모드를 따릅니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "cli",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.hedra.com/docs/pages/developer/v3/mcp",
+  "repo": null,
+  "install": "claude mcp add --transport http hedra https://mcp.hedra.com",
+  "caveats": [
+   "MCP 도구 목록과 API 카탈로그는 서로 다름",
+   "CLI·API는 Studio 크레딧과 별도인 USD API 지갑 사용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Hedra MCP 문서",
+    "url": "https://www.hedra.com/docs/pages/developer/v3/mcp.md"
+   },
+   {
+    "label": "Hedra 문서 색인",
+    "url": "https://docs.hedra.com/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-tavus",
+  "name": "Tavus MCP",
+  "vendor": "Tavus",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "실시간 대화형 영상 아바타(PAL)를 에이전트로 구축",
+  "description": "Tavus는 실시간으로 듣고 말하는 대화형 영상 아바타(PAL)와 CVI를 제공합니다. 호스팅 MCP(mcp.tavus.io/mcp)를 Claude Code·Codex·Cursor에 연결하면 에이전트가 PAL을 만들고, 도구 호출을 연결하고, 시뮬레이션 대화로 테스트합니다. ChatGPT 플러그인과 CLI도 제공됩니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.tavus.io/sections/agent-tools/mcp-server",
+  "repo": null,
+  "install": "claude mcp add -s user --transport http tavus https://mcp.tavus.io/mcp",
+  "caveats": [],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Tavus MCP 문서",
+    "url": "https://docs.tavus.io/sections/agent-tools/mcp-server.md"
+   },
+   {
+    "label": "Tavus 문서 색인",
+    "url": "https://docs.tavus.io/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-sync",
+  "name": "sync. (립싱크·비주얼 더빙)",
+  "vendor": "sync. labs",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "영상 립싱크·비주얼 더빙 API와 MCP",
+  "description": "sync.는 기존 영상의 입 모양을 새 음성에 맞추는 립싱크와 비주얼 더빙을 웹 스튜디오, API, Premiere·DaVinci 플러그인으로 제공합니다. Claude 웹에서는 원격 MCP(mcp.sync.so/mcp)에 OAuth로, Claude Code·Codex·Cursor에서는 npm MCP 패키지와 API 키로 연결하며, ChatGPT 공식 플러그인도 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "local-mcp",
+   "connector",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Hobbyist $5/월~, 무료 월 3회",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 1,
+  "updated": "2026-10",
+  "homepage": "https://sync.so",
+  "repo": "synchronicity-labs/mcp-server",
+  "install": "https://mcp.sync.so/mcp",
+  "caveats": [
+   "무료는 월 3회·15초 이하",
+   "사용량은 초당 약 $0.05 수준"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "sync. MCP 문서",
+    "url": "https://sync.so/docs/plugins-and-extensions/mcp-server.md"
+   },
+   {
+    "label": "sync. 요금",
+    "url": "https://sync.so/pricing.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-elevenlabs-dubbing",
+  "name": "ElevenLabs Dubbing",
+  "vendor": "ElevenLabs",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "화자 목소리를 유지한 90+개 언어 영상 더빙",
+  "description": "ElevenLabs Dubbing은 화자의 감정·타이밍·톤과 배경음을 유지하면서 오디오·영상을 90개 이상 언어로 번역 더빙합니다. 앱의 자동 더빙(Dubbing v2)과 세밀하게 편집하는 Dubbing Studio가 있고, Dubbing API는 에이전트가 API 키로 호출할 수 있습니다. 카탈로그의 ElevenLabs MCP 항목과 다른, 더빙 전용 제품입니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요 (ElevenLabs 플랜 크레딧)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://elevenlabs.io/docs/overview/capabilities/dubbing",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "무료 티어 더빙은 워터마크 자동 삽입",
+   "Dubbing Studio(세밀 편집)는 v1 모델에서만"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "ElevenLabs 더빙 문서",
+    "url": "https://elevenlabs.io/docs/overview/capabilities/dubbing.md"
+   },
+   {
+    "label": "ElevenLabs 문서 색인",
+    "url": "https://elevenlabs.io/docs/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-rask",
+  "name": "Rask AI",
+  "vendor": "Rask AI",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "영상 번역·더빙·자막 생성 서비스",
+  "description": "Rask AI는 영상 번역 더빙, 자막 생성·번역, 전사 기능을 제공하는 현지화 서비스로, 무료 자막 생성기 같은 무료 도구와 API를 갖추고 있습니다. AI 구독과 직접 연결되는 MCP는 확인되지 않아, 에이전트에서는 API로 연동하거나 웹 앱에서 쓰는 방식입니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.rask.ai",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "요금·API 조건은 공식 페이지에서 확인 필요",
+   "MCP·커넥터 미확인"
+  ],
+  "korea": "웹사이트 한국어(Ko) 버전 제공.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Rask AI 홈페이지",
+    "url": "https://www.rask.ai/"
+   }
+  ]
+ },
+ {
+  "id": "vgen-veed-fabric",
+  "name": "VEED (Fabric MCP)",
+  "vendor": "VEED",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "사진+음성으로 말하는 영상을 만드는 VEED MCP",
+  "description": "VEED는 웹 영상 편집·자막·아바타 플랫폼이며, Fabric 1.0은 이미지와 오디오로 립싱크된 말하는 영상을 만드는 모델입니다. 원격 MCP(veed.io/api/v1/mcp)로 에이전트가 커스텀 캐릭터·음성의 토킹헤드 영상을 생성하고, 별도 VEED API로 립싱크·자막 기능도 호출할 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "byok",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "Creator $12.25/월(연간)~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.veed.io",
+  "repo": null,
+  "install": "https://www.veed.io/api/v1/mcp",
+  "caveats": [
+   "VEED API는 앱과 별도 요금제",
+   "요금은 편집자 좌석당 과금"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "MCP Registry: io.veed/fabric-mcp",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=veed"
+   },
+   {
+    "label": "VEED 요금",
+    "url": "https://www.veed.io/pricing/plans.md"
+   },
+   {
+    "label": "VEED API llms.txt",
+    "url": "https://api.veed.io/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-twelvelabs",
+  "name": "TwelveLabs MCP",
+  "vendor": "TwelveLabs",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "영상 검색·요약·챕터를 뽑는 영상 이해 MCP",
+  "description": "TwelveLabs는 Marengo(임베딩)와 Pegasus(영상→텍스트) 모델로 영상 라이브러리를 자연어로 검색하고, 요약·챕터·하이라이트·질의응답을 만드는 API를 제공합니다. 원격 MCP를 API 키 헤더와 함께 Claude Code·Cursor에 연결하면 자막 초안, 메타데이터, 클립 찾기 작업을 에이전트에게 맡길 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "Free·Developer·Enterprise (확인 필요)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.twelvelabs.io",
+  "repo": null,
+  "install": "https://mcp.twelvelabs.io/mcp",
+  "caveats": [
+   "X-api-key 헤더로 TwelveLabs API 키 전달 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "MCP Registry: io.twelvelabs",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.twelvelabs"
+   },
+   {
+    "label": "TwelveLabs llms.txt",
+    "url": "https://www.twelvelabs.io/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-opusclip",
+  "name": "OpusClip MCP",
+  "vendor": "OpusClip",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "긴 영상을 쇼츠로 자르고 자막·게시까지 하는 MCP",
+  "description": "OpusClip은 긴 영상을 바이럴 쇼츠로 잘라 주는 AI 클리핑 서비스로, 네이티브 MCP가 업로드, 클리핑, 자막, 리프레임, 썸네일, SNS 예약 게시 등 29개 도구를 제공합니다. Claude Code·Cursor·Codex는 mcp.opus.pro/mcp에, claude.ai는 별도 커넥터 엔드포인트에 OAuth로 연결합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "무료 월 60분~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.opus.pro/mcp",
+  "repo": null,
+  "install": "claude mcp add --transport http opusclip https://mcp.opus.pro/mcp",
+  "caveats": [
+   "API 접근은 Pro(베타)·Max·Business 플랜",
+   "claude.ai용 커넥터(api.opus.pro/api/mcp)는 27개 도구로 별도"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "OpusClip llms.txt",
+    "url": "https://www.opus.pro/llms.txt"
+   },
+   {
+    "label": "OpusClip 에이전트 설정",
+    "url": "https://help.opus.pro/api-reference/agent-setup.md"
+   },
+   {
+    "label": "OpusClip 플랜",
+    "url": "https://help.opus.pro/docs/article/plans-and-credits.md"
+   }
+  ]
+ },
+ {
+  "id": "vgen-descript",
+  "name": "Descript MCP",
+  "vendor": "Descript",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "Claude 커넥터로 텍스트 기반 영상 편집·자막",
+  "description": "Descript는 대본을 편집하듯 영상·팟캐스트를 편집하고 자막, 음성 복제, 번역을 제공하는 편집기입니다. Anthropic 커넥터 디렉터리에 등록된 Descript MCP를 Claude에 추가하거나 ChatGPT·Cursor에 연결하면, 편집 내용을 말로 설명해 AI 어시스턴트 Underlord가 편집하게 하고 대본도 가져올 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "확인 필요 (무료로 시작 가능)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.descript.com/mcp",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·API 사용 시 미디어 분·AI 크레딧 차감"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Descript MCP 개요",
+    "url": "https://help.descript.com/api-and-mcp/mcp.md"
+   },
+   {
+    "label": "Descript Claude 연결",
+    "url": "https://help.descript.com/api-and-mcp/mcp-claude.md"
+   },
+   {
+    "label": "Descript MCP 페이지",
+    "url": "https://www.descript.com/mcp"
+   }
+  ]
+ },
+ {
+  "id": "vgen-youtube-auto-dubbing",
+  "name": "YouTube 자동 더빙",
+  "vendor": "Google (YouTube)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "YouTube Studio의 자동 다국어 더빙(한↔영 지원)",
+  "description": "YouTube 자동 더빙은 대상 크리에이터에게 기본으로 켜지는 기능으로, 업로드한 영상을 다른 언어 음성 트랙으로 자동 더빙하고 설명란에 'auto-dubbed'를 표시합니다. 일부 채널에서는 입 모양을 맞추는 실험적 립싱크도 쓸 수 있습니다. AI 에이전트 연동은 없지만 한국어 유튜버에게 영향이 큰 기능이라 실었습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "추가 비용 언급 없음",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://support.google.com/youtube/answer/15569972?hl=en",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "120분 초과, 음성이 거의 없는 영상, 저작권 클레임 영상은 제외",
+   "립싱크는 일부 채널 대상 실험 기능"
+  ],
+  "korea": "한국어 원본은 영어·인도네시아어로, 영어 원본은 한국어로 더빙 가능.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "YouTube Help: 자동 더빙",
+    "url": "https://support.google.com/youtube/answer/15569972?hl=en"
+   }
+  ]
+ },
+ {
+  "id": "vgen-whisper-cpp",
+  "name": "whisper.cpp",
+  "vendor": "ggml-org",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "Apple Silicon에서 빠른 로컬 음성 인식·자막 생성",
+  "description": "whisper.cpp는 OpenAI Whisper 모델의 C/C++ 포트로, Apple Silicon에서는 Metal GPU와 Core ML(ANE)로 가속됩니다. Claude Code나 Codex가 whisper-cli로 로컬 영상·음성을 받아쓰고 자막 파일을 만드는 작업을 돌릴 수 있으며, 클라우드 비용이나 업로드가 필요 없습니다.",
+  "connect": [
+   "cli",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 54622,
+  "updated": "2026-10",
+  "homepage": "https://github.com/ggml-org/whisper.cpp",
+  "repo": "ggml-org/whisper.cpp",
+  "install": "brew install whisper.cpp",
+  "caveats": [
+   "모델 파일은 별도 다운로드 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "whisper.cpp README",
+    "url": "https://github.com/ggml-org/whisper.cpp"
+   },
+   {
+    "label": "Homebrew whisper.cpp",
+    "url": "https://formulae.brew.sh/api/formula/whisper.cpp.json"
+   }
+  ]
+ },
+ {
+  "id": "vgen-openai-whisper",
+  "name": "Whisper (OpenAI 오픈소스)",
+  "vendor": "OpenAI",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "다국어 음성 인식 오픈소스 모델(Python)",
+  "description": "OpenAI Whisper는 대규모 약지도 학습으로 만든 다국어 음성 인식 모델의 원본 Python 구현입니다. pip로 설치해 ffmpeg와 함께 쓰며, 에이전트가 스크립트로 자막과 번역 초안을 만들 때 기준 구현으로 많이 씁니다. Mac에서 속도가 중요하면 whisper.cpp가 더 적합합니다.",
+  "connect": [
+   "cli",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 111187,
+  "updated": "2026-08",
+  "homepage": "https://github.com/openai/whisper",
+  "repo": "openai/whisper",
+  "install": "pip install -U openai-whisper",
+  "caveats": [
+   "ffmpeg 별도 설치 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "openai/whisper README",
+    "url": "https://github.com/openai/whisper"
+   }
+  ]
+ },
+ {
+  "id": "vgen-ffmpeg",
+  "name": "FFmpeg",
+  "vendor": "FFmpeg",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "에이전트가 쓰는 영상 변환·자막 합성 CLI",
+  "description": "FFmpeg는 영상·오디오 변환, 자르기, 자막 입히기에 쓰는 표준 CLI로, video-use·Whisper 같은 에이전트 영상 도구가 기본으로 의존합니다. AI 기능은 없지만 Claude Code·Codex가 명령을 조합해 자막 합성과 포맷 변환을 자동화할 수 있어 분야 필수 도구로 실었습니다.",
+  "connect": [
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://ffmpeg.org/",
+  "repo": null,
+  "install": "brew install ffmpeg",
+  "caveats": [
+   "GPL-3.0-or-later 라이선스(Homebrew 빌드 기준)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Homebrew ffmpeg",
+    "url": "https://formulae.brew.sh/api/formula/ffmpeg.json"
+   },
+   {
+    "label": "openai/whisper README(ffmpeg 요구)",
+    "url": "https://github.com/openai/whisper"
+   }
+  ]
+ },
+ {
+  "id": "vgen-video-use",
+  "name": "video-use",
+  "vendor": "Browser Use",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "Claude Code로 원본 영상을 컷·자막·색보정 편집",
+  "description": "video-use는 원본 촬영본 폴더를 Claude Code·Codex에 맡기면 군말 삭제, 컷 편집, 색보정, 자막 번인, HyperFrames·Remotion 오버레이까지 처리해 final.mp4를 돌려주는 오픈소스 스킬입니다. 에이전트가 설치 문서를 읽고 ffmpeg와 스킬 등록을 직접 처리합니다.",
+  "connect": [
+   "skills",
+   "cli",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "local"
+  ],
+  "aiCost": "apikey",
+  "price": "무료 (MIT), ElevenLabs API 별도",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 29703,
+  "updated": "2026-10",
+  "homepage": "https://github.com/browser-use/video-use",
+  "repo": "browser-use/video-use",
+  "install": null,
+  "caveats": [
+   "ffmpeg와 ElevenLabs API 키 필요",
+   "클라우드 호스팅 버전은 대기자 명단 단계"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "browser-use/video-use README",
+    "url": "https://github.com/browser-use/video-use"
+   }
+  ]
+ },
+ {
+  "id": "vgen-vrew",
+  "name": "브루(Vrew)",
+  "vendor": "보이저엑스(VoyagerX)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "음성 인식 자동 자막·AI 목소리 영상 편집기",
+  "description": "브루는 음성 인식 자동 자막, 문서처럼 하는 컷 편집, 무음 구간 삭제, AI 목소리, 텍스트·PDF로 영상 만들기, 100개 이상 언어 번역 자막을 제공하는 국산 AI 영상 편집기입니다. 맥·윈도우·우분투 앱과 웹 버전이 있고, 앱 안의 Vrew Agent가 편집 요청을 처리합니다. Claude·ChatGPT 구독과 연동되지는 않고 자체 크레딧으로 동작합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "무료 월 200 크레딧, 유료 플랜 가격 확인 필요",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://vrew.ai/ko/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "2026-04 통합 크레딧제 전환, 미사용 크레딧 이월 없음",
+   "Vrew Agent 요청도 크레딧 차감",
+   "외부 AI 에이전트(MCP) 연동 없음"
+  ],
+  "korea": "국산 서비스로 한국어 UI·자막·AI 목소리 지원. 2025-11 신규 구독 요금 인상 공지.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "브루 홈페이지",
+    "url": "https://vrew.ai/ko/"
+   },
+   {
+    "label": "통합 크레딧 공지",
+    "url": "https://docs.channel.io/vrew-payment/en/articles/Vrew-is-Switching-to-Unified-Credits-Coming-Late-April-58d4ac45"
+   },
+   {
+    "label": "Vrew Agent 출시·요금",
+    "url": "https://docs.channel.io/vrew-us/en/articles/Vrew-Agent-Official-Launch--Pricing-fd9c1c2b"
+   }
+  ]
+ },
+ {
+  "id": "vgen-typecast",
+  "name": "타입캐스트(Typecast)",
+  "vendor": "네오사피엔스(Neosapience)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "감정 표현 AI 성우 TTS와 숏폼 제작 스킬",
+  "description": "타입캐스트는 700개 이상 실제 성우 기반 AI 보이스로 감정 있는 내레이션을 만드는 TTS 서비스이며, API는 자막·립싱크용 단어 타임스탬프와 즉시 음성 복제를 지원합니다. 에이전트용으로 문서 MCP, Agent Skills(typecast-api, 자막 달린 세로 숏폼을 만드는 create-typecast-shorts), cast CLI, MCP 서버 저장소를 제공합니다.",
+  "connect": [
+   "app",
+   "byok",
+   "local-mcp",
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "무료 3,000 크레딧, 베이직 ₩9,900/월~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 3,
+  "updated": "2026-10",
+  "homepage": "https://typecast.ai/kr",
+  "repo": "neosapience/typecast-api-mcp-server",
+  "install": null,
+  "caveats": [
+   "무료 플랜으로 내려받은 콘텐츠는 출처 표기 필수",
+   "Studio 구독과 API 요금제는 별도"
+  ],
+  "korea": "국내 서비스로 원화(KRW) 요금제를 별도로 운영(베이직 ₩9,900, 프로 ₩39,000/월 등).",
+  "starter": false,
+  "sources": [
+   {
+    "label": "타입캐스트 요금(한국)",
+    "url": "https://typecast.ai/kr/pricing/"
+   },
+   {
+    "label": "Typecast llms.txt",
+    "url": "https://typecast.ai/llms.txt"
+   },
+   {
+    "label": "Typecast API 에이전트 문서",
+    "url": "https://typecast.ai/docs/llms.txt"
+   }
+  ]
+ },
+ {
+  "id": "vgen-clova-dubbing",
+  "name": "클로바더빙(CLOVA Dubbing)",
+  "vendor": "네이버(NAVER)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "문장 입력만으로 영상에 AI 보이스 더빙",
+  "description": "클로바더빙은 네이버의 AI 보이스 더빙 웹 서비스로, 원하는 문장을 입력하면 영상에 AI 음성 더빙을 입혀 줍니다. AI 구독이나 에이전트와 연동되지 않는 웹 서비스이지만, 국내 크리에이터가 많이 쓰는 한국어 더빙 도구라 실었습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://clovadubbing.naver.com",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "현재 요금제·API 제공 여부 확인 필요",
+   "외부 AI 에이전트 연동 없음"
+  ],
+  "korea": "네이버의 한국어 AI 보이스 더빙 서비스.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "클로바더빙 홈페이지",
+    "url": "https://clovadubbing.naver.com"
+   },
+   {
+    "label": "아이뉴스24: 유료 서비스 출시",
+    "url": "https://www.inews24.com/view/1341575"
+   }
+  ]
+ },
+ {
+  "id": "vgen-deepbrain-aistudios",
+  "name": "AI Studios (딥브레인AI)",
+  "vendor": "딥브레인AI(DeepBrain AI)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "2,000+ 아바타로 텍스트를 프레젠터 영상으로",
+  "description": "AI Studios는 텍스트 대본을 사실적인 디지털 휴먼 프레젠터 영상으로 바꾸는 클라우드 플랫폼으로, 2,000개 이상 아바타, 150개 이상 언어 음성 합성, AI 더빙, 인터랙티브 아바타를 제공합니다. ChatGPT 연동 스크립트 생성과 API 기반 자동 영상 제작을 지원하지만, MCP 연동은 확인되지 않았습니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "무료(월 3개)·개인 $24/월~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.aistudios.com/ko",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "무료 플랜은 영상 3개·720p 제한"
+  ],
+  "korea": "국내 기업 딥브레인AI 서비스, 한국어 사이트·블로그·고객 사례 제공.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "AI Studios llms.txt",
+    "url": "https://www.aistudios.com/llms.txt"
+   },
+   {
+    "label": "AI Studios 요금(한국어)",
+    "url": "https://www.aistudios.com/ko/pricing"
+   }
+  ]
+ },
+ {
+  "id": "vgen-perso-ai",
+  "name": "Perso AI (페르소 더빙)",
+  "vendor": "이스트소프트(ESTsoft)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "목소리 복제·립싱크 99+개 언어 AI 더빙",
+  "description": "Perso Dubbing은 원래 화자의 목소리를 복제해 영상을 99개 이상 언어로 번역 더빙하고 프레임 단위 립싱크와 자막을 붙여 주는 서비스입니다. 개발자 API(api.perso.ai)와 코딩 에이전트용 llms.txt 명세가 있어, Claude Code가 API 키로 더빙 파이프라인을 자동화할 수 있습니다.",
+  "connect": [
+   "app",
+   "byok",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "PRO $99/월 (Finch 기준 분당 $0.11~)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://perso.ai",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "립싱크는 별도 옵션",
+   "모델(Finch·Linnet·Nightingale)별 분당 비용 상이"
+  ],
+  "korea": "국내 이스트소프트 서비스, 한국어 포함 99+개 언어 더빙과 100+개 언어 음성 인식.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Perso llms.txt",
+    "url": "https://perso.ai/llms.txt"
+   },
+   {
+    "label": "Perso 개발자 문서",
+    "url": "https://developers.perso.ai/docs"
+   }
+  ]
+ }
+]

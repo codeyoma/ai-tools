@@ -1,0 +1,4351 @@
+[
+  {
+    "id": "fin-alpha-vantage-mcp",
+    "name": "Alpha Vantage MCP",
+    "vendor": "Alpha Vantage",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "OAuth 원격 MCP, 약 120개 시장 데이터 도구",
+    "description": "주식·외환·암호화폐·기술지표 등 Alpha Vantage API를 약 120개 MCP 도구로 제공하는 공식 서버입니다. 원격 엔드포인트에 OAuth로 로그인하면 Claude, ChatGPT, Codex, Gemini CLI, Cursor, VS Code 등에서 설치 없이 쓸 수 있고, uvx marketdata-mcp-server로 로컬 실행도 됩니다. Progressive Tool Discovery로 도구 스키마를 줄여 컨텍스트 소모가 적은 데이터 조회용으로 적합합니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료 API 키 제공",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 221,
+    "updated": null,
+    "homepage": "https://mcp.alphavantage.co/",
+    "repo": "alphavantage/alpha_vantage_mcp",
+    "install": "https://mcp.alphavantage.co/mcp",
+    "caveats": [
+      "?apikey= URL 방식 인증은 레거시(폐기 예정), OAuth 권장",
+      "무료 티어 호출 한도는 확인 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub alpha_vantage_mcp",
+        "url": "https://github.com/alphavantage/alpha_vantage_mcp"
+      },
+      {
+        "label": "Alpha Vantage MCP 사이트",
+        "url": "https://mcp.alphavantage.co/"
+      }
+    ]
+  },
+  {
+    "id": "fin-twelve-data-mcp",
+    "name": "Twelve Data MCP",
+    "vendor": "Twelve Data",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "OAuth 2.1 원격 MCP로 시세·지표·펀더멘털",
+    "description": "실시간·과거 시세, 60개 이상의 기술지표, 펀더멘털, ETF·펀드, 뉴스, 시장 주도주, 공시를 제공하는 Twelve Data의 MCP 서버입니다. 호스팅 서버는 Twelve Data 계정으로 OAuth 2.1 로그인하면 API 키 없이 Claude와 ChatGPT에서 연결되고, 오픈소스 로컬 서버는 TWELVE_DATA_API_KEY로 stdio 실행합니다. 원격 OAuth 데이터 소스가 필요한 채팅 사용자에게 잘 맞습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "Twelve Data 플랜에 따름",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://twelvedata.com/docs/llms/ai/mcp-server.md",
+    "repo": null,
+    "install": "https://mcp.twelvedata.com/mcp",
+    "caveats": [
+      "구독 플랜에 따라 쓸 수 있는 엔드포인트가 달라짐",
+      "디렉터리에는 초기 단계(early-stage)로 소개됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Twelve Data MCP 문서",
+        "url": "https://twelvedata.com/docs/llms/ai/mcp-server.md"
+      },
+      {
+        "label": "mcpservers.org Twelve Data",
+        "url": "https://mcpservers.org/ru/servers/twelvedata/mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-massive-mcp",
+    "name": "Massive MCP",
+    "vendor": "Massive (구 Polygon.io)",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "메타 도구 3개로 쓰는 시장 데이터 MCP",
+    "description": "Polygon.io에서 이름을 바꾼 Massive의 공식 MCP 서버로 주식·옵션·외환·암호화폐·선물 시세, 펀더멘털, Benzinga 애널리스트 평가·뉴스, 국채 금리·인플레이션을 다룹니다. search_endpoints, call_api, query_data(가져온 테이블에 SQL 실행) 세 메타 도구만 노출해 컨텍스트를 아낍니다. stdio·SSE·streamable-http 로컬 실행 또는 호스팅 엔드포인트로 연결하며 MASSIVE_API_KEY가 필요합니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요 (MASSIVE_API_KEY 필요)",
+    "free": false,
+    "official": "official",
+    "status": "experimental",
+    "stars": 398,
+    "updated": null,
+    "homepage": null,
+    "repo": "massive-com/mcp_massive",
+    "install": "https://mcp.massive.com",
+    "caveats": [
+      "실험적 단계로 호환성이 깨지는 변경 가능",
+      "uvx 콜드 스타트가 Claude의 30초 연결 제한을 넘을 수 있어 uv tool install 권장",
+      "POLYGON_API_KEY는 폐기 예정 별칭"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub mcp_massive",
+        "url": "https://github.com/massive-com/mcp_massive"
+      }
+    ]
+  },
+  {
+    "id": "fin-finnhub-mcp",
+    "name": "Finnhub MCP Server",
+    "vendor": "Finnhub",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "70개 도구, Finnhub 계정 OAuth 원격 MCP",
+    "description": "2026년 8월 6일 공개된 Finnhub의 호스팅 MCP로 펀더멘털, 애널리스트 추정치, 실적 발표 녹취와 실시간 오디오, SEC 공시, ETF 보유 종목, 외환, 암호화폐, 대체 데이터까지 70개 도구를 제공합니다. API 키 없이 기존 Finnhub 계정으로 OAuth 로그인하며, Claude는 커스텀 커넥터(OAuth Client ID claude), ChatGPT는 Settings > Plugins > Developer mode(Client ID chatgpt)로 추가합니다. 데이터 접근 범위와 호출 한도는 Finnhub 계정 플랜을 그대로 따릅니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "none",
+    "price": "Finnhub 계정 플랜에 따름",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": "https://finnhub.io/static/finnhub-how-to-connect-mcp-server.html",
+    "repo": null,
+    "install": "https://mcp.finnhub.io/mcp",
+    "caveats": [
+      "MCP 호출은 API 키와 같은 한도를 소모",
+      "ChatGPT 플러그인과 Claude 커스텀 커넥터는 유료 AI 플랜 필요",
+      "무료 플랜에서 쓸 수 있는 도구 범위는 미공개"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Finnhub MCP 연결 가이드",
+        "url": "https://finnhub.io/static/finnhub-how-to-connect-mcp-server.html"
+      },
+      {
+        "label": "Finnhub API 문서",
+        "url": "https://finnhub.io/docs/api"
+      }
+    ]
+  },
+  {
+    "id": "fin-dune-mcp",
+    "name": "Dune MCP",
+    "vendor": "Dune",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "DuneSQL로 온체인 데이터 쿼리·대시보드 작성",
+    "description": "Dune의 공식 원격 MCP로 에이전트가 테이블을 검색하고 DuneSQL 쿼리를 만들어 실행하며 결과 확인, 시각화, 대시보드 작성까지 할 수 있습니다. 브라우저 OAuth(권장) 또는 Dune API 키로 인증하며 Claude Code, Claude Desktop, Codex, Cursor, OpenCode 설정이 문서화돼 있습니다. getUsage 도구로 현재 결제 주기의 크레딧 사용량을 확인할 수 있고, 코딩 에이전트용 Dune CLI·Skills도 함께 제공됩니다.",
+    "connect": [
+      "remote-mcp",
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "쿼리마다 Dune 크레딧 소모",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.dune.com/docs/agents/mcp.md",
+    "repo": null,
+    "install": "claude mcp add --scope user --transport http dune https://api.dune.com/mcp/v1",
+    "caveats": [
+      "Codex에서 긴 쿼리가 Transport closed로 끊기면 tool_timeout_sec = 300 설정",
+      "MCP 쿼리당 크레딧 비용과 무료 티어 사용 가능 여부는 미문서화"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Dune MCP 문서",
+        "url": "https://docs.dune.com/docs/agents/mcp.md"
+      },
+      {
+        "label": "Dune llms.txt",
+        "url": "https://docs.dune.com/llms.txt"
+      }
+    ]
+  },
+  {
+    "id": "fin-coingecko-mcp",
+    "name": "CoinGecko MCP Server",
+    "vendor": "CoinGecko",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "키 없이 쓰는 공개 원격 암호화폐 데이터 MCP",
+    "description": "CoinGecko의 공식 MCP로 키가 필요 없는 공개 원격 엔드포인트, Pro 키용 원격 엔드포인트(mcp.pro-api.coingecko.com), Demo·Pro 키를 쓰는 로컬 npm 패키지 @coingecko/coingecko-mcp를 제공합니다. Claude(웹·데스크톱·Code), Cursor, Windsurf가 문서화된 클라이언트입니다. AI Agent Hub 페이지에는 200개 이상 네트워크의 100만 개 이상 자산을 76개 이상 도구로 다룬다고 소개돼 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "공개 서버 무료(공유 한도), Demo·Pro 키 플랜 별도",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.coingecko.com/docs/mcp-server",
+    "repo": null,
+    "install": "https://mcp.api.coingecko.com/mcp",
+    "caveats": [
+      "무료 공개 서버는 공유 레이트 리밋 적용",
+      "도구 호출마다 플랜의 한도와 크레딧이 차감됨",
+      "AI Agent Hub 페이지는 beta로 표기(메인 문서에는 없음)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "CoinGecko MCP 문서",
+        "url": "https://docs.coingecko.com/docs/mcp-server"
+      },
+      {
+        "label": "CoinGecko AI Agent Hub",
+        "url": "https://docs.coingecko.com/docs/ai-agent-hub/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-eodhd-mcp",
+    "name": "EODHD MCP Server",
+    "vendor": "EODHD (EodHistoricalData)",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "88개 도구 중 85개가 읽기 전용인 데이터 MCP",
+    "description": "EOD·분봉·틱 시세, 펀더멘털, 뉴스·감성, 스크리너, 거시·국채, 신용 위험, 제재(OFAC) 데이터와 마켓플레이스의 미국 옵션·ESG까지 88개 도구를 제공하는 공급사 서버입니다. stdio, streamable HTTP(/mcp), SSE로 직접 실행하며 Claude Desktop, Claude Code, ChatGPT 커넥터 설정이 문서화돼 있습니다. 도구 대부분이 읽기 전용이라 붙이기 부담이 적지만, 도구 수가 많아 컨텍스트를 많이 씁니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "EODHD 플랜에 따름",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 23,
+    "updated": null,
+    "homepage": null,
+    "repo": "EodHistoricalData/EODHD-MCP-Server",
+    "install": null,
+    "caveats": [
+      "Praams 리포트 도구 3개는 리포트 생성과 이메일 발송을 실행",
+      "호스팅 URL이 없어 직접 실행해야 함",
+      "플랜에 없는 도구는 업스트림 권한 오류를 반환"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub EODHD-MCP-Server",
+        "url": "https://github.com/EodHistoricalData/EODHD-MCP-Server"
+      }
+    ]
+  },
+  {
+    "id": "fin-financial-datasets-mcp",
+    "name": "Financial Datasets MCP Server",
+    "vendor": "Financial Datasets",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "재무제표·주가·뉴스 10개 도구 로컬 MCP",
+    "description": "손익계산서, 대차대조표, 현금흐름표, 현재·과거 주가, 기업 뉴스, 암호화폐 티커·시세를 10개 도구로 제공하는 공급사 공식 서버입니다. FINANCIAL_DATASETS_API_KEY를 설정하고 uv run server.py로 로컬 실행합니다. ai-hedge-fund, Dexter 같은 에이전트 프레임워크가 쓰는 것과 같은 데이터 API입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요 (API 키 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 2300,
+    "updated": null,
+    "homepage": null,
+    "repo": "financial-datasets/mcp-server",
+    "install": "uv run server.py",
+    "caveats": [
+      "TypingMind 가이드의 원격 엔드포인트는 README에 없어 미검증"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub financial-datasets/mcp-server",
+        "url": "https://github.com/financial-datasets/mcp-server"
+      },
+      {
+        "label": "TypingMind Financial Datasets",
+        "url": "https://www.typingmind.com/mcp/financial-datasets"
+      }
+    ]
+  },
+  {
+    "id": "fin-fmp-mcp",
+    "name": "Financial-Modeling-Prep-MCP-Server",
+    "vendor": "imbenrabi (커뮤니티)",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "FMP 데이터 250개 이상 도구 커뮤니티 MCP",
+    "description": "Financial Modeling Prep(FMP) API를 24개 카테고리 250개 이상 도구로 노출하는 가장 완성도 높은 커뮤니티 서버로 주식·암호화폐·외환·SEC 공시를 다룹니다. FMP 토큰으로 호스팅 버전을 쓰거나 npx로 직접 실행할 수 있고 Dynamic·Static·All-tools 모드를 고를 수 있습니다. FMP가 직접 만든 MCP는 확인되지 않았습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(Apache 2.0), FMP 토큰 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "FMP 공식 서버 아님",
+      "도구가 250개 이상이라 All-tools 모드는 컨텍스트 소모가 큼"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama FMP 서버",
+        "url": "https://glama.ai/mcp/servers/jzhijrg35z"
+      },
+      {
+        "label": "mcp.so FMP 설정",
+        "url": "https://mcp.so/servers/financial-modeling-prep-mcp-server?tab=config"
+      }
+    ]
+  },
+  {
+    "id": "fin-fred-mcp",
+    "name": "fred-mcp-server",
+    "vendor": "stefanoamorelli (커뮤니티)",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "FRED 80만 개 경제 시계열을 도구 3개로",
+    "description": "미국 세인트루이스 연준의 경제 데이터 FRED에 있는 80만 개 이상 시계열 전체를 세 가지 도구로 조회하는 커뮤니티 MCP 서버입니다. FRED API 키를 넣어 로컬 MCP로 실행하며, npx로 쓰는 대안으로 fred-economic-mcp도 있습니다. 거시 지표를 리서치 노트나 백테스트 입력으로 가져올 때 유용합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스, FRED API 키 필요",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": "stefanoamorelli/fred-mcp-server",
+    "install": null,
+    "caveats": [
+      "FRED 공식 MCP 아님",
+      "과거 시점 백테스트에는 데이터 빈티지(수정 이력)를 고정해야 룩어헤드를 피함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama fred-mcp-server README",
+        "url": "https://glama.ai/mcp/servers/@stefanoamorelli/fred-mcp-server/blob/41a5270f604aef6d81d0c33a9f2054be0d43a4dd/README.md"
+      },
+      {
+        "label": "getdrio fred-economic-mcp",
+        "url": "https://www.getdrio.com/mcp/io-github-danishashko-fred-economic-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-financial-hub-mcp",
+    "name": "financial-hub-mcp",
+    "vendor": "커뮤니티",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "SEC EDGAR 공시·XBRL·FRED를 한 서버로",
+    "description": "SEC EDGAR 공시, XBRL 재무 데이터, FRED 거시 지표, 시세를 묶은 커뮤니티 MCP 서버로 npx로 바로 실행합니다. SEC의 User-Agent 규정 때문에 SEC_USER_AGENT_EMAIL이, FRED 조회에는 FRED_API_KEY가 필요합니다. SEC EDGAR 공식 MCP는 없으며, 비슷한 대안으로 EdgarMCP(pip install mcp-edgarmcp)와 값마다 공시 링크를 붙여 주는 Cite-Finance가 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스, FRED API 키 필요",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "npx -y financial-hub-mcp",
+    "caveats": [
+      "스냅샷 당시 주간 다운로드 약 58회의 신규 패키지",
+      "스코프 없는 npm 이름이라 npx -y 실행 전 패키지 출처 확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Socket financial-hub-mcp",
+        "url": "https://socket.dev/npm/package/financial-hub-mcp"
+      },
+      {
+        "label": "Glama EdgarMCP",
+        "url": "https://glama.ai/mcp/servers/birthday-tools/edgarmcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-yfinance-mcp",
+    "name": "yfinance-mcp",
+    "vendor": "narumiruna (커뮤니티)",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "yfinance 기반 무료 시세 조회 MCP",
+    "description": "비공식 Yahoo Finance 라이브러리 yfinance를 감싼 커뮤니티 MCP 서버로 별도 데이터 계약 없이 시세와 재무 정보를 조회합니다. 로컬 MCP로 실행해 코딩 에이전트나 Claude Desktop에 붙이며, 배당·재무제표용이나 워치리스트·지표용 변형 서버도 있습니다. 라이선스 피드가 아니므로 프로토타이핑 용도로 적합합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 149,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": "narumiruna/yfinance-mcp",
+    "install": null,
+    "caveats": [
+      "Yahoo 공식 피드가 아니라 안정성과 약관 위험이 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Enterprise DNA 디렉터리",
+        "url": "https://enterprisedna.co/directories/mcp/narumiruna-yfinance-mcp"
+      },
+      {
+        "label": "mcpservers.org Yahoo Finance MCP",
+        "url": "https://mcpservers.org/servers/a05031113/yahoo-fianace-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-tiingo-mcp",
+    "name": "tiingo-mcp",
+    "vendor": "major7apps (커뮤니티)",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "Tiingo 데이터 38개 도구, Rust 커뮤니티 MCP",
+    "description": "Tiingo에는 공식 MCP가 없어(mcp.tiingo.com 미해석) 현재 가장 나은 선택지인 Rust 커뮤니티 서버입니다. 주식·외환·암호화폐 시세, 금융 뉴스, 펀더멘털을 38개 도구로 제공하며 로컬 MCP로 실행합니다. 원격 연결이 필요하면 MCP Registry에 Pipeworx 게이트웨이(gateway.pipeworx.io/tiingo/mcp)도 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT), Tiingo API 토큰 필요",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 11,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "major7apps/tiingo-mcp",
+    "install": null,
+    "caveats": [
+      "Tiingo 공식 서버가 아닌 스타 11개의 소규모 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub major7apps/tiingo-mcp",
+        "url": "https://github.com/major7apps/tiingo-mcp"
+      },
+      {
+        "label": "MCP Registry: tiingo",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=tiingo&limit=50"
+      }
+    ]
+  },
+  {
+    "id": "fin-sp-global-kensho-mcp",
+    "name": "S&P Global (Kensho) MCP",
+    "vendor": "S&P Global",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "Claude 번들·ChatGPT 앱 양쪽의 S&P 데이터",
+    "description": "S&P Global의 Kensho 원격 MCP는 anthropics/financial-services 커넥터 묶음에 들어 있고 별도 sp-global 파트너 플러그인과 Claude for Excel 데이터 소스로도 쓰입니다. ChatGPT Enterprise에는 2026년 2월 16일 S&P Global 앱이 추가돼 Apps 탭에서 승인된 S&P 로그인으로 연결합니다. 어느 경로든 S&P 쪽 계약이 있어야 데이터를 볼 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "S&P Global 구독 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.marketplace.spglobal.com/en/solutions/chatgpt-%28594c80a5-b40c-49ae-9f9c-c9f304590399%29",
+    "repo": null,
+    "install": "https://kfinance.kensho.com/integrations/mcp",
+    "caveats": [
+      "ChatGPT 앱은 Enterprise 전용이며 Capital IQ 자격 증명과 별개",
+      "라이선스가 없으면 연결해도 데이터 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services"
+      },
+      {
+        "label": "S&P Global Marketplace: ChatGPT",
+        "url": "https://www.marketplace.spglobal.com/en/solutions/chatgpt-%28594c80a5-b40c-49ae-9f9c-c9f304590399%29"
+      },
+      {
+        "label": "Claude 문서: Excel",
+        "url": "https://www.claude.com/docs/office-agents/excel"
+      }
+    ]
+  },
+  {
+    "id": "fin-lseg-mcp",
+    "name": "LSEG MCP",
+    "vendor": "LSEG",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "LSEG 데이터, Claude 번들·Excel에서 연결",
+    "description": "LSEG의 원격 MCP는 anthropics/financial-services 커넥터 묶음에 포함되고 별도 lseg 파트너 플러그인도 있으며, Claude for Excel이 끌어오는 데이터 소스 중 하나입니다. OpenAI의 ChatGPT for Financial Services는 LSEG News를 기본 데이터로 묶고 LSEG 구독 인증 연동을 준비 중입니다. 기존 LSEG 계약이 있는 기관 사용자용입니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "LSEG 구독 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://api.analytics.lseg.com/lfa/mcp",
+    "caveats": [
+      "LSEG 라이선스가 없으면 사용 불가"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services"
+      },
+      {
+        "label": "Claude 문서: Excel",
+        "url": "https://www.claude.com/docs/office-agents/excel"
+      },
+      {
+        "label": "TestingCatalog",
+        "url": "https://www.testingcatalog.com/openai-launches-chatgpt-for-financial-services.md"
+      }
+    ]
+  },
+  {
+    "id": "fin-daloopa-mcp",
+    "name": "Daloopa MCP",
+    "vendor": "Daloopa",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "Claude·ChatGPT 금융 번들에 모두 들어간 데이터",
+    "description": "Daloopa 원격 MCP는 anthropics/financial-services 커넥터 묶음과 Claude for Excel 데이터 소스에 포함됩니다. ChatGPT for Financial Services에서는 OpenAI가 Daloopa 데이터를 직접 호스팅해 별도 계약 없이 제공합니다. Claude 경로에서는 Daloopa 구독이나 API 키가 필요할 수 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "Daloopa 구독 필요(Claude 경로)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.daloopa.com/server/mcp",
+    "caveats": [
+      "Claude 경로는 각자 Daloopa 라이선스 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services"
+      },
+      {
+        "label": "TestingCatalog",
+        "url": "https://www.testingcatalog.com/openai-launches-chatgpt-for-financial-services.md"
+      },
+      {
+        "label": "Claude 문서: Excel",
+        "url": "https://www.claude.com/docs/office-agents/excel"
+      }
+    ]
+  },
+  {
+    "id": "fin-factset-mcp",
+    "name": "FactSet MCP",
+    "vendor": "FactSet",
+    "domain": "finance",
+    "category": "시장 데이터",
+    "tagline": "기관 라이선스용 FactSet 원격 MCP",
+    "description": "FactSet 원격 MCP는 anthropics/financial-services 커넥터로 Claude Code와 Cowork에서 쓸 수 있습니다. ChatGPT for Financial Services의 50개 이상 커넥터에도 포함되며, ChatGPT for Excel 베타 당시에는 연동 예정 앱 목록에 있었습니다. FactSet 계약이 있는 기관 사용자 전용입니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "FactSet 라이선스 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.factset.com/mcp",
+    "caveats": [
+      "FactSet 라이선스가 없으면 사용 불가"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services"
+      },
+      {
+        "label": "Fonearena",
+        "url": "https://www.fonearena.com/blog/492132/openai-chatgpt-financial-services.html/amp"
+      }
+    ]
+  },
+  {
+    "id": "fin-alpaca-mcp",
+    "name": "Alpaca MCP Server",
+    "vendor": "Alpaca",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "기본 페이퍼 트레이딩인 공식 로컬 브로커 MCP",
+    "description": "미국 주식·ETF, 옵션(멀티레그·그릭스·행사), 암호화폐, 뉴스, 기업 이벤트, 채권 시세를 다루는 Alpaca 공식 MCP로, v2는 FastMCP/OpenAPI 기반으로 다시 작성됐습니다. 로컬 stdio가 기본이라 Claude Desktop, Claude Code, Cursor, VS Code, PyCharm, Antigravity CLI에서 쓰며, ChatGPT와 Claude 모바일은 원격 서버를 직접 호스팅해야 합니다. ALPACA_TOOLSETS로 11개 도구 묶음 중 노출 범위를 줄일 수 있어 에이전트 트레이딩 실험의 첫 단계로 적합합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor",
+      "copilot",
+      "gemini"
+    ],
+    "aiCost": "none",
+    "price": "최소 입금 없음, 페이퍼 가상 자금 $100K",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 1000,
+    "updated": null,
+    "homepage": "https://alpaca.markets/agentic",
+    "repo": "alpacahq/alpaca-mcp-server",
+    "install": "claude mcp add alpaca --scope user --transport stdio uvx alpaca-mcp-server",
+    "caveats": [
+      "기본값 페이퍼(ALPACA_PAPER_TRADE=true), 실거래는 명시적으로 전환해야 함",
+      "내장 주문 확인·읽기 전용 모드가 없으니 주문 도구 자동 승인 금지",
+      "HTTP 모드는 원격 인증이 없어 외부 공개 금지"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub alpaca-mcp-server",
+        "url": "https://github.com/alpacahq/alpaca-mcp-server"
+      },
+      {
+        "label": "Alpaca agentic 페이지",
+        "url": "https://alpaca.markets/agentic"
+      }
+    ]
+  },
+  {
+    "id": "fin-webull-mcp",
+    "name": "Webull OpenAPI MCP",
+    "vendor": "Webull",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "UAT 샌드박스 기본, 주문 미리보기·한도 내장",
+    "description": "미국·홍콩·일본·싱가포르 등 9개 지역의 주식·옵션·선물·암호화폐·이벤트 계약 시세와 주문을 다루는 Webull 공식 로컬 MCP입니다. uvx로 실행하고 App Key·Secret으로 인증하며, 2FA 계정은 Webull 앱에서 승인하는 15일짜리 토큰(자동 갱신)을 씁니다. 주문 미리보기 도구, 시장별 금액·수량 한도, 종목 화이트리스트, 주문 감사 로그를 갖췄습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(Apache-2.0), Webull 계정 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 30,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "webull-inc/webull-openapi-mcp",
+    "install": "uvx webull-openapi-mcp serve",
+    "caveats": [
+      "기본 UAT 샌드박스, 실거래는 WEBULL_ENVIRONMENT=prod 필요",
+      "WEBULL_TOOLSETS로 주문 도구 제외 가능",
+      "README 경고: AK/SK를 AI 모델에 공유하지 말 것"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub webull-openapi-mcp",
+        "url": "https://github.com/webull-inc/webull-openapi-mcp"
+      },
+      {
+        "label": "PyPI webull-openapi-mcp",
+        "url": "https://pypi.org/pypi/webull-openapi-mcp/json"
+      }
+    ]
+  },
+  {
+    "id": "fin-ibkr-mcp",
+    "name": "IBKR AI Integration (MCP)",
+    "vendor": "Interactive Brokers",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "AI는 초안, 주문은 고객이 승인하는 원격 MCP",
+    "description": "Interactive Brokers의 원격 OAuth MCP로 AI가 포트폴리오를 분석해 주문 지시를 초안으로 만들면 고객이 IBKR 플랫폼에서 검토해 주문으로 전환합니다. 6월 1일 Claude 인증 커넥터로 출시된 뒤 7월 28일 모든 MCP 클라이언트에 열려 ChatGPT·Claude·Grok·Perplexity 디렉터리와 Claude Code·Codex·Cursor 커스텀 커넥터에서 쓸 수 있습니다. 10월 21일 추가된 Autonomous Trading은 계좌 자산의 10%(최대 $25,000)로 제한된 현금 전용 AI Partition 안에서만 AI가 직접 주문합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "연결 추가 요금 없음(일반 수수료 적용)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://www.interactivebrokers.com/en/trading/ai-integrations.php",
+    "repo": null,
+    "install": "https://api.ibkr.com/v1/api/mcp-public",
+    "caveats": [
+      "표준 모드는 모든 주문을 고객이 직접 검토·제출, 페이퍼 계좌 연결 가능 여부는 미공개",
+      "Autonomous는 비마진 개인 계좌가 Review & Approve 모드로 10회 이상 거래한 뒤에만 가능",
+      "접근을 철회해도 대기·부분 체결 주문은 자동 취소되지 않음"
+    ],
+    "korea": "인도·일본에서는 제공되지 않습니다. Autonomous 대상 법인이 문서마다 달라(IB LLC·호주·싱가포르·영국, 보도자료는 유럽 추가) 한국 거주자는 계좌가 속한 IBKR 법인을 먼저 확인해야 합니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "IBKR AI Integrations",
+        "url": "https://www.interactivebrokers.com/en/trading/ai-integrations.php"
+      },
+      {
+        "label": "IBKR 보도자료 2026-07-28",
+        "url": "https://www.interactivebrokers.com/en/general/about/mediaRelations/7-28-26.php"
+      },
+      {
+        "label": "IBKR Traders' Insight",
+        "url": "https://www.interactivebrokers.com/campus/traders-insight/ibkr-toolbox/traders-toolbox-ai-order-placement-is-here/"
+      }
+    ]
+  },
+  {
+    "id": "fin-robinhood-agentic-mcp",
+    "name": "Robinhood Agentic Trading MCP",
+    "vendor": "Robinhood",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "별도 에이전트 계좌에서만 거래하는 공식 MCP",
+    "description": "2026년 5월 27일 베타로 출시된 Robinhood의 Trading MCP로, AI 클라이언트에 커스텀 커넥터로 링크를 추가해 씁니다. 공식 지원 클라이언트는 Claude Desktop, Claude Code, ChatGPT, Codex, Cursor, Grok이며 설정은 데스크톱에서만 됩니다. 거래는 별도의 자기 주도형 agentic account(IRA 제외)에서만 하고 매 거래마다 푸시 알림이 오지만, 읽기는 계좌 번호를 포함해 모든 Robinhood 계좌에 미칩니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "추가 요금 없음",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "거래 미리보기 승인은 선택 사항이라 끄면 확인 없이 주문됨",
+      "거래는 에이전트 계좌로 격리되지만 전체 계좌 읽기 권한을 가짐",
+      "암호화폐 지원 여부와 한도 기능은 출처마다 다름"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Finder 가이드",
+        "url": "https://www.finder.com/stock-trading/robinhood-agentic-accounts"
+      },
+      {
+        "label": "CryptoBriefing",
+        "url": "https://cryptobriefing.com/robinhood-agentic-trading-crypto-equities/"
+      }
+    ]
+  },
+  {
+    "id": "fin-tradier-mcp",
+    "name": "Tradier MCP",
+    "vendor": "Tradier",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "개인 토큰 인증 호스팅 MCP, 주문 확인 없음",
+    "description": "2025년 12월 22일 출시된 Tradier의 호스팅 MCP로 개인 액세스 토큰으로 인증합니다. 실시간·지연 시세, 그릭스를 포함한 옵션 체인, 주식·옵션 주문, 계좌·워치리스트, 페이퍼 트레이딩을 다룹니다. ChatGPT Desktop, Claude(웹·데스크톱·Code), Cursor, Gemini CLI를 지원합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "chatgpt",
+      "claude",
+      "cursor",
+      "gemini"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2025-12",
+    "homepage": "https://support.tradier.com/kb/guide/en/tradiers-mcp-server-eoA0tv3GlS/Steps/4946334",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "내장 주문 확인 단계가 없어 직접 검토 단계를 만들어야 함",
+      "페이퍼 트레이딩 계좌로 먼저 검증",
+      "클라이언트에서 주문 도구 자동 승인 금지"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Tradier 보도자료",
+        "url": "https://tradier.com/company/press/Tradier-Launches-MCP-Service-LLM-Powered-Trading"
+      },
+      {
+        "label": "Tradier 지원 KB",
+        "url": "https://support.tradier.com/kb/guide/en/tradiers-mcp-server-eoA0tv3GlS/Steps/4946334"
+      }
+    ]
+  },
+  {
+    "id": "fin-tastytrade-mcp",
+    "name": "tastytrade MCP server",
+    "vendor": "tastytrade",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "기본 실거래, dry-run 토큰을 거쳐 주문하는 MCP",
+    "description": "tastytrade 공식 로컬 MCP로 84개 도구(읽기 전용 70, 쓰기 2, 파괴적 12)를 제공하며 npm 배포 없이 저장소를 클론해 빌드(Node 22+)한 뒤 stdio로 실행합니다. 주문 제출·수정 도구 5개는 대응하는 dry_run_* 도구가 발급한 1회용 confirmation_token(60초 유효, 인자 해시에 묶임)이 있어야 하고, 모든 주문 결과에 environment 필드가 붙습니다. 인증은 TASTYTRADE_CLIENT_ID, TASTYTRADE_CLIENT_SECRET, TASTYTRADE_REFRESH_TOKEN 환경 변수로만 하며 Claude Desktop·Claude Code 설정이 문서화돼 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(README상 MIT), tastytrade 계정 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 32,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "tastytrade/tastytrade-mcp",
+    "install": null,
+    "caveats": [
+      "기본 엔드포인트가 PRODUCTION(실거래), 샌드박스는 TASTYTRADE_ENV=sandbox",
+      "README 명시: 확인 토큰은 사람의 승인이 아님",
+      "TASTYTRADE_READ_ONLY=1이면 쓰기 도구를 모두 숨김(fail-closed)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub tastytrade-mcp",
+        "url": "https://github.com/tastytrade/tastytrade-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-bybit-mcp",
+    "name": "Bybit MCP Server",
+    "vendor": "Bybit",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "396개 도구, 테스트넷은 직접 켜야 하는 거래소 MCP",
+    "description": "Bybit 공식 로컬 MCP로 시세, 주문, 포지션, 계좌, 자산, 대출, Earn, 세금 보고서, WebSocket 스트림에 POV·Iceberg 전략 주문까지 396개 도구를 제공합니다. npx로 실행(Node 20.6+)하고 HMAC(BYBIT_API_KEY, BYBIT_API_SECRET) 또는 RSA 키로 인증하며, 시세 도구 23개는 키 없이 동작합니다. Claude Desktop, Cursor, VS Code가 문서화된 클라이언트입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 43,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "bybit-exchange/trading-mcp",
+    "install": "npx bybit-official-trading-server@latest",
+    "caveats": [
+      "BYBIT_TESTNET=true가 아니면 실거래",
+      "내장 주문 확인 단계가 없음, 주문은 직접 검토",
+      "Bybit 권고대로 출금 권한을 끈 API 키 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub bybit trading-mcp",
+        "url": "https://github.com/bybit-exchange/trading-mcp"
+      },
+      {
+        "label": "npm bybit-official-trading-server",
+        "url": "https://registry.npmjs.org/bybit-official-trading-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-kraken-cli",
+    "name": "Kraken CLI",
+    "vendor": "Kraken",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "kraken mcp 내장, 키 없는 페이퍼 시뮬레이터",
+    "description": "Kraken 공식 단일 바이너리 CLI로 15개 그룹 174개 명령을 제공하고 kraken mcp로 stdio MCP 서버를 띄우며, market·trade·paper 등 서비스 그룹을 골라 노출할 수 있습니다. 1,400개 이상 현물 페어, xStocks 토큰화 미국 주식, 외환, 무기한·만기 선물을 다루고, 실시간 가격을 쓰는 현물·선물 페이퍼 시뮬레이터는 API 키 없이 동작합니다. Cursor, Claude, Codex, Copilot, Gemini 등에서 쓸 수 있습니다.",
+    "connect": [
+      "cli",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": 775,
+    "updated": null,
+    "homepage": null,
+    "repo": "krakenfx/kraken-cli",
+    "install": "kraken mcp",
+    "caveats": [
+      "기본 guarded 모드: 주문·출금 등 위험 명령 41개는 acknowledged=true 필요",
+      "--allow-dangerous는 이 보호를 끄므로 쓰지 말 것",
+      "xStocks는 미국에서 이용 불가"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub kraken-cli",
+        "url": "https://github.com/krakenfx/kraken-cli"
+      },
+      {
+        "label": "BlockEden 2026-04-22",
+        "url": "https://blockeden.xyz/blog/2026/04/22/kraken-cli-open-source-ai-agent-execution-engine-crypto-markets/"
+      }
+    ]
+  },
+  {
+    "id": "fin-okx-agent-trade-kit",
+    "name": "OKX Agent Trade Kit",
+    "vendor": "OKX",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "170개 도구, 읽기 전용 플래그 지원 거래 키트",
+    "description": "OKX 공식 에이전트 키트로 @okx_ai/okx-trade-mcp와 @okx_ai/okx-trade-cli 두 npm 패키지(Node 18+)를 제공합니다. 시장·현물·스왑·선물·옵션·계좌·이벤트·Earn·봇·뉴스·스마트머니 11개 모듈 170개 도구를 로컬에서 실행해 키가 사용자 PC에만 남습니다. setup 명령이 Claude Desktop, Cursor, Claude Code, VS Code 설정을 자동으로 써 줍니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 486,
+    "updated": null,
+    "homepage": null,
+    "repo": "okx/agent-trade-kit",
+    "install": "okx-trade-mcp setup --client <client>",
+    "caveats": [
+      "--read-only와 --modules로 노출 범위부터 줄일 것",
+      "데모(모의) 환경은 출시 보도에만 언급돼 README로는 미확인",
+      "주문 도구 자동 승인 금지"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub okx/agent-trade-kit",
+        "url": "https://github.com/okx/agent-trade-kit"
+      },
+      {
+        "label": "Unlock-BC",
+        "url": "https://unlock-bc.com/en/okx-launches-agent-trade-kit-for-ai-trading"
+      }
+    ]
+  },
+  {
+    "id": "fin-coinbase-agentkit",
+    "name": "Coinbase AgentKit",
+    "vendor": "Coinbase",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "온체인 지갑 에이전트 툴킷, 기본 지출 한도 없음",
+    "description": "Coinbase의 온체인 에이전트 툴킷으로 TypeScript MCP 확장과 예제 MCP 스마트 지갑 서버를 제공합니다. LangChain, Vercel AI SDK, OpenAI Agents SDK, AutoGen, Pydantic-AI, Strands를 지원하고 CDP·Privy·viem 지갑과 50개 이상 TypeScript, 30개 이상 Python 액션 프로바이더를 갖췄습니다. 코딩 에이전트가 라이브러리로 코드를 짜거나 MCP 확장으로 붙여 씁니다.",
+    "connect": [
+      "library",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 1300,
+    "updated": null,
+    "homepage": null,
+    "repo": "coinbase/agentkit",
+    "install": null,
+    "caveats": [
+      "기본값으로 사람 승인, 지출 한도, 수신처 허용 목록이 모두 없음",
+      "프롬프트 인젝션으로 온체인 전송이 일어날 수 있어 가드레일 미들웨어 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub coinbase/agentkit",
+        "url": "https://github.com/coinbase/agentkit"
+      }
+    ]
+  },
+  {
+    "id": "fin-trade-it-mcp",
+    "name": "Trade It (Trade Agent) MCP",
+    "vendor": "Trade It",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "여러 브로커를 잇는 초안 우선 원격 MCP",
+    "description": "Robinhood, Schwab, E*Trade, Webull, Public, tastytrade 브로커와 Coinbase, Kraken 거래소를 하나의 원격 MCP로 연결하는 서드파티 서비스입니다. 브라우저 OAuth로 인증하며 create_trade는 주문 초안만 만들고 execute_trade는 사용자의 명시적 확인 뒤에만 주문을 제출합니다. 공식 MCP가 없는 Schwab·E*Trade를 쓸 때의 대안이지만 브로커 OAuth를 제3자에게 맡기게 됩니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "Pro 플랜 필요(무료 체험 있음)",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": 61,
+    "updated": null,
+    "homepage": null,
+    "repo": "trade-it-inc/trade-it-mcp",
+    "install": "https://mcp.tradeit.app/mcp",
+    "caveats": [
+      "초안 작성 후 명시적 확인이 있어야만 주문 실행",
+      "브로커 OAuth 토큰을 제3자 서비스에 위임"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "mcp.so Trade Agent",
+        "url": "https://mcp.so/server/trade-agent-mcp"
+      },
+      {
+        "label": "GitHub trade-it-mcp",
+        "url": "https://github.com/trade-it-inc/trade-it-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-polymarket-agents",
+    "name": "Polymarket Agents",
+    "vendor": "Polymarket",
+    "domain": "finance",
+    "category": "브로커·거래소",
+    "tagline": "보관 처리된 Polymarket 공식 자율 거래 프레임워크",
+    "description": "AI 에이전트로 Polymarket에서 자율 거래하는 Python 프레임워크로 지갑 개인 키와 USDC가 필요하며 MCP는 없습니다. 2026년 5월 11일 소유자가 보관(archived) 처리해 읽기 전용이 됐습니다. Kalshi도 공식 MCP가 없고, 커뮤니티 oddsrail 서버의 호스팅 버전은 Kalshi API 약관 때문에 Kalshi 도구를 빼서 Kalshi 거래는 직접 셀프 호스팅해야 합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "archived",
+    "stars": 3800,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": "Polymarket/agents",
+    "install": null,
+    "caveats": [
+      "2026-05-11 보관 처리돼 유지보수 없음",
+      "Polymarket 약관상 미국인 등 일부 지역은 에이전트를 통한 거래도 금지",
+      "지갑 개인 키를 직접 다루는 실자금 거래"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub Polymarket/agents",
+        "url": "https://github.com/Polymarket/agents"
+      },
+      {
+        "label": "mcpservers.org oddsrail",
+        "url": "https://mcpservers.org/servers/hmesutozsoy/oddsrail"
+      }
+    ]
+  },
+  {
+    "id": "fin-kis-trading-mcp",
+    "name": "KIS Trading MCP",
+    "vendor": "한국투자증권",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "한국투자증권 공식 트레이딩 MCP, 모의투자 지원",
+    "description": "한국투자증권 공식 open-trading-api 저장소의 MCP 폴더에 있는 트레이딩 서버로 국내·해외 주식, 선물·옵션, 채권, ETF·ELW 시세와 잔고·손익, 현금·신용·파생 주문(정정·취소 포함), 순위·투자자 동향을 다룹니다. 같은 저장소에 llms.txt, LLM용 단일 API 예제(examples_llm), 전략 빌더, QuantConnect Lean 기반 백테스터(Docker)가 함께 있습니다. Claude와 Cursor 사용 예가 있으며 Python 3.11+, uv, ~/KIS/config/kis_devlp.yaml 설정이 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스, KIS 계좌·앱키 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 1654,
+    "updated": "2026-10",
+    "homepage": "https://github.com/koreainvestment/open-trading-api/tree/main/MCP",
+    "repo": "koreainvestment/open-trading-api",
+    "install": null,
+    "caveats": [
+      "모의투자는 ka.auth(svr=\"vps\")와 별도 모의 키 사용, REST 호출 한도는 더 낮음",
+      "README에 주문 확인 흐름 설명이 없어 클라이언트 승인 창이 실질적 안전장치",
+      "LLM이 추정한 종목코드는 호출 전 KIS 종목 검색으로 검증 권장"
+    ],
+    "korea": "한국투자증권 공식 제공입니다. 2026-10-23부터 KIS Developers > AI도구에서 'OpenAPI AI 에이전트'(API 사용법·샘플 코드·오류 수정)와 '투자전략 플레이그라운드'도 제공합니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub open-trading-api",
+        "url": "https://github.com/koreainvestment/open-trading-api"
+      },
+      {
+        "label": "KIS MCP 폴더",
+        "url": "https://github.com/koreainvestment/open-trading-api/tree/main/MCP"
+      },
+      {
+        "label": "velog @laivdata",
+        "url": "https://velog.io/@laivdata/new-paradigm-investment-api-meets-nlp-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-kis-code-assistant-mcp",
+    "name": "KIS Code Assistant MCP",
+    "vendor": "한국투자증권",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "KIS API 사용법·샘플 코드 자연어 검색 MCP",
+    "description": "한국투자증권 Open API의 사용법과 샘플 코드를 자연어로 검색해 주는 공식 MCP로, 주문 없이 개발을 돕는 용도입니다. 2025년 9월 공개 당시 Cursor, Claude Code, Smithery 경로가 소개됐고, 이를 써서 Cursor에서 5/20일 골든크로스 봇을 모의투자로만 만들어 보는 실습기도 있습니다. 트레이딩 코드를 직접 짜기 전에 API 탐색용으로 붙여 두기 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 1654,
+    "updated": "2026-10",
+    "homepage": "https://github.com/koreainvestment/open-trading-api/tree/main/MCP",
+    "repo": "koreainvestment/open-trading-api",
+    "install": null,
+    "caveats": [
+      "코드·문서 검색 전용이라 주문 도구 없음",
+      "Smithery 호스팅 URL은 10월 31일 종료 예정이라 로컬 실행 권장"
+    ],
+    "korea": "공개 당시 GeekNews에서 프롬프트 인젝션으로 의도치 않은 주문이 나갈 수 있다는 지적이 나왔고, 실습기는 '처음에는 반드시 모의투자로 시작'을 권합니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GeekNews",
+        "url": "https://news.hada.io/topic?id=23084"
+      },
+      {
+        "label": "velog @jjlee6496",
+        "url": "https://velog.io/@jjlee6496/KIS-Code-Assistant-MCP1"
+      },
+      {
+        "label": "GitHub open-trading-api",
+        "url": "https://github.com/koreainvestment/open-trading-api"
+      }
+    ]
+  },
+  {
+    "id": "fin-kiwoom-mcp",
+    "name": "Kiwoom REST API MCP (kiwoom-exec-mcp, kiwoom-spec-mcp)",
+    "vendor": "키움증권",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "기본 demo, 주문 도구는 이중 게이트로 잠금",
+    "description": "키움증권 공식 REST API 저장소에 포함된 MCP로, kiwoom-spec-mcp는 자격 증명 없이 337개 API 스펙과 예제를 검색하고 kiwoom-exec-mcp는 시세·계좌·주문을 처리하며 계좌번호를 마스킹합니다. Claude Desktop용 .mcpb 번들, Claude Code·Codex 설정 스크립트, demo가 기본인 kiwoomcli를 함께 제공합니다. Python 3.13+와 uv가 필요하고 Linux는 지원하지 않으며, 자율 매매보다 대화형 리서치용으로 설계됐습니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스, 키움 계좌·App Key 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 64,
+    "updated": null,
+    "homepage": null,
+    "repo": "Kiwoom-Securities/Kiwoom-REST-API",
+    "install": null,
+    "caveats": [
+      "KIWOOM_MCP_ALLOW_ORDERS=\"1\"이 아니면 주문 도구 미등록, 주문 시 confirm=true도 필요",
+      "AI가 confirm을 스스로 채울 수 있어 클라이언트 승인 창이 실제 안전장치",
+      "env가 비어 있으면 로컬에 저장된 실계좌 자격 증명으로 대체될 수 있음"
+    ],
+    "korea": "KIWOOM_MODE=demo|real로 모의·실전을 나누고 데모와 실전은 App Key가 따로이며, 데스크톱 번들 기본값은 demo입니다. 반복 조회 시 429 오류가 날 수 있습니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub Kiwoom-REST-API",
+        "url": "https://github.com/Kiwoom-Securities/Kiwoom-REST-API"
+      },
+      {
+        "label": "AlgoLab 분석",
+        "url": "https://algolab.co.kr/blog/kiwoom-openapi-mcp-server-claude-2026"
+      }
+    ]
+  },
+  {
+    "id": "fin-nhplug-mcp",
+    "name": "nhplug-mcp",
+    "vendor": "NH투자증권 (PLUG-OpenAPI)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "NH Open API 샘플 MCP, 기본은 실전(Live)",
+    "description": "README에 NH투자증권 공식 Open API(NHPLUG) 지원 저장소라고 밝힌 샘플 MCP로 국내·해외 주식 시세, 계좌 조회, 주문을 REST 49개와 실시간 27채널로 다룹니다. 도구가 너무 많아지지 않도록 소수의 메타 도구로 노출하며 Node 18+로 Claude Desktop에 붙이고 NHPLUG_APP_KEY, NHPLUG_APP_SECRET을 씁니다. 베이스·인증 URL을 허용 목록으로 묶어 오타로 키가 다른 곳에 새는 일을 막습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT), NH 앱키 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 13,
+    "updated": "2026-09",
+    "homepage": "https://www.nhplug.com",
+    "repo": "PLUG-OpenAPI/nhplug-mcp",
+    "install": "npx -y github:PLUG-OpenAPI/nhplug-mcp",
+    "caveats": [
+      "NH 가이드: 기본은 운영(Live)이며 주문이 실제로 체결됨",
+      "주문 도구는 NHPLUG_ENABLE_TRADING=true일 때만 노출(기본 false), 켜지 말고 조회용으로 시작",
+      "GitHub 조직이 2026-08 생성·미인증이라 공식 여부는 README와 nhsec.com 연락처가 근거"
+    ],
+    "korea": "모의투자 서버는 https://moapi.nhplug.com:8443이며, 액세스 토큰 발급은 운영 환경에서만 됩니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub nhplug-mcp",
+        "url": "https://github.com/PLUG-OpenAPI/nhplug-mcp"
+      },
+      {
+        "label": "nhplug.com llms.txt",
+        "url": "https://www.nhplug.com/llms.txt"
+      }
+    ]
+  },
+  {
+    "id": "fin-tossinvest-mcp",
+    "name": "tossinvest-mcp",
+    "vendor": "scjang01 (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "토스증권 Open API 커뮤니티 MCP, 샌드박스 없음",
+    "description": "토스증권 공식 Open API를 감싼 커뮤니티 MCP(v0.3.0, MIT, npx stdio)로 조회 도구 34개와 거래 도구 6개를 제공합니다. 거래 도구는 TOSSINVEST_ENABLE_TRADING=\"true\"일 때만 등록되고, 주문당·일일 한도와 종목 허용 목록을 선택적으로 걸 수 있습니다. Claude Desktop, Cursor 등에서 쓰며, 자격 증명 없이 문서만 검색하는 tossinvest-openapi-mcp도 따로 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": "scjang01/tossinvest-mcp",
+    "install": null,
+    "caveats": [
+      "토스증권 API는 샌드박스·모의 환경이 없어 모든 주문이 실자금",
+      "호출하는 PC의 공인 IP를 허용 목록에 등록해야 함",
+      "개발 중인 v0.3.0, 거래 도구는 꺼 둔 채 시작"
+    ],
+    "korea": "토스증권 공식 API 문서는 developers.tossinvest.com/docs에 있으며, 공식 MCP는 없습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub tossinvest-mcp",
+        "url": "https://github.com/scjang01/tossinvest-mcp"
+      },
+      {
+        "label": "GitHub tossinvest-openapi-mcp",
+        "url": "https://github.com/JeongSeongMok/tossinvest-openapi-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-ls-openapi-mcp",
+    "name": "RedoxNet.Mcp.LsOpenApi",
+    "vendor": "RedoxNet (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "LS증권 OpenAPI 비공식 읽기 전용 MCP",
+    "description": "LS증권(구 이베스트) OpenAPI를 감싼 비공식 .NET(NuGet) MCP로 국내·미국 시세, 차트, ETF, 스크리너, 잔고·보유 종목 조회를 제공합니다. v1.6은 주문 기능이 없는 읽기 전용이며 주문은 v1.7에 계획돼 있습니다. LS증권과 무관하며 보증받지 않았다고 명시돼 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://nuget.org/packages/redoxnet.mcp.lsopenapi",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "v1.6은 읽기 전용, v1.7에서 주문이 추가되면 권한을 다시 검토"
+    ],
+    "korea": "LS증권 공식 MCP는 없습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "NuGet RedoxNet.Mcp.LsOpenApi",
+        "url": "https://nuget.org/packages/redoxnet.mcp.lsopenapi"
+      }
+    ]
+  },
+  {
+    "id": "fin-upbit-mcp",
+    "name": "upbit-mcp-server",
+    "vendor": "solangii 외 (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "업비트 시세·주문 커뮤니티 MCP 모음",
+    "description": "업비트에는 공식 MCP가 없고 커뮤니티 서버만 있습니다. solangii/upbit-mcp-server(FastMCP, stdio)는 시세·계좌·주문 생성·취소를, restful3/upbit-mcp-sse(Docker, SSE)는 호가·캔들·입출금 내역·기술지표·백테스트까지 다루며, BrainDAO/mcp-upbit(npm)는 거래 도구를 선택적으로 켭니다. 거래가 필요 없다면 조회 전용 구성을 고르는 편이 안전합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "실계좌 대상이며 모의 환경 언급 없음, 주문 도구 자동 승인 금지",
+      "출금 권한 없는 API 키 사용"
+    ],
+    "korea": "업비트 공식 MCP는 확인되지 않았습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama solangii/upbit-mcp-server",
+        "url": "https://glama.ai/mcp/servers/solangii/upbit-mcp-server"
+      },
+      {
+        "label": "Glama restful3 upbit-mcp-sse",
+        "url": "https://glama.ai/mcp/servers/@restful3/upbit-mcp-sse"
+      },
+      {
+        "label": "Glama BrainDAO mcp-upbit",
+        "url": "https://images.glama.ai/mcp/servers/BrainDAO/mcp-upbit"
+      }
+    ]
+  },
+  {
+    "id": "fin-bithumb-mcp",
+    "name": "bithumb-mcp",
+    "vendor": "zereight (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "빗썸 API 기반 TypeScript 커뮤니티 MCP",
+    "description": "빗썸 API 메서드를 바탕으로 만든 TypeScript 커뮤니티 MCP 서버입니다. 빗썸 공식 MCP는 확인되지 않아 현재로서는 이런 커뮤니티 서버가 유일한 선택지입니다. 로컬 MCP로 코딩 에이전트에 붙여 빗썸 API 작업을 자연어로 처리할 때 씁니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "실계좌 대상, 주문 기능과 안전장치는 코드에서 직접 확인",
+      "출금 권한 없는 API 키 사용"
+    ],
+    "korea": "빗썸 공식 MCP는 확인되지 않았습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama zereight/bithumb-mcp",
+        "url": "https://glama.ai/mcp/servers/@zereight/bithumb-mcp/blob/c1fa220b9ded12b89f33bd3abe456c0982009b54/src/index.ts"
+      }
+    ]
+  },
+  {
+    "id": "fin-coinone-mcp",
+    "name": "coinone-mcp-server",
+    "vendor": "jooh95 (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "코인원 커뮤니티 MCP, 2025년 이후 업데이트 없음",
+    "description": "코인원은 개발자 문서(llms.txt)에 Public·Private API v2 레퍼런스만 있고 MCP나 AI 에이전트 관련 내용이 없습니다. 커뮤니티 서버 jooh95/coinone-mcp-server(Apache-2.0)는 2025-05 이후, xeromank/coinone-mcp는 2025-10 이후 업데이트가 없습니다. 코딩 에이전트가 REST v2를 직접 호출하는 코드를 짜는 편이 현실적입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(Apache-2.0)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 2,
+    "updated": "2025-05",
+    "homepage": null,
+    "repo": "jooh95/coinone-mcp-server",
+    "install": null,
+    "caveats": [
+      "유지보수가 멈춰 API 변경 시 동작 보장 없음",
+      "실계좌 대상이므로 주문 기능은 쓰지 않는 편이 안전"
+    ],
+    "korea": "코인원 공식 MCP는 없으며 MCP Registry 검색 결과도 0건입니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Coinone llms.txt",
+        "url": "https://docs.coinone.co.kr/llms.txt"
+      },
+      {
+        "label": "GitHub coinone-mcp-server",
+        "url": "https://github.com/jooh95/coinone-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-opendart-mcp",
+    "name": "opendart-mcp",
+    "vendor": "RealYoungk (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "OpenDART 공시·재무 83개 도구 MCP",
+    "description": "금융감독원 OpenDART API를 83개 도구로 감싼 커뮤니티 MCP로 공시 검색, 기업 개황, 정기보고서, 재무제표, 지분, 주요사항, 증권신고서를 다룹니다. uvx로 Claude Desktop, Claude Code, Cursor 등에 붙이며 SSE·Docker 옵션도 있습니다. 무료 OPENDART_API_KEY만 있으면 바로 쓸 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(OpenDART 키 무료)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 3,
+    "updated": null,
+    "homepage": null,
+    "repo": "RealYoungk/opendart-mcp",
+    "install": "uvx opendart-mcp",
+    "caveats": [
+      "OpenDART 공식 MCP 아님",
+      "스타 3개의 소규모 프로젝트라 유지보수 위험"
+    ],
+    "korea": "OpenDART 공식 MCP는 없습니다. 대안으로 재무제표 주석 추출을 지원하는 ChangooLee/mcp-opendart, hypn4/opendart-fss-mcp, keonho-kim/OpenDart-mcp가 있습니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub opendart-mcp",
+        "url": "https://github.com/RealYoungk/opendart-mcp"
+      },
+      {
+        "label": "WikiDocs OpenDART",
+        "url": "https://wikidocs.net/336171"
+      }
+    ]
+  },
+  {
+    "id": "fin-openkrx-mcp",
+    "name": "openkrx-mcp",
+    "vendor": "RealYoungk (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "KRX Open API 31개 도구 MCP",
+    "description": "한국거래소 KRX Open API를 감싼 커뮤니티 MCP로 지수, 주식, ETP, 채권, 파생상품, 일반상품, ESG 데이터를 31개 도구로 제공합니다. 2010년 이후 일별 데이터를 매일 08:00(KST)에 갱신하며 stdio 또는 SSE로 실행합니다. KRX_API_KEY가 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(KRX Open API 무료 가입)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 2,
+    "updated": null,
+    "homepage": null,
+    "repo": "RealYoungk/openkrx-mcp",
+    "install": null,
+    "caveats": [
+      "KRX Open API 호출 한도 10,000회",
+      "스타 2개의 소규모 프로젝트"
+    ],
+    "korea": "KRX Open API 키는 openapi.krx.co.kr에서 무료로 가입해 받습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub openkrx-mcp",
+        "url": "https://github.com/RealYoungk/openkrx-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-korea-bok-stats-mcp",
+    "name": "korea-bok-stats-mcp",
+    "vendor": "hlucent (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "한국은행 ECOS 통계 MCP, 공개 호스팅 종료",
+    "description": "한국은행 ECOS의 통계표 검색, 데이터, 항목, 100대 지표, 메타데이터, 용어 사전을 6개 도구로 제공하던 커뮤니티 MCP로 BOK_API_KEY(보통 하루 안에 발급)를 씁니다. 공개 Fly.io 배포는 2026-08-23에 종료됐습니다. 원격 대안으로 Pipeworx의 ECOS 게이트웨이(mcp-ecos-kr)가 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료(BOK API 키 필요)",
+    "free": true,
+    "official": "community",
+    "status": "shutdown",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "호스팅 당시 분당 3회 초과 시 일시 차단, 하루 30회 한도",
+      "차단돼도 HTTP 200과 isError로 응답",
+      "ECOS 데이터는 한국은행 Open API 약관 적용"
+    ],
+    "korea": "한국은행 공식 MCP는 없습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama ECOS MCP",
+        "url": "https://glama.ai/mcp/servers/wa3epmpqih"
+      },
+      {
+        "label": "GitHub pipeworx mcp-ecos-kr",
+        "url": "https://github.com/pipeworx-io/mcp-ecos-kr"
+      }
+    ]
+  },
+  {
+    "id": "fin-kosis-openapi-mcp",
+    "name": "kosis-openapi-mcp",
+    "vendor": "rubatoyd (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "KOSIS 4만 셀 한도 자동 분할, xlsx 내보내기",
+    "description": "통계청 국가통계포털 KOSIS의 통계표 검색, 메타데이터·값 조회, xlsx·csv·json·sqlite 내보내기를 지원하는 커뮤니티 MCP로 CLI도 들어 있습니다. 요청이 KOSIS의 40,000셀 한도에 걸리면 기간을 자동으로 나눠 가져옵니다. .mcpb 번들로 배포되고 아직 PyPI에는 없어 Git에서 uvx로 실행하며, kosis.kr에서 자동 승인되는 KOSIS_API_KEY가 필요합니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(KOSIS 키 자동 승인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 0,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "rubatoyd/kosis-openapi-mcp",
+    "install": "uvx --from git+https://github.com/rubatoyd/kosis-openapi-mcp kosis-mcp",
+    "caveats": [
+      "2026-09에 생성된 신규 프로젝트(스타 0개)",
+      "README 경고: API 키를 base64 디코딩하지 말 것"
+    ],
+    "korea": "KOSIS 공식 MCP는 없습니다. 자연어 조회용 Dayoooun/korea-stats-mcp(스타 16개)와 공유 키를 쓰는 Pipeworx 원격 게이트웨이도 있으며, KOSIS는 잘못된 키에도 HTTP 200과 {\"err\":\"11\"}을 돌려주니 응답 본문을 확인해야 합니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub kosis-openapi-mcp",
+        "url": "https://github.com/rubatoyd/kosis-openapi-mcp"
+      },
+      {
+        "label": "GitHub korea-stats-mcp",
+        "url": "https://github.com/Dayoooun/korea-stats-mcp"
+      },
+      {
+        "label": "GitHub mcp-kosis-kr",
+        "url": "https://github.com/pipeworx-io/mcp-kosis-kr"
+      }
+    ]
+  },
+  {
+    "id": "fin-korea-stock-mcp",
+    "name": "korea-stock-mcp",
+    "vendor": "jjlabsio (커뮤니티)",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "DART·KRX 공식 키로 쓰는 한국 주식 분석 MCP",
+    "description": "DART와 KRX 공식 Open API 키로 공시 목록과 원문(1MB 넘는 문서는 목차 페이징), XBRL 재무제표, KRX 일별 시세를 제공하는 커뮤니티 MCP입니다. Claude Desktop 설정에 npx로 넣어 실행하며 DART 키와 KRX Open API 키가 필요합니다. 공식 키를 쓰기 때문에 스크래핑 기반 도구보다 라이선스 측면에서 깔끔한 경로입니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(DART·KRX 키 필요)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 183,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "jjlabsio/korea-stock-mcp",
+    "install": null,
+    "caveats": [
+      "MCP Registry 항목(ai.smithery/jjlabsio-korea-stock-mcp)은 Smithery 호스팅이라 10월 31일 전에 로컬 npx로 전환 필요",
+      "관리자가 상용 서비스를 준비 중"
+    ],
+    "korea": "KRX Open API 키는 승인에 약 하루가 걸립니다.",
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub korea-stock-mcp",
+        "url": "https://github.com/jjlabsio/korea-stock-mcp"
+      },
+      {
+        "label": "MCP Registry: korea",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=korea&limit=50"
+      }
+    ]
+  },
+  {
+    "id": "fin-pykrx",
+    "name": "pykrx",
+    "vendor": "sharebook-kr",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "KRX·네이버 데이터 스크래핑 파이썬 라이브러리",
+    "description": "KRX와 네이버 금융 데이터를 가져오는 Python 스크래핑 라이브러리로 코딩 에이전트가 직접 코드를 작성해 씁니다. 로그인이 필요한 KRX API는 이제 KRX_ID와 KRX_PW 환경 변수, 즉 KRX 회원 계정이 반드시 있어야 합니다. 같은 조직의 pykrx-mcp(v0.1.3)는 ChatGPT·Claude에서 자연어로 KOSPI·KOSDAQ·KONEX 시세·재무·수급·공매도를 조회하지만 2026-02 이후 업데이트가 없습니다.",
+    "connect": [
+      "library",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 1105,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "sharebook-kr/pykrx",
+    "install": null,
+    "caveats": [
+      "데이터 저작권은 각 제공처(KRX·네이버)에 있음",
+      "스크래핑 기반이라 재배포·안정성에 제약",
+      "GitHub에서 라이선스 파일이 검출되지 않음"
+    ],
+    "korea": "로그인이 필요한 API는 KRX 회원 계정(KRX_ID, KRX_PW)이 필수입니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub pykrx",
+        "url": "https://github.com/sharebook-kr/pykrx"
+      },
+      {
+        "label": "GitHub pykrx-mcp",
+        "url": "https://github.com/sharebook-kr/pykrx-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-financedatareader",
+    "name": "FinanceDataReader",
+    "vendor": "FinanceData",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "KRX·글로벌 시세·지수·환율 파이썬 라이브러리",
+    "description": "KRX 상장·상장폐지 종목, 글로벌 상장 종목, 가격, 지수, 환율, 암호화폐를 가져오는 Python 라이브러리입니다. MCP 없이 코딩 에이전트가 직접 코드를 작성하는 대상으로 적합하며 꾸준히 관리되고 있습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 1558,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": "FinanceData/FinanceDataReader",
+    "install": "pip install finance-datareader",
+    "caveats": [],
+    "korea": "KRX 상장·상장폐지 목록을 지원해 국내 종목 유니버스 구성에 쓰기 좋습니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub FinanceDataReader",
+        "url": "https://github.com/FinanceData/FinanceDataReader"
+      },
+      {
+        "label": "PyPI finance-datareader",
+        "url": "https://pypi.org/project/finance-datareader/"
+      }
+    ]
+  },
+  {
+    "id": "fin-opendartreader",
+    "name": "OpenDartReader",
+    "vendor": "FinanceData",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "OpenDART 공시를 DataFrame으로 받는 라이브러리",
+    "description": "금융감독원 OpenDART 공시 API를 감싸 고유번호 매핑, DataFrame 출력, 재무제표 첨부 파일 다운로드를 제공하는 Python 라이브러리입니다. 코딩 에이전트가 공시·재무 분석 코드를 작성할 때 쓰기 좋습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT), OpenDART 키 필요",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 479,
+    "updated": "2026-08",
+    "homepage": null,
+    "repo": "FinanceData/OpenDartReader",
+    "install": "pip install opendartreader",
+    "caveats": [],
+    "korea": "OpenDART API 키가 필요합니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub OpenDartReader",
+        "url": "https://github.com/FinanceData/OpenDartReader"
+      },
+      {
+        "label": "PyPI opendartreader",
+        "url": "https://pypi.org/project/opendartreader/"
+      }
+    ]
+  },
+  {
+    "id": "fin-intelliquant",
+    "name": "인텔리퀀트 iQ Studio",
+    "vendor": "인텔리퀀트",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "Vibe Coding AI 비서가 있는 국내 퀀트 플랫폼",
+    "description": "코드(JavaScript 스타일), 블록, AI 대화로 전략을 만들고 2010~2026년 KOSPI 데이터로 백테스트하는 국내 퀀트 플랫폼입니다. 내장 'Vibe Coding' 비서가 전략 코드 작성·수정, 오류 수정, 백테스트 분석을 돕지만 사용 LLM은 공개되지 않았고 MCP가 없어 외부 AI 구독으로는 조작할 수 없습니다. iQ Market에서 검증 전략을 팔고 iQ Live로 증권사와 연동합니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.intelliquant.co.kr/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "MCP·외부 API 없음",
+      "내장 AI의 모델과 과금 방식 미공개"
+    ],
+    "korea": "국내 개인 투자자용 퀀트 플랫폼으로 KOSPI 백테스트를 지원합니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "intelliquant.co.kr",
+        "url": "https://www.intelliquant.co.kr/"
+      }
+    ]
+  },
+  {
+    "id": "fin-genport",
+    "name": "젠포트 (GenPort)",
+    "vendor": "뉴지스탁",
+    "domain": "finance",
+    "category": "한국 증권·공공데이터",
+    "tagline": "노코드 백테스트·주문 연동, 자연어 포트AI",
+    "description": "뉴지스탁의 퀀트 투자 플랫폼으로 노코드 전략 생성부터 백테스트, 예약매매, 증권사 주문 연동까지 제공하며 현재 genport.newsystock.com에서 서비스됩니다. 별도 서비스 '포트AI'가 자연어로 종목 탐색, 전략 생성, 시뮬레이션을 해 주지만 MCP나 공개 API는 확인되지 않아 외부 에이전트로는 연결할 수 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://genport.newsystock.com",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "옛 도메인 genport.co.kr은 접속되지 않음",
+      "포트AI의 모델과 요금 미공개"
+    ],
+    "korea": "암호화폐 24시간 자동매매용 코인젠포트와 종목 랭킹 서비스 뉴지랭크도 함께 운영합니다.",
+    "starter": false,
+    "sources": [
+      {
+        "label": "GenPort",
+        "url": "https://genport.newsystock.com/Main.aspx"
+      },
+      {
+        "label": "Newsystock 소개",
+        "url": "https://intro.newsystock.com/IntroB2C.aspx"
+      }
+    ]
+  },
+  {
+    "id": "fin-quantconnect-mcp",
+    "name": "QuantConnect MCP Server",
+    "vendor": "QuantConnect",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "LEAN 프로젝트·백테스트를 다루는 원격 MCP",
+    "description": "QuantConnect API를 LLM에 연결하는 원격 MCP로 프로젝트, 파일, 컴파일, 백테스트, 최적화, 라이브 트레이딩, 리서치 노트북 셀, Object Store, 데이터셋, 알림 도구를 제공합니다. Claude Code 데스크톱 앱에 커스텀 커넥터로 URL을 추가하고 브라우저에서 조직을 승인하며, Copilot(Local Platform), Cursor, Devin Desktop 설정도 문서화돼 있습니다. 조직에 유료 Agent Node가 있어야 연결됩니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "유료 Agent Node 필요(A1-1 월 $24부터)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://www.quantconnect.com/docs/v2/ai-assistance/mcp-server",
+    "repo": null,
+    "install": "https://www.quantconnect.com/api/v2/mcp",
+    "caveats": [
+      "무료 A-MICRO 노드는 원격 MCP에 연결 불가",
+      "create_live_algorithm 같은 라이브 트레이딩 도구는 제외하거나 범위를 좁힐 것",
+      "옛 GitHub 저장소 QuantConnect/mcp-server(Docker)는 deprecated"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "QC MCP Key Concepts",
+        "url": "https://www.quantconnect.com/docs/v2/ai-assistance/mcp-server/key-concepts"
+      },
+      {
+        "label": "QC MCP: Claude Code",
+        "url": "https://www.quantconnect.com/docs/v2/ai-assistance/mcp-server/claude-code"
+      },
+      {
+        "label": "GitHub QuantConnect/mcp-server",
+        "url": "https://github.com/QuantConnect/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-quantconnect-mia",
+    "name": "Mia",
+    "vendor": "QuantConnect",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "LEAN 코드를 쓰고 페이퍼 배포까지 하는 QC 에이전트",
+    "description": "QuantConnect의 자체 에이전틱 코딩 에이전트로 LEAN 코드 작성·컴파일·수정, 백테스트, 리서치 노트북, 파라미터 최적화를 하고 페이퍼 트레이딩을 배포·모니터링합니다. 상용·오픈소스 모델을 섞은 독자 조합을 쓰며, 에이전트는 기본적으로 무료 QuantConnect Meta Agent에서 돌아가 외부 AI 구독이 필요 없습니다. Algorithm Lab, Research Pipeline, 커뮤니티 포럼, Discord(#ask-mia)에서 쓸 수 있습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "기본 무료 Meta Agent, 전용 Assistant Node 월 $24부터",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.quantconnect.com/docs/v2/ai-assistance/predefined-agents/mia",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "실자금 라이브 배포 결정은 사용자 몫",
+      "모델을 직접 고르려면 유료 Agent Node와 BYOK 필요(BYOK 자격 조건은 문서마다 상충)",
+      "o3 대비 75% 벤치마크는 벤더 자체 주장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "QC 문서: Mia",
+        "url": "https://www.quantconnect.com/docs/v2/ai-assistance/predefined-agents/mia"
+      },
+      {
+        "label": "QuantConnect 가격",
+        "url": "https://www.quantconnect.com/pricing"
+      },
+      {
+        "label": "QC 문서: BYOK",
+        "url": "https://www.quantconnect.com/docs/v2/ai-assistance/bring-your-own-key"
+      }
+    ]
+  },
+  {
+    "id": "fin-lean",
+    "name": "LEAN",
+    "vendor": "QuantConnect",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "QuantConnect의 오픈소스 알고리즘 트레이딩 엔진",
+    "description": "QuantConnect의 오픈소스 백테스트·라이브 트레이딩 엔진으로 코딩 에이전트가 직접 전략 코드를 쓰고 테스트하는 대상입니다. QuantConnect MCP나 Mia를 통해 클라우드에서도 다룰 수 있고, 한국투자증권 open-trading-api의 백테스터도 Lean(Docker) 기반입니다. 활발히 개발 중이지만 GitHub 릴리스로는 버전을 관리하지 않습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 22186,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "QuantConnect/Lean",
+    "install": null,
+    "caveats": [
+      "마지막 태그 릴리스가 2017년이라 커밋 단위로 버전 고정"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub QuantConnect/Lean",
+        "url": "https://github.com/QuantConnect/Lean"
+      },
+      {
+        "label": "GitHub open-trading-api",
+        "url": "https://github.com/koreainvestment/open-trading-api"
+      }
+    ]
+  },
+  {
+    "id": "fin-openbb-mcp",
+    "name": "openbb-mcp-server",
+    "vendor": "OpenBB / OpenBQ",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "OpenBB 데이터 플랫폼을 MCP 도구로 노출",
+    "description": "OpenBB Open Data Platform(ODP)의 REST 라우트를 MCP 도구로 노출하는 로컬 서버로 기본 streamable-http(127.0.0.1:8001)로 실행합니다. 카테고리 필터와 디스커버리 도구로 전체 카탈로그를 숨겨 토큰 낭비를 막습니다. 2026-10-01 설립된 비영리 OpenBQ가 기술을 관리하며 저장소는 openbq-org/OpenBB로 옮겨졌습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 74606,
+    "updated": "2026-10",
+    "homepage": "https://openbb.co/",
+    "repo": "openbq-org/OpenBB",
+    "install": "uvx --from openbb-mcp-server --with openbb openbb-mcp",
+    "caveats": [
+      "OpenBQ·FINOS로 거버넌스가 옮겨가는 중이라 버전 고정 권장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OpenBB MCP README",
+        "url": "https://github.com/OpenBB-finance/OpenBB/tree/develop/openbb_platform/extensions/mcp_server"
+      },
+      {
+        "label": "PyPI openbb-mcp-server",
+        "url": "https://pypi.org/project/openbb-mcp-server/"
+      },
+      {
+        "label": "GitHub openbq-org/OpenBB",
+        "url": "https://github.com/openbq-org/OpenBB"
+      }
+    ]
+  },
+  {
+    "id": "fin-openbb-workspace-mcp",
+    "name": "OpenBB Workspace MCP",
+    "vendor": "OpenBB",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "열려 있는 Workspace 세션을 에이전트 도구로",
+    "description": "OpenBB Workspace 백엔드의 /mcp 엔드포인트로 사용자의 Workspace 브라우저 세션을 도구로 노출해 대시보드 읽기, 위젯 데이터 가져오기·생성, 탭 관리, 백엔드 등록을 할 수 있습니다. Workspace MCP 개인 액세스 토큰(Bearer)으로 인증하며 Claude Code, Codex, Cursor 등 streamable HTTP를 지원하는 MCP 클라이언트에서 씁니다. 반대로 Workspace Copilot이 외부 MCP 서버를 호출할 수도 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "개인용 무료 Community Edition 있음",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-09",
+    "homepage": "https://docs.openbb.co/agents/workspace-mcp-overview",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "브라우저 탭과 Workspace MCP Companion이 계속 연결돼 있어야 함",
+      "오픈소스화와 FINOS 이관이 진행 중"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OpenBB Workspace MCP 문서",
+        "url": "https://docs.openbb.co/agents/workspace-mcp-overview"
+      },
+      {
+        "label": "openbb.co",
+        "url": "https://openbb.co/"
+      }
+    ]
+  },
+  {
+    "id": "fin-jesse-mcp",
+    "name": "Jesse MCP",
+    "vendor": "Jesse",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "셀프 호스팅 Jesse 대시보드에 내장된 MCP",
+    "description": "암호화폐 트레이딩 프레임워크 Jesse의 셀프 호스팅 대시보드 주소 /mcp에서 제공되는 MCP로 Claude, Codex, Cursor, VS Code, Zed 등을 로컬 프로젝트에 연결합니다. 전략 작성, 캔들 가져오기·내보내기, 백테스트, 규칙 유의성 검정, 최적화, 몬테카를로, 리서치 스크립트, 페이퍼·라이브 세션(라이브 플러그인 필요)을 다룹니다. 인증은 Jesse 비밀번호에서 파생한 MCP 토큰을 씁니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT), MCP 요금 미기재",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 8694,
+    "updated": "2026-10",
+    "homepage": "https://docs.jesse.trade/docs/mcp/",
+    "repo": "jesse-ai/jesse",
+    "install": null,
+    "caveats": [
+      "라이브 세션은 실자금 사용, 페이퍼 세션으로 먼저 검증",
+      "리서치 스크립트는 PC 전체 접근 권한을 가짐",
+      "문서 경고: 과적합에 주의"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Jesse MCP 문서",
+        "url": "https://docs.jesse.trade/docs/mcp/"
+      },
+      {
+        "label": "GitHub jesse-ai/jesse",
+        "url": "https://github.com/jesse-ai/jesse"
+      }
+    ]
+  },
+  {
+    "id": "fin-numerai-mcp",
+    "name": "Numerai MCP",
+    "vendor": "Numerai",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "Numerai 토너먼트 제출·모델 업로드용 원격 MCP",
+    "description": "Numerai가 호스팅하는 MCP(stateless 2026-07-28 프로토콜, Streamable HTTP)로 토너먼트 정보, 모델 생성·업로드, 제출 검사, 범용 GraphQL 도구를 제공합니다. Numerai API 키를 NUMERAI_MCP_AUTH(Token PUBLIC_ID$SECRET_KEY 형식)로 넣어 인증하며 Codex CLI를 권장 클라이언트로, Cursor와 Claude Code도 지원합니다. 무료 난독화 데이터셋(Classic v6)으로 참가할 수 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "chatgpt",
+      "cursor",
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "무료 참가(NMR 스테이킹은 선택)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.numer.ai/numerai-tournament/api",
+    "repo": null,
+    "install": "https://api-tournament.numer.ai/mcp",
+    "caveats": [
+      "API 키 스코프는 제출·모델 업로드·사용자 정보까지, 스테이킹은 제외",
+      "v6 제출은 2026-11-06 시작 라운드부터"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Numerai 문서: API & MCP",
+        "url": "https://docs.numer.ai/numerai-tournament/api"
+      },
+      {
+        "label": "Numerai 문서",
+        "url": "https://docs.numer.ai/"
+      }
+    ]
+  },
+  {
+    "id": "fin-lumibot",
+    "name": "Lumibot",
+    "vendor": "Lumiwealth",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "브로커 12곳을 잇는 트레이딩 봇 라이브러리",
+    "description": "12개 브로커 연동과 에이전트 결정 백테스트를 지원하는 Python 트레이딩 봇 라이브러리로 실제 주문까지 하는 AI 에이전트를 내세웁니다. Claude Code, Codex, Cursor용 LumiBot trading skills(Lumiwealth/lumibot-trading-skills)를 설치할 수 있고, README는 Claude, ChatGPT, Codex, Cursor에서 쓰는 BotSpot MCP를 권합니다. 내장 AI 템플릿은 OPENAI_API_KEY가 필요해 별도 API 과금이 생깁니다.",
+    "connect": [
+      "library",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(GPL-3.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 2159,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "Lumiwealth/lumibot",
+    "install": null,
+    "caveats": [
+      "실주문 경로가 있으므로 브로커 페이퍼 계좌로 먼저 검증",
+      "GPL-3.0이라 상용 파생물에 주의",
+      "trading skills 저장소는 2026-10-24 생성된 신규 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub Lumibot",
+        "url": "https://github.com/Lumiwealth/lumibot"
+      },
+      {
+        "label": "GitHub lumibot-trading-skills",
+        "url": "https://github.com/Lumiwealth/lumibot-trading-skills"
+      }
+    ]
+  },
+  {
+    "id": "fin-botspot-mcp",
+    "name": "BotSpot MCP",
+    "vendor": "BotSpot",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "OAuth나 API 키로 붙는 트레이딩 봇 원격 MCP",
+    "description": "Lumibot이 권장하는 원격 MCP로 MCP 2026-07-28 사양의 stateless HTTP POST로 동작합니다. ChatGPT, Claude, Gemini CLI는 OAuth 로그인으로, Claude Code, Codex, Cursor는 BotSpot API 키(Bearer)로 연결하며 Cursor, VS Code, Claude 커넥터 원클릭 설치 배지가 있습니다. 거래 동작에는 승인이 필요합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "chatgpt",
+      "claude",
+      "gemini",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "none",
+    "price": "유료 BotSpot 플랜 필요(Lumibot README는 무료로 표기)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://botspot.trade/agents",
+    "repo": null,
+    "install": "https://mcp.botspot.trade/mcp",
+    "caveats": [
+      "무료 여부가 출처마다 상충",
+      "거래 동작은 승인을 거치며 클라이언트 자동 승인 금지"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "botspot.trade/agents",
+        "url": "https://botspot.trade/agents"
+      },
+      {
+        "label": "GitHub Lumibot",
+        "url": "https://github.com/Lumiwealth/lumibot"
+      }
+    ]
+  },
+  {
+    "id": "fin-hummingbot-skills",
+    "name": "Hummingbot Skills",
+    "vendor": "Hummingbot",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "보관된 MCP를 대체한 Hummingbot 에이전트 스킬",
+    "description": "Hummingbot이 MCP 저장소(hummingbot/mcp, 2026-03 마지막 푸시)를 보관 처리하고 대신 내놓은 Agent Skills 묶음으로 Claude Code, Cursor 등에 설치합니다. 함께 나온 hummingbot/condor는 Telegram이나 로컬 대시보드에서 AI 트레이딩 에이전트를 관리하는 하네스로 OpenAI·OpenRouter BYOK를 씁니다. Hummingbot 문서는 MCP를 특권 제어 평면으로 보고 Hummingbot API를 Tailscale 뒤에서 돌리라고 권합니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "오픈소스",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": "https://hummingbot.org/mcp/",
+    "repo": "hummingbot/skills",
+    "install": "npx skills add hummingbot/skills",
+    "caveats": [
+      "hummingbot/mcp는 보관됐는데 문서는 아직 옛 저장소를 가리킴",
+      "Condor 경고: AI 비서가 강력한 API 동작을 쉽게 실행하게 만듦",
+      "실거래 봇 제어 권한은 최소로 부여"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub hummingbot/skills",
+        "url": "https://github.com/hummingbot/skills"
+      },
+      {
+        "label": "hummingbot.org/mcp",
+        "url": "https://hummingbot.org/mcp/"
+      },
+      {
+        "label": "GitHub hummingbot/condor",
+        "url": "https://github.com/hummingbot/condor"
+      }
+    ]
+  },
+  {
+    "id": "fin-vectorbt-pro",
+    "name": "vectorbt PRO",
+    "vendor": "vectorbt",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "vbt agents install로 스킬을 설치하는 유료 백테스터",
+    "description": "vectorbt의 유료 버전으로 vbt agents install이 VBT 스킬을 .agents/skills와 .claude/skills에 설치하고 MCP 서버, CLI, LLM용 문서, 오프라인 지식 도구를 함께 제공합니다. GitHub Sponsors나 Patreon을 통한 비공개 저장소로 배포됩니다. 어떤 LLM을 어떻게 인증하는지는 공개 페이지에 나와 있지 않습니다.",
+    "connect": [
+      "skills",
+      "local-mcp",
+      "cli",
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "월 $25부터(연 $240, 평생 $500)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://vectorbt.pro/",
+    "repo": null,
+    "install": "vbt agents install",
+    "caveats": [
+      "MCP 서버의 도구 목록과 전송 방식은 미공개",
+      "비공개 저장소 구독형 배포"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "vectorbt.pro",
+        "url": "https://vectorbt.pro/"
+      }
+    ]
+  },
+  {
+    "id": "fin-vectorbt",
+    "name": "vectorbt",
+    "vendor": "polakowo",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "AI 에이전트 워크플로를 내세운 오픈소스 백테스터",
+    "description": "vectorbt 오픈소스판으로 README에서 트레이더·연구자·AI 에이전트를 위한 도구이자 에이전트 주도 워크플로 지원을 내세웁니다. 코딩 에이전트가 직접 코드를 작성해 쓰는 라이브러리이며, 2026-10-19 v1.2.0이 나왔습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(커스텀 라이선스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 9508,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "polakowo/vectorbt",
+    "install": null,
+    "caveats": [
+      "GitHub 라이선스가 NOASSERTION(커스텀 조건)이라 상용 사용 전 확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub polakowo/vectorbt",
+        "url": "https://github.com/polakowo/vectorbt"
+      }
+    ]
+  },
+  {
+    "id": "fin-tradingview-mcp",
+    "name": "tradingview-mcp",
+    "vendor": "tradesdontlie (커뮤니티)",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "TradingView Desktop을 CDP로 조작하는 MCP",
+    "description": "TradingView 공식 MCP가 없어 가장 인기 있는 커뮤니티 서버로, 로컬 TradingView Desktop을 Chrome DevTools Protocol(localhost:9222)로 조작합니다. Claude Code용 stdio MCP와 tv CLI로 78개 도구를 제공하며 Pine Script 코드 주입, 컴파일, 오류 읽기, 저장을 할 수 있습니다. 차트 조작만 하고 실제 주문은 하지 않습니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스, TradingView 구독 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": 6927,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "tradesdontlie/tradingview-mcp",
+    "install": null,
+    "caveats": [
+      "비공개 내부 인터페이스를 써서 TradingView 약관 위반 위험",
+      "시장 데이터 재배포 금지",
+      "GitHub 라이선스 NOASSERTION(README는 MIT)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub tradingview-mcp",
+        "url": "https://github.com/tradesdontlie/tradingview-mcp"
+      },
+      {
+        "label": "Glama PineScript MCP",
+        "url": "https://glama.ai/mcp/servers/cklose2000/pinescript-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-nautilustrader",
+    "name": "NautilusTrader",
+    "vendor": "Nautech Systems",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "Rust 네이티브 프로덕션급 트레이딩 엔진",
+    "description": "Rust 네이티브 엔진 위에서 Python으로 전략을 제어하는 프로덕션급 트레이딩 플랫폼으로 MCP나 LLM 연동은 없고 코딩 에이전트가 코드를 작성하는 대상입니다. 저장소에 AGENTS.md, CLAUDE.md, AI_POLICY.md가 있지만 기여자용이며 완전 자율 에이전트의 기여는 받지 않습니다. 커뮤니티 MCP는 스타 2개짜리 코드·문서 검색 서버(GwangPyo/NautilusTraderMCP)뿐입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(LGPL-3.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 30694,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "nautechsystems/nautilus_trader",
+    "install": null,
+    "caveats": [
+      "공식 MCP 없음",
+      "LGPL-3.0 라이선스"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub nautilus_trader",
+        "url": "https://github.com/nautechsystems/nautilus_trader"
+      },
+      {
+        "label": "GitHub NautilusTraderMCP",
+        "url": "https://github.com/GwangPyo/NautilusTraderMCP"
+      }
+    ]
+  },
+  {
+    "id": "fin-zipline-reloaded",
+    "name": "zipline-reloaded",
+    "vendor": "stefan-jansen",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "꾸준히 관리되는 zipline 후속 백테스터",
+    "description": "zipline을 이어받아 커뮤니티가 관리하는 Python 백테스트 라이브러리로 2026-10-18 3.2.0이 나왔습니다. README에 MCP나 AI 연동 언급이 없어 코딩 에이전트가 직접 코드를 작성해 씁니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(Apache-2.0)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 1971,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "stefan-jansen/zipline-reloaded",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub zipline-reloaded",
+        "url": "https://github.com/stefan-jansen/zipline-reloaded"
+      }
+    ]
+  },
+  {
+    "id": "fin-backtesting-py",
+    "name": "backtesting.py",
+    "vendor": "kernc",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "AGPL 라이선스 파이썬 백테스트 라이브러리",
+    "description": "Python 백테스트 라이브러리로 PyPI 0.6.6(2026-07-22)이 최신이며, MCP·AI 연동 없이 코딩 에이전트가 직접 코드를 작성하는 대상입니다. AGPL-3.0 카피레프트 라이선스라 상용 작업에서는 주의해야 합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(AGPL-3.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 9124,
+    "updated": "2026-08",
+    "homepage": null,
+    "repo": "kernc/backtesting.py",
+    "install": "pip install backtesting",
+    "caveats": [
+      "AGPL-3.0이라 상용 서비스 배포 시 소스 공개 의무 검토"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub backtesting.py",
+        "url": "https://github.com/kernc/backtesting.py"
+      },
+      {
+        "label": "PyPI backtesting",
+        "url": "https://pypi.org/project/backtesting/"
+      }
+    ]
+  },
+  {
+    "id": "fin-bt",
+    "name": "bt",
+    "vendor": "pmorissette",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "MIT 라이선스 파이썬 백테스트 라이브러리",
+    "description": "MIT 라이선스의 Python 백테스트 라이브러리로 2026-10-10 v1.4.1이 나왔습니다. README에 MCP나 AI 연동 언급이 없어 코딩 에이전트가 직접 코드를 작성하는 대상입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 3000,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "pmorissette/bt",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub pmorissette/bt",
+        "url": "https://github.com/pmorissette/bt"
+      }
+    ]
+  },
+  {
+    "id": "fin-backtrader",
+    "name": "Backtrader",
+    "vendor": "mementum",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "널리 쓰이지만 2023년 이후 릴리스 없는 백테스터",
+    "description": "여전히 많이 쓰이는 Python 백테스트 라이브러리지만 마지막 푸시가 2024-08, 마지막 PyPI 릴리스가 2023-04(1.9.78.123)라 사실상 관리되지 않습니다. MCP 없이 코딩 에이전트가 코드를 작성하는 대상이며, 새 프로젝트라면 관리 중인 대안도 함께 검토할 만합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(GPL-3.0)",
+    "free": true,
+    "official": "official",
+    "status": "stale",
+    "stars": 23556,
+    "updated": "2024-08",
+    "homepage": null,
+    "repo": "mementum/backtrader",
+    "install": null,
+    "caveats": [
+      "유지보수 중단 상태",
+      "GPL-3.0 라이선스"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub backtrader",
+        "url": "https://github.com/mementum/backtrader"
+      },
+      {
+        "label": "PyPI backtrader",
+        "url": "https://pypi.org/project/backtrader/"
+      }
+    ]
+  },
+  {
+    "id": "fin-freqtrade",
+    "name": "freqtrade",
+    "vendor": "freqtrade",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "룩어헤드 분석 명령을 갖춘 암호화폐 봇",
+    "description": "오픈소스 암호화폐 트레이딩 봇으로 FreqAI는 고전적 ML·강화학습 기능이며 LLM 연동은 아닙니다. 공식 MCP는 없지만 lookahead-analysis와 recursive-analysis 명령이 있어 LLM이 작성한 전략의 룩어헤드 편향을 점검하는 데 유용합니다. 코딩 에이전트가 전략 코드를 쓰고 이 명령으로 검증하는 흐름이 안전합니다.",
+    "connect": [
+      "library",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(GPL-3.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 55845,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "freqtrade/freqtrade",
+    "install": null,
+    "caveats": [
+      "공식 MCP 없음",
+      "라이브 봇에 붙이기 전 dry-run 인스턴스로 검증",
+      "GPL-3.0 라이선스"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub freqtrade",
+        "url": "https://github.com/freqtrade/freqtrade"
+      },
+      {
+        "label": "freqtrade lookahead-analysis 문서",
+        "url": "https://github.com/freqtrade/freqtrade/blob/develop/docs/lookahead-analysis.md"
+      }
+    ]
+  },
+  {
+    "id": "fin-freqtrade-dev-mcp",
+    "name": "freqtrade_dev_mcp",
+    "vendor": "dasein108 (커뮤니티)",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "freqtrade 전략 생성·백테스트·하이퍼옵트 MCP",
+    "description": "freqtrade 전략 개발용 커뮤니티 stdio MCP로 create_strategy, download_candles, backtest_strategy, hyperopt_strategy와 결과 추출·검색 등 12개 도구에 LangGraph 전략 에이전트를 포함합니다. 거래를 실행하지 않는 읽기 전용 코드 분석 서버 yalcin/freqtrade-mcp와 함께 쓰는 조합이 freqtrade의 안전한 분리 구성으로 꼽힙니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "experimental",
+    "stars": 10,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "dasein108/freqtrade_dev_mcp",
+    "install": null,
+    "caveats": [
+      "알파 단계",
+      "freqtrade 팀과 무관한 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub freqtrade_dev_mcp",
+        "url": "https://github.com/dasein108/freqtrade_dev_mcp"
+      },
+      {
+        "label": "GitHub yalcin/freqtrade-mcp",
+        "url": "https://github.com/yalcin/freqtrade-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-kukapay-freqtrade-mcp",
+    "name": "freqtrade-mcp (kukapay)",
+    "vendor": "kukapay (커뮤니티)",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "실행 중 봇에 주문하는 freqtrade MCP, 확인 없음",
+    "description": "실행 중인 freqtrade 봇을 REST API로 조작하는 커뮤니티 MCP(Python 3.13+, stdio)로 fetch_bot_status, fetch_trades, place_trade, stop_bot, delete_lock 도구를 제공합니다. 인기 있는 서버지만 2025-12 이후 업데이트가 없고 확인 단계 없이 place_trade를 노출합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 148,
+    "updated": "2025-12",
+    "homepage": null,
+    "repo": "kukapay/freqtrade-mcp",
+    "install": null,
+    "caveats": [
+      "place_trade에 확인 단계가 없어 실자금 봇 연결 금지",
+      "dry-run 인스턴스에만 연결",
+      "2025-12 이후 업데이트 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub kukapay/freqtrade-mcp",
+        "url": "https://github.com/kukapay/freqtrade-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-qlib",
+    "name": "Qlib",
+    "vendor": "Microsoft",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "Microsoft의 오픈소스 퀀트 머신러닝 플랫폼",
+    "description": "Microsoft의 오픈소스 퀀트 머신러닝 플랫폼으로 2026-10-08 v0.9.8이 나왔습니다. LLM 기능은 RD-Agent를 통해 제공되며, 2024-08-08 RD-Agent에 LLM 기반 Auto Quant Factory가 공개됐습니다. 코딩 에이전트가 직접 코드를 작성해 쓰는 라이브러리입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 49648,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "microsoft/qlib",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub microsoft/qlib",
+        "url": "https://github.com/microsoft/qlib"
+      }
+    ]
+  },
+  {
+    "id": "fin-finrl",
+    "name": "FinRL",
+    "vendor": "AI4Finance Foundation",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "심층 강화학습 금융 트레이딩 라이브러리",
+    "description": "Stable-Baselines3 기반 A2C, DDPG, PPO, SAC, TD3로 트레이딩 정책을 학습하는 심층 강화학습 라이브러리로 ML·DRL·LLM을 아우르는 AI 네이티브 방향을 내세웁니다. MCP는 없고 코딩 에이전트가 코드를 작성해 씁니다. GitHub 릴리스는 v0.3.8(2026-03)이지만 PyPI finrl은 0.3.7(2024-04)에 멈춰 있습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 16800,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "AI4Finance-Foundation/FinRL",
+    "install": null,
+    "caveats": [
+      "PyPI 패키지가 GitHub 릴리스보다 뒤처짐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub FinRL",
+        "url": "https://github.com/AI4Finance-Foundation/FinRL"
+      },
+      {
+        "label": "PyPI finrl",
+        "url": "https://pypi.org/project/finrl/"
+      }
+    ]
+  },
+  {
+    "id": "fin-quantgpt",
+    "name": "QuantGPT",
+    "vendor": "Miasyster (커뮤니티)",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "WorldQuant BRAIN에 알파를 자동 제출하는 MCP",
+    "description": "LLM이 팩터를 설계·백테스트해 WorldQuant BRAIN에 제출하는 에이전트 주도 알파 팩토리로, Claude Code·Claude Desktop용 FastMCP 도구 15개(wq_brain_submit, wq_brain_batch_submit, run_anti_overfit 등)를 제공합니다. 일부 기능은 DeepSeek API 키를 쓰며 상용 QuantGPT Cloud와 연결돼 있습니다. WorldQuant BRAIN에는 공식 MCP가 없고, 더 작은 duy0699cat/worldquant-brain-mcp는 명시적 확인 플래그 뒤에서만 알파를 제출합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "apikey",
+    "price": "오픈소스(MIT), 일부 기능 DeepSeek 키 필요",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 494,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": "Miasyster/QuantGPT",
+    "install": null,
+    "caveats": [
+      "사람 개입 없는 자동 제출을 내세우지만 BRAIN API 사용은 WorldQuant 약관 적용",
+      "대량 자동 제출은 과적합 팩터를 양산할 위험"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub QuantGPT",
+        "url": "https://github.com/Miasyster/QuantGPT"
+      },
+      {
+        "label": "GitHub worldquant-brain-mcp",
+        "url": "https://github.com/duy0699cat/worldquant-brain-mcp"
+      },
+      {
+        "label": "WorldQuant BRAIN",
+        "url": "https://www.worldquant.com/brain/"
+      }
+    ]
+  },
+  {
+    "id": "fin-composer-mcp",
+    "name": "Composer MCP",
+    "vendor": "Composer",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "사실상 종료된 Composer 전략 MCP",
+    "description": "Composer의 심포니 전략을 MCP로 백테스트하고 투자하던 서버로, 문서화된 두 호스트(ai.composer.trade, mcp.composer.trade)가 NXDOMAIN이고 composer.trade/mcp와 GitHub 저장소는 404입니다. Composer의 llms.txt도 이제 REST API만 언급해 MCP는 중단된 것으로 봐야 합니다. 현재 무료 플랜은 무제한 전략·백테스트를, Trading Pass(월 $40)는 거래를 제공합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료 플랜, Trading Pass 월 $40",
+    "free": true,
+    "official": "official",
+    "status": "shutdown",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.composer.trade/ai",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "공식 종료 공지는 없지만 호스트·저장소 모두 응답 없음",
+      "온라인의 옛 설치 안내와 마켓플레이스 항목은 무효"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Composer llms.txt",
+        "url": "https://www.composer.trade/llms.txt"
+      },
+      {
+        "label": "Composer AI 페이지",
+        "url": "https://www.composer.trade/ai"
+      }
+    ]
+  },
+  {
+    "id": "fin-backtest-auditor",
+    "name": "backtest-auditor",
+    "vendor": "nothingbutalpha",
+    "domain": "finance",
+    "category": "퀀트·백테스트",
+    "tagline": "룩어헤드 린트·Deflated Sharpe 백테스트 감사 MCP",
+    "description": "MCP Registry에 등록된 로컬 백테스트 감사 서버로 룩어헤드 린트, Deflated Sharpe, 비용 점검을 제공하며 PyPI로 배포됩니다. LLM이 만든 전략은 룩어헤드 편향이 새기 쉬워 이런 전용 점검과 함께 쓰는 것이 좋습니다. 레지스트리에는 수수료·슬리피지 민감도와 룩어헤드 체크리스트를 주는 backtest-cost-sensitivity-mcp 같은 비슷한 서버도 있지만 대부분 신생 개인 프로젝트입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "신생 프로젝트라 보안·유지보수 상태 미평가"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "MCP Registry: backtest",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=backtest&limit=50"
+      }
+    ]
+  },
+  {
+    "id": "fin-anthropic-financial-services",
+    "name": "Claude for Financial Services (anthropics/financial-services)",
+    "vendor": "Anthropic",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "Anthropic 공식 금융 플러그인·에이전트·커넥터 묶음",
+    "description": "Anthropic의 오픈소스 금융 플러그인 마켓플레이스로 Earnings Reviewer, KYC Screener 등 에이전트 10개, /comps·/dcf·/lbo·/earnings 같은 스킬, FactSet·S&P Global(Kensho)·LSEG·Morningstar·PitchBook·Moody's·Daloopa·Aiera·MT Newswires·Chronograph·Egnyte·Box 원격 커넥터 12개를 묶었습니다. Claude Code나 Cowork에 플러그인으로 설치하면 Claude 플랜 안에서 동작하고, 산출물은 사람이 검토·승인하도록 단계적으로 준비되며 거래는 실행하지 않습니다. DCF, comps, IC 메모 같은 펀더멘털·IB·PE 분석용이며 체계적 백테스트용은 아닙니다.",
+    "connect": [
+      "plugin",
+      "skills",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료(Apache-2.0), 각 커넥터는 제공사 구독 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 40700,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "anthropics/financial-services",
+    "install": "claude plugin marketplace add anthropics/financial-services",
+    "caveats": [
+      "커넥터는 해당 데이터 제공사를 이미 라이선스한 경우에만 동작",
+      "설치 후 claude mcp list에 커넥터가 보이지 않았다는 사례가 있음",
+      "Managed Agents API 배포는 ANTHROPIC_API_KEY로 API 과금"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services"
+      },
+      {
+        "label": "The Rundown 가이드",
+        "url": "https://www.rundown.ai/guides/turn-claude-code-into-your-personal-wall-street-analyst"
+      },
+      {
+        "label": "The Register",
+        "url": "https://www.theregister.com/2026/05/05/anthropic_unleashes_finance_agents_claude/"
+      }
+    ]
+  },
+  {
+    "id": "fin-chatgpt-financial-services",
+    "name": "ChatGPT for Financial Services",
+    "vendor": "OpenAI",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "금융 데이터를 번들한 기관 전용 ChatGPT",
+    "description": "2026년 9월 10일 발표된 OpenAI의 기관 전용 제품으로 ChatGPT Enterprise 통제 위에 Daloopa, PitchBook, LSEG News, Crunchbase 데이터를 OpenAI가 직접 호스팅해 별도 계약 없이 제공합니다. FactSet, Preqin, Intapp 등 50개 이상 커넥터와 관리자가 배포하는 Excel·Word·PowerPoint 템플릿, 역할 기반 스킬을 지원하고 S&P Capital IQ, LSEG, MSCI, Dow Jones Factiva, Moody's 구독 인증 연동을 준비 중입니다. 영업팀을 통해 자격을 갖춘 기관에만 제공되므로 Plus·Pro 개인 구독자는 쓸 수 없습니다.",
+    "connect": [
+      "connector"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "기관 영업 문의(가격 비공개)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-09",
+    "homepage": "https://openai.com/index/introducing-chatgpt-financial-services/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "OpenAI 공식 페이지가 403이라 세부 내용은 언론 보도 기반",
+      "ChatGPT Plus·Pro 개인 플랜에서는 이용 불가",
+      "모델명 GPT-6 Astra는 2차 출처"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "TestingCatalog",
+        "url": "https://www.testingcatalog.com/openai-launches-chatgpt-for-financial-services.md"
+      },
+      {
+        "label": "Fonearena",
+        "url": "https://www.fonearena.com/blog/492132/openai-chatgpt-financial-services.html/amp"
+      },
+      {
+        "label": "OpenAI 발표",
+        "url": "https://openai.com/index/introducing-chatgpt-financial-services/"
+      }
+    ]
+  },
+  {
+    "id": "fin-tradingagents",
+    "name": "TradingAgents",
+    "vendor": "TauricResearch",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "ChatGPT 플랜으로 돌리는 멀티 에이전트 리서치",
+    "description": "역할을 나눈 LLM 에이전트들이 종목을 분석하는 오픈소스 프레임워크로 Yahoo Finance, SEC EDGAR, Alpha Vantage, FRED, Polymarket, StockTwits/Reddit 데이터를 쓰고 backtest 하위 명령을 제공합니다. v0.7.0(2026-10-16)부터 tradingagents login chatgpt로 API 키 대신 ChatGPT Plus·Pro 플랜 한도 안에서 실행할 수 있고, OpenAI·Anthropic·Google·Ollama 등 여러 프로바이더 API 키도 지원합니다. v0.4~v0.7 릴리스는 FRED 빈티지 고정, 시점 무결성, 결정 다음 종가부터 채점하는 백테스트 등 룩어헤드 누수 수정에 집중했습니다.",
+    "connect": [
+      "signin",
+      "byok",
+      "cli"
+    ],
+    "worksWith": [
+      "chatgpt",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료(Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 113517,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "TauricResearch/TradingAgents",
+    "install": "tradingagents login chatgpt",
+    "caveats": [
+      "Claude 구독 로그인은 없고 Anthropic 모델은 API 키로만 사용",
+      "연구용이며 투자 조언이 아님",
+      "LLM 백테스트는 학습 데이터 누수 위험이 있어 결과를 가설로만 볼 것"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub TradingAgents",
+        "url": "https://github.com/TauricResearch/TradingAgents"
+      },
+      {
+        "label": "TradingAgents 릴리스",
+        "url": "https://github.com/TauricResearch/TradingAgents/releases"
+      },
+      {
+        "label": "v0.7.0 릴리스",
+        "url": "https://github.com/TauricResearch/TradingAgents/releases/tag/v0.7.0"
+      }
+    ]
+  },
+  {
+    "id": "fin-ai-hedge-fund",
+    "name": "ai-hedge-fund",
+    "vendor": "virattt",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "투자자 페르소나 에이전트의 교육용 헤지펀드",
+    "description": "투자자 페르소나 에이전트들로 구성한 교육용 멀티 에이전트 헤지펀드로, 백테스터와 해시 체인 원장을 쓰는 페이퍼 트레이딩 모드를 aihf 터미널 앱으로 실행합니다. Anthropic, OpenAI, DeepSeek, Google, xAI, Kimi 중 하나의 모델 API 키가 필요하고 구독 로그인은 지원하지 않습니다. 데이터는 별도 API 키가 필요한 Financial Datasets를 씁니다.",
+    "connect": [
+      "byok",
+      "cli"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "오픈소스(MIT), 모델·데이터 API 키 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 64203,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "virattt/ai-hedge-fund",
+    "install": null,
+    "caveats": [
+      "교육용이며 실제 거래를 하지 않음",
+      "LLM 호출은 API 과금이라 AI 구독으로 충당되지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub ai-hedge-fund",
+        "url": "https://github.com/virattt/ai-hedge-fund"
+      }
+    ]
+  },
+  {
+    "id": "fin-dexter",
+    "name": "Dexter",
+    "vendor": "virattt",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "자기 검증 루프를 갖춘 자율 금융 리서치 에이전트",
+    "description": "작업 계획, 자기 검증, 루프 감지, 단계 제한, 스크래치패드 로그를 갖춘 TypeScript/Bun 기반 자율 금융 리서치 에이전트로 금융판 Claude Code를 표방합니다. OpenAI, Anthropic, Google, xAI, OpenRouter, Ollama를 API 키로만 쓰며 데이터는 Financial Datasets API와 Exa/Tavily 검색을 씁니다. LangSmith 평가 세트와 WhatsApp 게이트웨이도 들어 있습니다.",
+    "connect": [
+      "byok",
+      "cli"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "apikey",
+    "price": "오픈소스, 모델·데이터 API 키 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 27710,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "virattt/dexter",
+    "install": null,
+    "caveats": [
+      "README는 MIT라고 하지만 GitHub에서 라이선스 파일이 검출되지 않음",
+      "교육·정보 목적이며 투자 조언 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub dexter",
+        "url": "https://github.com/virattt/dexter"
+      },
+      {
+        "label": "Stackademic 리뷰",
+        "url": "https://blog.stackademic.com/is-dexter-the-claude-code-for-finance-it-claims-to-be-37bf6f87f045"
+      }
+    ]
+  },
+  {
+    "id": "fin-finrobot",
+    "name": "FinRobot",
+    "vendor": "AI4Finance Foundation",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "3세대로 진화한 오픈소스 금융 리서치 플랫폼",
+    "description": "AutoGen 기반 V0(교육용 pip 패키지), OpenAI Agents SDK 기반 V1(셀프 호스팅 주식 리서치 웹앱), PydanticAI·FastAPI·React/Tauri 기반 V2(프로덕션 데스크톱 리서치 워크스테이션, finrobot.ai/v2 호스팅)로 이어지는 금융 에이전트 플랫폼입니다. 모든 세대가 BYOK 방식이라 AI 구독 대신 API 키 과금이 발생합니다. 모델은 추론하고 소프트웨어는 계산하며 에이전트는 조율하고 시스템은 검증한다는 원칙을 내세웁니다.",
+    "connect": [
+      "byok",
+      "app",
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "오픈소스(Apache-2.0), 모델 API 키 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 8287,
+    "updated": "2026-07",
+    "homepage": null,
+    "repo": "AI4Finance-Foundation/FinRobot",
+    "install": "pip install finrobot",
+    "caveats": [
+      "구독 로그인 미지원(BYOK)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub FinRobot",
+        "url": "https://github.com/AI4Finance-Foundation/FinRobot"
+      }
+    ]
+  },
+  {
+    "id": "fin-fingpt",
+    "name": "FinGPT",
+    "vendor": "AI4Finance Foundation",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "금융 특화 오픈 LLM 파인튜닝 프로젝트",
+    "description": "금융 감성 분석용 FinGPT v3 LoRA 모델(Hugging Face)과 벤치마크를 중심으로 한 오픈 모델 파인튜닝 프로젝트로, AI 구독용 에이전트 하네스는 아닙니다. README 소식이 대부분 2023년 모델 공개에 머물러 있어 반쯤 정체된 상태입니다. 로컬에서 오픈 모델을 돌리거나 코딩 에이전트로 학습 코드를 다룰 때 참고할 만합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 21452,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "AI4Finance-Foundation/FinGPT",
+    "install": null,
+    "caveats": [
+      "README 소식이 2023년 위주로 사실상 정체"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub FinGPT",
+        "url": "https://github.com/AI4Finance-Foundation/FinGPT"
+      }
+    ]
+  },
+  {
+    "id": "fin-rd-agent",
+    "name": "RD-Agent",
+    "vendor": "Microsoft",
+    "domain": "finance",
+    "category": "리서치 에이전트",
+    "tagline": "Qlib 위에서 팩터·모델을 자동 연구하는 에이전트",
+    "description": "Microsoft의 R&D 자동화 에이전트로 Qlib 기반 퀀트 시나리오 fin_quant(팩터·모델 공동 최적화), fin_factor, fin_model, fin_factor_report(재무 보고서에서 팩터 추출)를 제공합니다. LiteLLM을 기본 백엔드로 OpenAI, Azure OpenAI, DeepSeek 등 API 키가 필요하고 대부분 시나리오에 Docker가 필요하며 Linux만 지원합니다. rdagent server_ui로 웹 UI를 띄울 수 있습니다.",
+    "connect": [
+      "byok",
+      "cli"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "오픈소스(MIT), 모델 API 키 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 15034,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "microsoft/RD-Agent",
+    "install": null,
+    "caveats": [
+      "Linux 전용, Docker 필요",
+      "구독 로그인 미지원(BYOK)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub RD-Agent",
+        "url": "https://github.com/microsoft/RD-Agent"
+      },
+      {
+        "label": "GitHub microsoft/qlib",
+        "url": "https://github.com/microsoft/qlib"
+      }
+    ]
+  },
+  {
+    "id": "fin-marimo-pair",
+    "name": "marimo pair",
+    "vendor": "marimo",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "기존 구독의 Claude Code·Codex를 노트북에 연결",
+    "description": "Python 노트북 marimo의 기능으로 Claude Code, Codex, Gemini CLI를 기존 구독 그대로 터미널에서 실행하면서 실행 중인 노트북 전체에 접근하게 해 줍니다. 실험적 Agents 패널이 이 CLI들을 내장하고, 어시스턴트는 메모리에 있는 변수 값(@df 등)을 볼 수 있으며 MCP 클라이언트로도 동작합니다. 코드 완성에는 GitHub Copilot 로그인을, 그 밖에는 OpenAI·Anthropic·Google·Bedrock·Ollama BYOK를 지원합니다.",
+    "connect": [
+      "signin",
+      "ide",
+      "byok"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료(Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 23311,
+    "updated": "2026-10",
+    "homepage": "https://docs.marimo.io/guides/editor_features/ai_completion/",
+    "repo": "marimo-team/marimo",
+    "install": null,
+    "caveats": [
+      "Agents 패널은 실험적 기능",
+      "에이전트가 라이브 커널에서 임의 코드를 실행하므로 브로커 키를 같은 커널에 두지 말 것"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "marimo AI 문서",
+        "url": "https://docs.marimo.io/guides/editor_features/ai_completion/"
+      },
+      {
+        "label": "GitHub marimo",
+        "url": "https://github.com/marimo-team/marimo"
+      }
+    ]
+  },
+  {
+    "id": "fin-jupyter-ai",
+    "name": "Jupyter AI",
+    "vendor": "Project Jupyter",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "JupyterLab 안의 Claude·Codex·Copilot 페르소나",
+    "description": "JupyterLab 확장 Jupyter AI v3로 Claude, Codex, GitHub Copilot, Goose, Kiro, OpenCode 등 에이전트를 AI 페르소나로 노트북 안에서 바로 씁니다. 커스텀 MCP 서버를 페르소나와 공유할 수 있고 에이전트는 MCP 도구를 쓰기 전에 허락을 구합니다. 2026-09-03 v3.2.0이 나왔습니다.",
+    "connect": [
+      "ide"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료(BSD-3-Clause)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 4425,
+    "updated": "2026-09",
+    "homepage": "https://jupyter-ai.readthedocs.io/en/latest/",
+    "repo": "jupyterlab/jupyter-ai",
+    "install": null,
+    "caveats": [
+      "페르소나 인증이 구독 로그인인지 API 키인지 문서에 명시되지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Jupyter AI 문서",
+        "url": "https://jupyter-ai.readthedocs.io/en/latest/"
+      },
+      {
+        "label": "GitHub jupyter-ai",
+        "url": "https://github.com/jupyterlab/jupyter-ai"
+      }
+    ]
+  },
+  {
+    "id": "fin-jupyter-mcp-server",
+    "name": "Jupyter MCP Server",
+    "vendor": "Datalayer",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "실시간 노트북 제어 MCP와 Claude Code 플러그인",
+    "description": "Jupyter 노트북을 실시간으로 연결·관리하는 MCP 서버로 Claude Desktop, Cursor, Windsurf 등 MCP 클라이언트에서 쓰며 STDIO와 Streamable HTTP를 지원합니다. Claude Code 플러그인(/datalayer:notebook, /datalayer:run 명령)이 있고 코드 샌드박스를 Datalayer, Kaggle, Google Colab, Modal, Daytona, E2B 등으로 넓힐 수 있습니다.",
+    "connect": [
+      "local-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(BSD-3-Clause)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 1311,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "datalayer/jupyter-mcp-server",
+    "install": "/plugin install datalayer",
+    "caveats": [
+      "에이전트가 커널에서 임의 코드를 실행할 수 있으므로 비밀 키를 커널에 두지 말 것"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub jupyter-mcp-server",
+        "url": "https://github.com/datalayer/jupyter-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-colab-mcp",
+    "name": "colab-mcp",
+    "vendor": "Google",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "로컬 에이전트를 브라우저 Colab 세션에 연결",
+    "description": "Google 공식 저장소의 MCP 서버로 로컬 에이전트를 브라우저에 열린 Colab 세션에 연결합니다. 클라이언트가 notifications/tools/list_changed를 지원해야 하며 Gemini CLI, Claude Code, Windsurf가 명시돼 있습니다. GitHub에서 uvx로 설치하고 태그 릴리스가 없으며 외부 코드 기여는 받지 않습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "gemini",
+      "claude"
+    ],
+    "aiCost": "none",
+    "price": "무료(Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 1338,
+    "updated": "2026-06",
+    "homepage": null,
+    "repo": "googlecolab/colab-mcp",
+    "install": null,
+    "caveats": [
+      "태그 릴리스 없음",
+      "Colab 인증 방식과 GPU 한도는 문서화되지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub colab-mcp",
+        "url": "https://github.com/googlecolab/colab-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-motherduck-mcp",
+    "name": "MotherDuck / DuckDB MCP Server",
+    "vendor": "MotherDuck",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "읽기 전용 모드를 지원하는 DuckDB MCP",
+    "description": "DuckDB 파일, 인메모리 DB, S3에 있는 DuckDB, MotherDuck에 붙는 로컬 MCP로 읽기 전용 모드를 지원합니다. Claude Desktop(.mcpb), Cursor, VS Code, Kiro 원클릭 설치와 Claude Code CLI 명령을 제공하고, 완전 관리형 MotherDuck Remote MCP도 따로 있습니다. 로컬 틱·바 데이터 저장소를 SQL로 다루는 퀀트 워크플로에 잘 맞습니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 534,
+    "updated": "2026-10",
+    "homepage": "https://motherduck.com/docs/sql-reference/mcp/",
+    "repo": "motherduckdb/mcp-server-motherduck",
+    "install": null,
+    "caveats": [
+      "쓰기가 필요 없으면 읽기 전용 모드로 연결"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub mcp-server-motherduck",
+        "url": "https://github.com/motherduckdb/mcp-server-motherduck"
+      },
+      {
+        "label": "MotherDuck Remote MCP 문서",
+        "url": "https://motherduck.com/docs/sql-reference/mcp/"
+      }
+    ]
+  },
+  {
+    "id": "fin-claude-for-excel",
+    "name": "Claude for Excel",
+    "vendor": "Anthropic",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "Claude 유료 플랜으로 쓰는 Excel 에이전트",
+    "description": "2026-05-07 PowerPoint, Word와 함께 정식 출시된 Excel 추가 기능으로 Pro, Max, Team, Enterprise 플랜의 사용 한도 안에서 동작합니다. 커넥터로 S&P Global, LSEG, Daloopa 데이터를 끌어오고 피벗, 조건부 서식, 데이터 유효성 검사를 직접 편집하며 셀 단위 인용을 남깁니다. 매크로·VBA·데이터 표는 지원하지 않고 Mac은 Excel 16.46 이상이 필요합니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "Claude Pro·Max·Team·Enterprise에 포함",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://www.claude.com/docs/office-agents/excel",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "프롬프트 인젝션 위험: 신뢰할 수 있는 스프레드시트만 사용",
+      "Free 플랜, iPad, Android, Excel 2016/2019 미지원",
+      "Enterprise 감사 로그에 활동이 남지 않음(Compliance API 베타에는 포함)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude 블로그 2026-05-07",
+        "url": "https://claude.com/blog/collaborate-with-claude-across-excel-powerpoint-word-and-outlook"
+      },
+      {
+        "label": "Claude 문서: Excel",
+        "url": "https://www.claude.com/docs/office-agents/excel"
+      }
+    ]
+  },
+  {
+    "id": "fin-chatgpt-for-excel",
+    "name": "ChatGPT for Excel / Google Sheets",
+    "vendor": "OpenAI",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "OpenAI 계정으로 쓰는 Excel·Sheets 추가 기능",
+    "description": "2026-03-05 Excel 베타, 04-22 Google Sheets 확장을 거쳐 5월 5~7일경 베타를 벗어나 전 세계 사용자에게 열린 ChatGPT 스프레드시트 추가 기능입니다. Excel은 Microsoft Marketplace, Sheets는 Google Workspace Marketplace에서 설치하고 OpenAI 계정으로 로그인합니다. 베타 당시 Moody's, Dow Jones Factiva, MSCI, Third Bridge, MT Newswires 앱 연동이 있었고 VBA·매크로, Power Query, 피벗 테이블은 지원하지 않았습니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "ChatGPT 플랜 포함(Free·Go 포함 여부는 상충)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://openai.com/index/chatgpt-for-excel/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "OpenAI 공식 페이지가 403이라 세부 내용은 언론·검색 스니펫 기반",
+      "Free·Go 플랜 포함 여부는 출처마다 다름",
+      "베타 시점의 기능 제한은 정식 출시 후 바뀌었을 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Gulf Times",
+        "url": "https://www.gulf-times.com/article/725154/community/technology/openai-launches-chatgpt-add-in-with-excel-google-sheets-for-all-users"
+      },
+      {
+        "label": "TechNews",
+        "url": "https://technews.tw/2026/05/06/httpswww-digitaltrends-comcomputingchatgpt-for-excel-and-google-sheets-is-now-out-of-beta-and-its-kind-of-a-big-deal/"
+      },
+      {
+        "label": "Pasquale Pillitteri 가이드",
+        "url": "https://pasqualepillitteri.it/en/news/1963/chatgpt-for-excel-google-sheets-complete-guide-2026"
+      }
+    ]
+  },
+  {
+    "id": "fin-copilot-in-excel",
+    "name": "Copilot in Excel",
+    "vendor": "Microsoft",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "편집·계획·채팅 3모드, Claude·GPT 모델 선택",
+    "description": "2026-04-22부터 Microsoft 365 Copilot과 Microsoft 365 Premium의 기본 경험이 된 Excel의 에이전트형 Copilot으로 Personal·Family 플랜에서도 쓸 수 있습니다. 표, 차트, 피벗, 수식을 만들고 고치며 편집·계획·채팅 세 모드를 Windows, Mac, 웹에서 지원합니다. Claude와 GPT 모델 전환은 상용 Copilot 또는 Microsoft 365 Premium 구독이 있어야 합니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "Microsoft 365 Copilot·Premium 등 라이선스 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-04",
+    "homepage": "https://support.microsoft.com/en-gb/office/frequently-asked-questions-about-agent-mode-in-excel-1cfd906d-40b4-46be-8e2d-65b893e28a02",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "편집하려면 계산 옵션이 자동이어야 함",
+      "Android는 채팅 전용, iPad·iPhone 편집은 배포 중",
+      "엔터프라이즈는 관리자가 Anthropic을 하위 처리자로 허용해야 Claude 모델 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Microsoft Copilot 블로그 2026-04-22",
+        "url": "https://www.microsoft.com/en-us/copilot/blog/2026/04/22/copilots-agentic-capabilities-in-word-excel-and-powerpoint-are-generally-available/"
+      },
+      {
+        "label": "Microsoft Support FAQ",
+        "url": "https://support.microsoft.com/en-gb/office/frequently-asked-questions-about-agent-mode-in-excel-1cfd906d-40b4-46be-8e2d-65b893e28a02"
+      }
+    ]
+  },
+  {
+    "id": "fin-gemini-in-sheets",
+    "name": "Gemini in Google Sheets",
+    "vendor": "Google",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "미리보기 후 적용하는 Sheets 프롬프트 편집",
+    "description": "Google Sheets에서 표, 수식, 차트, 분석을 생성하고 Drive와 Gmail의 맥락을 끌어오는 Gemini 기능입니다. 프롬프트 편집은 적용·실행 취소가 가능한 미리보기 카드로 보여 주며 조건부 서식, 피벗, 필터, 찾아 바꾸기, 다단계 프롬프트를 지원하고 Fix 버튼이 수식 오류를 고칩니다. 적격 Google Workspace 또는 Google AI 플랜이 필요합니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "적격 Workspace·Google AI 플랜 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://support.google.com/docs/answer/14218565",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "플랜별 세부 조건은 확인 필요",
+      "에이전트 편집은 미리보기 카드에서 검토 후 적용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Google 지원: Gemini in Sheets",
+        "url": "https://support.google.com/docs/answer/14218565"
+      }
+    ]
+  },
+  {
+    "id": "fin-excel-mcp-server",
+    "name": "excel-mcp-server",
+    "vendor": "haris-musa (커뮤니티)",
+    "domain": "finance",
+    "category": "노트북·스프레드시트",
+    "tagline": "Excel 없이 수식·차트·피벗 통합 문서 생성",
+    "description": "openpyxl 기반 MCP로 Microsoft Excel 없이 Claude, Cursor, VS Code Copilot, Codex 등에서 수식, 차트, 실제 피벗 테이블, 슬라이서가 들어간 Excel 파일을 만들고 읽고 편집합니다. Python 백테스트 결과를 Claude Code에서 보고서로 뽑을 때 Excel 라이선스 없이 쓸 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 4259,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "haris-musa/excel-mcp-server",
+    "install": null,
+    "caveats": [
+      "Excel처럼 수식 값을 재계산하지 않으므로 Excel에서 값 확인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub excel-mcp-server",
+        "url": "https://github.com/haris-musa/excel-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "fin-ghostfolio-mcp",
+    "name": "Ghostfolio MCP",
+    "vendor": "Ghostfolio",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "잔액을 숨기는 제한 보기 토큰의 포트폴리오 MCP",
+    "description": "셀프 호스팅 자산 관리 도구 Ghostfolio의 실험적 자체 MCP로 ENABLE_FEATURE_MCP=true를 켜면 /mcp에서 제공됩니다. AI 클라이언트가 포트폴리오를 읽고 거래 내역을 가져오며 계좌 현금 잔액을 갱신할 수 있습니다. My Ghostfolio > Access에서 제한 보기(금액 없음)·보기·관리 권한 단계별 토큰을 발급해, 잔액을 노출하지 않고 자산 배분만 분석하게 할 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(AGPL-3.0), 셀프 호스팅",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": 9565,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "ghostfolio/ghostfolio",
+    "install": "http://localhost:3333/mcp",
+    "caveats": [
+      "실험적 기능",
+      "관리 권한 토큰은 거래 가져오기와 잔액 수정이 가능하므로 분석에는 제한 보기 토큰 사용",
+      "AGPL-3.0 라이선스"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub ghostfolio",
+        "url": "https://github.com/ghostfolio/ghostfolio"
+      }
+    ]
+  },
+  {
+    "id": "fin-plaid-mcp",
+    "name": "Plaid Dashboard MCP",
+    "vendor": "Plaid",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "Plaid 연동 진단용 원격 MCP(소비자 데이터 아님)",
+    "description": "Plaid의 원격 MCP로 plaid_debug_item, plaid_get_link_analytics, plaid_get_usages 같은 프로덕션 진단 도구를 제공하며 소비자 거래 데이터는 다루지 않습니다. OAuth client_credentials(mcp:dashboard 스코프, 15분 토큰)로 인증하며 Claude.ai와 ChatGPT의 원격 MCP에서 씁니다. 샌드박스·모의 데이터용 로컬 MCP는 plaid/ai-coding-toolkit(MIT)으로 따로 제공됩니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "beta",
+    "stars": 31,
+    "updated": "2026-10",
+    "homepage": "https://plaid.com/docs/resources/mcp/",
+    "repo": "plaid/ai-coding-toolkit",
+    "install": "https://api.dashboard.plaid.com/mcp/",
+    "caveats": [
+      "개발자 진단 전용이며 개인 가계부 데이터 연동이 아님",
+      "활발히 개발 중이라 호환성이 깨지는 변경 가능"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Plaid MCP 문서",
+        "url": "https://plaid.com/docs/resources/mcp/"
+      },
+      {
+        "label": "GitHub plaid/ai-coding-toolkit",
+        "url": "https://github.com/plaid/ai-coding-toolkit"
+      }
+    ]
+  },
+  {
+    "id": "fin-ynab-mcp",
+    "name": "ynab-mcp-server",
+    "vendor": "calebl (커뮤니티)",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "YNAB 개인 토큰으로 쓰는 커뮤니티 MCP",
+    "description": "공식 ynab JS SDK와 Personal Access Token(YNAB_API_TOKEN)을 쓰는 가장 인기 있는 YNAB 커뮤니티 MCP입니다. Claude Code·Desktop용 로컬 stdio로 돌리거나 Worker로 배포해 claude.ai 웹·모바일 커스텀 커넥터로 쓸 수 있습니다. YNAB은 API 사이트에 커뮤니티 MCP들을 소개하되 지원하지 않는다고 밝히며, OAuth 호스팅 대안으로 smirnovlabs 서버(mcpforynab.smirnovlabs.com)도 있습니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 159,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "calebl/ynab-mcp-server",
+    "install": null,
+    "caveats": [
+      "YNAB 공식 MCP 없음",
+      "원격 배포·호스팅 중계를 쓰면 가계부 데이터가 AI 벤더와 중계 서버를 거침"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub ynab-mcp-server",
+        "url": "https://github.com/calebl/ynab-mcp-server"
+      },
+      {
+        "label": "YNAB API 사이트",
+        "url": "https://api.ynab.com/"
+      },
+      {
+        "label": "MCP Registry: ynab",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ynab&limit=50"
+      }
+    ]
+  },
+  {
+    "id": "fin-monarch-mcp",
+    "name": "monarch-mcp-server",
+    "vendor": "robcerda (커뮤니티)",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "비공식 API 기반 Monarch Money MCP",
+    "description": "Monarch Money 커뮤니티 MCP로 Claude Desktop과 Claude Code를 지원하며, MFA를 지원하는 커뮤니티 포크 라이브러리 MonarchMoneyCommunity를 씁니다. Monarch에는 공식 MCP가 없어 역설계된 비공식 API에 기대므로 깨질 위험과 약관 위험이 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 427,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "robcerda/monarch-mcp-server",
+    "install": null,
+    "caveats": [
+      "여러 Monarch 서버가 이메일, 비밀번호, MFA 시크릿을 환경 변수로 요구",
+      "원본 monarchmoney 라이브러리는 API 도메인 변경 후 고장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub monarch-mcp-server",
+        "url": "https://github.com/robcerda/monarch-mcp-server"
+      },
+      {
+        "label": "Glama jamiew monarch-mcp",
+        "url": "https://glama.ai/mcp/servers/jamiew/monarch-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-lunchmoney-mcp",
+    "name": "lunchmoney-mcp",
+    "vendor": "akutishevsky (커뮤니티)",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "Lunch Money 공식 가이드가 추천하는 MCP",
+    "description": "Lunch Money의 공식 Using the API with AI 가이드가 인기 선택지로 소개하는 커뮤니티 MCP로 v2 API 전체를 다루고 Claude Desktop용 원클릭 .mcpb 번들을 제공합니다. npm @akutishevsky/lunchmoney-mcp 3.0.0이 최신입니다. 읽기 전용 원격 비공식 커넥터(mcp.lunchmoney.sh)도 따로 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 109,
+    "updated": "2026-08",
+    "homepage": null,
+    "repo": "akutishevsky/lunchmoney-mcp",
+    "install": null,
+    "caveats": [
+      "가이드 경고: 관련 데이터가 AI 제공사를 거쳐 전송될 수 있음",
+      "v2 API는 v1과 하위 호환되지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "lunchmoney.dev: Using the API with AI",
+        "url": "https://lunchmoney.dev/using-with-ai"
+      },
+      {
+        "label": "GitHub lunchmoney-mcp",
+        "url": "https://github.com/akutishevsky/lunchmoney-mcp"
+      }
+    ]
+  },
+  {
+    "id": "fin-actual-mcp",
+    "name": "actual-mcp",
+    "vendor": "s-stefanov (커뮤니티)",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "셀프 호스팅 Actual Budget용 커뮤니티 MCP",
+    "description": "오픈소스 가계부 Actual Budget의 커뮤니티 MCP로 계좌, 거래, 순자산 같은 지표를 정수 센트 단위 JSON으로 돌려줍니다. ACTUAL_SERVER_URL과 ACTUAL_PASSWORD로 셀프 호스팅 Actual 서버에 연결해, 데이터를 자기 서버에 둔 채 AI 분석을 할 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 267,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "s-stefanov/actual-mcp",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub actual-mcp",
+        "url": "https://github.com/s-stefanov/actual-mcp"
+      },
+      {
+        "label": "GitHub actualbudget/actual",
+        "url": "https://github.com/actualbudget/actual"
+      }
+    ]
+  },
+  {
+    "id": "fin-firefly-iii-mcp",
+    "name": "firefly-iii-mcp",
+    "vendor": "etnperlong (커뮤니티)",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "Firefly III 커뮤니티 MCP, 2025-06 이후 정체",
+    "description": "셀프 호스팅 가계부 Firefly III(AGPL-3.0)의 커뮤니티 MCP로, 본체는 활발히 개발되지만 MCP는 2025-06 이후 업데이트가 없습니다. 쓰기 전에 현재 Firefly III API와 호환되는지 확인해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "none",
+    "price": "오픈소스(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 90,
+    "updated": "2025-06",
+    "homepage": null,
+    "repo": "etnperlong/firefly-iii-mcp",
+    "install": null,
+    "caveats": [
+      "유지보수가 멈춰 최신 Firefly III와의 호환성 보장 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub firefly-iii-mcp",
+        "url": "https://github.com/etnperlong/firefly-iii-mcp"
+      },
+      {
+        "label": "GitHub firefly-iii",
+        "url": "https://github.com/firefly-iii/firefly-iii"
+      }
+    ]
+  },
+  {
+    "id": "fin-wealthfolio",
+    "name": "Wealthfolio",
+    "vendor": "Wealthfolio",
+    "domain": "finance",
+    "category": "개인 재무",
+    "tagline": "로컬 우선 데스크톱 자산 앱, MCP는 없음",
+    "description": "로컬 우선 데스크톱 자산 추적 앱으로 애드온 시스템과 증권 데이터용 선택적 유료 구독이 있습니다. README에 MCP나 LLM 연동 언급이 없어 현재는 AI 구독으로 직접 연결할 방법이 없습니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "앱 무료(AGPL-3.0), 증권 데이터 구독은 선택",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 9247,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "wealthfolio/wealthfolio",
+    "install": null,
+    "caveats": [
+      "MCP·AI 연동 없음(애드온 시스템만 제공)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub wealthfolio",
+        "url": "https://github.com/wealthfolio/wealthfolio"
+      }
+    ]
+  }
+]

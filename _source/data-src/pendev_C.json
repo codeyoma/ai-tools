@@ -1,0 +1,360 @@
+[
+ {
+  "id": "pd-magicpath",
+  "name": "MagicPath",
+  "vendor": "MagicPath",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "사람과 에이전트가 함께 쓰는 AI 디자인 캔버스",
+  "description": "MagicPath는 React 컴포넌트를 생성·편집하는 클라우드 디자인 캔버스로, Chrome 확장 'Web Capture'로 실제 웹사이트의 요소를 골라 편집 가능한 React 컴포넌트로 가져올 수 있습니다. Claude Code·Codex·Cursor·Claude 앱에 MagicPath 플러그인(원격 MCP + 스킬)을 설치하고 MagicPath 계정으로 브라우저 로그인만 하면, 에이전트가 캔버스에 디자인을 만들거나 고치고 완성된 디자인을 프로젝트 코드로 가져옵니다. 공식 FAQ에 따르면 외부 에이전트 호출은 MagicPath 크레딧을 쓰지 않으므로 AI 비용은 쓰던 구독에서 나갑니다. 생성 코드는 React 19·TypeScript·Tailwind CSS 기반이고 Figma 가져오기·내보내기도 지원합니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "skills",
+   "connector",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(크레딧 하루 20), 유료 Builder·Pro·Teams 가격 확인 필요",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 3,
+  "updated": "2026-09",
+  "homepage": "https://www.magicpath.ai/documentation/features/external-agents",
+  "repo": "MagicPathAI/magicpath-agent-plugin",
+  "install": "claude plugin marketplace add MagicPathAI/magicpath-agent-plugin && claude plugin install magicpath@magicpath",
+  "caveats": [
+   "앱 안 캔버스 채팅으로 생성하면 MagicPath 크레딧 소모(무료 하루 20, 월 최대 120)",
+   "무료 플랜 외부 에이전트 호출 한도가 문서마다 주 50회·125회로 엇갈림",
+   "Chrome 확장은 v1.0.0, 웹스토어 기준 마지막 업데이트 2025-10"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "MagicPath 문서: External agents",
+    "url": "https://www.magicpath.ai/documentation/features/external-agents"
+   },
+   {
+    "label": "MagicPath 문서: Plans, credits & limits",
+    "url": "https://www.magicpath.ai/documentation/help/plans"
+   },
+   {
+    "label": "@dr_cintas 추천 트윗",
+    "url": "https://x.com/dr_cintas/status/1987182077712765068"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@dr_cintas)"
+ },
+ {
+  "id": "pd-kombai",
+  "name": "Kombai",
+  "vendor": "Kombai",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "UI 디자인부터 프론트엔드 코드까지 하는 AI 에이전트",
+  "description": "Kombai는 무한 캔버스에서 UI를 디자인하고, 저장소의 컴포넌트·토큰·훅을 재사용해 프로덕션 프론트엔드 코드까지 작성하는 에이전트로 데스크톱 앱과 VS Code·Cursor·Windsurf 등 IDE 확장으로 제공됩니다. 'Local agents' 기능으로 PC에 설치된 Claude Code·Codex CLI를 불러 기존 구독으로 작업을 돌릴 수 있지만, 기본 Kombai 에이전트와 MCP 호출에는 Kombai 자체 크레딧이 듭니다. 반대로 데스크톱 앱의 Kombai MCP 서버를 켜면 Claude Code·Cursor·Codex·Gemini CLI에 설정과 스킬(/design-with-kombai 등)이 자동 설치돼, 쓰던 에이전트가 Kombai에 디자인 작업을 맡길 수 있습니다. Figma 디자인도 MCP 없이 네이티브로 가져와 코드로 옮길 수 있습니다.",
+  "connect": [
+   "app",
+   "ide",
+   "local-mcp",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot",
+   "gemini"
+  ],
+  "aiCost": "credits",
+  "price": "무료 월 300크레딧, Pro $20/월, Team $40/인·월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-10",
+  "homepage": "https://kombai.com/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "Claude Code·Codex 구독으로 돌려도 MCP 호출에는 Kombai 크레딧 필요",
+   "Kombai MCP 서버는 데스크톱 앱이 실행 중일 때만 동작",
+   "macOS 데스크톱 앱은 Apple Silicon 빌드"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "Kombai 문서: Local agents",
+    "url": "https://docs.kombai.com/features/local-agents.md"
+   },
+   {
+    "label": "Kombai 문서: Kombai MCP Server",
+    "url": "https://docs.kombai.com/features/mcp/kombai-mcp-server.md"
+   },
+   {
+    "label": "@oikon48 추천 글 (Zenn)",
+    "url": "https://zenn.dev/oikon/articles/kombai-frontend"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@oikon48)"
+ },
+ {
+  "id": "pd-flora",
+  "name": "FLORA",
+  "vendor": "FLORA",
+  "domain": "design",
+  "category": "이미지 편집·생성",
+  "tagline": "이미지·영상·3D를 노드로 엮는 AI 크리에이티브 캔버스",
+  "description": "FLORA는 Gemini·Veo·GPT Image·FLUX·Seedance 등 50개 이상 모델을 한 캔버스에서 노드로 연결해 이미지·영상·오디오·3D를 만드는 디자이너·브랜드팀용 워크스페이스입니다. 원격 MCP 서버를 Claude(커스텀 커넥터)·Claude Code(플러그인 또는 claude mcp add)·ChatGPT 앱·Codex·Cursor·VS Code에 연결하면, 에이전트가 비용 견적을 먼저 보여 준 뒤 생성하고 Technique 실행과 캔버스 정리까지 맡을 수 있습니다. 다만 생성 비용은 AI 구독이 아니라 FLORA 워크스페이스의 달러 기반 월 사용량에서 차감됩니다. 제품 사진을 영상으로 바꾸거나 수십~수백 개 에셋을 일괄 생성하는 작업에 잘 맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "skills",
+   "connector",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot",
+   "gemini"
+  ],
+  "aiCost": "credits",
+  "price": "무료(신규 워크스페이스 $2.50 사용량), Starter $18/월, Pro $50/월, Max $200/월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 9,
+  "updated": "2026-10",
+  "homepage": "https://flora.ai/",
+  "repo": "florafauna-ai/flora-mcp-skills",
+  "install": "claude mcp add --transport http flora https://agents.flora.ai/mcp",
+  "caveats": [
+   "MCP·API로 계속 쓰려면 Starter 이상 플랜 필요",
+   "무료 플랜은 앱에서 텍스트·이미지 모델만 사용 가능(영상 불가)",
+   "월 사용량은 USD 기준이며 다음 달로 이월되지 않음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "FLORA 문서: Claude Code에 MCP 설치",
+    "url": "https://docs.flora.ai/mcp/install/claude-code.md"
+   },
+   {
+    "label": "FLORA 문서: How Pricing Works",
+    "url": "https://docs.flora.ai/plans-and-billing/pricing.md"
+   },
+   {
+    "label": "@Tocelot 지지 트윗",
+    "url": "https://x.com/Tocelot/status/1894806443372749218"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@tocelot)"
+ },
+ {
+  "id": "pd-wispr-flow",
+  "name": "Wispr Flow",
+  "vendor": "Wispr",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "어느 앱에서나 말로 입력하는 AI 받아쓰기",
+  "description": "Wispr Flow는 단축키를 누르고 말하면 커서 위치에 다듬어진 텍스트를 넣어 주는 받아쓰기 앱으로 macOS·Windows·iOS·Android를 지원합니다. macOS의 Terminal·iTerm2·Warp·Ghostty에도 바로 붙여넣고, Claude Code·Codex CLI에는 긴 받아쓰기를 일반 텍스트로 나눠 넣으며, Cursor·Windsurf 채팅에서는 말한 파일명을 태그해 줍니다. 음성 인식은 Wispr 클라우드에서 처리돼 AI 구독과는 별도 요금이고, 원격 MCP 서버를 Claude·ChatGPT·Gemini·Cursor 등에 연결하면 Notetaker 회의 기록을 읽기 전용으로 조회할 수 있습니다. 코딩 에이전트에 긴 프롬프트를 말로 전할 때 유용합니다.",
+  "connect": [
+   "app",
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "무료 주 2,000단어, Pro $15/월(연간 $12/월)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://wisprflow.ai/",
+  "repo": null,
+  "install": "https://api.wisprflow.ai/connect/mcp",
+  "caveats": [
+   "오디오는 클라우드에서 처리(공식 보안 FAQ)",
+   "모델 개선용 데이터 공유가 기본 켜짐 — 설정에서 끌 수 있고, 제로 데이터 보존 강제는 Enterprise",
+   "MCP는 Notetaker 데이터 읽기 전용이며 받아쓰기 기록은 읽지 못함"
+  ],
+  "korea": "한국어는 음성으로 자동 감지되는 23개 언어에 포함(언어 감지는 받아쓰기 1회 단위)",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Wispr Flow 도움말: Cursor·VS Code·IDE에서 쓰기",
+    "url": "https://docs.wisprflow.ai/articles/6434410694-use-flow-with-cursor-vs-code-and-other-ides"
+   },
+   {
+    "label": "Wispr Flow 도움말: 여러 언어로 쓰기",
+    "url": "https://docs.wisprflow.ai/articles/3191899797-use-flow-with-multiple-languages"
+   },
+   {
+    "label": "@petergyang 툴킷 트윗",
+    "url": "https://x.com/petergyang/status/2003850688842150302"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@petergyang)"
+ },
+ {
+  "id": "pd-aqua-voice",
+  "name": "Aqua Voice",
+  "vendor": "Aqua Voice, Inc.",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "코딩 용어에 강한 AI 받아쓰기, MCP·CLI 제공",
+  "description": "Aqua Voice는 키 하나를 누른 채 말하면 Cursor·Claude Code·터미널 등 어떤 입력란에든 정리된 텍스트를 넣어 주는 받아쓰기 앱으로, 자체 음성 모델 Avalon이 코드·AI 용어 인식에 강하다고 내세웁니다. 원격 MCP 서버를 OAuth로 Claude·Claude Code·ChatGPT·Codex·Cursor에 연결하면 에이전트가 사전·지시문·언어 설정과 과거 받아쓰기 기록을 다룰 수 있고, CLI와 Claude Code·Codex용 스킬도 제공됩니다. 받아쓰기 자체는 Aqua 서버에서 처리되므로 AI 구독과 별도로 Aqua 요금이 듭니다. 화면 내용을 읽어 이름·코드 철자를 맞추는 Deep Context 옵션이 있어 코딩 에이전트에 프롬프트를 말로 넣을 때 특히 좋습니다.",
+  "connect": [
+   "app",
+   "remote-mcp",
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "credits",
+  "price": "무료 1,000단어, Pro $10/월(연간)·$12/월, Max $19/월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-10",
+  "homepage": "https://aquavoice.com/",
+  "repo": null,
+  "install": "https://api.aquavoice.com/mcp",
+  "caveats": [
+   "오디오는 클라우드 처리 — Privacy Mode(기본 꺼짐)를 켜야 전사가 서버에 남지 않음",
+   "Realtime Mode는 서드파티 실시간 음성 업체로 오디오를 보냄",
+   "MCP는 기록·설정 관리용이며 받아쓰기는 실행하지 않음"
+  ],
+  "korea": "한국어 포함 49개 언어 받아쓰기 지원(Auto로 자동 감지 가능)",
+  "starter": true,
+  "sources": [
+   {
+    "label": "Aqua Voice llms.txt (기능·요금·언어·개인정보)",
+    "url": "https://aquavoice.com/llms.txt"
+   },
+   {
+    "label": "Aqua MCP 안내",
+    "url": "https://aquavoice.com/mcp"
+   },
+   {
+    "label": "@AI_masaou 추천 글 (note)",
+    "url": "https://note.com/masa_wunder/n/nf44d2b94ef22"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou)"
+ },
+ {
+  "id": "pd-amical",
+  "name": "Amical",
+  "vendor": "Amical",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "오픈소스·로컬 우선 AI 받아쓰기 앱",
+  "description": "Amical은 Whisper 음성 인식과 로컬 LLM으로 내 PC 안에서 받아쓰기를 처리하는 MIT 라이선스 오픈소스 앱으로, macOS·Windows 데스크톱과 Android 공개 베타·iOS 베타를 제공합니다. 활성 앱을 감지해 이메일·채팅·IDE 등에 맞게 서식을 다듬고, 터미널 같은 입력란에서는 구두점·대소문자만 정리합니다. 서식 정리용 언어 모델로 Ollama나 OpenAI 호환 로컬 서버, OpenRouter를 연결할 수 있고 원하면 Amical 클라우드 모델도 쓸 수 있습니다. MCP 연동은 아직 계획 단계라 에이전트가 직접 조작하진 못하지만, 무료·오프라인으로 Claude Code에 말로 프롬프트를 넣고 싶을 때 좋은 선택입니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료(로컬 무제한, 클라우드 주 2,000단어), Premium $7/월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 1572,
+  "updated": "2026-10",
+  "homepage": "https://amical.ai/",
+  "repo": "amicalhq/amical",
+  "install": "brew install --cask amical",
+  "caveats": [
+   "MCP 연동은 계획 단계로 아직 미출시",
+   "로컬 Whisper는 Apple Silicon(Metal)에서 빠르고 Intel Mac에서는 느림",
+   "요금 페이지에 Premium이 $7/월과 $10/월로 엇갈려 표기됨"
+  ],
+  "korea": "앱 UI는 한국어 미지원. 한국어 받아쓰기는 공식 문서에 명시가 없어 확인 필요(100개+ 언어 지원 표방)",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub amicalhq/amical",
+    "url": "https://github.com/amicalhq/amical"
+   },
+   {
+    "label": "Amical 문서 전문 (llms-full.txt)",
+    "url": "https://amical.ai/llms-full.txt"
+   },
+   {
+    "label": "@AI_masaou 추천 글 (note)",
+    "url": "https://note.com/masa_wunder/n/nf44d2b94ef22"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou)"
+ },
+ {
+  "id": "pd-willow-voice",
+  "name": "Willow Voice",
+  "vendor": "Willow Care, Inc.",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "문체를 학습해 다듬어 주는 AI 받아쓰기",
+  "description": "Willow Voice는 단축키를 누른 채 말하면 어떤 텍스트 입력란에든 군더더기 말을 지우고 서식을 맞춘 글을 넣어 주는 받아쓰기 앱으로 Mac·Windows·iPhone을 지원합니다. 개발자용 페이지에서 Cursor·Claude Code·Codex에 긴 프롬프트를 말로 넣는 용도를 내세우지만 MCP·API 연동은 공식 페이지에 언급이 없어, AI 구독과 별개로 쓰는 독립 앱입니다. 음성 인식은 클라우드 모델로 처리하며, 기본값인 Private Mode에서는 오디오와 전사 내용이 서버에 저장되지 않습니다. 쓰는 사람의 문체를 학습하고 이름·제품 용어 사전을 자동으로 쌓는 점이 강점입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "무료 플랜 있음, Pro $15/월(연간 $12/월)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://willowvoice.com/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "기본은 클라우드 처리, 오프라인(온디바이스) 모드의 플랫폼·플랜 범위는 확인 필요",
+   "제로 데이터 보존 강제는 Business·Enterprise 플랜"
+  ],
+  "korea": "한국어 받아쓰기 안내 페이지가 있으며 100개 이상 언어 간 전환을 지원한다고 소개",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Willow for Developers",
+    "url": "https://willowvoice.com/developers"
+   },
+   {
+    "label": "Willow 도움말: 데이터·개인정보 보호",
+    "url": "https://help.willowvoice.com/en/articles/12854269-how-willow-protects-your-data-and-privacy"
+   },
+   {
+    "label": "@PhilHedayatnia 언급 (AirfoilStudio 게시물)",
+    "url": "https://x.com/AirfoilStudio/status/2066597990924763585"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@philhedayatnia)"
+ }
+]

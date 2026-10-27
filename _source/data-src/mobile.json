@@ -1,0 +1,3588 @@
+[
+  {
+    "id": "mob-xcode-coding-assistant",
+    "name": "Xcode 27 coding assistant",
+    "vendor": "Apple",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "Xcode 안에서 Claude·Codex·Gemini 에이전트 실행",
+    "description": "Xcode 27의 코딩 어시스턴트는 Anthropic Claude Agent, OpenAI Codex, Google Gemini·Antigravity를 IDE 안에서 실행합니다. Settings > Intelligence > Agents에서 에이전트를 받아 기존 구독 계정으로 로그인하거나, 'Add an Agent'로 다른 ACP 에이전트를 추가할 수 있습니다. 에이전트가 시뮬레이터 부팅, 앱 설치·실행, 터치 입력, 스크린샷 캡처까지 직접 검증하고, 스킬·MCP 서버·ACP 구성을 묶은 플러그인과 플랜 모드를 지원합니다. Claude나 ChatGPT를 이미 구독하는 iOS 개발자가 가장 먼저 연결할 경로입니다.",
+    "connect": [
+      "ide",
+      "signin",
+      "plugin",
+      "skills",
+      "byok"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "Xcode 무료 (출시는 Apple Developer Program)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://developer.apple.com/xcode/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "macOS Tahoe 26.6 이상 필요",
+      "에이전트별로 받는 구독 등급(무료 포함)은 Apple 문서에 명시 없음",
+      "에이전트 설정 폴더(~/Library/Developer/Xcode/CodingAssistant)는 Xcode 안에서만 적용"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Xcode 27 Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes"
+      },
+      {
+        "label": "Apple: Setting up coding intelligence",
+        "url": "https://developer.apple.com/documentation/xcode/setting-up-coding-intelligence"
+      },
+      {
+        "label": "Apple Developer Releases",
+        "url": "https://developer.apple.com/news/releases/"
+      }
+    ]
+  },
+  {
+    "id": "mob-xcode-mcpbridge",
+    "name": "Xcode MCP (xcrun mcpbridge)",
+    "vendor": "Apple",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "터미널 Claude Code·Codex가 Xcode를 MCP로 조작",
+    "description": "Xcode 26.3부터 Xcode는 자기 기능을 Model Context Protocol로 외부 에이전트에 공개합니다. Claude Code, Codex, Cursor에서 `xcrun mcpbridge`를 MCP 서버로 등록하면 각자의 구독으로 Xcode 빌드, 프리뷰, 진단 기능을 호출할 수 있습니다. Xcode 27에서 디버거, 스킴, 빌드 설정, 엔타이틀먼트, Info.plist, String Catalog 번역 도구가 추가됐고 27.2 RC에는 `GetCodeCoverage`가 들어갔습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Xcode에 포함 (무료)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://developer.apple.com/documentation/xcode/giving-agentic-coding-tools-access-to-xcode",
+    "repo": null,
+    "install": "xcrun mcpbridge",
+    "caveats": [
+      "26.3 RC에서 MCP 스펙 준수 버그가 보고됨(2차 출처)",
+      "외부 에이전트 접근은 26.3에 추가된 권한 시스템을 거침",
+      "워크스페이스 없이 쓰려면 Xcode 27의 독립 MCP 서버 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Xcode 26.3 Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-26_3-release-notes"
+      },
+      {
+        "label": "DEV Community",
+        "url": "https://dev.to/arshtechpro/xcode-263-use-ai-agents-from-cursor-claude-code-beyond-4dmi"
+      },
+      {
+        "label": "Xcode 27.2 RC Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes"
+      }
+    ]
+  },
+  {
+    "id": "mob-xcrun-mcp-server",
+    "name": "Xcode standalone MCP server (xcrun mcp-server)",
+    "vendor": "Apple",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "워크스페이스를 열지 않아도 도는 Xcode MCP",
+    "description": "Xcode 27 베타 5부터 들어간 독립형 MCP 서버로, Xcode 워크스페이스를 열지 않아도 터미널 에이전트가 Xcode 도구를 쓸 수 있습니다. `sudo xcrun mcp-server enable`로 켜고 `xcrun mcp-server status`로 상태를 확인합니다. Claude Code나 Codex를 Xcode 밖에서 돌리면서 구독 그대로 빌드와 검증을 맡길 때 맞습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Xcode에 포함 (무료)",
+    "free": true,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes",
+    "repo": null,
+    "install": "sudo xcrun mcp-server enable",
+    "caveats": [
+      "얼리 프리뷰: 설정 변경 후 Xcode 재실행이나 재부팅이 필요할 수 있음",
+      "무인용 `--unsafe-always-allow-all-agents`는 Apple이 자리에서 쓰는 환경엔 비권장"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Xcode 27 Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes"
+      },
+      {
+        "label": "Xcode 27.2 RC Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes"
+      }
+    ]
+  },
+  {
+    "id": "mob-lldb-mcp",
+    "name": "lldb-mcp",
+    "vendor": "Apple",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "Xcode 27 LLDB에 함께 들어간 MCP 서버",
+    "description": "Xcode 27부터 LLDB 디버거가 자체 MCP 서버인 lldb-mcp를 함께 제공합니다. MCP를 지원하는 Claude Code나 Codex 같은 에이전트를 디버거에 연결하는 Apple 공식 경로이며, 에이전트 비용은 연결한 구독에서 나갑니다. Xcode MCP에 추가된 디버거 콘솔 도구와 함께 디버깅 작업을 에이전트에 맡길 때 씁니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Xcode에 포함 (무료)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-09",
+    "homepage": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "도구 목록과 설정법은 릴리스 노트에 자세히 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Xcode 27 Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes"
+      }
+    ]
+  },
+  {
+    "id": "mob-claude-desktop-ios-simulator",
+    "name": "Claude Code Desktop iOS Simulator",
+    "vendor": "Anthropic",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "Claude가 시뮬레이터를 띄우고 직접 탭하며 검증",
+    "description": "Claude Code 데스크톱 앱의 대화창 옆에 Apple iOS 시뮬레이터를 띄우는 패널입니다. Claude가 앱을 빌드·설치·실행하고 화면을 탭하고 읽으며 자기 변경을 검증하고, 컴퓨터 사용이나 macOS 손쉬운 사용·화면 기록 권한이 필요 없습니다. Claude Pro·Max·Team·Enterprise 구독에 포함되며 세션마다 최대 4대의 시뮬레이터를 따로 씁니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "Claude Pro·Max·Team·Enterprise에 포함",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://code.claude.com/docs/en/desktop-ios-simulator",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "시뮬레이터 전용(실기기 불가), 로컬 세션만 지원",
+      "기기 스크린샷이 대화 보존 정책에 따라 Anthropic으로 전송됨",
+      "Claude Desktop v1.24012.0+와 Xcode 26.x 또는 27 필요, HIPAA 구성 조직 제외"
+    ],
+    "korea": "한국 App Store에서 Claude Pro는 월 ₩33,000(VAT 포함)이라 구독 전 웹 결제 가격과 비교를 권장",
+    "starter": true,
+    "sources": [
+      {
+        "label": "Claude Code docs",
+        "url": "https://code.claude.com/docs/en/desktop-ios-simulator"
+      },
+      {
+        "label": "OpenTheRank: Claude 한국 가격",
+        "url": "https://opentherank.com/ko/ai-pricing/claude/south-korea/"
+      }
+    ]
+  },
+  {
+    "id": "mob-mobilebuildmcp",
+    "name": "MobileBuildMCP",
+    "vendor": "Sentry",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "구 XcodeBuildMCP, iOS 빌드·시뮬레이터 MCP",
+    "description": "iOS·macOS 프로젝트의 빌드, 테스트, 시뮬레이터·기기 작업을 MCP 서버와 CLI로 제공하며, 2026년 9월 v2.7.1에서 XcodeBuildMCP에서 이름을 바꿨습니다. Claude Code, Codex, Cursor에 로컬 MCP로 붙이면 Xcode를 열지 않고 각 구독으로 헤드리스 빌드와 검증을 돌릴 수 있습니다. `mobilebuildmcp init`으로 에이전트 스킬도 설치합니다.",
+    "connect": [
+      "local-mcp",
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 6500,
+    "updated": "2026-09",
+    "homepage": "https://github.com/getsentry/MobileBuildMCP",
+    "repo": "getsentry/MobileBuildMCP",
+    "install": "npx -y mobilebuildmcp@latest mcp",
+    "caveats": [
+      "이름 변경으로 패키지·바이너리·환경변수가 바뀌어 `npx xcodebuildmcp` 설정은 더 이상 맞지 않음",
+      "Sentry 런타임 오류 텔레메트리 기본 켜짐(옵트아웃 가능)",
+      "기기 도구는 코드 서명 설정 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "MobileBuildMCP releases",
+        "url": "https://github.com/getsentry/MobileBuildMCP/releases"
+      },
+      {
+        "label": "GitHub getsentry/XcodeBuildMCP",
+        "url": "https://github.com/getsentry/XcodeBuildMCP"
+      }
+    ]
+  },
+  {
+    "id": "mob-ios-simulator-mcp",
+    "name": "ios-simulator-mcp",
+    "vendor": "joshuayoes",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "iOS 시뮬레이터 탭·스와이프·스크린샷 MCP",
+    "description": "iOS 시뮬레이터에서 탭, 입력, 스와이프, 접근성 트리 기반 요소 찾기, 스크린샷, 화면 녹화를 제공하는 커뮤니티 MCP 서버입니다. Claude Code 등 MCP 클라이언트에 로컬 서버로 등록하면 구독 그대로 시뮬레이터 UI를 조작할 수 있습니다. macOS, Xcode, Node와 Facebook IDB가 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/joshuayoes/ios-simulator-mcp",
+    "repo": "joshuayoes/ios-simulator-mcp",
+    "install": "claude mcp add ios-simulator npx ios-simulator-mcp",
+    "caveats": [
+      "1.3.3 미만 버전에 명령 주입 취약점: 최신 버전(1.6.0) 사용",
+      "디렉터리마다 스타 수가 약 813~2,030으로 다르게 표시됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "npm registry",
+        "url": "https://registry.npmjs.org/ios-simulator-mcp/latest"
+      },
+      {
+        "label": "releasealert.dev CVE",
+        "url": "https://releasealert.dev/github/joshuayoes/ios-simulator-mcp/cves"
+      }
+    ]
+  },
+  {
+    "id": "mob-sosumi",
+    "name": "sosumi.ai",
+    "vendor": "sosumi.ai",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "Apple 문서·HIG를 마크다운으로 주는 호스팅 MCP",
+    "description": "Apple Developer 문서와 Human Interface Guidelines를 마크다운으로 바꿔 주는 커뮤니티 서비스로, URL의 developer.apple.com을 sosumi.ai로 바꾸기만 하면 됩니다. `https://sosumi.ai/mcp` 호스팅 MCP(Streamable HTTP/SSE)를 제공하고, stdio 전용 클라이언트는 mcp-remote 프록시로 연결합니다. 에이전트가 최신 Apple API 문서를 읽어야 할 때 유용하지만 Xcode 27의 시맨틱 문서 검색이 일부를 대신합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://sosumi.ai",
+    "repo": null,
+    "install": "https://sosumi.ai/mcp",
+    "caveats": [
+      "Apple 공식이 아닌 커뮤니티 서비스"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama 목록",
+        "url": "https://glama.ai/mcp/servers/wsg0p3d9mp"
+      }
+    ]
+  },
+  {
+    "id": "mob-apple-docs-mcp",
+    "name": "apple-docs-mcp",
+    "vendor": "kimsungwhee",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "Apple 문서와 WWDC 자료를 검색하는 MCP",
+    "description": "Apple 개발자 문서와 WWDC 2014~2025 자료를 에이전트가 검색하게 해 주는 커뮤니티 MCP 서버입니다. npm 패키지 `@kimsungwhee/apple-docs-mcp`로 배포되며 Claude Code, Cursor, VS Code에서 로컬 서버로 씁니다. Swift·SwiftUI API를 최신 문서 기준으로 확인할 때 쓸 만합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": "kimsungwhee/apple-docs-mcp",
+    "install": "claude mcp add apple-docs -- npx -y @kimsungwhee/apple-docs-mcp@latest",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "VibeIndex",
+        "url": "https://vibeindex.ai/mcp/kimsungwhee/apple-docs-mcp"
+      },
+      {
+        "label": "Augment",
+        "url": "https://www.augmentcode.com/mcp/apple-docs-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-sweetpad",
+    "name": "Sweetpad",
+    "vendor": "sweetpad-dev",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "사람과 에이전트를 위한 xcodebuild CLI",
+    "description": "Xcode를 열지 않고 Apple 플랫폼 앱을 빌드·실행·디버그·테스트하는 CLI로, 스스로를 'xcodebuild for humans and agents'라고 소개합니다. Xcode 프로젝트, Tuist, XcodeGen, SwiftPM을 지원하고 코딩 에이전트용 스킬을 제공해 Claude Code나 Codex가 구독 그대로 셸에서 씁니다. VS Code 확장이 있고 Neovim, Zed, Helix, Emacs도 지원합니다.",
+    "connect": [
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 1900,
+    "updated": null,
+    "homepage": "https://github.com/sweetpad-dev/sweetpad",
+    "repo": "sweetpad-dev/sweetpad",
+    "install": null,
+    "caveats": [
+      "README에 MCP 언급 없음: 셸 CLI로 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub sweetpad",
+        "url": "https://github.com/sweetpad-dev/sweetpad"
+      }
+    ]
+  },
+  {
+    "id": "mob-alex-sidebar",
+    "name": "Alex Sidebar",
+    "vendor": "alexcodes.app",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "팀이 OpenAI에 합류하며 종료된 Xcode AI 도구",
+    "description": "Xcode용 AI 사이드바로 자동 수정, Cmd+K 인라인 편집, SPM 패키지 추가, Ollama·LM Studio 로컬 모델을 지원했던 도구입니다. 사이트 배너에 따르면 팀이 OpenAI에 합류해 Codex로 옮겨 갔고 다운로드는 10월 1일(2025년 표기 기준)에 중단됐습니다. 지금은 Xcode 27의 Codex·Claude 에이전트가 대안입니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "서비스 종료",
+    "free": false,
+    "official": "official",
+    "status": "shutdown",
+    "stars": null,
+    "updated": "2025-10",
+    "homepage": "https://www.alexcodes.app/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "다운로드 중단: 새로 도입하지 말 것"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "alexcodes.app",
+        "url": "https://www.alexcodes.app/"
+      }
+    ]
+  },
+  {
+    "id": "mob-swift-assist",
+    "name": "Swift Assist",
+    "vendor": "Apple",
+    "domain": "mobile",
+    "category": "iOS",
+    "tagline": "발표만 되고 그 이름으로는 출시되지 않은 기능",
+    "description": "WWDC24에서 Xcode 16용으로 발표됐지만 그 이름으로는 끝내 출시되지 않은 Apple의 AI 코딩 기능입니다. 현재 Apple의 Xcode 페이지와 Xcode 26.x·27 릴리스 노트 어디에도 이 이름이 없으며, ChatGPT·Claude 연동과 에이전트를 담은 Xcode 26 코딩 인텔리전스가 사실상 자리를 대신했습니다. 지금 쓸 것은 Xcode 27 코딩 어시스턴트입니다.",
+    "connect": [
+      "ide"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "출시되지 않음",
+    "free": false,
+    "official": "official",
+    "status": "deprecated",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developer.apple.com/xcode/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Apple이 취소나 개명을 공식 발표한 적은 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "heise",
+        "url": "https://heise.de/-10321591"
+      },
+      {
+        "label": "9to5Mac (2025-06)",
+        "url": "https://9to5mac.com/2025/06/10/beyond-chatgpt-xcode-26-will-support-multiple-ai-models-like-claude/"
+      },
+      {
+        "label": "developer.apple.com/xcode",
+        "url": "https://developer.apple.com/xcode/"
+      }
+    ]
+  },
+  {
+    "id": "mob-android-studio-byoa",
+    "name": "Android Studio Bring Your Own Agent",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Android Studio에 Claude·Codex 등 ACP 에이전트",
+    "description": "Android Studio에 ACP 호환 에이전트를 직접 연결하는 기능으로 Claude Agent, Codex, Google Antigravity가 공식으로 언급됩니다. 에이전트 창에서 고른 뒤 구독 계정으로 로그인하거나 API 키를 넣으면 되고, Antigravity는 Google AI Pro·Ultra 플랜으로도 쓸 수 있습니다. 에이전트는 빌드 진단, Compose 프리뷰, SDK 도구, 에뮬레이터 제어 같은 네이티브 도구를 쓰고 프로젝트 스킬·슬래시 명령·메모리를 자동으로 불러옵니다.",
+    "connect": [
+      "ide",
+      "signin",
+      "byok"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "Android Studio 무료 (에이전트는 각 구독)",
+    "free": true,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": "2026-09",
+    "homepage": "https://android-developers.googleblog.com/2026/09/build-your-way-use-any-ai-agent-in-android-studio.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Canary 'Rabbit 2'부터 프리뷰: 안정판 도달 여부 미확인",
+      "각 AI 제공사 약관 적용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Android Developers Blog (2026-09)",
+        "url": "https://android-developers.googleblog.com/2026/09/build-your-way-use-any-ai-agent-in-android-studio.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-android-studio-agent-byok",
+    "name": "Gemini in Android Studio Agent Mode",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Android Studio 에이전트에 내 API 키·로컬 모델",
+    "description": "Android Studio 내장 Agent Mode는 기기 배포, 스크린샷, Logcat 확인, 실행 중 앱 조작과 Figma·Notion·Linear 같은 원격 MCP 서버 연결을 지원합니다. Otter 3부터 Settings > Tools > AI > Model Providers에서 OpenAI, Anthropic, OpenRouter 같은 서드파티 원격 제공자의 URL과 API 키를 넣거나 LM Studio·Ollama 로컬 모델을 쓸 수 있습니다. 구독 로그인 대신 API 종량제나 로컬 모델로 돌리고 싶을 때의 경로입니다.",
+    "connect": [
+      "ide",
+      "byok"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "apikey",
+    "price": "Android Studio 무료 (API 사용료 별도)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-01",
+    "homepage": "https://developer.android.com/studio/gemini/use-a-remote-model",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "서드파티 모델에선 일부 Android Studio 전용 AI 기능이 기대대로 동작하지 않을 수 있음",
+      "코드와 프롬프트가 해당 제공사로 전송됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "developer.android.com: 원격 모델",
+        "url": "https://developer.android.com/studio/gemini/use-a-remote-model"
+      },
+      {
+        "label": "Android Developers Blog (2026-01)",
+        "url": "https://android-developers.googleblog.com/2026/01/llm-flexibility-agent-mode-improvements.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-android-cli",
+    "name": "Android CLI",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Claude Code·Codex용 공식 Android 터미널 도구",
+    "description": "Google I/O 2026에서 1.0으로 정식 출시된 Android CLI는 Claude Code, Codex, Antigravity 같은 에이전트에게 핵심 Android 작업 도구를 제공합니다. Android Studio와 연동해 심볼 해석, 파일 경고 분석, Compose 프리뷰 렌더링을 처리하고, Android·Firebase·Kotlin 최신 문서를 담은 Knowledge Base도 함께 발표됐습니다. Google은 Android Studio 안에서 에이전트를 돌릴 때보다 토큰 사용량이 70% 넘게 적다고 주장합니다.",
+    "connect": [
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://goo.gle/CLI_IO26",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "토큰 70% 절감·3배 속도는 독립 검증되지 않은 벤더 주장"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Android Developers Blog: I/O 2026",
+        "url": "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html"
+      },
+      {
+        "label": "The Next Web",
+        "url": "https://thenextweb.com/news/google-android-cli-agentic-coding-tools-io-2026"
+      }
+    ]
+  },
+  {
+    "id": "mob-android-skills",
+    "name": "Android Skills",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Compose 마이그레이션 등 공식 SKILL.md 모음",
+    "description": "Google이 공개한 SKILL.md 형식의 에이전트 스킬 모음으로 XML→Compose, Navigation 3, CameraX 마이그레이션, 적응형 UI, Compose Styles, Perfetto SQL, 테스트를 다룹니다. Claude Code나 Codex에 넣으면 구독 그대로 Google 권장 방식에 맞춰 작업하고, I/O 2026부터 Journeys 테스트도 스킬로 실행할 수 있습니다. Play 정책·결제 관련 스킬도 같은 저장소에 있습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developer.android.com/tools/agents/android-skills",
+    "repo": "android/skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Android skills docs",
+        "url": "https://developer.android.com/tools/agents/android-skills"
+      },
+      {
+        "label": "The Next Web",
+        "url": "https://thenextweb.com/news/google-android-cli-agentic-coding-tools-io-2026"
+      },
+      {
+        "label": "Android Developers Blog: I/O 2026",
+        "url": "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-appfunctions",
+    "name": "AppFunctions",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Android 앱을 온디바이스 MCP 서버처럼 노출",
+    "description": "Android 앱이 기능을 에이전트와 어시스턴트에 노출해 '온디바이스 MCP 서버처럼' 동작하게 하는 플랫폼 API이자 Jetpack 라이브러리입니다. 개발을 돕는 도구라기보다 내 앱을 AI 에이전트가 호출할 수 있게 만드는 통합 지점이라 Claude·ChatGPT 구독과 직접 연결되지는 않습니다. Gemini 연동은 비공개 프리뷰 단계입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료 (플랫폼 API)",
+    "free": true,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Gemini 연동은 비공개 프리뷰"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Android Developers Blog: I/O 2026",
+        "url": "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-adb-mcp-iksnerd",
+    "name": "adb-mcp",
+    "vendor": "iksnerd",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "에뮬레이터·logcat·Gradle을 다루는 Go MCP",
+    "description": "Go로 작성된 비공식 Android MCP 서버로 에뮬레이터 부팅, 스크린샷, UI 계층 조회, 탭·입력, logcat, Gradle 빌드를 73~78개 도구로 제공합니다. 로컬 MCP라 Claude Code나 Codex 같은 클라이언트가 구독만으로 Android 기기를 다룰 수 있습니다. 스타가 2~3개 수준이라 실무에는 mobile-mcp 같은 크로스플랫폼 기기 MCP가 더 안전합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/iksnerd/adb-mcp",
+    "repo": "iksnerd/adb-mcp",
+    "install": null,
+    "caveats": [
+      "스타 2~3개의 초기 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "mcpservers.org",
+        "url": "https://mcpservers.org/servers/iksnerd/adb-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-android-mcp-cursortouch",
+    "name": "Android-MCP",
+    "vendor": "CursorTouch",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "ADB와 접근성 API로 Android 기기 조작",
+    "description": "Python으로 작성된 커뮤니티 MCP 서버로 ADB와 Android 접근성 API를 이용해 Android 10 이상 기기를 조작합니다. 로컬 MCP 클라이언트에 붙이면 Claude Code나 Codex가 구독 그대로 기기 화면을 읽고 조작할 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/CursorTouch/Android-MCP",
+    "repo": "CursorTouch/Android-MCP",
+    "install": null,
+    "caveats": [
+      "Android 10 이상 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama CursorTouch",
+        "url": "https://glama.ai/mcp/servers/@CursorTouch/Android-MCP/tree/02f8d997328a8f2e5f5fd094aa4bbf5ca17423fb"
+      }
+    ]
+  },
+  {
+    "id": "mob-android-mcp-server-mg",
+    "name": "android-mcp-server",
+    "vendor": "martingeidobler",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Claude Code용으로 만든 TypeScript Android MCP",
+    "description": "Claude Code에서 쓰려고 만든 TypeScript 커뮤니티 Android MCP 서버입니다. 로컬 MCP로 등록하면 Claude 구독으로 Android 기기·에뮬레이터 작업을 맡길 수 있으며, 2026년 3월에 갱신됐고 스타는 약 43개입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": 43,
+    "updated": "2026-03",
+    "homepage": "https://github.com/martingeidobler/android-mcp-server",
+    "repo": "martingeidobler/android-mcp-server",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Enterprise DNA",
+        "url": "https://enterprisedna.co/directories/mcp/martingeidobler-android-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-androidbuild-mcp",
+    "name": "AndroidBuildMCP",
+    "vendor": "asjackson",
+    "domain": "mobile",
+    "category": "Android",
+    "tagline": "Gradle 빌드·에뮬레이터·adb 배포 초기 MCP",
+    "description": "Gradle 빌드, 에뮬레이터, adb 배포, UI 자동화를 다루는 npm 패키지 `@asjackson/androidbuild-mcp`로, XcodeBuildMCP에 가장 가까운 Android판입니다. 로컬 MCP로 구독 에이전트에 붙일 수 있지만 v0.1.1의 아주 이른 단계라 시험용으로 보는 편이 맞습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "experimental",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.npmjs.com/package/@asjackson/androidbuild-mcp",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "v0.1.1 초기 버전"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Socket",
+        "url": "https://socket.dev/npm/package/@asjackson/androidbuild-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-expo-mcp",
+    "name": "Expo MCP Server",
+    "vendor": "Expo",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "EAS 빌드·TestFlight·스토어 리뷰를 한 MCP로",
+    "description": "Expo가 운영하는 OAuth 호스팅 MCP 서버로 EAS 빌드·워크플로, TestFlight 크래시·피드백, Play 크래시·ANR, App Store·Play 리뷰 조회와 답글까지 다룹니다. Claude Code, Codex, Cursor, VS Code에서 원격 MCP로 붙일 수 있고, 2026년 8월 13일부터 Claude 커넥터 디렉터리에도 올라 claude.ai·데스크톱·모바일에서 구독 그대로 씁니다. SDK 54+ 로컬 도구로 라우터 사이트맵, 앱 로그, 탭, 스크린샷도 지원합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "Free 플랜에 포함, 유료 플랜은 한도 상향",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": "https://docs.expo.dev/eas/ai/mcp/",
+    "repo": null,
+    "install": "claude mcp add --transport http expo https://mcp.expo.dev/mcp",
+    "caveats": [
+      "`search_documentation`은 유료 EAS 플랜 필요",
+      "로컬 도구는 dev 서버 1개만, iOS는 macOS 시뮬레이터만",
+      "스토어 리뷰 답글은 공개되므로 승인 후 실행"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Expo docs: MCP",
+        "url": "https://docs.expo.dev/eas/ai/mcp/"
+      },
+      {
+        "label": "Expo changelog",
+        "url": "https://expo.dev/changelog/connect-expo-in-claude"
+      }
+    ]
+  },
+  {
+    "id": "mob-expo-skills",
+    "name": "Expo Skills",
+    "vendor": "Expo",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "expo-router·EAS 등 23개 스킬 공식 플러그인",
+    "description": "Expo 공식 플러그인으로 expo-router, expo-ui, expo-upgrade, expo-native-ui, eas-app-stores, eas-update, eas-workflows 등 23개 스킬을 담고 있습니다. Claude Code와 Codex 공식 마켓플레이스에서 바로 설치되고, 설치하면 Expo MCP 서버도 함께 등록됩니다. Claude Code나 Codex를 이미 쓰는 React Native 개발자가 앱 빌더 구독 없이 Expo 앱을 만드는 가장 싼 경로입니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (EAS 사용 시 EAS 요금)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.expo.dev/skills/",
+    "repo": "expo/skills",
+    "install": "claude plugin install expo@claude-plugins-official",
+    "caveats": [
+      "Codex는 `codex plugin add expo@openai-curated`로 설치"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Expo docs: skills",
+        "url": "https://docs.expo.dev/skills/"
+      }
+    ]
+  },
+  {
+    "id": "mob-dart-mcp-server",
+    "name": "Dart and Flutter MCP server",
+    "vendor": "Google (Dart·Flutter)",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "분석·포맷·테스트·런타임 검사용 공식 MCP",
+    "description": "`dart mcp-server`로 실행하는 공식 MCP 서버로 분석기 진단, 심볼 해석, `dart_fix`, `dart_format`, 테스트, 실행 중 앱 런타임 검사, pub.dev 검색, pubspec 관리를 제공합니다. stdio를 지원하는 모든 MCP 클라이언트에서 쓸 수 있어 Claude Code, Codex, Copilot, Antigravity CLI 사용자가 구독 그대로 Flutter 작업을 맡길 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.flutter.dev/ai/mcp-server",
+    "repo": null,
+    "install": "dart mcp-server",
+    "caveats": [
+      "dart.dev 문서에 실험적 기능으로 표기된 적 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "pub.dev",
+        "url": "https://pub.dev/packages/dart_mcp_server"
+      },
+      {
+        "label": "docs.flutter.dev",
+        "url": "https://docs.flutter.dev/ai/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-dart-flutter-plugin",
+    "name": "dart-flutter plugin",
+    "vendor": "Google (Flutter)",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "Claude Code·Codex용 공식 Flutter 플러그인",
+    "description": "flutter/agent-plugins 마켓플레이스에서 배포하는 공식 플러그인으로 Dart·Flutter MCP 서버와 짝을 이룹니다. Claude Code, Codex, Cursor에 설치하면 각자의 구독으로 Flutter 앱 개발을 진행할 수 있고, 스킬만 필요하면 `npx skills add flutter/agent-plugins`나 `dart-lang/skills`를 쓰면 됩니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.flutter.dev/ai/mcp-server",
+    "repo": "flutter/agent-plugins",
+    "install": "claude plugin install dart-flutter@dart-flutter",
+    "caveats": [
+      "Codex는 `codex plugin add dart-flutter@dart-flutter`"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "docs.flutter.dev",
+        "url": "https://docs.flutter.dev/ai/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-radon-ide",
+    "name": "Radon IDE",
+    "vendor": "Software Mansion",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "에디터 안에 iOS 시뮬레이터·Android 에뮬레이터",
+    "description": "VS Code와 Cursor 확장으로 iOS 시뮬레이터와 Android 에뮬레이터를 에디터 안에 띄우고 요소·네트워크 인스펙터, React Scan, 디버거, 라우터 연동을 제공하는 React Native·Expo 개발 도구입니다. 내장 AI 어시스턴트는 사용자가 고른 LLM에 최신 React Native 생태계 지식을 더해 주며, 홈페이지에 MCP 언급은 없습니다. 상용 Team License 조건이 적용됩니다.",
+    "connect": [
+      "ide"
+    ],
+    "worksWith": [
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요 (Team License)",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://radon.swmansion.com/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "AI 어시스턴트가 어떤 모델·구독을 쓰는지 세부 정보 없음",
+      "MCP 미지원(홈페이지 기준)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "radon.swmansion.com",
+        "url": "https://radon.swmansion.com/"
+      }
+    ]
+  },
+  {
+    "id": "mob-kotlin-agent-skills",
+    "name": "Kotlin agent skills",
+    "vendor": "JetBrains",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "KMP 마이그레이션·iOS 빌드 개선 공식 스킬",
+    "description": "JetBrains가 공개한 Kotlin 에이전트 스킬 10종으로, KMP의 AGP 9 마이그레이션, CocoaPods→SwiftPM 전환, 느린 Kotlin/Native·iOS 빌드 개선 같은 작업을 담고 있습니다. Claude Code와 Codex 플러그인 마켓플레이스로 설치되고 Junie, Gemini, Copilot과도 호환된다고 문서에 나와 있습니다. Compose Multiplatform 전용 스킬은 아직 없습니다.",
+    "connect": [
+      "skills",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": 1100,
+    "updated": "2026-10",
+    "homepage": "https://kotlinlang.org/docs/kotlin-ai-skills.html",
+    "repo": "Kotlin/kotlin-agent-skills",
+    "install": "npx skills add Kotlin/kotlin-agent-skills",
+    "caveats": [
+      "JetBrains Incubator 단계 프로젝트"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub Kotlin/kotlin-agent-skills",
+        "url": "https://github.com/Kotlin/kotlin-agent-skills"
+      },
+      {
+        "label": "kotlinlang.org: Kotlin AI skills",
+        "url": "https://kotlinlang.org/docs/kotlin-ai-skills.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-klibs-mcp",
+    "name": "klibs.io MCP server",
+    "vendor": "JetBrains",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "멀티플랫폼 Kotlin 라이브러리 검색 MCP",
+    "description": "JetBrains의 klibs.io 멀티플랫폼 라이브러리 카탈로그를 에이전트가 검색하게 해 주는 MCP 서버로, Kotlin 공식 AI 개발 문서에 소개돼 있습니다. MCP 클라이언트에 붙이면 구독 에이전트가 KMP 프로젝트에 맞는 라이브러리를 찾아 줍니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/JetBrains/klibs-io/blob/master/integrations/mcp/README.md",
+    "repo": "JetBrains/klibs-io",
+    "install": null,
+    "caveats": [
+      "호스팅·로컬 여부 등 연결 방식은 README 확인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "klibs.io MCP README",
+        "url": "https://github.com/JetBrains/klibs-io/blob/master/integrations/mcp/README.md"
+      },
+      {
+        "label": "kotlinlang.org: AI for Kotlin",
+        "url": "https://kotlinlang.org/docs/ai-for-development.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-compose-hot-reload-mcp",
+    "name": "Compose Hot Reload MCP server",
+    "vendor": "JetBrains",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "CMP 1.12 내장, 데스크톱 UI 리로드·조작 MCP",
+    "description": "Compose Multiplatform 1.12.0부터 Compose Hot Reload에 내장된 MCP 서버로 Gradle 태스크 `hotMcpServer`로 실행합니다. `reload`, `take_screenshot`, `get_semantic_tree`, `get_logs`, `click`, `type_text`, `scroll` 도구로 구독 에이전트가 실행 중인 UI를 리로드하고 확인하며 조작할 수 있습니다. 데스크톱(JVM) 타깃만 지원해 Android·iOS 화면 검증에는 쓸 수 없습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Compose Multiplatform에 포함",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://kotlinlang.org/docs/multiplatform/compose-hot-reload.html",
+    "repo": null,
+    "install": "./gradlew --no-daemon --quiet --console=plain hotMcpServer",
+    "caveats": [
+      "데스크톱(JVM) 타깃 전용: Android·iOS 미지원",
+      "Kotlin 2.1.20+와 JetBrains Runtime(Java 21) 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "kotlinlang.org: Compose Hot Reload",
+        "url": "https://kotlinlang.org/docs/multiplatform/compose-hot-reload.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-junie",
+    "name": "Junie",
+    "vendor": "JetBrains",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "JetBrains 로그인이나 BYOK로 쓰는 코딩 에이전트",
+    "description": "JetBrains의 LLM 비종속 코딩 에이전트로 터미널, IDE, CI/CD와 GitHub Action에서 실행됩니다. JetBrains 계정 OAuth나 Junie API 키로 쓰거나, Anthropic·OpenAI·Google·xAI·OpenRouter 키 또는 GitHub Copilot을 BYOK로 연결할 수 있습니다. Kotlin 공식 AI 문서에 IDE 플러그인·CLI·헤드리스 CI 형태로 소개돼 KMP 팀이 쓰기 좋습니다.",
+    "connect": [
+      "cli",
+      "byok"
+    ],
+    "worksWith": [
+      "copilot"
+    ],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 496,
+    "updated": null,
+    "homepage": "https://github.com/JetBrains/junie",
+    "repo": "JetBrains/junie",
+    "install": "npm i -g @jetbrains/junie",
+    "caveats": [
+      "독점 라이선스(JetBrains AI Service 약관)",
+      "요금 페이지 정보를 확인하지 못함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub JetBrains/junie",
+        "url": "https://github.com/JetBrains/junie"
+      },
+      {
+        "label": "kotlinlang.org: AI for Kotlin",
+        "url": "https://kotlinlang.org/docs/ai-for-development.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-kotlin-lib-mcp",
+    "name": "kotlin-lib-mcp",
+    "vendor": "aoreshkov",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "Maven 소스 jar에서 Kotlin API·KDoc 제공",
+    "description": "Maven 소스 jar에서 Kotlin·Java 라이브러리 소스, 공개 API, KDoc을 꺼내 에이전트에 제공하는 커뮤니티 MCP 서버입니다. MCP 클라이언트에 연결하면 구독 에이전트가 의존성의 실제 API를 확인하며 코드를 쓸 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "MCP Registry v0.9.0 기준 정보만 확인됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "MCP Registry (kotlin)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=kotlin"
+      }
+    ]
+  },
+  {
+    "id": "mob-capacitor-skills",
+    "name": "capacitor-skills",
+    "vendor": "Ionic",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "Ionic 팀 공식 Capacitor 에이전트 스킬",
+    "description": "Ionic 팀이 공개한 Capacitor용 에이전트 스킬로 플러그인 생성, Cordova 플러그인 마이그레이션, OutSystems ODC 빌드 액션 생성, iOS UIScene 마이그레이션(8.4→8.5)을 다룹니다. `npx skills add`로 Claude Code나 Codex에 설치해 구독 그대로 씁니다. 공식 MCP는 없으므로 런타임 검증은 mobile-mcp 같은 범용 기기 MCP와 함께 써야 합니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 28,
+    "updated": "2026-07",
+    "homepage": "https://github.com/ionic-team/capacitor-skills",
+    "repo": "ionic-team/capacitor-skills",
+    "install": "npx skills add ionic-team/capacitor-skills",
+    "caveats": [
+      "저장소에 라이선스 파일 없음",
+      "공식 Capacitor·Ionic MCP는 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub capacitor-skills",
+        "url": "https://github.com/ionic-team/capacitor-skills"
+      }
+    ]
+  },
+  {
+    "id": "mob-capawesome-capacitor-mcp",
+    "name": "Capacitor MCP (Capawesome)",
+    "vendor": "Capawesome",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "계정 없이 쓰는 Capacitor 문서 호스팅 MCP",
+    "description": "Capawesome이 운영하는 비공식 호스팅 MCP로 Capacitor v6~v8 및 next 문서, 플러그인 목록, Ionic 블로그를 에이전트에 제공합니다. 계정이나 토큰 없이 Claude Code, claude.ai 커넥터, Cursor, VS Code, Windsurf, Zed에서 바로 붙일 수 있고, stdio용 `npx -y @capawesome/capacitor-mcp`도 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (계정·토큰 불필요)",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 1,
+    "updated": "2026-09",
+    "homepage": "https://github.com/capawesome-team/capacitor-mcp",
+    "repo": "capawesome-team/capacitor-mcp",
+    "install": "claude mcp add --transport http capacitor https://capacitor-mcp.capawesome.io/mcp",
+    "caveats": [
+      "Ionic·OutSystems와 무관한 비공식 서버",
+      "Registry v0.0.1의 초기 단계"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub capacitor-mcp",
+        "url": "https://github.com/capawesome-team/capacitor-mcp"
+      },
+      {
+        "label": "MCP Registry (capacitor)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=capacitor"
+      }
+    ]
+  },
+  {
+    "id": "mob-capawesome-ionic-mcp",
+    "name": "Ionic Framework MCP (Capawesome)",
+    "vendor": "Capawesome",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "Ionic Framework 문서를 주는 호스팅 MCP",
+    "description": "Capawesome이 Capacitor MCP와 짝으로 운영하는 Ionic Framework용 호스팅 MCP입니다. `https://ionic-framework-mcp.capawesome.io/mcp`를 원격 MCP로 등록하면 구독 에이전트가 Ionic 문서를 참조하며 작업할 수 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": 1,
+    "updated": "2026-09",
+    "homepage": "https://github.com/capawesome-team/ionic-framework-mcp",
+    "repo": "capawesome-team/ionic-framework-mcp",
+    "install": "https://ionic-framework-mcp.capawesome.io/mcp",
+    "caveats": [
+      "Ionic 공식 서버가 아님",
+      "Registry v0.0.1의 초기 단계"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub ionic-framework-mcp",
+        "url": "https://github.com/capawesome-team/ionic-framework-mcp"
+      },
+      {
+        "label": "MCP Registry (capacitor)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=capacitor"
+      }
+    ]
+  },
+  {
+    "id": "mob-capawesome-skills",
+    "name": "Capawesome skills",
+    "vendor": "Capawesome",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "Capacitor·Ionic·Capawesome용 에이전트 스킬",
+    "description": "Capawesome, Capacitor, Ionic Framework 작업을 위한 에이전트 스킬 모음입니다. Claude Code나 Codex 같은 스킬 지원 에이전트에 넣어 구독 그대로 쓰며, 2026년 10월까지 꾸준히 갱신되고 있습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": 51,
+    "updated": "2026-10",
+    "homepage": "https://github.com/capawesome-team/skills",
+    "repo": "capawesome-team/skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub capawesome-team/skills",
+        "url": "https://github.com/capawesome-team/skills"
+      }
+    ]
+  },
+  {
+    "id": "mob-maui-labs",
+    "name": ".NET MAUI Labs (DevFlow MCP)",
+    "vendor": "Microsoft",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "MAUI 앱 런타임 검사·조작용 실험적 MCP",
+    "description": "dotnet 조직의 실험적 패키지 모음으로, `maui` CLI의 `maui ai init`이 MAUI 스킬, DevFlow 스킬, 에이전트, MCP 설정을 설치합니다. DevFlow MCP는 앱 안의 HTTP 에이전트로 iOS, Android, Mac Catalyst 등에서 비주얼 트리 검사, 요소 조작, 스크린샷, 네트워크 모니터링, 로그 스트리밍을 제공합니다. 기본값은 Copilot 중심이지만 `--env Claude` 대상과 Claude Code 플러그인(`dotnet-maui@dotnet-maui-labs`)도 지원합니다.",
+    "connect": [
+      "cli",
+      "local-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": 229,
+    "updated": null,
+    "homepage": "https://github.com/dotnet/maui-labs",
+    "repo": "dotnet/maui-labs",
+    "install": "dotnet tool install -g Microsoft.Maui.Cli --prerelease",
+    "caveats": [
+      "실험적 패키지로 .NET MAUI 지원 정책 대상 아님",
+      "v0.1.0-preview 단계"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub dotnet/maui-labs",
+        "url": "https://github.com/dotnet/maui-labs"
+      }
+    ]
+  },
+  {
+    "id": "mob-lynx-devtool-mcp",
+    "name": "Lynx DevTool MCP",
+    "vendor": "ByteDance (Lynx)",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "기기 속 Lynx 페이지를 DevTools처럼 조작",
+    "description": "Lynx 3.6의 'Lynx for AI'로 나온 공식 MCP 서버로, 기기나 시뮬레이터에서 실행 중인 Lynx 페이지의 요소·콘솔·소스를 읽고 클릭·드래그 같은 상호작용과 스크린샷을 수행합니다. `@lynx-js` npm 스코프로 배포되며 Claude Code, Codex, VS Code, Cursor, Gemini CLI 설치 명령이 문서화돼 있어 구독 에이전트에서 바로 씁니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://www.npmjs.com/package/@lynx-js/devtool-mcp-server",
+    "repo": null,
+    "install": "claude mcp add lynx-devtool npx @lynx-js/devtool-mcp-server@latest",
+    "caveats": [
+      "Node 18.19+와 Lynx Engine 앱이 도는 기기·시뮬레이터 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Lynx 3.6 blog",
+        "url": "https://lynxjs.org/blog/lynx-3-6"
+      },
+      {
+        "label": "npm @lynx-js/devtool-mcp-server",
+        "url": "https://www.npmjs.com/package/@lynx-js/devtool-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-lynx-skills",
+    "name": "Lynx skills·Docs MCP",
+    "vendor": "ByteDance (Lynx)",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "ReactLynx 모범 사례 스킬과 문서 MCP",
+    "description": "lynx-community/skills 저장소는 reactlynx-best-practices, lynx-api-docs, lynx-check-css-support, lynx-trace-analysis 같은 스킬과 Lynx Docs MCP를 함께 제공합니다. 스킬은 `npx skills add lynx-community/skills`로, 문서 MCP는 `npx -y @lynx-js/docs-mcp-server@latest`로 Claude Code·Codex 등에 붙여 구독 그대로 씁니다.",
+    "connect": [
+      "skills",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 27,
+    "updated": "2026-10",
+    "homepage": "https://github.com/lynx-community/skills",
+    "repo": "lynx-community/skills",
+    "install": "npx skills add lynx-community/skills",
+    "caveats": [
+      "lynx-community 조직과 lynx-family의 관계는 공식 명시 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub lynx-community/skills",
+        "url": "https://github.com/lynx-community/skills"
+      },
+      {
+        "label": "Lynx 3.6 blog",
+        "url": "https://lynxjs.org/blog/lynx-3-6"
+      }
+    ]
+  },
+  {
+    "id": "mob-tauri-mcp",
+    "name": "mcp-server-tauri",
+    "vendor": "hypothesi",
+    "domain": "mobile",
+    "category": "크로스플랫폼",
+    "tagline": "Tauri v2 앱 UI 자동화와 모바일 로그 MCP",
+    "description": "Tauri v2용 커뮤니티 MCP 서버와 Rust 플러그인 `tauri-plugin-mcp-bridge`로 스크린샷, 클릭, 입력, 요소 찾기, IPC 모니터링을 제공합니다. 모바일 개발용으로 iOS 시뮬레이터와 Android 에뮬레이터를 나열하고 콘솔, Android logcat, iOS 로그를 스트리밍하며, Tauri 공식 문서에도 커뮤니티 자료로 링크돼 있습니다. Claude Code, Cursor, VS Code, Zed, Codex를 지원합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 326,
+    "updated": "2026-10",
+    "homepage": "https://github.com/hypothesi/mcp-server-tauri",
+    "repo": "hypothesi/mcp-server-tauri",
+    "install": "npx -y @a1st/aix add mcp tauri --command 'npx @hypothesi/tauri-mcp-server'",
+    "caveats": [
+      "에이전트 코딩 도구로 개발돼 버그가 있을 수 있다는 면책 문구",
+      "Tauri 1st-party MCP는 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub mcp-server-tauri",
+        "url": "https://github.com/hypothesi/mcp-server-tauri"
+      },
+      {
+        "label": "Tauri llms-full.txt",
+        "url": "https://v2.tauri.app/llms-full.txt"
+      }
+    ]
+  },
+  {
+    "id": "mob-mobile-mcp",
+    "name": "mobile-mcp",
+    "vendor": "Mobile Next",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "iOS·Android 기기를 조작하는 범용 MCP",
+    "description": "iOS·Android 시뮬레이터, 에뮬레이터, 실기기를 접근성 트리 우선(스크린샷 보조)으로 조작하는 오픈소스 MCP 서버로, 기기 관리, 앱 설치·실행, 탭·스와이프·녹화, 로그·크래시 등 약 33개 도구를 제공합니다. Claude Code, Codex, Copilot, Gemini CLI, Cursor, Antigravity 등 거의 모든 클라이언트에서 구독 그대로 쓰며, `/mobile-mirror` 명령이 있는 Claude Code 플러그인도 있습니다. 플랫폼과 상관없이 에이전트에게 기기 조작을 맡길 때의 기본 선택지입니다.",
+    "connect": [
+      "local-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0), 클라우드 실기기 유료",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 9900,
+    "updated": null,
+    "homepage": "https://github.com/mobile-next/mobile-mcp",
+    "repo": "mobile-next/mobile-mcp",
+    "install": "npx -y @mobilenext/mobile-mcp@latest",
+    "caveats": [
+      "익명 텔레메트리 기본 켜짐(`MOBILEMCP_DISABLE_TELEMETRY=1`로 끔)",
+      "HTTP 모드는 `MOBILEMCP_AUTH`를 설정하지 않으면 인증 없음",
+      "Node 20+ 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub mobile-mcp",
+        "url": "https://github.com/mobile-next/mobile-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-agent-device",
+    "name": "agent-device",
+    "vendor": "Callstack",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "AI 에이전트용 모바일 앱 자동화·검증",
+    "description": "Callstack이 만든 AI 코딩 에이전트용 모바일 자동화 도구로, 접근성 스냅샷에 스크린샷·영상·로그를 증거로 남깁니다. iOS·Android 시뮬레이터와 실기기는 물론 tvOS, Android TV, HarmonyOS, 웹, macOS까지 다루며 `agent-device mcp`로 stdio MCP 서버를 띄우거나 스킬로 씁니다. Claude Code, Codex, Cursor 등에서 구독 그대로 React Native 앱을 검증할 때 좋습니다.",
+    "connect": [
+      "local-mcp",
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 5100,
+    "updated": null,
+    "homepage": "https://github.com/callstackincubator/agent-device",
+    "repo": "callstackincubator/agent-device",
+    "install": "agent-device mcp",
+    "caveats": [
+      "Node 22.12+ 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub agent-device",
+        "url": "https://github.com/callstackincubator/agent-device"
+      }
+    ]
+  },
+  {
+    "id": "mob-maestro-mcp",
+    "name": "Maestro MCP",
+    "vendor": "mobile.dev",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "Maestro CLI 내장 MCP로 YAML 플로 실행",
+    "description": "Maestro CLI에 기본 포함된 MCP 서버로 기기 목록, 화면 검사, 스크린샷, YAML 플로 실행, Maestro Cloud 실행 도구를 제공합니다. `maestro mcp`를 Claude Code, Codex, Copilot CLI, Cursor, Gemini CLI 등에 등록하면 구독 그대로 쓸 수 있습니다. 에이전트가 탐색한 흐름을 반복 가능한 회귀 테스트로 굳히는 데 적합합니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "CLI 무료, Maestro Cloud 요금 확인 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.maestro.dev/getting-started/maestro-mcp",
+    "repo": null,
+    "install": "claude mcp add maestro -- maestro mcp",
+    "caveats": [
+      "클라우드 도구는 Maestro Cloud 로그인이나 API 키 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Maestro docs",
+        "url": "https://docs.maestro.dev/getting-started/maestro-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-appium-mcp",
+    "name": "Appium MCP",
+    "vendor": "Appium",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "Appium 세션·제스처·테스트 코드 생성 MCP",
+    "description": "appium GitHub 조직의 MCP 서버로 세션, 네이티브·웹뷰 컨텍스트, 제스처, W3C 액션, 앱 생명주기·권한, 로케이터 생성, 테스트 코드 생성을 다룹니다. 로컬 MCP라 Claude Code, Cursor, Gemini CLI 등에서 구독 그대로 쓰며, 선택 기능으로 AI 비전 파인더(`appium_ai`)가 있습니다. 기존 Appium 테스트 자산이 있는 팀에 맞습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 506,
+    "updated": null,
+    "homepage": "https://github.com/appium/appium-mcp",
+    "repo": "appium/appium-mcp",
+    "install": "npx -y appium-mcp@latest",
+    "caveats": [
+      "Node 22+, JDK 8+, Android SDK(UiAutomator2), Xcode(XCUITest) 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub appium-mcp",
+        "url": "https://github.com/appium/appium-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-browserstack-mcp",
+    "name": "BrowserStack MCP Server",
+    "vendor": "BrowserStack",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "실기기 클라우드를 원격 MCP로 연결",
+    "description": "BrowserStack 공식 원격 MCP 서버로 App Live 실기기 세션, App Automate 테스트 실행, 앱 스크린샷, App Profiling 같은 모바일 기능을 제공합니다. Claude Code·Desktop·claude.ai, ChatGPT, Codex, Copilot, Cursor에서 연결한 뒤 BrowserStack 계정으로 로그인합니다. 원격 서버는 localhost·VPN 대상 Local Testing을 지원하지 않아 그때는 로컬 Node 22+ 서버를 씁니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "BrowserStack 계정 필요, 오픈소스용 무료 플랜",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 155,
+    "updated": null,
+    "homepage": "https://github.com/browserstack/mcp-server",
+    "repo": "browserstack/mcp-server",
+    "install": "claude mcp add --scope user --transport http browserstack https://mcp.browserstack.com/mcp",
+    "caveats": [
+      "AGPL-3.0 라이선스",
+      "원격 서버는 Local Testing 미지원"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub browserstack/mcp-server",
+        "url": "https://github.com/browserstack/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-sauce-mcp",
+    "name": "Sauce MCP",
+    "vendor": "Sauce Labs",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "Sauce Labs 실기기·잡 관리 호스팅 MCP",
+    "description": "Sauce Labs 공식 호스팅 MCP로 실기기 탐색·세션, Sauce Storage 앱 설치·실행, 스크린샷·UI 읽기, 네트워크 조절, 잡·빌드·아티팩트 조회, AI 테스트 생성을 제공합니다. OAuth 없이 `Authorization: Basic`(사용자명:액세스 키 Base64)과 `X-Sauce-Region` 헤더로 연결하며, Claude Code, Cursor, VS Code Copilot, Gemini CLI, Antigravity 설정이 문서화돼 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor",
+      "copilot",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "기본 연결은 모든 계정, 기기 도구는 유료 애드온",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.saucelabs.com/sauce-ai/sauce-mcp/",
+    "repo": null,
+    "install": "https://mcp.saucelabs.com",
+    "caveats": [
+      "모바일 기기 도구는 유료 Private Devices + Access API 전용",
+      "Base64 자격 증명을 설정 헤더에 넣어야 함",
+      "AI 테스트 작성은 Enterprise 유료 애드온"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Sauce docs: Sauce MCP",
+        "url": "https://docs.saucelabs.com/sauce-ai/sauce-mcp/"
+      },
+      {
+        "label": "Sauce docs: getting started",
+        "url": "https://docs.saucelabs.com/sauce-ai/sauce-mcp-getting-started/"
+      }
+    ]
+  },
+  {
+    "id": "mob-sauce-api-mcp",
+    "name": "sauce-api-mcp",
+    "vendor": "Sauce Labs",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "Sauce Labs API용 로컬 오픈소스 MCP",
+    "description": "Sauce Labs가 공개한 로컬 stdio MCP 서버로, 코어 API 서버와 OpenAPI 스펙에서 생성한 실기기용 `sauce-api-mcp-rdc` 두 가지를 제공합니다. `SAUCE_USERNAME`, `SAUCE_ACCESS_KEY` 환경변수로 인증하며 MCP 클라이언트에서 구독 그대로 씁니다. README 스스로 기능이 더 많은 호스팅 Sauce MCP를 권장합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0), Sauce Labs 계정 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 10,
+    "updated": "2026-10",
+    "homepage": "https://github.com/saucelabs/sauce-api-mcp",
+    "repo": "saucelabs/sauce-api-mcp",
+    "install": "pip install sauce-api-mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub sauce-api-mcp",
+        "url": "https://github.com/saucelabs/sauce-api-mcp"
+      },
+      {
+        "label": "MCP Registry (sauce)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=sauce"
+      }
+    ]
+  },
+  {
+    "id": "mob-testmu-mcp",
+    "name": "TestMu AI MCP Server",
+    "vendor": "TestMu AI (구 LambdaTest)",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "구 LambdaTest, OAuth 호스팅 테스트 MCP",
+    "description": "LambdaTest가 이름을 바꾼 TestMu AI의 공식 호스팅 MCP로, 처음 연결할 때 OAuth로 인증해 설정 파일에 API 키를 둘 필요가 없습니다. HyperExecute 잡 실행, 자동화 실패 분석, SmartUI 시각 비교 설명, WCAG 접근성 감사, Test Manager의 AI 테스트 케이스 생성을 지원합니다. Claude Code, Codex, Copilot, Cursor, Antigravity 등 많은 클라이언트가 문서화돼 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "TestMu AI 계정 필요 (요금 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 0,
+    "updated": "2026-10",
+    "homepage": "https://github.com/LambdaTest/mcp-server-guide",
+    "repo": "LambdaTest/mcp-server-guide",
+    "install": "claude mcp add --transport http mcp-lambdatest https://mcp.lambdatest.com/mcp",
+    "caveats": [
+      "네이티브 모바일 앱까지 다루는지 모바일 브라우저만인지 명시 없음",
+      "요금·플랜 제한 미기재"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub LambdaTest/mcp-server-guide",
+        "url": "https://github.com/LambdaTest/mcp-server-guide"
+      },
+      {
+        "label": "MCP Registry (lambdatest)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=lambdatest"
+      }
+    ]
+  },
+  {
+    "id": "mob-wix-pilot",
+    "name": "Wix Pilot (Detox)",
+    "vendor": "Wix",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "Detox용 자연어 테스트, LLM API는 직접 연결",
+    "description": "Detox용으로 시작해 Puppeteer, Playwright, Appium까지 지원하는 Wix의 AI 테스트 프레임워크로, 사람이 쓴 명령을 정확한 테스트 동작으로 바꿉니다. 원하는 LLM(OpenAI, Anthropic 등) API를 호출하는 `PromptHandler`를 직접 구현해야 하므로 Claude나 ChatGPT 구독으로는 돌릴 수 없습니다. Detox 자체에는 MCP가 없어, 에이전트 탐색이 필요하면 mobile-mcp나 Maestro MCP를 함께 쓰는 편이 낫습니다.",
+    "connect": [
+      "library",
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "확인 필요 (LLM API 비용 별도)",
+    "free": false,
+    "official": "official",
+    "status": "stale",
+    "stars": 47,
+    "updated": "2026-02",
+    "homepage": "https://wix.github.io/Detox/docs/pilot/testing-with-pilot",
+    "repo": "wix-incubator/pilot",
+    "install": "npm i -D @wix-pilot/core @wix-pilot/detox",
+    "caveats": [
+      "구독 로그인 불가: LLM API 키와 핸들러를 직접 구현",
+      "2025년 9월 이후 업데이트가 드묾",
+      "Detox 공식 MCP 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub wix-incubator/pilot",
+        "url": "https://github.com/wix-incubator/pilot"
+      },
+      {
+        "label": "Detox docs: Pilot",
+        "url": "https://wix.github.io/Detox/docs/pilot/testing-with-pilot"
+      },
+      {
+        "label": "GitHub wix/Detox",
+        "url": "https://github.com/wix/Detox"
+      }
+    ]
+  },
+  {
+    "id": "mob-revyl",
+    "name": "Revyl",
+    "vendor": "Revyl",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "클라우드 빌드·기기·검증 플로를 CLI·MCP로",
+    "description": "클라우드 빌드, 클라우드 iOS·Android 기기, 테스트·검증 플로, 'Atlas' 런타임 증거를 제공하는 상용 모바일 개발 플랫폼입니다. CLI(`revyl run checkout-flow --device ios`), MCP, Cursor 플러그인, GitHub Actions, API로 연결되며 에이전트는 각자의 구독으로 이 도구들을 호출합니다. 에이전트 워크플로에 클라우드 기기 커버리지를 더할 때 쓸 만합니다.",
+    "connect": [
+      "cli",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료(월 사용량 제공) 후 종량제, Starter·Enterprise",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://revyl.com/",
+    "repo": null,
+    "install": "curl -fsSL https://revyl.com/setup | sh",
+    "caveats": [
+      "MCP 엔드포인트와 Cursor 외 지원 클라이언트는 홈페이지에 없음",
+      "구체적인 가격 미공개"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "revyl.com",
+        "url": "https://revyl.com/"
+      }
+    ]
+  },
+  {
+    "id": "mob-firebase-test-lab",
+    "name": "Firebase Test Lab",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "2027년 9월 30일 종료 예정인 기기 테스트",
+    "description": "Firebase의 기기 테스트 서비스로 현재 지원 중단 상태이며 2027년 9월 30일 완전히 종료됩니다. Firebase MCP 도구에도 들어 있지 않아 구독 에이전트와 연결할 공식 수단이 없고, Google은 Google Cloud의 Developer Device Platform으로 옮기라고 안내합니다. 기존 사용자는 약 11개월 안에 이전해야 합니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "deprecated",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://firebase.google.com/docs/test-lab",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2027-09-30 완전 종료",
+      "Firebase MCP 도구 목록에 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Firebase Test Lab docs",
+        "url": "https://firebase.google.com/docs/test-lab"
+      },
+      {
+        "label": "Firebase docs: MCP server",
+        "url": "https://firebase.google.com/docs/ai-assistance/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-developer-device-platform",
+    "name": "Developer Device Platform (Device Run)",
+    "vendor": "Google Cloud",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "Test Lab 후속, 에이전트 마이그레이션 스킬 제공",
+    "description": "Firebase Test Lab을 대체하는 Google Cloud 서비스로, `gcloud beta device-run`으로 실기기·가상 기기에서 Android 인스트루먼테이션 테스트와 iOS XCTest를 실행합니다. 스마트 샤딩, 테스트 케이스 단위 재시도, 3시간 샤드 타임아웃, 실시간 기기 카탈로그를 지원합니다. `migrating-device-run` 에이전트 스킬과 Antigravity, Claude Code, Codex용 마이그레이션 프롬프트를 제공해 이전 작업을 구독 에이전트에 맡길 수 있습니다.",
+    "connect": [
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://docs.cloud.google.com/developer-device-platform/device-run/migrate",
+    "repo": null,
+    "install": "gcloud beta device-run",
+    "caveats": [
+      "Pre-GA 약관이 적용되는 프리뷰",
+      "MCP 없음, 요금 미공개",
+      "iOS 예시는 `gcloud alpha device-run` 사용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Google Cloud DDP 이전 가이드",
+        "url": "https://docs.cloud.google.com/developer-device-platform/device-run/migrate"
+      }
+    ]
+  },
+  {
+    "id": "mob-journeys",
+    "name": "Journeys for Android Studio",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "테스트·QA",
+    "tagline": "자연어로 쓰는 Android E2E UI 테스트",
+    "description": "사용자 여정과 검증 조건을 자연어로 적으면 Gemini가 UI 테스트를 실행하는 Android Studio 기능입니다. Otter 3부터 Studio Labs에서 켜고 로컬·원격 기기에서 Gradle 태스크로 돌릴 수 있어, Google Cloud 프로젝트로 인증하면 명령줄에서도 실행됩니다. I/O 2026부터 Android Skills로 공식 지원돼 Claude Code나 Codex 같은 외부 에이전트도 Journeys를 실행할 수 있습니다.",
+    "connect": [
+      "ide",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://android-developers.googleblog.com/2026/01/llm-flexibility-agent-mode-improvements.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Studio Labs 실험 기능",
+      "CLI 실행 시 Google Cloud 프로젝트 인증 필요",
+      "테스트 실행에 쓰이는 Gemini 과금 방식은 자료에 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2025/05/20/android-studio-adds-agentic-ai-with-journeys-feature-agent-mode/"
+      },
+      {
+        "label": "Android Developers Blog (2026-01)",
+        "url": "https://android-developers.googleblog.com/2026/01/llm-flexibility-agent-mode-improvements.html"
+      },
+      {
+        "label": "Android Developers Blog: I/O 2026",
+        "url": "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-firebase-mcp",
+    "name": "Firebase MCP server",
+    "vendor": "Google (Firebase)",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "Crashlytics·Firestore·Remote Config MCP",
+    "description": "Firebase CLI 자격 증명으로 도는 공식 로컬 MCP 서버로 Crashlytics 이슈·이벤트·리포트, Auth, Firestore, Remote Config 배포·롤백, RTDB, SQL Connect, Functions, FCM, Storage, App Hosting, 보안 규칙을 다룹니다. Claude Code는 firebase/firebase-tools 마켓플레이스 플러그인이 권장 경로이고, Antigravity, Cursor, VS Code Copilot, Windsurf 등에서도 구독 그대로 씁니다. 별도 Crashlytics MCP는 없어 크래시 분석도 이 서버로 합니다.",
+    "connect": [
+      "local-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, 사용한 Firebase 서비스 요금만",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://firebase.google.com/docs/ai-assistance/mcp-server",
+    "repo": "firebase/firebase-tools",
+    "install": "npx -y firebase-tools@latest mcp",
+    "caveats": [
+      "`--only`로 기능 그룹을 제한해 노출 도구를 줄일 수 있음",
+      "Remote Config 배포 같은 쓰기 도구 포함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Firebase docs: MCP server",
+        "url": "https://firebase.google.com/docs/ai-assistance/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-revenuecat-mcp",
+    "name": "RevenueCat MCP",
+    "vendor": "RevenueCat",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "구독 상품·오퍼링·페이월을 MCP로 관리",
+    "description": "RevenueCat 공식 호스팅 MCP로 앱, 상품, 엔타이틀먼트, 오퍼링·패키지, App Store Connect·Play Console 상품 상태, 페이월(AI 'Rico' 지원), 분석 차트와 실험을 다룹니다. API v2 키를 Bearer 토큰으로 쓰거나 OAuth로 인증하며, Claude Code, Codex, Cursor에는 'AI Toolkit' 플러그인 설치가 권장됩니다. 스토어 상품 상태까지 바꿀 수 있어 출시 작업 일부도 맡길 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.revenuecat.com/docs/tools/mcp",
+    "repo": null,
+    "install": "https://mcp.revenuecat.ai/mcp",
+    "caveats": [
+      "MCP 사용 비용 미기재",
+      "스토어 상품 상태를 바꾸는 쓰기 도구 포함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "RevenueCat docs",
+        "url": "https://www.revenuecat.com/docs/tools/mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-superwall-mcp",
+    "name": "Superwall MCP",
+    "vendor": "Superwall",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "페이월·캠페인·ASC·검색광고 208개 도구",
+    "description": "Superwall CLI에서 생성한 208개 도구를 제공하는 공식 호스팅 MCP로 앱, 상품, 캠페인, 페이월, 사용자, 웹훅, ClickHouse SQL 조회와 App Store Connect(`asc_*`), Apple Search Ads(`asa_*`)까지 다룹니다. 계정 로그인으로 연결하고 Apple 키는 서버 쪽에 보관되며, Claude·Codex·Cursor용 플러그인이 MCP와 스킬을 함께 설치합니다. 도구에 읽기·쓰기·파괴적 라벨은 붙지만 자체 확인 절차가 없어 클라이언트 승인 설정에 의존해야 합니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://superwall.com/docs/dashboard/guides/superwall-mcp",
+    "repo": null,
+    "install": "claude mcp add superwall --transport http https://mcp.superwall.com/mcp",
+    "caveats": [
+      "파괴적 도구도 자체 확인이 없으니 클라이언트 승인을 켜 둘 것"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Superwall docs",
+        "url": "https://superwall.com/docs/dashboard/guides/superwall-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-adapty-cli",
+    "name": "Adapty Developer CLI",
+    "vendor": "Adapty",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "MCP 대신 CLI와 스킬로 구독 플랫폼 관리",
+    "description": "Adapty는 핵심 구독 플랫폼에 MCP를 두지 않고, 공식 Developer CLI와 에이전트 스킬·플러그인으로 앱, 액세스 레벨, 상품, 페이월, 플로, 플레이스먼트를 관리하게 합니다. `adapty auth login` 브라우저 인증 뒤 Claude Code, Codex, Copilot CLI, Gemini CLI가 구독 그대로 CLI를 실행하며, iOS·Android·React Native·Flutter·Unity·KMP·Capacitor SDK 연동 스킬과 RevenueCat→Adapty 마이그레이션도 지원합니다. Claude 앱(구 Cowork)용 플러그인과 Apple Ads 플러그인도 있습니다.",
+    "connect": [
+      "cli",
+      "skills",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://adapty.io/docs/manage-adapty-with-ai",
+    "repo": null,
+    "install": "npm install -g adapty",
+    "caveats": [
+      "claude.ai·ChatGPT 같은 채팅 전용 클라이언트는 핵심 플랫폼에 직접 연결 불가(Claude 앱 플러그인 제외)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Adapty: Manage Adapty with AI",
+        "url": "https://adapty.io/docs/manage-adapty-with-ai"
+      },
+      {
+        "label": "Adapty: Developer CLI quickstart",
+        "url": "https://adapty.io/docs/developer-cli-quickstart"
+      },
+      {
+        "label": "Adapty llms.txt",
+        "url": "https://adapty.io/docs/llms.txt"
+      }
+    ]
+  },
+  {
+    "id": "mob-adapty-mail-mcp",
+    "name": "Adapty Mail MCP",
+    "vendor": "Adapty",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "Adapty Mail 이메일 플로용 OAuth MCP",
+    "description": "Adapty Mail 전용 공식 원격 MCP(Streamable HTTP, OAuth 2.1)로 Claude 웹·데스크톱, ChatGPT, Claude Code, Codex, Copilot CLI, Gemini CLI, Cursor, Windsurf에서 연결됩니다. 이메일 플로를 에이전트로 만들고 고칠 수 있지만, 플로를 저장하면 실제 사람에게 메일이 나가기 시작하므로 승인 절차를 꼭 유지해야 합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://adapty.io/docs/mail-mcp",
+    "repo": null,
+    "install": "claude mcp add --transport http --scope user adaptymail https://api-mail.adapty.io/mcp",
+    "caveats": [
+      "플로 저장 즉시 실제 사용자에게 이메일 발송 시작",
+      "파괴적 도구는 표시돼 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Adapty: Mail MCP",
+        "url": "https://adapty.io/docs/mail-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-onesignal-mcp",
+    "name": "OneSignal MCP",
+    "vendor": "OneSignal",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "푸시·이메일·세그먼트 43개 도구 무료 MCP",
+    "description": "OneSignal 공식 원격 MCP로 OAuth로 연결하며 사용자·구독, 메시지 발송, 템플릿, 세그먼트, Live Activities, 이메일 전달성·워밍업 등 11개 범주 43개 도구를 제공합니다. Claude Code, Claude 커넥터 디렉터리(claude.ai·데스크톱·모바일), OpenAI 플러그인 마켓플레이스(ChatGPT·Codex), Cursor 마켓플레이스, VS Code Copilot에서 구독 그대로 씁니다. MCP 자체는 무료이고 호출은 OneSignal API 한도에 포함됩니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (OneSignal API 한도 적용)",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://documentation.onesignal.com/docs/en/model-context-protocol",
+    "repo": null,
+    "install": "claude mcp add --transport http onesignal https://api.onesignal.com/mcp/oauth",
+    "caveats": [
+      "`send_message`는 고영향 도구라 실제 발송에 주의",
+      "원격 HTTP 전용이라 stdio 전용 클라이언트는 연결 불가",
+      "이름이 비슷한 커뮤니티 서버가 많아 출처 확인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "OneSignal docs",
+        "url": "https://documentation.onesignal.com/docs/en/model-context-protocol"
+      },
+      {
+        "label": "GitHub onesignal-ai-skills",
+        "url": "https://github.com/OneSignal/onesignal-ai-skills"
+      }
+    ]
+  },
+  {
+    "id": "mob-amplitude-mcp",
+    "name": "Amplitude MCP",
+    "vendor": "Amplitude",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "제품 분석·실험·세션 리플레이 OAuth MCP",
+    "description": "Amplitude 공식 호스팅 MCP로 US·EU 엔드포인트를 두고 OAuth 2.0과 기존 Amplitude 권한을 그대로 따릅니다. 검색, 차트·애드혹 쿼리, 대시보드, 실험·플래그, 택소노미, 코호트, 세션 리플레이, 설문, AI 에이전트 분석을 다루며 ChatGPT에는 약 25개 도구만 제공됩니다. Claude Code, Codex CLI, Cursor, Gemini CLI 등에서 쓰고, Claude Code 플러그인 마켓플레이스(amplitude/mcp-marketplace)로 스킬도 설치할 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "기존 Amplitude 고객 사용 가능 (요금 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://amplitude.com/docs/analytics/amplitude-mcp",
+    "repo": null,
+    "install": "https://mcp.amplitude.com/mcp",
+    "caveats": [
+      "관리자가 MCP 접근을 차단할 수 있음(기본 허용)",
+      "플랜별 제한 여부 미기재"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Amplitude docs",
+        "url": "https://amplitude.com/docs/analytics/amplitude-mcp"
+      },
+      {
+        "label": "MCP Registry (amplitude)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=amplitude"
+      }
+    ]
+  },
+  {
+    "id": "mob-mixpanel-mcp",
+    "name": "Mixpanel MCP",
+    "vendor": "Mixpanel",
+    "domain": "mobile",
+    "category": "백엔드·수익화",
+    "tagline": "이벤트 쿼리·대시보드·리플레이 OAuth MCP",
+    "description": "Mixpanel 공식 원격 MCP(US·EU·IN 엔드포인트)로 쿼리, 대시보드, Lexicon 데이터 관리, 코호트, 세션 리플레이, 실험, 플래그를 다룹니다. OAuth나 CI용 서비스 계정(베타)으로 인증하며 claude.ai 커넥터, Claude Code(스킬 포함 플러그인), ChatGPT, Codex, Gemini CLI, Cursor에서 구독 그대로 씁니다. 2026년 8월 1일 이후 만든 무료·Growth 계정은 MCP가 기본으로 켜져 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "무료 계정에서도 사용 가능",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.mixpanel.com/docs/mcp",
+    "repo": null,
+    "install": "https://mcp.mixpanel.com/mcp",
+    "caveats": [
+      "사용자당 시간당 600요청 제한",
+      "EU·IN 리전은 ChatGPT 개발자 모드로 연결",
+      "2026-08-01 이전 계정은 관리자가 활성화해야 함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Mixpanel docs",
+        "url": "https://docs.mixpanel.com/docs/mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-asc-cli",
+    "name": "App Store Connect CLI (asc)",
+    "vendor": "rorkai (Rudrank Riyam)",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "App Store Connect 자동화 CLI와 스킬 25종",
+    "description": "TestFlight, 빌드, 심사 제출, 서명, 메타데이터, 스크린샷, 구독, 분석을 다루는 App Store Connect API용 스크립트 친화 CLI입니다. `asc install-skills`로 25개 에이전트 스킬을 설치하면 Claude Code나 Codex가 MCP 없이 셸 명령으로 구독 그대로 출시 작업을 처리합니다. 에이전트 기반 App Store 출시에서 가장 널리 쓰이는 도구입니다.",
+    "connect": [
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 8000,
+    "updated": "2026-10",
+    "homepage": "https://github.com/rorkai/App-Store-Connect-CLI",
+    "repo": "rorkai/App-Store-Connect-CLI",
+    "install": "brew install asc",
+    "caveats": [
+      "MCP 없음: 셸 CLI로 사용",
+      "rorkai 조직으로 이전됨(Rork의 후원·인수 여부는 추정)"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub App-Store-Connect-CLI",
+        "url": "https://github.com/rudrankriyam/App-Store-Connect-CLI"
+      },
+      {
+        "label": "GitHub API rorkai/App-Store-Connect-CLI",
+        "url": "https://api.github.com/repos/rorkai/App-Store-Connect-CLI"
+      }
+    ]
+  },
+  {
+    "id": "mob-appstore-mcp-forgeops",
+    "name": "appstore-mcp",
+    "vendor": "forgeopslabs",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "Rust로 만든 100여 개 도구 ASC MCP",
+    "description": "Rust(rmcp SDK)로 작성된 커뮤니티 App Store Connect MCP 서버로 101~114개 도구와 범용 JSON:API 호출 도구를 제공합니다. App Store Connect API 키(.p8)로 인증하며 로컬 MCP 클라이언트에서 구독 그대로 씁니다. Apple이 공식 ASC MCP를 내지 않은 공백을 메우는 선택지 중 도구 수가 가장 많습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://mcpservers.org/servers/forgeopslabs/appstore-mcp",
+    "repo": "forgeopslabs/appstore-mcp",
+    "install": null,
+    "caveats": [
+      "Apple 공식 아님",
+      "App Store Connect API 키(.p8) 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "mcpservers.org",
+        "url": "https://mcpservers.org/servers/forgeopslabs/appstore-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-appstoreconnect-mcp-yuraist",
+    "name": "appstoreconnect-mcp",
+    "vendor": "yuraist",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "IAP·구독·TestFlight까지 다루는 ASC MCP",
+    "description": "앱, 인앱 결제, 구독, TestFlight, 제품 페이지 실험, 심사 제출을 46개 이상의 도구로 다루는 커뮤니티 App Store Connect MCP 서버입니다. App Store Connect API 키(.p8)가 필요하며 로컬 MCP로 Claude Code나 Codex에 붙여 구독 그대로 씁니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://glama.ai/mcp/servers/yuraist/appstoreconnect-mcp",
+    "repo": "yuraist/appstoreconnect-mcp",
+    "install": null,
+    "caveats": [
+      "Apple 공식 아님",
+      "App Store Connect API 키(.p8) 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama yuraist",
+        "url": "https://glama.ai/mcp/servers/yuraist/appstoreconnect-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-app-store-connect-mcp-wiseapps",
+    "name": "app-store-connect-mcp",
+    "vendor": "wiseappsai",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "범용 요청 도구 하나로 ASC API 호출",
+    "description": "범용 요청 도구 하나로 App Store Connect API를 호출하는 커뮤니티 MCP 서버입니다. App Store Connect API 키(.p8)가 필요하고, 도구가 하나뿐이라 어떤 엔드포인트를 부를지는 구독 에이전트가 직접 판단해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://glama.ai/mcp/servers/wiseappsai/app-store-connect-mcp",
+    "repo": "wiseappsai/app-store-connect-mcp",
+    "install": null,
+    "caveats": [
+      "App Store Connect API 키(.p8) 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama wiseappsai",
+        "url": "https://glama.ai/mcp/servers/wiseappsai/app-store-connect-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-appstore-connect-mcp-tae",
+    "name": "appstore-connect-mcp",
+    "vendor": "TrialAndErrorAI",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "App Store Connect 분석용 MCP(초안 단계)",
+    "description": "App Store Connect 분석 데이터에 초점을 둔 MIT 라이선스 커뮤니티 MCP 서버입니다. README가 초안 PR-FAQ 수준이라 기능 범위가 확정되지 않았고, 다른 ASC MCP처럼 API 키(.p8)가 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "experimental",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://glama.ai/mcp/servers/@TrialAndErrorAI/appstore-connect-mcp/blob/bfdc3544ea1a7521d43586754dbe48fc4d94a6e3/docs/PRFAQ.md",
+    "repo": "TrialAndErrorAI/appstore-connect-mcp",
+    "install": null,
+    "caveats": [
+      "README가 초안 PR-FAQ 상태"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama TrialAndErrorAI PRFAQ",
+        "url": "https://glama.ai/mcp/servers/@TrialAndErrorAI/appstore-connect-mcp/blob/bfdc3544ea1a7521d43586754dbe48fc4d94a6e3/docs/PRFAQ.md"
+      }
+    ]
+  },
+  {
+    "id": "mob-fastlane",
+    "name": "fastlane",
+    "vendor": "fastlane",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "AI 통합은 없지만 에이전트가 레인을 실행",
+    "description": "iOS·Android 빌드, 서명, 배포를 자동화하는 대표 오픈소스 도구로, 2026년 10월 15일 2.241.1이 나올 만큼 활발히 유지됩니다. 공식 MCP, 스킬, AI 통합은 없으므로 Claude Code나 Codex가 `fastlane beta` 같은 기존 레인을 허용된 셸 명령으로 실행하는 방식이 현실적입니다. 이미 fastlane을 쓰는 팀은 추가 비용 없이 구독 에이전트에 출시 작업을 맡길 수 있습니다.",
+    "connect": [
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 42300,
+    "updated": "2026-10",
+    "homepage": "https://docs.fastlane.tools/",
+    "repo": "fastlane/fastlane",
+    "install": null,
+    "caveats": [
+      "공식 MCP·스킬·AI 통합 없음",
+      "커뮤니티 fastlane MCP는 작거나 방치됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub fastlane",
+        "url": "https://github.com/fastlane/fastlane"
+      },
+      {
+        "label": "docs.fastlane.tools",
+        "url": "https://docs.fastlane.tools/"
+      },
+      {
+        "label": "MCP Registry (fastlane)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=fastlane"
+      }
+    ]
+  },
+  {
+    "id": "mob-fastlane-mcp-lyderdev",
+    "name": "fastlane-mcp-server",
+    "vendor": "lyderdev",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "fastlane을 감싼 커뮤니티 MCP(방치됨)",
+    "description": "fastlane을 감싸 iOS·Android 빌드, 테스트, 서명, 버전 올리기, 메타데이터·스크린샷, AppCenter·Firebase App Distribution 배포를 MCP 도구로 제공하는 커뮤니티 서버입니다. 2025년 8월 이후 업데이트가 없고 AppCenter 연동은 이미 쓸모가 없어, 새로 도입하기보다 구독 에이전트가 fastlane 레인을 직접 실행하게 하는 편이 낫습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "stale",
+    "stars": 6,
+    "updated": "2025-08",
+    "homepage": "https://github.com/lyderdev/fastlane-mcp-server",
+    "repo": "lyderdev/fastlane-mcp-server",
+    "install": null,
+    "caveats": [
+      "2025년 8월 이후 갱신 없음",
+      "AppCenter 연동은 더 이상 쓸 수 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub lyderdev/fastlane-mcp-server",
+        "url": "https://github.com/lyderdev/fastlane-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "mob-daemux-fastlane-mcp",
+    "name": "@daemux/fastlane-mcp",
+    "vendor": "daemux",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "CLI·REST로 ASC를 관리하는 fastlane MCP",
+    "description": "'CLI와 REST API로 App Store Connect를 관리하는 fastlane MCP 서버'를 표방하는 커뮤니티 패키지로 daemux/daemux-plugins 저장소에서 나왔습니다. 로컬 MCP로 구독 에이전트에 붙일 수 있지만 2026년 2월 v0.1.0 단계라 기능과 안정성은 직접 확인해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "experimental",
+    "stars": null,
+    "updated": "2026-02",
+    "homepage": "https://www.npmjs.com/package/@daemux/fastlane-mcp",
+    "repo": "daemux/daemux-plugins",
+    "install": null,
+    "caveats": [
+      "v0.1.0 초기 버전"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "npm @daemux/fastlane-mcp",
+        "url": "https://www.npmjs.com/package/@daemux/fastlane-mcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-google-play-developer-mcp",
+    "name": "google-play-developer-mcp",
+    "vendor": "devinwang",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "Play Publisher API 전체를 157개 도구로",
+    "description": "Android Publisher API v3 전체와 Play Developer Reporting API를 157개 도구로 감싼 커뮤니티 MCP 서버로, Google이 공식 Play MCP를 내지 않은 상황에서 가장 범위가 넓습니다. Play Console에 초대한 Google Cloud 서비스 계정으로 인증하고 Claude, Cursor, VS Code Copilot, Gemini CLI 등 MCP 클라이언트에서 구독 그대로 씁니다. 스타 8개의 신생 프로젝트라 버전을 고정하고 쓰기 권한을 주기 전에 도구 목록을 검토해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 8,
+    "updated": "2026-10",
+    "homepage": "https://github.com/devinwang/google-play-developer-mcp",
+    "repo": "devinwang/google-play-developer-mcp",
+    "install": "npm install -g google-play-developer-mcp",
+    "caveats": [
+      "릴리스 권한 서비스 계정은 프로덕션 롤아웃까지 가능하니 Play Console 권한을 좁게",
+      "버전 고정 권장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub google-play-developer-mcp",
+        "url": "https://github.com/devinwang/google-play-developer-mcp"
+      },
+      {
+        "label": "MCP Registry (google-play)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=google-play"
+      }
+    ]
+  },
+  {
+    "id": "mob-google-play-mcp-agimaulana",
+    "name": "GooglePlayConsoleMcp",
+    "vendor": "AgiMaulana",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "Play 릴리스·트랙·Vitals용 Python MCP",
+    "description": "아티팩트 업로드, 트랙, 테스터, 단계적 출시 같은 릴리스 수명 주기와 Android Vitals를 다루는 Python 커뮤니티 MCP 서버입니다. `GOOGLE_APPLICATION_CREDENTIALS` 서비스 계정으로 `uvx google-play-mcp`를 실행해 Claude Code 등에 붙이며, 선택적으로 로컬 HTTP 모드도 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 7,
+    "updated": "2026-05",
+    "homepage": "https://github.com/AgiMaulana/GooglePlayConsoleMcp",
+    "repo": "AgiMaulana/GooglePlayConsoleMcp",
+    "install": "claude mcp add google-play-mcp -e GOOGLE_APPLICATION_CREDENTIALS=… -- uvx google-play-mcp",
+    "caveats": [
+      "서비스 계정 권한을 좁게 설정할 것"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub GooglePlayConsoleMcp",
+        "url": "https://github.com/AgiMaulana/GooglePlayConsoleMcp"
+      }
+    ]
+  },
+  {
+    "id": "mob-play-console-mcp-wiseapps",
+    "name": "@wiseappsai/play-console-mcp",
+    "vendor": "wiseappsai",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "Play 릴리스·리뷰·Vitals MCP(저장소 사라짐)",
+    "description": "릴리스, 스토어 등록정보, 수익화, 리뷰, 주문, 권한, Android Vitals를 다루는 npm 커뮤니티 MCP 패키지입니다. 메타데이터에 적힌 GitHub 저장소가 404를 반환해 유지보수가 끊겼거나 비공개로 바뀐 것으로 보이므로 새로 쓰기엔 위험합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "stale",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://www.npmjs.com/package/@wiseappsai/play-console-mcp",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "GitHub 저장소 404"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "npm @wiseappsai/play-console-mcp",
+        "url": "https://www.npmjs.com/package/@wiseappsai/play-console-mcp"
+      },
+      {
+        "label": "MCP Registry (play-console)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=play-console"
+      }
+    ]
+  },
+  {
+    "id": "mob-myagents-google-play",
+    "name": "google-play (myagents.click)",
+    "vendor": "myagents.click",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "포르투갈어로 된 Google Play 호스팅 MCP",
+    "description": "릴리스, 리뷰, 안정성을 다루는 서드파티 호스팅 MCP로 `https://google-play.mcp.myagents.click/mcp`에서 제공되며 설명이 포르투갈어로 되어 있습니다. 원격 MCP라 설치 없이 구독 에이전트에 붙일 수 있지만 운영 주체와 인증 방식이 자료에 자세히 없어 신중히 검토해야 합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": null,
+    "install": "https://google-play.mcp.myagents.click/mcp",
+    "caveats": [
+      "운영 주체·인증 방식 불명확"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "MCP Registry (google-play)",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=google-play"
+      }
+    ]
+  },
+  {
+    "id": "mob-play-skills",
+    "name": "Google Play skills (play-policy-insights 등)",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "Play 정책 감사·결제 라이브러리 업그레이드 스킬",
+    "description": "Google android/skills 저장소의 play 폴더에 있는 공식 스킬로, `play-policy-insights`는 데이터 보안, 권한, 계정 삭제 등 Google Play 정책 영역을 기준으로 앱을 점검하는 자동 감사 스킬입니다. Play Billing Library 버전 업그레이드와 Engage SDK 연동 스킬도 함께 있습니다. Claude Code나 Codex에 넣어 출시 전 정책 점검을 구독 에이전트에 맡길 수 있습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-07",
+    "homepage": "https://github.com/android/skills/tree/main/play",
+    "repo": "android/skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub android/skills (play)",
+        "url": "https://github.com/android/skills/tree/main/play"
+      },
+      {
+        "label": "play-policy-insights SKILL.md",
+        "url": "https://github.com/android/skills/blob/main/play/play-policy-insights/SKILL.md"
+      }
+    ]
+  },
+  {
+    "id": "mob-play-console-ai",
+    "name": "Google Play Console Gemini features",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "Play Console 안의 Gemini 현지화·스토어 등록정보",
+    "description": "I/O 2026에서 발표된 Play Console 내장 AI 기능으로, CSV나 Google Sheets로 스토어 등록정보 현지화를 미리 채우고 키워드에 맞춘 맞춤 스토어 등록정보를 Gemini가 자동 생성합니다. 일회성 상품의 일괄 가격 변경과 SKU 가져오기를 하는 '에이전트형 카탈로그 관리'는 '곧' 제공된다고 발표됐습니다. 콘솔 UI 안에서만 동작하고 API나 MCP로 노출되지 않아 Claude·ChatGPT 에이전트가 직접 호출할 수는 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://android-developers.googleblog.com/2026/05/io-2026-whats-new-in-google-play.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "일부 기능은 '곧' 출시로 발표돼 출시 여부 미확인",
+      "공식 Play Developer API·Play Console MCP 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Android Developers Blog: Google Play",
+        "url": "https://android-developers.googleblog.com/2026/05/io-2026-whats-new-in-google-play.html"
+      },
+      {
+        "label": "Android Developers Blog: I/O 2026",
+        "url": "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-apptweak-mcp",
+    "name": "AppTweak MCP",
+    "vendor": "AppTweak",
+    "domain": "mobile",
+    "category": "출시·ASO",
+    "tagline": "ASO 데이터 API를 에이전트에 연결하는 MCP",
+    "description": "AppTweak 공식 MCP 서버로 에이전트가 AppTweak API 레퍼런스를 읽고 엔드포인트를 호출하거나 코드를 작성하게 합니다. Claude, Cursor, Claude Code를 비롯한 MCP 클라이언트에서 구독 그대로 쓰지만, 호출은 AppTweak API 크레딧을 소모합니다. ASO 데이터를 에이전트 분석에 끌어올 때 맞습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "AppTweak API 크레딧 차감",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developers.apptweak.com/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "인증·설치 세부는 랜딩 페이지에 없음",
+      "에이전트용 크레딧·한도는 별도 페이지 확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "developers.apptweak.com",
+        "url": "https://developers.apptweak.com/"
+      }
+    ]
+  },
+  {
+    "id": "mob-rork",
+    "name": "Rork",
+    "vendor": "Rork",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "Swift·Kotlin 네이티브 앱을 만드는 AI 빌더",
+    "description": "프롬프트로 Swift·SwiftUI iPhone 앱, Kotlin·Compose Android 앱, React 웹 앱을 만드는 AI 빌더로, 클라우드 시뮬레이터·에뮬레이터에서 실행하고 TestFlight·App Store·Google Play까지 배포합니다. 에이전트가 React Native보다 Swift 앱을 더 잘 만든다는 이유로 신규 Expo 프로젝트 생성을 중단했습니다. 생성 비용은 Rork 자체 크레딧으로 내며 Claude·ChatGPT 구독이나 BYOK로 빌더 에이전트를 돌릴 수 없고, 유료 플랜은 GitHub 양방향 동기화로 코드를 내보냅니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Free(디자인만), Pro $20/월(100크레딧), Max $200/월~",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://rork.com/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "신규 Expo 프로젝트 불가(기존 프로젝트는 유지)",
+      "iOS 빌드·클라우드 시뮬레이터 세션은 추가 크레딧",
+      "iOS·Android가 별도 코드베이스로 생성됨"
+    ],
+    "korea": "무료 플랜 디자인 크레딧은 주요 시장 월 35개, 그 외 월 5개라 한국이 어느 쪽인지 확인 필요",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Rork docs: Expo",
+        "url": "https://docs.rork.com/expo"
+      },
+      {
+        "label": "Rork docs: 요금제",
+        "url": "https://docs.rork.com/introduction/subscriptions"
+      },
+      {
+        "label": "Rork docs: 코드 내보내기",
+        "url": "https://docs.rork.com/faq/code-export"
+      }
+    ]
+  },
+  {
+    "id": "mob-vibecode",
+    "name": "Vibecode",
+    "vendor": "Vibecode",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "Swift 네이티브 iPhone 앱 AI 빌더, BYOK 없음",
+    "description": "네이티브 Swift iPhone 앱과 Android·웹 앱을 만드는 AI 빌더로 자체 모바일 앱도 있습니다. 모든 플랜에 Claude·GPT·Gemini 프리미엄 모델, 소스 코드 다운로드, Cursor SSH 연결, App Store 제출이 포함되지만 '자신의 API 키는 필요 없다'고 밝혀 BYOK나 구독 연결은 없습니다. 비용은 Plus $20, Pro $50, Max $200 플랜의 이월 가능한 크레딧으로 냅니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Plus $20/월, Pro $50, Max $200 (크레딧 이월)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.vibecodeapp.com/pricing",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2026년 3월 Apple이 Vibecode iOS 앱 업데이트를 차단(가이드라인 2.5.2)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Vibecode pricing",
+        "url": "https://www.vibecodeapp.com/pricing"
+      },
+      {
+        "label": "9to5Mac (2026-03)",
+        "url": "https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps/"
+      }
+    ]
+  },
+  {
+    "id": "mob-newly",
+    "name": "Newly",
+    "vendor": "Newly",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "구 Natively, Expo 앱 생성과 코드 내보내기",
+    "description": "Expo·React Native 기반으로 iOS·Android 네이티브 코드로 컴파일되는 앱을 만드는 AI 빌더로, natively.dev는 newly.app으로 연결됩니다. 소스 코드 전체를 내보내 어디서든 수정·배포할 수 있어 Claude Code나 Codex로 넘기기 좋은 출발점입니다. Agent 플랜은 월 200크레딧과 스토어 배포를 포함하고, 준비 중인 Apex 플랜은 컴플라이언스 점검, 스크린샷 자동화, 메타데이터 제출을 내세웁니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Agent 플랜 월 200크레딧 (가격 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://newly.app/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "BYOK 언급 없음",
+      "Apex 플랜은 아직 출시 전"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "newly.app",
+        "url": "https://newly.app/"
+      }
+    ]
+  },
+  {
+    "id": "mob-dreamflow",
+    "name": "DreamFlow",
+    "vendor": "FlutterFlow",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "FlutterFlow 팀의 Flutter 앱 AI 빌더",
+    "description": "FlutterFlow 팀이 만든 프롬프트·비주얼 캔버스·코드 빌더로 Firebase나 Supabase를 쓰는 Flutter 앱을 생성합니다. GPT-5, Claude Sonnet 4 등 모델을 자체 크레딧으로 쓰며, BYOK('Bring Your Own AI Models')는 Enterprise 플랜에서만 됩니다. Hobby 플랜부터 스토어 배포와 Flutter 코드 전체 내보내기가 가능해 이후 dart-flutter 플러그인으로 이어서 작업할 수 있습니다.",
+    "connect": [
+      "app",
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Free(일회성 10크레딧), Hobby $20/월, Pro $90/월, Enterprise",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://dreamflow.app/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "BYOK는 Enterprise 전용"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "dreamflow.app",
+        "url": "https://dreamflow.app/"
+      }
+    ]
+  },
+  {
+    "id": "mob-draftbit",
+    "name": "Draftbit",
+    "vendor": "Draftbit",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "웹·네이티브 앱 비주얼 빌더, 코드 내보내기",
+    "description": "웹과 네이티브 iOS·Android 앱을 'AI 에이전트'로 만드는 비주얼 빌더로, 전체 코드를 가져오고 편집하고 내보낼 수 있으며 GitHub 연결과 일일 백업을 지원합니다. '자신의 Claude·OpenAI 계정을 사용'할 수 있다고 하지만 API 계정인지 소비자 구독인지는 불분명합니다. 100개 이상의 통합과 MCP를 지원합니다.",
+    "connect": [
+      "app",
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "무료로 시작 (유료 요금 확인 필요)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://draftbit.com/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "'자체 Claude·OpenAI 계정'이 API 키인지 구독인지 불명확"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "draftbit.com",
+        "url": "https://draftbit.com/"
+      }
+    ]
+  },
+  {
+    "id": "mob-replit-mobile",
+    "name": "Replit (mobile apps)",
+    "vendor": "Replit",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "Expo 앱을 만들고 App Store Connect에 업로드",
+    "description": "Replit Agent는 Expo로 React Native 모바일 앱을 만들고, Expo Go QR 코드나 iOS 시뮬레이터·Android 에뮬레이터 미리보기로 테스트하게 합니다. Publishing 탭에서 Apple 계정으로 로그인해 App Store Connect·TestFlight에 올릴 수 있지만 Google Play 게시는 아직 지원하지 않고, Replit 안에서는 EAS CLI·EAS Build를 쓸 수 없습니다. 생성 비용은 Replit 자체 요금으로 내며 Claude·ChatGPT 구독으로 대신할 수 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.replit.com/build/mobile-app",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Google Play 게시 미지원",
+      "Apple Developer Program(2FA) 필요, 번들 ID가 Replit 프로젝트에 묶임",
+      "2026년 3월 Apple이 Replit iOS 앱 업데이트를 차단"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Replit docs: 휴대폰 미리보기",
+        "url": "https://docs.replit.com/build/mobile-preview-testing"
+      },
+      {
+        "label": "Replit docs: App Store Connect 업로드",
+        "url": "https://docs.replit.com/build/mobile-upload-ios"
+      },
+      {
+        "label": "9to5Mac (2026-03)",
+        "url": "https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps/"
+      }
+    ]
+  },
+  {
+    "id": "mob-bolt-mobile",
+    "name": "Bolt (Expo mobile apps)",
+    "vendor": "Bolt",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "Expo로 앱을 만들고 EAS로 양대 스토어 출시",
+    "description": "Bolt에 모바일 앱을 요청하면 자동으로 Expo를 쓰고, Expo Go로 테스트한 뒤 EAS를 통해 TestFlight·App Store와 Google Play 베타·스토어까지 게시합니다. 첫 프롬프트에 '모바일 앱'이라고 밝혀야 하며 웹으로 시작한 프로젝트는 모바일로 쉽게 바뀌지 않습니다. 작업별로 모델을 자동 선택하고 비용은 Bolt 자체 요금으로 냅니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://support.bolt.new/integrations/expo",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Supabase는 Pro·Teams 플랜에서 사용",
+      "EAS 게시의 플랜 제한은 확인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Bolt Help: Expo",
+        "url": "https://support.bolt.new/integrations/expo"
+      }
+    ]
+  },
+  {
+    "id": "mob-lovable-mobile",
+    "name": "Lovable",
+    "vendor": "Lovable",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "웹 앱 전용, 네이티브 모바일 앱은 미지원",
+    "description": "Lovable은 웹 앱만 만들며 App Store나 Google Play로 패키징·제출하는 기능이 없고 React Native 프로젝트도 생성하지 않습니다. 모바일이 필요하면 PWA로 만들거나 게시된 URL을 Lovable 밖에서 Capacitor로 감싸야 하며, Lovable 모바일 앱은 휴대폰에서 프로젝트를 만드는 클라이언트일 뿐입니다. GitHub·GitLab·Bitbucket 양방향 동기화로 코드를 내보낼 수 있습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.lovable.dev/features/publish",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "네이티브 앱 빌드·스토어 제출 불가",
+      "Sign in with ChatGPT 플랜 사용은 '곧 지원' 상태"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Lovable docs: Publish",
+        "url": "https://docs.lovable.dev/features/publish"
+      },
+      {
+        "label": "learn.chatgpt.com: SIWC",
+        "url": "https://learn.chatgpt.com/docs/sign-in-with-chatgpt"
+      }
+    ]
+  },
+  {
+    "id": "mob-a0-dev",
+    "name": "a0.dev",
+    "vendor": "a0.dev",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "App Store Connect 등록·업로드까지 하는 빌더",
+    "description": "채팅으로 앱을 만드는 빌더로 Convex나 Supabase 백엔드를 쓰고, 빌드부터 App Store Connect 등록정보 생성과 업로드까지 처리합니다. Google Play, APK, 웹 배포도 지원하며 결제·구독과 분석 기능, iOS·Android 컴패니언 앱이 들어 있습니다. 모델, BYOK, 코드 내보내기, 가격은 홈페이지에 나와 있지 않습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://a0.dev/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "모델·BYOK·가격 정보 미공개"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "a0.dev",
+        "url": "https://a0.dev/"
+      }
+    ]
+  },
+  {
+    "id": "mob-anything",
+    "name": "Anything",
+    "vendor": "Anything",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "모바일 앱·사이트 AI 빌더, iOS 앱은 퇴출",
+    "description": "'모바일 앱, 사이트, 도구'를 만드는 AI 빌더로 40개 이상의 통합을 내세우고 GPT-5를 언급합니다. 2026년 3월 Apple은 가이드라인 2.5.2를 이유로 Anything의 iOS 앱을 App Store에서 내렸는데, 이는 빌더의 미리보기 앱에 대한 조치이지 생성된 앱에 대한 것은 아닙니다. BYOK, 코드 내보내기, 게시 방식은 홈페이지에 나와 있지 않습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.createanything.com/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Anything iOS 앱 App Store 퇴출(2026년 3월)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "createanything.com",
+        "url": "https://www.createanything.com/"
+      },
+      {
+        "label": "9to5Mac (2026-03)",
+        "url": "https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps/"
+      }
+    ]
+  },
+  {
+    "id": "mob-google-ai-studio-android",
+    "name": "Google AI Studio (native Android apps)",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "프롬프트로 Kotlin·Compose 앱, Play 내부 트랙까지",
+    "description": "프롬프트 하나로 Kotlin과 Jetpack Compose 네이티브 Android 앱을 만들고, 브라우저 에뮬레이터로 확인한 뒤 USB/adb로 설치하거나 Play 개발자 계정으로 Play Console 내부 테스트 트랙에 올릴 수 있습니다. ZIP이나 GitHub로 내보내 Android Studio나 Antigravity + Android CLI로 이어서 작업할 수 있습니다. Firebase 지원과 테스터 관리는 '곧' 제공 예정입니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://android-developers.googleblog.com/2026/05/build-android-apps-google-ai-studio.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "비용 정책은 발표 자료에 명시 없음",
+      "Firebase 지원·테스터 관리는 출시 예정"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Android Developers Blog: AI Studio",
+        "url": "http://android-developers.googleblog.com/2026/05/build-android-apps-google-ai-studio.html"
+      }
+    ]
+  },
+  {
+    "id": "mob-firebase-studio",
+    "name": "Firebase Studio",
+    "vendor": "Google",
+    "domain": "mobile",
+    "category": "모바일 앱 빌더",
+    "tagline": "2027년 3월 22일 종료되는 Google AI 앱 개발 환경",
+    "description": "Google의 AI 앱 개발 환경으로 2026년 3월 19일 종료가 발표됐습니다. 2026년 6월 22일부터 새 워크스페이스와 가입이 막혔고 2027년 3월 22일 서비스가 끝나며, Google은 코드 중심 사용자에게 Antigravity를, 프로토타이핑에는 AI Studio를 권합니다. Firebase 백엔드 서비스 자체는 영향이 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "신규 가입 중단",
+    "free": false,
+    "official": "official",
+    "status": "deprecated",
+    "stars": null,
+    "updated": "2026-06",
+    "homepage": "https://firebase.google.com/docs/studio/migrating-project",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2027-03-22 종료, 새 워크스페이스 생성 불가"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Firebase docs: Studio 이전",
+        "url": "https://firebase.google.com/docs/studio/migrating-project"
+      },
+      {
+        "label": "Storyboard18",
+        "url": "https://www.storyboard18.com/digital/google-to-shut-firebase-studio-in-2027-shifts-focus-to-ai-studio-and-antigravity-92922.htm"
+      }
+    ]
+  }
+]

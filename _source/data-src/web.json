@@ -1,0 +1,4480 @@
+[
+  {
+    "id": "web-figma-mcp",
+    "name": "Figma MCP server",
+    "vendor": "Figma",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "디자인 컨텍스트·Code Connect를 코드로 잇는 공식 MCP",
+    "description": "Figma 공식 원격 MCP 서버로, 프레임의 디자인 컨텍스트·변수·Code Connect 매핑을 읽어 실제 컴포넌트 코드로 옮기고 캔버스에 직접 쓰기도 합니다. Claude Code, Codex, Copilot CLI, Gemini CLI, Cursor, Xcode 등 Figma MCP Catalog에 등록된 클라이언트가 구독 그대로 연결합니다. 라이브 웹 UI를 편집 가능한 Figma 레이어로 되돌리는 code-to-canvas도 지원해 디자인과 구현을 오가는 작업에 가장 강력합니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Dev·Full 시트 필요(유료 플랜), 캔버스 쓰기는 베타 무료",
+    "free": false,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developers.figma.com/docs/figma-mcp-server/",
+    "repo": "figma/mcp-server-guide",
+    "install": "claude plugin install figma@claude-plugins-official",
+    "caveats": [
+      "설치돼 있지만 미연결 — /mcp에서 인증 필요",
+      "write-to-canvas는 추후 사용량 과금 예정, 드래프트 밖 쓰기는 Full 시트 필요",
+      "커뮤니티 Framelink 서버 0.6.3 미만은 CVE-2025-53967"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Figma developer docs",
+        "url": "https://developers.figma.com/docs/figma-mcp-server/"
+      },
+      {
+        "label": "Figma Help: Claude Code 플러그인",
+        "url": "https://help.figma.com/hc/en-us/articles/39888612464151"
+      },
+      {
+        "label": "Claude directory: Figma",
+        "url": "https://claude.ai/directory/c758d038-d8eb-4421-b426-9dd68dc7f84a"
+      }
+    ]
+  },
+  {
+    "id": "web-figma-make",
+    "name": "Figma Make",
+    "vendor": "Figma",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "프롬프트로 앱을 만드는 Figma의 MCP 클라이언트",
+    "description": "아이디어나 기존 Figma 디자인을 인터랙티브 앱으로 바꾸는 Figma의 프롬프트-앱 도구입니다. 자체 MCP 서버는 없고 검증된 커넥터 21개를 쓰는 MCP 클라이언트로 동작하며, 커스텀 커넥터는 유료 플랜에서만 됩니다. 만든 코드는 Figma MCP 서버의 Make 리소스로 Claude Code 등에서 읽거나 zip으로 내려받아 이어서 작업합니다.",
+    "connect": [
+      "app",
+      "remote-mcp"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "플랜·시트별 상이(공식 문서끼리 설명이 충돌)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://help.figma.com/hc/en-us/articles/31304412302231-Explore-Figma-Make",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "GitHub 동기화 문서 없음 — zip 다운로드는 Full·Dev 시트",
+      "다운로드에 package.json·Vite 설정이 빠질 수 있어 보완 필요",
+      "쓰기 도구는 기본 꺼짐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Figma Help: Make 커넥터",
+        "url": "https://help.figma.com/hc/en-us/articles/35440096186007-Connect-external-tools-to-Figma-Make-using-MCP"
+      },
+      {
+        "label": "Figma Help: Make 코드",
+        "url": "https://help.figma.com/hc/en-us/articles/33649966245783"
+      },
+      {
+        "label": "Figma Forum 기능 요청",
+        "url": "https://forum.figma.com/suggest-a-feature-11/feature-request-download-build-configuration-files-with-code-43219"
+      }
+    ]
+  },
+  {
+    "id": "web-pencil",
+    "name": "Pencil",
+    "vendor": "Pencil (pen.dev)",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "IDE 안에서 쓰는 로컬 디자인 캔버스와 MCP",
+    "description": "데스크톱 앱이나 VS Code·Cursor 확장으로 실행되는 벡터 디자인 도구로, 실행 중에 로컬 MCP 서버(get_style, read_skill, get_app_state, execute, browser)를 엽니다. Claude Code·Codex·ChatGPT 구독으로 디자인을 바로 생성·수정하며, 디자인 작업은 로컬에 머뭅니다. Figma 파일을 만들기엔 과한 신규 페이지 목업에 잘 맞고, Claude Code와 함께 쓰면 덜 'AI스러운' 결과가 나왔다는 사용 후기도 있습니다.",
+    "connect": [
+      "local-mcp",
+      "ide",
+      "app"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "얼리 액세스 기간 무료(리뷰 기준)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.pen.dev/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "이미 설치돼 이 환경에 연결됨",
+      ".pen 파일은 암호화돼 MCP 도구로만 접근 가능"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Pencil docs: AI integration",
+        "url": "https://docs.pencil.dev/getting-started/ai-integration"
+      },
+      {
+        "label": "pen.dev",
+        "url": "https://www.pen.dev/"
+      },
+      {
+        "label": "Classmethod 사용기",
+        "url": "https://dev.classmethod.jp/en/articles/claude-code-pencil-mcp-web-design/"
+      }
+    ]
+  },
+  {
+    "id": "web-google-stitch",
+    "name": "Google Stitch",
+    "vendor": "Google",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "DESIGN.md·MCP로 내보내는 구글 AI UI 디자인",
+    "description": "Google의 AI UI 디자인 도구로, 디자인 토큰·타이포그래피·간격·컴포넌트 규칙을 담은 DESIGN.md 내보내기, MCP 연결, 코드 패널 HTML/CSS 복사라는 세 가지 출구가 있습니다. MCP로 연결하면 코딩 에이전트가 화면 목록과 최신 화면 버전을 직접 가져옵니다. Google 문서의 예시 클라이언트는 Antigravity이며, Claude Code로 옮기는 가이드도 나와 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "gemini",
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Google 공식 MCP 문서 페이지는 미확인",
+      "커뮤니티 Stitch MCP 서버는 품질 편차가 큼"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Pillitteri 가이드",
+        "url": "https://pasqualepillitteri.it/en/news/647/google-stitch-mcp-export-claude-code-design-to-code"
+      },
+      {
+        "label": "MindStudio",
+        "url": "https://www.mindstudio.ai/blog/google-stitch-mcp-coding-agents/"
+      },
+      {
+        "label": "Glama: 커뮤니티 Stitch MCP",
+        "url": "https://glama.ai/mcp/servers/huyy6ibnmw"
+      }
+    ]
+  },
+  {
+    "id": "web-penpot-mcp",
+    "name": "Penpot MCP server",
+    "vendor": "Penpot",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "오픈소스 디자인 툴 Penpot의 공식 MCP",
+    "description": "오픈소스 디자인 도구 Penpot의 공식 MCP 서버로, Penpot MCP 플러그인과 WebSocket으로 통신하며 캔버스를 읽고 조작합니다. Penpot이 호스팅하는 원격 모드와 npm 패키지 로컬 실행 중에서 고를 수 있고, Codex·Cursor·VS Code·Claude를 클라이언트로 명시합니다. 무료·오픈소스라 Figma 시트 없이 디자인-코드 루프를 만들 때 좋습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료·오픈소스",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://help.penpot.app/mcp/",
+    "repo": "penpot/penpot",
+    "install": null,
+    "caveats": [
+      "독립 저장소는 2026-02-03 아카이브 — 본 저장소 mcp/ 폴더로 이동"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Penpot help",
+        "url": "https://help.penpot.app/mcp/"
+      },
+      {
+        "label": "Penpot MCP 페이지",
+        "url": "https://penpot.app/penpot-mcp-server"
+      },
+      {
+        "label": "Glama: penpot-mcp",
+        "url": "https://glama.ai/mcp/servers/penpot/penpot-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-webflow-mcp",
+    "name": "Webflow MCP server",
+    "vendor": "Webflow",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "캔버스와 CMS를 다루는 Webflow 공식 원격 MCP",
+    "description": "Webflow API를 도구 34개로 노출하는 공식 원격 OAuth MCP로, 페이지 디자인·CMS 관리·모션 추가·트래픽 분석·사이트 런칭을 에이전트가 처리합니다. Claude 커넥터 디렉터리에 올라 있어 Claude 구독에서 바로 연결하고, 다른 원격 MCP 클라이언트도 같은 URL을 씁니다. 내 저장소의 코드 생성보다는 Webflow에 호스팅된 사이트를 편집하는 데 적합합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요(Webflow 계정 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developers.webflow.com/data/docs/ai-tools",
+    "repo": null,
+    "install": "https://mcp.webflow.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Webflow developer docs",
+        "url": "https://developers.webflow.com/data/docs/ai-tools"
+      },
+      {
+        "label": "Claude directory: Webflow",
+        "url": "https://claude.ai/directory/092d0ef3-9fc6-4101-8f7e-c2b80e58a065"
+      }
+    ]
+  },
+  {
+    "id": "web-canva-mcp",
+    "name": "Canva MCP server",
+    "vendor": "Canva",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "디자인 검색·자동 채우기·내보내기용 Canva MCP",
+    "description": "Canva 공식 원격 MCP로, 디자인 검색·조회·자동 채우기(autofill)·URL 가져오기·내보내기 등 17개 도구를 제공합니다. Claude 커넥터 디렉터리에 등록돼 Claude 구독으로 연결하며, Lovable 안에서도 기본 채팅 커넥터로 쓰입니다. 배너나 마케팅 이미지 같은 디자인 자산을 웹 작업 흐름에 끌어올 때 유용합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.canva.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Canva",
+        "url": "https://claude.ai/directory/eb9240f2-e1c1-43c1-828f-0fda40c22e4c"
+      },
+      {
+        "label": "Lovable docs: MCP",
+        "url": "https://docs.lovable.dev/integrations/mcp-servers"
+      }
+    ]
+  },
+  {
+    "id": "web-framer-unframer",
+    "name": "MCP (Framer plugin)",
+    "vendor": "Unframer",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "Framer 프로젝트를 에이전트로 편집하는 서드파티 플러그인",
+    "description": "Framer 마켓플레이스에 올라 있는 Unframer의 'MCP' 플러그인으로, Framer 안의 플러그인과 mcp.unframer.co의 Cloudflare Worker 서버, Framer ID 기반 WebSocket 터널을 조합합니다. MCP 클라이언트에서 지금 열려 있는 Framer 프로젝트를 편집할 수 있고, 모든 작업은 클라이언트에서 승인해야 합니다. Framer 공식 서버가 아닌 서드파티 제품이라는 점에 유의하세요.",
+    "connect": [
+      "remote-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.framer.com/marketplace/plugins/mcp",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "현재 열린 프로젝트에만 접근 가능",
+      "Framer 공식이 아닌 서드파티"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Framer Marketplace",
+        "url": "https://www.framer.com/marketplace/plugins/mcp"
+      },
+      {
+        "label": "Glama: framer-mcp",
+        "url": "https://glama.ai/mcp/servers/tmcpro/framer-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-builder-io",
+    "name": "Builder.io Fusion",
+    "vendor": "Builder.io",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "프롬프트·Figma로 UI를 만드는 Builder.io (미검증)",
+    "description": "프롬프트, Figma, 기존 코드로 앱과 UI를 만드는 Builder.io의 Fusion(Visual Copilot)입니다. 제3자 비교 자료에 따르면 무료 티어와 Pro($30/사용자/월, 연간 결제 시 $24)가 있고 내장·커스텀 MCP와 Claude Code 연동을 내세우지만, 공식 문서로는 확인되지 않았습니다. Pipedream의 Builder.io MCP 목록에는 아직 도구가 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료 티어, Pro $30/사용자/월(제3자 자료)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "공식 MCP·가격 페이지 미확인 — 제3자 자료뿐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "ToolQuestor 비교",
+        "url": "https://toolquestor.com/vs/builderio-vs-claude-design"
+      },
+      {
+        "label": "Pipedream: Builder.io MCP",
+        "url": "https://mcp.pipedream.com/app/builder_io"
+      }
+    ]
+  },
+  {
+    "id": "web-anima",
+    "name": "Anima (Agent Grid)",
+    "vendor": "Anima App",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "Figma·프롬프트를 앱과 코드로, Anima 공식 MCP",
+    "description": "Anima가 'Agent Grid' 허브로 재편한 공식 원격 MCP로, 프롬프트·웹사이트 URL·Figma 프레임에서 앱을 만들어 git 기반으로 호스팅·게시하거나 내 저장소에 디자인을 반영한 코드를 생성합니다. Claude Code 플러그인과 Codex 스킬을 제공하고, VS Code(Copilot)·Cursor에서도 브라우저 로그인으로 연결됩니다. 인증할 때 Figma를 연결하면 Figma 기반 흐름이 열립니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 6,
+    "updated": "2026-09",
+    "homepage": "https://www.animaapp.com",
+    "repo": "AnimaApp/mcp-server-guide",
+    "install": "claude mcp add --transport http anima https://api.agentgrid.io/v1/mcp",
+    "caveats": [
+      "공식 레지스트리 항목은 구 엔드포인트 — 벤더 URL 사용",
+      "디자인 시스템 접근은 Enterprise 기능"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "AnimaApp/mcp-server-guide",
+        "url": "https://github.com/AnimaApp/mcp-server-guide"
+      },
+      {
+        "label": "MCP Registry: anima",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=anima"
+      },
+      {
+        "label": "agentgrid.io",
+        "url": "https://agentgrid.io"
+      }
+    ]
+  },
+  {
+    "id": "web-locofy",
+    "name": "Locofy MCP",
+    "vendor": "Locofy",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "Figma 화면을 내 저장소 코드로, Locofy MCP",
+    "description": "Figma 디자인을 코드로 바꾸는 Locofy의 공식 MCP로, 대시보드에서 받은 개인 액세스 토큰과 프로젝트 ID로 인증합니다. Cursor·Claude Code·Windsurf·Gemini CLI·GitHub Copilot의 Agent 모드에서 'generate code using locofy mcp for [figma screen url]'처럼 요청하면 됩니다. 생성 사용량은 Locofy의 LDM 토큰에서 차감됩니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "credits",
+    "price": "LDM 토큰 사용량 과금(플랜 미기재)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.locofy.ai/docs/mcp/quickstart/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "커스텀 컴포넌트는 locofy push와 Figma 플러그인 매핑 필요",
+      "Locofy 페이지마다 지원 클라이언트 목록이 다름"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Locofy MCP quickstart",
+        "url": "https://www.locofy.ai/docs/mcp/quickstart/"
+      },
+      {
+        "label": "Locofy docs: MCP",
+        "url": "https://www.locofy.ai/docs/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-relume-publish-mcp",
+    "name": "Relume Publish MCP",
+    "vendor": "Relume",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "프롬프트 한 번으로 Webflow 사이트를 만드는 MCP",
+    "description": "프롬프트 하나로 전체 사이트를 만들어 '완전히 편집 가능한' 상태로 Webflow에 넘기는 Relume의 원격 MCP입니다. ChatGPT·Claude·Cursor·Lovable·Cline을 클라이언트로 명시하며, Claude Code도 표준 원격 MCP URL로 붙일 수 있습니다. Webflow로 마케팅 사이트를 빠르게 띄울 때 적합합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.relume.ai/mcp",
+    "repo": null,
+    "install": "https://relume-publish-mcp.relume.io/mcp",
+    "caveats": [
+      "인증 방식·요금제 미기재"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Relume MCP",
+        "url": "https://www.relume.ai/mcp"
+      },
+      {
+        "label": "MCP Registry: relume",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=relume"
+      }
+    ]
+  },
+  {
+    "id": "web-relume-library-mcp",
+    "name": "Relume Library MCP",
+    "vendor": "Relume",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "Relume 컴포넌트 라이브러리를 AI 에디터로",
+    "description": "Relume의 컴포넌트 라이브러리를 AI 에디터 안으로 가져오는 원격 MCP입니다. Publish MCP와 같은 클라이언트(ChatGPT, Claude, Cursor 등)에서 표준 원격 MCP URL로 연결합니다. Relume 컴포넌트를 찾아 페이지를 구성할 때 참고 자료로 쓰기 좋습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.relume.ai/mcp",
+    "repo": null,
+    "install": "https://relume-library-mcp.relume.io/mcp",
+    "caveats": [
+      "인증 방식·요금제 미기재"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Relume MCP",
+        "url": "https://www.relume.ai/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-uizard",
+    "name": "Uizard",
+    "vendor": "Uizard (Miro)",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "MCP 없는 AI 목업 도구, React/CSS 핸드오프만",
+    "description": "2024년 Miro가 인수한 AI UI 목업 도구로, MCP나 에이전트 연동은 확인되지 않았습니다. 코드 경로는 Pro 플랜의 React/CSS 개발자 핸드오프뿐이며, 무료 티어는 jpg·png·pdf 내보내기만 됩니다. 구독 AI와 직접 잇기보다 목업 단계의 도구로 보는 게 맞습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료(이미지·PDF 내보내기만), React/CSS 핸드오프는 Pro",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://uizard.io/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "MCP·에이전트 연동 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Uizard pricing",
+        "url": "https://uizard.io/pricing/"
+      },
+      {
+        "label": "Miro blog: Uizard 인수",
+        "url": "https://miro.com/blog/uizard-joins-miro/"
+      }
+    ]
+  },
+  {
+    "id": "web-claude-design",
+    "name": "Claude Design",
+    "vendor": "Anthropic",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "구독에 포함된 Anthropic의 프로토타입 생성 도구",
+    "description": "Anthropic Labs가 2026년 4월 연구 프리뷰로 내놓은 도구로, 대화만으로 프로토타입·덱·원페이저를 만들고 코드베이스와 디자인 파일에서 팀 디자인 시스템을 학습합니다. Claude Pro·Max·Team·Enterprise 구독에 포함돼 추가 결제 없이 쓰며, PDF·PPTX·독립 HTML·Canva로 내보내거나 Claude Code로 넘길 수 있습니다. 연결된 Vercel MCP에 import-claude-design-from-url 도구가 있어 Vercel 배포로도 이어집니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "Pro·Max·Team·Enterprise 구독에 포함",
+    "free": false,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Enterprise는 관리자가 켜야 사용 가능",
+      "Vercel 가져오기 도구는 팀에서 활성화된 경우에만 동작"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "The Decoder",
+        "url": "https://the-decoder.com/anthropics-claude-design-turns-chatbot-conversations-into-prototypes-slide-decks-and-marketing-assets/"
+      },
+      {
+        "label": "Unite.AI",
+        "url": "https://www.unite.ai/anthropic-launches-claude-design-for-visual-prototyping-and-presentations/"
+      }
+    ]
+  },
+  {
+    "id": "web-frontend-design-skill",
+    "name": "frontend-design",
+    "vendor": "Anthropic",
+    "domain": "web",
+    "category": "디자인→코드",
+    "tagline": "평범한 AI UI를 피하게 하는 Anthropic 공식 스킬",
+    "description": "타이포그래피·색·모션·구성 가이드를 자동으로 불러와 흔한 'AI 생성' UI를 피하게 해 주는 Anthropic의 1st-party Claude Code 플러그인·스킬입니다. UI 작업 요청 시 자동으로 활성화되며 슬래시 명령은 아닙니다. Claude 구독만으로 쓰는 기본 디자인 가이드이고, 한 사용자는 Pencil MCP를 함께 썼을 때 이 스킬만 쓸 때보다 덜 AI스러운 결과를 얻었다고 보고했습니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": "anthropics/claude-code",
+    "install": "/plugin install frontend-design@claude-code-plugins",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "ClaudeLog",
+        "url": "https://claudelog.com/faqs/what-is-frontend-design-skill-in-claude-code/"
+      },
+      {
+        "label": "Claude Marketplaces",
+        "url": "https://claudemarketplaces.com/skills/anthropics/claude-plugins-official/frontend-design"
+      },
+      {
+        "label": "Classmethod 사용기",
+        "url": "https://dev.classmethod.jp/en/articles/claude-code-pencil-mcp-web-design/"
+      }
+    ]
+  },
+  {
+    "id": "web-shadcn-mcp",
+    "name": "shadcn MCP",
+    "vendor": "shadcn",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "레지스트리 컴포넌트 설치의 사실상 표준 MCP",
+    "description": "shadcn CLI에 내장된 MCP로, components.json에 선언한 레지스트리에서 컴포넌트를 탐색·검색·설치합니다. 토큰 헤더를 쓰는 비공개 레지스트리와 @namespace 레지스트리도 지원해 Magic UI·Aceternity 같은 라이브러리를 MCP 하나로 다룹니다. Claude Code·Cursor·VS Code·Codex가 같은 명령으로 쓰며 구독 외 비용이 없습니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://ui.shadcn.com/docs/mcp",
+    "repo": null,
+    "install": "pnpm dlx shadcn@latest mcp init --client claude",
+    "caveats": [
+      "Codex는 ~/.codex/config.toml에 수동 등록 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "shadcn MCP docs",
+        "url": "https://ui.shadcn.com/docs/mcp"
+      },
+      {
+        "label": "shadcn registry MCP",
+        "url": "https://ui.shadcn.com/docs/registry/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-v0-mcp",
+    "name": "v0 MCP server",
+    "vendor": "Vercel",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "IDE에서 v0 채팅을 만들고 배포하는 OAuth MCP",
+    "description": "Vercel v0의 공식 원격 MCP로, IDE에서 v0 채팅을 만들거나 가져오고 소스 파일 편집·생성 이어가기·미리보기·Vercel 배포까지 처리합니다. OAuth로 로그인하며 Cursor·Claude Desktop·VS Code 등 MCP를 지원하는 IDE에서 쓸 수 있습니다. 다만 생성 사용량은 AI 구독이 아니라 v0 계정에 과금됩니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "credits",
+    "price": "v0 계정 사용량 과금",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://v0.app/docs/api/v1/adapters/mcp-server",
+    "repo": null,
+    "install": "npx mcp-remote https://v0.app/api/mcp",
+    "caveats": [
+      "설정에 v0 API 키를 넣지 말 것(OAuth 사용)",
+      "MCP 사용 플랜 조건 미기재"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "v0 MCP server docs",
+        "url": "https://v0.app/docs/api/v1/adapters/mcp-server"
+      },
+      {
+        "label": "Vercel Community",
+        "url": "https://community.vercel.com/t/connect-v0-to-mcp-server/22531"
+      }
+    ]
+  },
+  {
+    "id": "web-21st-mcp",
+    "name": "21st MCP",
+    "vendor": "21st.dev",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "React/Tailwind 컴포넌트 검색·생성 MCP",
+    "description": "21st.dev Magic MCP가 이름을 바꾼 서버로, React/Tailwind 컴포넌트 카탈로그를 검색하고 AI로 새 UI를 생성하거나 내 컴포넌트를 게시합니다. CLI로 Claude·Cursor·Codex·VS Code·Windsurf에 설치하거나 x-api-key 헤더로 HTTP MCP(https://21st.dev/api/mcp)에 붙습니다. 무료 키로는 search·get_component만 되고, 생성에는 유료 'AI access'가 필요합니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "credits",
+    "price": "무료 키(검색·조회), 생성은 유료 AI 액세스(가격 미공개)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 6200,
+    "updated": null,
+    "homepage": null,
+    "repo": "21st-dev/magic-mcp",
+    "install": "npx @21st-dev/cli@latest init --client claude",
+    "caveats": [
+      "기존 Magic 키는 리셋됨",
+      "AI 액세스 없으면 생성 도구가 ai_subscription_required 반환"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "21st-dev/magic-mcp",
+        "url": "https://github.com/21st-dev/magic-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-magic-ui-mcp",
+    "name": "Magic UI MCP",
+    "vendor": "Magic UI",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "Magic UI 레지스트리를 조회하는 작은 공식 MCP",
+    "description": "Magic UI의 공식 MCP로, 실시간 레지스트리를 읽는 listRegistryItems·searchRegistryItems·getRegistryItem 세 도구만 의도적으로 작게 제공합니다. Cursor·Windsurf·Claude·Cline·Roo-Cline용 설치 명령이 있고, 같은 컴포넌트는 npx shadcn@latest add @magicui/... 로도 설치됩니다. MCP 자체는 무료이고 Magic UI Pro는 따로 판매합니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Magic UI Pro $199 일회성",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 209,
+    "updated": "2026-04",
+    "homepage": "https://magicui.design/docs/mcp",
+    "repo": "magicuidesign/mcp",
+    "install": "pnpm dlx @magicuidesign/cli@latest install <client>",
+    "caveats": [
+      "shadcn MCP + @magicui 레지스트리와 기능이 대부분 겹침",
+      "Codex 지원 여부 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Magic UI MCP docs",
+        "url": "https://magicui.design/docs/mcp"
+      },
+      {
+        "label": "magicuidesign/mcp",
+        "url": "https://github.com/magicuidesign/mcp"
+      },
+      {
+        "label": "npm @magicuidesign/mcp",
+        "url": "https://www.npmjs.com/package/@magicuidesign/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-aceternity-ui",
+    "name": "Aceternity UI",
+    "vendor": "Aceternity",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "shadcn MCP로 설치하는 애니메이션 UI 라이브러리",
+    "description": "무료 컴포넌트 118개 이상, 블록 183개 이상, 템플릿 17개를 내세우는 UI 라이브러리로, 전용 MCP 대신 shadcn 레지스트리로 배포됩니다. 공식 안내대로 components.json에 @aceternity 레지스트리를 추가하고 shadcn MCP를 연결하면 Claude Code·Codex·Cursor가 이름만으로 컴포넌트·블록·페이지를 찾아 설치합니다. 유료 All-Access는 일회성 결제입니다.",
+    "connect": [
+      "library",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 컴포넌트 다수, All-Access 일회성 결제",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://ui.aceternity.com",
+    "repo": null,
+    "install": "npx shadcn@latest add @aceternity/[component-name]",
+    "caveats": [
+      "전용 MCP 없음 — 커뮤니티 aceternityui-mcp는 2025-07 이후 정체"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Aceternity UI",
+        "url": "https://ui.aceternity.com"
+      },
+      {
+        "label": "Aceternity CLI docs",
+        "url": "https://ui.aceternity.com/docs/cli"
+      },
+      {
+        "label": "커뮤니티 aceternityui-mcp",
+        "url": "https://api.github.com/repos/rudra016/aceternityui-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-storybook-mcp",
+    "name": "Storybook MCP",
+    "vendor": "Storybook",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "문서화된 컴포넌트만 쓰게 하는 Storybook 애드온",
+    "description": "Storybook이 실행되는 동안 localhost:6006/mcp를 여는 공식 애드온으로, 개발(stories-changed, stories-preview 등)·문서(docs-list, docs-show)·테스트(test-run, 접근성 검사 포함) 툴셋을 제공합니다. Claude Code·Codex·Cursor·Gemini CLI·VS Code Copilot에서 구독 그대로 쓰며, 에이전트가 문서화된 컴포넌트를 재사용하고 스스로 검증하게 만드는 가장 강력한 프로덕션 가드레일입니다. Docs 툴셋은 React 계열과 @storybook/angular-vite·@storybook/vue3-vite를 지원합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료(오픈소스 애드온)",
+    "free": true,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://storybook.js.org/docs/ai/mcp/overview",
+    "repo": null,
+    "install": "npx storybook add @storybook/addon-mcp",
+    "caveats": [
+      "프리뷰 단계(문서 기준 Storybook 10.6)",
+      "Docs 툴셋은 컴포넌트 매니페스트 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Storybook MCP docs",
+        "url": "https://storybook.js.org/docs/ai/mcp/overview"
+      },
+      {
+        "label": "Storybook addon-mcp",
+        "url": "https://storybook.js.org/addons/@storybook/addon-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-tailwind-css",
+    "name": "Tailwind CSS",
+    "vendor": "Tailwind Labs",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "공식 MCP·스킬·llms.txt가 없는 Tailwind",
+    "description": "Tailwind Labs는 MCP·스킬·llms.txt를 내놓지 않았고, 2026년 1월 llms.txt PR을 거절하며 엔지니어 4명 중 3명 해고, 매출 약 80% 감소, 문서 트래픽 약 40% 감소를 밝혔습니다. 에이전트는 학습 데이터와 설치된 패키지에 기대어 Tailwind를 씁니다. 커뮤니티 Tailwind MCP는 v3 전제가 많아 v4의 CSS 우선 설정과 어긋날 수 있습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "프레임워크 무료(Tailwind Plus 별도)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://tailwindcss.com",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "레지스트리의 ai.tailwind/tailwind-mcp는 Pinterest 스케줄러(동명이인)",
+      "커뮤니티 tailwind-context-resolver-mcp는 v3만 지원"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "DevClass",
+        "url": "https://www.devclass.com/2026/01/08/tailwind-labs-lays-off-75-percent-of-its-engineers-thanks-to-brutal-impact-of-ai/"
+      },
+      {
+        "label": "MCP Registry: tailwind",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=tailwind"
+      },
+      {
+        "label": "eWeek",
+        "url": "https://www.eweek.com/news/tailwind-labs-lays-off-engineers-due-to-ai/"
+      }
+    ]
+  },
+  {
+    "id": "web-lucide",
+    "name": "Lucide",
+    "vendor": "Lucide",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "llms.txt만 있는 아이콘 라이브러리(MCP 없음)",
+    "description": "아이콘 라이브러리 Lucide는 공식 MCP가 없고, LLM용 페이지 색인인 llms.txt를 제공합니다. 실무에서는 lucide-react 패키지와 llms.txt만으로 에이전트가 아이콘을 충분히 다룹니다. 커뮤니티 lucide-mcp가 있지만 스타가 0개 수준입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://lucide.dev",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "공식 MCP 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "lucide.dev/llms.txt",
+        "url": "https://lucide.dev/llms.txt"
+      },
+      {
+        "label": "커뮤니티 lucide-mcp",
+        "url": "https://github.com/joris-gallot/lucide-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-iconify-mcp-server",
+    "name": "iconify-mcp-server",
+    "vendor": "imjac0b (커뮤니티)",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "Iconify 아이콘을 찾는 커뮤니티 MCP",
+    "description": "Iconify는 공식 MCP가 없어 커뮤니티 래퍼를 써야 하며, GPL-3.0인 이 서버가 대표적입니다. Iconify 무료 공개 API를 감싼 호스팅 래퍼 io.github.pipeworx-io/iconify도 레지스트리에 있습니다. 필수 도구라기보다 선택적인 편의 기능으로 보면 됩니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(GPL-3.0)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 19,
+    "updated": "2025-11",
+    "homepage": null,
+    "repo": "imjac0b/iconify-mcp-server",
+    "install": null,
+    "caveats": [
+      "Iconify 공식 MCP 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub API: iconify-mcp-server",
+        "url": "https://api.github.com/repos/imjac0b/iconify-mcp-server"
+      },
+      {
+        "label": "MCP Registry: iconify",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=iconify"
+      }
+    ]
+  },
+  {
+    "id": "web-nuxt-ui-mcp",
+    "name": "Nuxt UI MCP",
+    "vendor": "Nuxt",
+    "domain": "web",
+    "category": "UI 컴포넌트",
+    "tagline": "Nuxt UI 컴포넌트·아이콘 검색 공식 원격 MCP",
+    "description": "Nuxt UI의 공식 원격 MCP로, search-components·get-component·get-component-metadata·get-example·search-icons 도구를 제공합니다. 원격 URL만 등록하면 Claude Code나 Cursor에서 구독 그대로 쓸 수 있습니다. Nuxt 프로젝트에서 컴포넌트 API와 아이콘을 정확히 찾을 때 유용합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 공개(요금 언급 없음)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://ui.nuxt.com",
+    "repo": null,
+    "install": "https://ui.nuxt.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "ui.nuxt.com/llms.txt",
+        "url": "https://ui.nuxt.com/llms.txt"
+      }
+    ]
+  },
+  {
+    "id": "web-lovable",
+    "name": "Lovable",
+    "vendor": "Lovable",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "Claude가 프로젝트를 조작하는 MCP 지원 앱 빌더",
+    "description": "프롬프트로 웹앱을 만드는 호스팅 앱 빌더로, 자체 원격 MCP(create_project, deploy_project, remix_project 등 35개 도구)를 제공해 Claude Code·Codex에서 Lovable 프로젝트를 만들고 관리할 수 있습니다. GitHub 앱을 연결하면 양방향으로 동기화돼, 프로토타입을 Claude Code로 옮겨 마무리하기 좋습니다. 생성은 Lovable 크레딧으로 과금되며 Claude·ChatGPT 구독이나 BYOK로 대신할 수 없습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "app"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "credits",
+    "price": "무료 티어, Pro 약 $25/월(비교 기사 기준)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.lovable.dev/integrations/mcp-servers",
+    "repo": null,
+    "install": "https://mcp.lovable.dev/",
+    "caveats": [
+      "웹앱 전용 — 모바일은 PWA나 직접 만든 Capacitor 래퍼",
+      "GitHub 동기화 플랜 조건은 공식 확인 안 됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Lovable docs: MCP",
+        "url": "https://docs.lovable.dev/integrations/mcp-servers"
+      },
+      {
+        "label": "Claude directory: Lovable",
+        "url": "https://claude.ai/directory/1d9dadfe-0a7d-4a47-af18-101ae0ae0efd"
+      },
+      {
+        "label": "Morph 비교",
+        "url": "https://www.morphllm.com/comparisons/claude-code-vs-lovable"
+      }
+    ]
+  },
+  {
+    "id": "web-bolt-new",
+    "name": "Bolt.new",
+    "vendor": "StackBlitz",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "GitHub와 양방향 동기화되는 브라우저 앱 빌더",
+    "description": "Claude Agent SDK 기반의 StackBlitz 호스팅 앱 빌더로, GitHub에 커밋하고 30초마다 Bolt 밖 변경을 가져오는 사실상 양방향 동기화를 지원합니다. 자체 MCP 서버는 없고 MCP 클라이언트로서 Notion·Linear·GitHub 등 커넥터와 커스텀 MCP를 붙일 수 있습니다. 생성은 Bolt 자체 과금이며 공식 BYOK나 Claude·ChatGPT 로그인은 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요(제3자 기준 Premium 약 $20/월)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://bolt.new",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "앱 안에서 병합 불가, GitHub 연결은 프로젝트 소유자만"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Bolt Help: GitHub",
+        "url": "https://support.bolt.new/integrations/git"
+      },
+      {
+        "label": "Bolt Help: MCP",
+        "url": "https://support.bolt.new/integrations/mcp.md"
+      },
+      {
+        "label": "Anthropic 고객 사례",
+        "url": "https://claude.com/customers/bolt"
+      }
+    ]
+  },
+  {
+    "id": "web-bolt-diy",
+    "name": "bolt.diy",
+    "vendor": "StackBlitz Labs",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "원하는 LLM 키로 돌리는 Bolt 오픈소스 포크",
+    "description": "Bolt.new의 오픈소스 포크로, 'using any LLM you want'라는 설명대로 직접 고른 모델의 API 키로 앱을 생성합니다. Bolt.new 호스팅 크레딧 대신 BYOK로 쓰는 경로이며 MIT 라이선스입니다. 원래의 stackblitz/bolt.new 저장소는 2024년 12월 이후 멈췄으니 이 포크를 써야 합니다.",
+    "connect": [
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "무료(MIT), 모델 API 비용 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 20000,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "stackblitz-labs/bolt.diy",
+    "install": null,
+    "caveats": [
+      "모델 API 사용료는 본인 부담"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub API: bolt.diy",
+        "url": "https://api.github.com/repos/stackblitz-labs/bolt.diy"
+      },
+      {
+        "label": "GitHub API: bolt.new(정체)",
+        "url": "https://api.github.com/repos/stackblitz/bolt.new"
+      }
+    ]
+  },
+  {
+    "id": "web-replit",
+    "name": "Replit",
+    "vendor": "Replit",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "공식 원격 MCP로 Replit 앱을 만들고 게시",
+    "description": "실제 Linux 환경을 주는 호스팅 앱 빌더로, 공식 원격 MCP와 Claude 커넥터를 통해 Claude Code·Codex에서 Replit 앱을 생성·조회·수정·게시할 수 있습니다. GitHub 저장소를 가져와 에이전트가 PR을 열게 할 수도 있습니다. 에이전트 생성은 Replit 자체 요금(Free·Auto·Power·Max 모드)으로 과금되며 BYOK나 구독 로그인은 언급되지 않습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector",
+      "app"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "credits",
+    "price": "무료 티어, Core $20/월",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.replit.com/platforms/mcp-server.md",
+    "repo": null,
+    "install": "claude mcp add replit https://mcp.replit.com/server/mcp --transport http",
+    "caveats": [
+      "유료 작업은 'Allow once' 확인 필요",
+      "Claude 디렉터리 커넥터 URL은 replit-mcp.com/anthropic/mcp로 다름"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Replit docs: MCP Server",
+        "url": "https://docs.replit.com/platforms/mcp-server.md"
+      },
+      {
+        "label": "Claude directory: Replit",
+        "url": "https://claude.ai/directory/b952bcd7-554a-460e-9c8a-a81074f9d430"
+      },
+      {
+        "label": "Replit docs: Agent",
+        "url": "https://docs.replit.com/features/agent/overview"
+      }
+    ]
+  },
+  {
+    "id": "web-firebase-studio",
+    "name": "Firebase Studio",
+    "vendor": "Google",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "종료 예정 — 신규 도입 비권장",
+    "description": "Google의 AI 앱 개발 환경 Firebase Studio는 Firebase 문서에서 'deprecated'로 표시되고 2027년 3월 22일 종료가 예정돼 있습니다. Firebase MCP 서버의 클라이언트 목록도 Firebase Studio 대신 Antigravity를 안내합니다. 기존 사용자는 마이그레이션 가이드를 따라 옮기고, 새 작업에는 쓰지 않는 게 좋습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "deprecated",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://firebase.google.com/docs/studio/migrating-project",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2027-03-22 종료 예정"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Firebase docs: 마이그레이션",
+        "url": "https://firebase.google.com/docs/studio/migrating-project"
+      },
+      {
+        "label": "Firebase MCP server docs",
+        "url": "https://firebase.google.com/docs/ai-assistance/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-base44",
+    "name": "Base44",
+    "vendor": "Base44",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "백엔드·인증·호스팅 내장 노코드 앱 빌더",
+    "description": "백엔드·인증·호스팅이 내장된 노코드 앱 빌더로, 빌드용과 실행용 크레딧 풀이 따로 있습니다. 코드 다운로드나 GitHub 푸시(베타)는 되지만 저장된 데이터와 서버 로직은 넘어오지 않아 프로덕션으로 옮기는 비용이 큽니다. Claude·ChatGPT 구독이나 BYOK로 생성 비용을 대신하는 경로는 확인되지 않았습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료 하루 5회·월 25회 메시지",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "내보내기 시 저장 데이터·서버 로직 누락",
+      "GitHub 푸시는 베타"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Hostinger 비교",
+        "url": "https://www.hostinger.com/uk/tutorials/replit-vs-base44"
+      },
+      {
+        "label": "Tools for Humans 비교",
+        "url": "https://www.toolsforhumans.ai/vs/base44-vs-replit"
+      }
+    ]
+  },
+  {
+    "id": "web-same",
+    "name": "Same",
+    "vendor": "Same",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "Next.js가 기본인 토큰제 AI 앱 빌더",
+    "description": "Next.js를 기본으로 JavaScript/TypeScript 앱을 만드는 호스팅 앱 빌더입니다. 내장 GitHub MCP 연결로 '저장소를 만들고 코드를 푸시해 줘'라고 요청해 GitHub로 내보내며, 유료 플랜에서는 프로젝트 다운로드도 됩니다. 생성은 Same 자체 토큰으로 과금되고 BYOK나 구독 로그인은 문서에 없습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료 월 50만 토큰, Basic $10·Pro $25·Max $50/월",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://same.new",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "프로젝트 다운로드는 유료 플랜"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Same docs: GitHub",
+        "url": "https://docs.same.new/integrations/github.md"
+      },
+      {
+        "label": "Same pricing",
+        "url": "https://docs.same.new/usage/pricing.md"
+      },
+      {
+        "label": "Same FAQ",
+        "url": "https://docs.same.new/get-started/faq.md"
+      }
+    ]
+  },
+  {
+    "id": "web-anything",
+    "name": "Anything",
+    "vendor": "Anything (구 Create.xyz)",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "Claude Code·Codex가 CLI로 움직이는 앱 빌더",
+    "description": "Create.xyz가 이름을 바꾼 앱 빌더로, 백엔드·결제·DB·인증·호스팅과 App Store 제출까지 포함한 웹·모바일 앱을 만듭니다. 계정 API 키를 발급하면 Claude Code·Codex·Cursor가 @anythingai/cli로 Anything을 조작하지만, 실제 생성은 Anything 에이전트와 크레딧이 맡습니다(BYOK 아님). 내보내기는 zip뿐이고 GitHub 동기화는 '곧 지원' 상태입니다.",
+    "connect": [
+      "cli",
+      "app"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "credits",
+    "price": "빌드엔 유료 플랜: Pro 20k $19/월(연간)·$24(월간), Max $199~$899/월",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.anything.com",
+    "repo": null,
+    "install": "npm install -g @anythingai/cli",
+    "caveats": [
+      "CLI는 일부 계정에 순차 배포 중(Node 24+ 필요)",
+      "추가 크레딧 1만당 $12"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Anything docs: API keys",
+        "url": "https://www.anything.com/docs/account/api-keys.md"
+      },
+      {
+        "label": "Anything docs: Export",
+        "url": "https://www.anything.com/docs/share/export.md"
+      },
+      {
+        "label": "Anything docs: Subscriptions",
+        "url": "https://www.anything.com/docs/account/subscriptions.md"
+      }
+    ]
+  },
+  {
+    "id": "web-leap",
+    "name": "Leap",
+    "vendor": "Encore",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "내 AWS·GCP로 배포하는 Encore.ts 앱 빌더",
+    "description": "Encore가 만든 AI 개발 에이전트로, Encore.ts 기반 프로덕션급 앱을 만들어 Encore Cloud나 내 AWS·GCP 계정에 배포합니다. 모든 앱에 GitHub 연동과 버전 관리가 붙어 있어 원하는 IDE로 옮겨 Claude Code에서 이어 작업하기 좋습니다. 크레딧제이며 BYOK·구독 로그인·MCP는 언급되지 않습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료 월 15크레딧(하루 5), Pro 100 $30/월~Pro 2500 $750/월",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.leap.new/getting-started/introduction",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "추가 크레딧 유효기간 2개월"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Leap docs",
+        "url": "https://docs.leap.new/getting-started/introduction"
+      },
+      {
+        "label": "Leap: Plans and Credits",
+        "url": "https://docs.leap.new/plans-credits/overview.md"
+      },
+      {
+        "label": "GitHub API: encore",
+        "url": "https://api.github.com/repos/encoredev/encore"
+      }
+    ]
+  },
+  {
+    "id": "web-mocha",
+    "name": "Mocha",
+    "vendor": "Mocha",
+    "domain": "web",
+    "category": "앱 빌더",
+    "tagline": "2026년 8월 1일 서비스 종료",
+    "description": "TypeScript·React·Hono·SQLite 앱을 Cloudflare에 올리던 AI 앱 빌더로, 2026년 8월 1일 서비스를 종료했습니다. 운영 중에는 코드 다운로드가 가능했지만 모델 선택은 Default와 Max Mode뿐이었습니다. zip 내보내기에 기대는 빌더의 락인 위험을 보여 주는 사례로, 지속적인 GitHub 동기화를 갖춘 빌더를 고르라는 교훈을 남겼습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "서비스 종료",
+    "free": false,
+    "official": "official",
+    "status": "shutdown",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.getmocha.com/getting-started/faq.md",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2026-10-24 기준 getmocha.com은 HTTP 525 오류",
+      "종료 후 내보내기 기간(30일설)은 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Mocha FAQ",
+        "url": "https://docs.getmocha.com/getting-started/faq.md"
+      },
+      {
+        "label": "AgentUI(경쟁사 주장)",
+        "url": "https://www.agentui.ai/en/mocha-alternative/"
+      }
+    ]
+  },
+  {
+    "id": "web-chrome-devtools-mcp",
+    "name": "Chrome DevTools MCP",
+    "vendor": "Google (Chrome DevTools)",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "성능 트레이스·콘솔·네트워크를 보는 공식 MCP",
+    "description": "Chrome DevTools 팀의 무료 공식 MCP로, 성능 트레이스와 인사이트, 네트워크 분석, 소스맵이 적용된 콘솔, 스크린샷, Puppeteer 자동화를 제공하고 이미 실행 중인 Chrome에도 붙습니다. Claude Code 플러그인에는 debug-optimize-lcp, a11y-debugging, memory-leak-debugging 등 디버깅 스킬 7개가 들어 있습니다. Claude Code·Gemini CLI·Cursor에서 구독만으로 브라우저 검증 단계를 채울 수 있습니다.",
+    "connect": [
+      "local-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "gemini",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료(Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 54100,
+    "updated": null,
+    "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "install": "/plugin install chrome-devtools-mcp@chrome-devtools-plugins",
+    "caveats": [
+      "사용 통계 기본 수집 — --no-usage-statistics로 끄기",
+      "트레이스 URL이 CrUX API로 갈 수 있음 — --no-performance-crux",
+      "Node v20.19+ 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: chrome-devtools-mcp",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+      },
+      {
+        "label": "Addy Osmani",
+        "url": "https://addyosmani.com/blog/devtools-mcp/"
+      }
+    ]
+  },
+  {
+    "id": "web-playwright-mcp",
+    "name": "Playwright MCP",
+    "vendor": "Microsoft",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "접근성 스냅샷 기반 브라우저 자동화 MCP",
+    "description": "Microsoft의 무료 공식 MCP로, 클릭·입력·폼 채우기·이동·접근성 스냅샷·스크린샷 등을 제공하고 네트워크 모킹·트레이싱·PDF·테스트 단언은 옵트인입니다. --extension 모드로 로그인된 Chrome/Edge에 붙을 수 있으며 Claude Code·Codex·Copilot CLI·Gemini CLI·Cursor 등에서 씁니다. 다만 README는 코딩 에이전트에 MCP보다 Playwright CLI+스킬을 권하고, MCP는 탐색형 자동화·자가 복구 테스트·장시간 상태 유지 루프용으로 남겨 둡니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 38600,
+    "updated": null,
+    "homepage": "https://github.com/microsoft/playwright-mcp",
+    "repo": "microsoft/playwright-mcp",
+    "install": null,
+    "caveats": [
+      "코딩 에이전트엔 CLI+스킬이 더 토큰 효율적"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: playwright-mcp",
+        "url": "https://github.com/microsoft/playwright-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-playwright-cli",
+    "name": "Playwright CLI + skills",
+    "vendor": "Microsoft",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "MCP보다 토큰 효율적인 Playwright CLI 스킬",
+    "description": "Microsoft가 대부분의 코딩 에이전트에 MCP 대신 권장하는 방식으로, Playwright CLI와 에이전트 스킬 조합이 '더 토큰 효율적'이라고 설명합니다. Claude Code에서는 microsoft/playwright-cli 플러그인 마켓플레이스로 설치하며 E2E 테스트 작성에 잘 맞습니다. 구독 외 비용 없이 브라우저 검증을 자동화하는 스타터 스택의 핵심입니다.",
+    "connect": [
+      "cli",
+      "skills",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/microsoft/playwright-mcp",
+    "repo": "microsoft/playwright-cli",
+    "install": "/plugin marketplace add microsoft/playwright-cli",
+    "caveats": [
+      "출처마다 패키지명이 다름(@playwright/cli 대 @playwright/mcp 내장)"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: playwright-mcp README",
+        "url": "https://github.com/microsoft/playwright-mcp"
+      },
+      {
+        "label": "newreleases: @playwright/mcp 0.0.59",
+        "url": "https://newreleases.io/project/npm/@playwright/mcp/release/0.0.59"
+      },
+      {
+        "label": "playwright-cli README(Glama)",
+        "url": "https://glama.ai/mcp/servers/@microsoft/playwright-mcp/blob/cd9819d0e885bbfed879b7316a088ab369a2a21f/packages/playwright-cli/README.md"
+      }
+    ]
+  },
+  {
+    "id": "web-browserbase-mcp",
+    "name": "Browserbase MCP",
+    "vendor": "Browserbase",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "Stagehand 기반 호스팅 클라우드 브라우저 MCP",
+    "description": "Browserbase의 호스팅 클라우드 브라우저를 Stagehand 자연어 액션으로 다루는 MCP로, 권장 방식은 호스팅 Streamable HTTP 엔드포인트이고 로컬 stdio도 됩니다. Browserbase는 무인 클라우드 실행엔 자사 MCP를, 로컬의 결정적 제어엔 Playwright·Chrome DevTools MCP를 권합니다(벤더 자체 글). Apache-2.0이며 제3자 카탈로그 기준 v3.0.0이 2026년 3월에 나왔습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 3400,
+    "updated": "2026-03",
+    "homepage": "https://docs.browserbase.com/integrations/mcp/introduction.md",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "클라우드 브라우저 요금은 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Browserbase MCP docs",
+        "url": "https://docs.browserbase.com/integrations/mcp/introduction.md"
+      },
+      {
+        "label": "Stagehand MCP docs",
+        "url": "https://docs.stagehand.dev/v3/integrations/mcp/introduction.md"
+      },
+      {
+        "label": "dev.co 카탈로그",
+        "url": "https://dev.co/ai/mcp/mcp-server-browserbase"
+      }
+    ]
+  },
+  {
+    "id": "web-browser-mcp",
+    "name": "Browser MCP",
+    "vendor": "browsermcp.io",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "내 로그인 브라우저를 조작하는 MCP(업데이트 정체)",
+    "description": "Chrome 확장과 로컬 MCP로 내 브라우저 프로필을 자동화하는 도구로, Playwright MCP를 바탕으로 만들어졌습니다. Claude Code·Codex·VS Code(Copilot)·Cursor·Claude Desktop에서 npx로 설치합니다. 하지만 2025년 4월 이후 코드 푸시가 없고 저장소는 단독 빌드가 안 되며 'CAPTCHA 회피'를 내세우므로, Playwright --extension이나 Chrome DevTools MCP가 낫습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 7200,
+    "updated": "2025-04",
+    "homepage": "https://browsermcp.io/docs/setup-server/",
+    "repo": "BrowserMCP/mcp",
+    "install": "claude mcp add browsermcp -- npx @browsermcp/mcp@latest",
+    "caveats": [
+      "npm 0.1.3(2025-04) 이후 업데이트 없음",
+      "봇 탐지·CAPTCHA 회피 표방 — 프로덕션 비권장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Browser MCP docs",
+        "url": "https://browsermcp.io/docs/setup-server/"
+      },
+      {
+        "label": "GitHub: BrowserMCP/mcp",
+        "url": "https://github.com/BrowserMCP/mcp"
+      },
+      {
+        "label": "npm @browsermcp/mcp",
+        "url": "https://www.npmjs.com/package/@browsermcp/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-browsertools-mcp",
+    "name": "BrowserTools MCP",
+    "vendor": "AgentDesk",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "실제 Chrome의 콘솔·네트워크·Lighthouse 감사",
+    "description": "압축 해제한 확장과 npx 서버로 실제 Chrome에 붙어 콘솔·네트워크·스크린샷·Lighthouse 감사를 에이전트에 넘기는 커뮤니티 MCP입니다. 'Version 2.0 rewrite'에서 1.2.x에 치명적 취약점이 있다고 경고하므로 v2 이상으로 고정하거나 피해야 합니다. Node 22.19+가 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 설치(npx·확장)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 7300,
+    "updated": null,
+    "homepage": "https://github.com/AgentDeskAI/browser-tools-mcp",
+    "repo": "AgentDeskAI/browser-tools-mcp",
+    "install": null,
+    "caveats": [
+      "1.2.x 치명적 취약점 — v2 이상 고정 또는 회피"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: browser-tools-mcp",
+        "url": "https://github.com/AgentDeskAI/browser-tools-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-axe-mcp",
+    "name": "axe MCP Server",
+    "vendor": "Deque",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "에이전트에 Deque 접근성 수정 노하우를",
+    "description": "Deque의 상용 접근성 MCP로, Axe Platform의 접근성 전문 지식을 코딩 에이전트에 넣고 수정안을 한 번에 적용·편집·거절하게 합니다. GitHub Copilot·Cursor·Claude Code·Windsurf·VS Code 등 MCP 에이전트에서 쓰며 axe DevTools for Web에 번들돼 있습니다. 프로덕션 접근성(a11y) 검증 단계에 적합합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "axe DevTools for Web 포함(가격 미확인)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.deque.com/axe/mcp-server/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "요금·티어 정보 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Deque axe MCP",
+        "url": "https://www.deque.com/axe/mcp-server/"
+      },
+      {
+        "label": "Deque blog",
+        "url": "https://www.deque.com/fr/blog/axe-devtools-for-web-now-includes-axe-mcp-server-for-earlier-fixes-and-faster-delivery/"
+      },
+      {
+        "label": "UVA Digital Accessibility",
+        "url": "https://digitalaccessibility.virginia.edu/axe-mcp-server-digital-accessibility-expertise-right-your-ai-agent"
+      }
+    ]
+  },
+  {
+    "id": "web-lighthouse-mcp",
+    "name": "lighthouse-mcp",
+    "vendor": "priyankark (커뮤니티)",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "로컬에서 Lighthouse 감사를 돌리는 MCP",
+    "description": "Lighthouse를 감싼 로컬 커뮤니티 MCP로, Claude Code·Codex·Copilot·Cursor·Cline·Amp에서 사이트 감사를 실행합니다. Google이 Lighthouse·PageSpeed 공식 MCP를 내지 않아, Chrome DevTools MCP와 함께 로컬 감사를 채우는 실용적인 선택지입니다. MIT 라이선스이며 2026년 10월에도 갱신되고 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 212,
+    "updated": "2026-10",
+    "homepage": "https://github.com/priyankark/lighthouse-mcp",
+    "repo": "priyankark/lighthouse-mcp",
+    "install": "npx lighthouse-mcp",
+    "caveats": [
+      "Google 공식 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: lighthouse-mcp",
+        "url": "https://github.com/priyankark/lighthouse-mcp"
+      },
+      {
+        "label": "GitHub API",
+        "url": "https://api.github.com/repos/priyankark/lighthouse-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-lighthouse-mcp-server",
+    "name": "lighthouse-mcp-server",
+    "vendor": "danielsogl (커뮤니티)",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "Core Web Vitals·에이전트 브라우징 감사 MCP",
+    "description": "Lighthouse 감사와 Core Web Vitals(LCP·INP·CLS), WebMCP·llms.txt를 보는 Lighthouse 13의 'Agentic Browsing' 감사를 제공하는 로컬 커뮤니티 MCP입니다. 표준 로컬 MCP라 구독 클라이언트에서 그대로 실행합니다. 2026년 10월에도 갱신되는 활성 프로젝트입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(로컬 실행)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 73,
+    "updated": "2026-10",
+    "homepage": "https://github.com/danielsogl/lighthouse-mcp-server",
+    "repo": "danielsogl/lighthouse-mcp-server",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: lighthouse-mcp-server",
+        "url": "https://github.com/danielsogl/lighthouse-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-pagespeed-insights-mcp",
+    "name": "pagespeed-insights-mcp",
+    "vendor": "ruslanlap (커뮤니티)",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "PSI·CrUX 필드 데이터를 가져오는 MCP",
+    "description": "PageSpeed Insights와 CrUX API를 감싸 실제 사용자 필드 데이터를 더해 주는 커뮤니티 MCP로, 무료 Google API 키가 필요합니다. 로컬 Lighthouse 감사로는 보이지 않는 현장 성능을 에이전트가 확인할 때 씁니다. Apache-2.0이며 README는 워크플로 도구 6개, 레지스트리는 도구 16개로 표기합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(Google API 키 필요)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 76,
+    "updated": "2026-10",
+    "homepage": "https://github.com/ruslanlap/pagespeed-insights-mcp",
+    "repo": "ruslanlap/pagespeed-insights-mcp",
+    "install": null,
+    "caveats": [
+      "무료 Google API 키 필요",
+      "레지스트리의 com.considus/pagespeed-insights-mcp는 deprecated"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: pagespeed-insights-mcp",
+        "url": "https://github.com/ruslanlap/pagespeed-insights-mcp"
+      },
+      {
+        "label": "MCP Registry: pagespeed",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pagespeed"
+      }
+    ]
+  },
+  {
+    "id": "web-argos-mcp",
+    "name": "Argos MCP server",
+    "vendor": "Argos",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "시각 회귀 diff를 보고 승인하는 원격 MCP",
+    "description": "시각 회귀 테스트 서비스 Argos의 공식 원격 MCP로, 설치 없이 OAuth(조직·범위 선택)나 개인 액세스 토큰으로 연결합니다. REST API에서 생성된 도구로 빌드·diff 조회, 빌드 승인·거절, 코멘트, 불안정 테스트 분류, 프로젝트 관리까지 합니다. 에이전트 스킬·CLI·문서 MCP도 함께 제공해 배포 전 시각 diff 확인 단계에 적합합니다.",
+    "connect": [
+      "remote-mcp",
+      "skills",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://argos-ci.com/docs/agents/mcp-server.md",
+    "repo": null,
+    "install": "https://mcp.argos-ci.com",
+    "caveats": [
+      "프로젝트 CI 토큰은 거부됨 — OAuth나 개인 토큰 사용"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Argos docs: MCP server",
+        "url": "https://argos-ci.com/docs/agents/mcp-server.md"
+      },
+      {
+        "label": "Argos docs: llms.txt",
+        "url": "https://argos-ci.com/docs/llms.txt"
+      }
+    ]
+  },
+  {
+    "id": "web-browserstack-mcp",
+    "name": "BrowserStack MCP server (Percy)",
+    "vendor": "BrowserStack",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "Percy 시각 테스트와 실기기 테스트용 원격 MCP",
+    "description": "BrowserStack의 공식 원격 MCP로, Percy 시각 테스트 도구(fetchPercyChanges, managePercyBuildApproval 등)와 접근성·테스트 관리 도구를 제공합니다. 핵심 도구 5개가 더 큰 도구 카탈로그를 검색하는 구조라 컨텍스트를 아낍니다. Claude 디렉터리 커넥터와 ChatGPT 앱이 있고, Claude Code·Codex에서도 원격 URL로 붙습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "BrowserStack 계정 필요, 오픈소스는 무료 플랜 가능",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": 155,
+    "updated": "2026-10",
+    "homepage": "https://github.com/browserstack/mcp-server",
+    "repo": "browserstack/mcp-server",
+    "install": "claude mcp add --scope user --transport http browserstack https://mcp.browserstack.com/mcp",
+    "caveats": [
+      "addPercySnapshotCommands·runPercyScan은 원격 MCP에서 미지원",
+      "AGPL-3.0"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: browserstack/mcp-server",
+        "url": "https://github.com/browserstack/mcp-server"
+      },
+      {
+        "label": "BrowserStack TOOLS.md",
+        "url": "https://github.com/browserstack/mcp-server/blob/main/docs/TOOLS.md"
+      },
+      {
+        "label": "Claude directory: BrowserStack",
+        "url": "https://claude.ai/directory/f30854c6-f587-4fb3-ba06-60e55cedf605"
+      }
+    ]
+  },
+  {
+    "id": "web-applitools-mcp",
+    "name": "Applitools MCP",
+    "vendor": "Applitools",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "Eyes 시각 테스트 결과를 검사·해결하는 MCP",
+    "description": "Applitools Eyes용 공식 로컬 MCP로, npx나 VS Code·Cursor 확장으로 실행합니다. 셋업·체크포인트 도구는 Playwright Fixtures SDK만 지원하지만, 검사·해결·리뷰 도구는 모든 Eyes 결과에 쓸 수 있습니다. 이미 Playwright와 Eyes를 쓰는 팀에 가장 잘 맞습니다.",
+    "connect": [
+      "local-mcp",
+      "ide"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Applitools Eyes 계정 필요(가격 미기재)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://github.com/applitools/mcp",
+    "repo": "applitools/mcp",
+    "install": "npx --yes @applitools/mcp@latest",
+    "caveats": [
+      "읽기·쓰기 API 키를 따로 발급해야 함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: applitools/mcp",
+        "url": "https://github.com/applitools/mcp"
+      },
+      {
+        "label": "npm @applitools/mcp",
+        "url": "https://www.npmjs.com/package/@applitools/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-chromatic-mcp",
+    "name": "Chromatic MCP",
+    "vendor": "Chromatic",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "빌드마다 Storybook MCP를 원격으로 게시",
+    "description": "Chromatic이 빌드할 때마다 Storybook MCP 서버를 함께 배포해, 로컬 MCP를 게시된 Storybook의 /mcp 경로에 있는 원격 서버로 바꿔 줍니다. 원격에서는 Docs 도구만 제공되고 개발·테스트 도구는 로컬 개발 서버에 남습니다. 팀 전체가 컴포넌트 문서를 에이전트 컨텍스트로 공유할 때 쓰며, 시각 테스트 기준선 승인 도구는 아닙니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.chromatic.com/docs/mcp/",
+    "repo": null,
+    "install": "https://<BRANCH>--<APP-ID>.chromatic.com/mcp",
+    "caveats": [
+      "Storybook 10.3+와 React 필요",
+      "비공개 Storybook은 로그인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Chromatic docs: MCP",
+        "url": "https://www.chromatic.com/docs/mcp/"
+      }
+    ]
+  },
+  {
+    "id": "web-cloudflare-browser-run",
+    "name": "Cloudflare Browser Run MCP",
+    "vendor": "Cloudflare",
+    "domain": "web",
+    "category": "테스트·디버깅",
+    "tagline": "페이지 가져오기·마크다운 변환·스크린샷 MCP",
+    "description": "Cloudflare의 원격 OAuth MCP로, 웹 페이지를 가져와 마크다운으로 바꾸고 스크린샷을 찍습니다. 로컬 브라우저 없이 배포된 페이지를 확인할 때 쓰며, 구독 클라이언트에 URL만 추가하면 됩니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "Cloudflare 계정 필요(요금 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+    "repo": null,
+    "install": "https://browser.mcp.cloudflare.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cloudflare docs",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/"
+      }
+    ]
+  },
+  {
+    "id": "web-vercel-mcp",
+    "name": "Vercel MCP",
+    "vendor": "Vercel",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "배포·롤백·런타임 로그까지 다루는 Vercel MCP",
+    "description": "Vercel 공식 원격 OAuth MCP로, 배포·롤백·런타임 오류와 로그·환경 변수·도메인·플래그·Web Analytics·Sandbox까지 다룹니다. Claude Code·Claude.ai·ChatGPT·Codex CLI·Cursor·VS Code Copilot·Gemini CLI 등 Vercel이 검토한 클라이언트만 연결되며 모든 플랜에서 씁니다. Next.js 프리뷰를 배포한 뒤 get_runtime_errors로 오류를 읽는 루프를 바로 돌릴 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "모든 플랜에서 이용 가능",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": "2026-09",
+    "homepage": "https://vercel.com/docs/ai-tooling/vercel-mcp",
+    "repo": null,
+    "install": "npx -y add-mcp https://mcp.vercel.com -g",
+    "caveats": [
+      "이미 연결됨(도구 200개 이상)",
+      "AI가 내 Vercel 사용자와 같은 권한을 가짐",
+      "Vercel이 검토한 클라이언트만 지원"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Vercel MCP docs",
+        "url": "https://vercel.com/docs/ai-tooling/vercel-mcp"
+      },
+      {
+        "label": "Claude directory: Vercel",
+        "url": "https://claude.ai/directory/7eb42afe-0087-4493-a105-da2b021d5c03"
+      }
+    ]
+  },
+  {
+    "id": "web-netlify-mcp",
+    "name": "Netlify MCP",
+    "vendor": "Netlify",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "프로젝트 생성·빌드·배포를 맡기는 Netlify MCP",
+    "description": "Netlify 공식 MCP로, 프로젝트를 만들고 빌드·배포하며 환경 변수·확장·폼 제출을 관리합니다. 로컬 npm 패키지 @netlify/mcp(개인 액세스 토큰, Node 22+)와 Claude 디렉터리에 등록된 원격 엔드포인트, 두 경로가 있습니다. Vercel 대신 Netlify에 배포하는 프로젝트에서 같은 역할을 합니다.",
+    "connect": [
+      "local-mcp",
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://netlify-mcp.netlify.app/mcp",
+    "caveats": [
+      "원격 엔드포인트의 베타/GA 여부 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Netlify",
+        "url": "https://claude.ai/directory/816d73d2-2c34-4ad5-a1a3-c119c719e3af"
+      },
+      {
+        "label": "mcpservers.org: netlify-mcp",
+        "url": "https://mcpservers.org/servers/netlify/netlify-mcp"
+      },
+      {
+        "label": "Glama: netlify-mcp",
+        "url": "https://glama.ai/mcp/servers/@netlify/netlify-mcp/blob/3e46a6f8710a9075e953e0e2a57864c70cfe70a8/package.json"
+      }
+    ]
+  },
+  {
+    "id": "web-cloudflare-mcp",
+    "name": "Cloudflare MCP (Code Mode)",
+    "vendor": "Cloudflare",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "2,500개+ API를 약 1,000토큰에 담은 Code Mode",
+    "description": "Cloudflare의 메인 원격 MCP로, search()·execute()·docs()만으로 전체 Cloudflare API(2,500개 이상 엔드포인트)를 다룹니다. 생성된 JS는 격리된 Dynamic Worker 샌드박스에서 실행되고, 전체 스키마의 약 117만 토큰 대신 약 1,000토큰만 씁니다. OAuth나 API 토큰으로 연결하며 Docs·Containers·Browser Run 등 별도 서버도 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Cloudflare 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+    "repo": "cloudflare/mcp-server-cloudflare",
+    "install": "https://mcp.cloudflare.com/mcp",
+    "caveats": [
+      "Code Mode는 권한 범위가 넓음 — 도구 목록 확인·토큰 범위 제한",
+      "GitHub README의 도메인별 서버 목록은 공식 문서와 다름"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cloudflare docs",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/"
+      },
+      {
+        "label": "mcp-server-cloudflare README",
+        "url": "https://cdn.jsdelivr.net/gh/cloudflare/mcp-server-cloudflare@main/README.md"
+      },
+      {
+        "label": "Anavem",
+        "url": "https://www.anavem.com/mcp/cloudflare-mcp-servers"
+      }
+    ]
+  },
+  {
+    "id": "web-render-mcp",
+    "name": "Render MCP server",
+    "vendor": "Render",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "웹 서비스·Postgres 생성부터 로그까지 Render MCP",
+    "description": "Render의 공식 MCP로 호스팅 방식을 권장하며, 워크스페이스 관리, 웹 서비스·정적 사이트·크론·Postgres·Key Value 생성, 환경 변수 수정, 배포 트리거, 로그·메트릭 조회, 읽기 전용 SQL을 지원합니다. OAuth나 API 키로 연결하고 공식 Render 플러그인이 OAuth 설정을 자동으로 해 줍니다. Claude Code·Claude Desktop·Codex·Cursor·Gemini CLI 등에서 씁니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Render 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://render.com/docs/mcp-server",
+    "repo": "render-oss/render-mcp-server",
+    "install": null,
+    "caveats": [
+      "삭제·IP 허용목록·스케일링은 불가",
+      "시크릿이 AI 컨텍스트에 들어갈 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Render MCP docs",
+        "url": "https://render.com/docs/mcp-server"
+      },
+      {
+        "label": "GitHub: render-mcp-server",
+        "url": "https://github.com/render-oss/render-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-railway-mcp",
+    "name": "Railway MCP",
+    "vendor": "Railway",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "프로젝트·배포·로그를 다루는 Railway 원격 MCP",
+    "description": "Railway의 공식 원격 MCP로, create-project·create-deployment·deploy-artifact·get-logs·get-status와 기능 플래그 도구를 제공합니다. Claude 커넥터 디렉터리에 등록돼 Claude 구독에서 바로 연결합니다. 세부 정보는 디렉터리 목록 기준이며 벤더 문서로는 확인되지 않았습니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Railway 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.railway.com/",
+    "caveats": [
+      "요금·상태는 벤더 문서로 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Railway",
+        "url": "https://claude.ai/directory/9ed5afff-a8dc-4f68-b97b-61dae12de3a5"
+      }
+    ]
+  },
+  {
+    "id": "web-flyctl-mcp",
+    "name": "flyctl MCP server",
+    "vendor": "Fly.io",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "flyctl을 MCP로 여는 실험적 로컬 서버",
+    "description": "flyctl에 내장된 실험적 MCP 서버로, apps·certs·logs·machine·secrets·volumes 등 명령 그룹을 에이전트에 노출합니다. --claude·--cursor·--vscode 같은 플래그로 클라이언트 설정을 써 주며 기본적으로 127.0.0.1에 바인딩됩니다. Fly는 이 서버를 원격으로 돌리면 남이 내 권한으로 명령을 실행할 수 있다고 경고합니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://fly.io/docs/mcp/flyctl-server/",
+    "repo": null,
+    "install": "fly mcp server --claude",
+    "caveats": [
+      "원격 실행 금지 — localhost에 묶어 둘 것",
+      "범위가 제한된 토큰 사용 권장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Fly docs: flyctl MCP server",
+        "url": "https://fly.io/docs/mcp/flyctl-server/"
+      },
+      {
+        "label": "Fly docs: fly mcp server",
+        "url": "https://fly.io/docs/flyctl/mcp-server/"
+      }
+    ]
+  },
+  {
+    "id": "web-fly-sprites",
+    "name": "Sprites",
+    "vendor": "Fly.io",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "에이전트용 영속 Linux 컴퓨터, 원격 MCP·플러그인",
+    "description": "Fly.io의 새 제품으로, 에이전트를 위한 영속 Linux '컴퓨터'를 제공합니다. Claude 디렉터리에 원격 커넥터가 있고, Claude Code 플러그인은 MCP·스킬·안전 훅을 함께 설치합니다. 로컬 flyctl MCP와 달리 원격 커넥터로 바로 쓸 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://sprites.dev",
+    "repo": "superfly/sprites-claude-plugin",
+    "install": "/plugin install sprites@sprites",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Sprites",
+        "url": "https://claude.ai/directory/98670155-4f80-423f-949a-cde375c9668f"
+      },
+      {
+        "label": "superfly/sprites-claude-plugin",
+        "url": "https://github.com/superfly/sprites-claude-plugin"
+      },
+      {
+        "label": "superfly/skills",
+        "url": "https://github.com/superfly/skills"
+      }
+    ]
+  },
+  {
+    "id": "web-cloudinary-mcp",
+    "name": "Cloudinary MCP (Asset Management)",
+    "vendor": "Cloudinary",
+    "domain": "web",
+    "category": "배포·인프라",
+    "tagline": "미디어 자산을 관리하는 Cloudinary 원격 MCP",
+    "description": "Cloudinary의 공식 원격 MCP로, 자산 업로드·이름 변경·보관·목록 조회·삭제를 제공합니다. Claude 커넥터 디렉터리에 등록돼 Claude 구독으로 연결합니다. 웹앱의 이미지 등 미디어 자산을 에이전트가 직접 정리할 때 유용합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "삭제 도구 포함 — 쓰기 권한 주의"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Cloudinary",
+        "url": "https://claude.ai/directory/c93e842b-830f-4b4a-bbd1-6e3af0199a8f"
+      }
+    ]
+  },
+  {
+    "id": "web-supabase-mcp",
+    "name": "Supabase MCP",
+    "vendor": "Supabase",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "읽기 전용·프로젝트 범위로 쓰는 Supabase MCP",
+    "description": "Supabase 공식 원격 MCP로, 동적 클라이언트 등록 덕분에 PAT 없이 OAuth로 연결하고 project_ref·read_only=true·features 쿼리 파라미터로 범위를 좁힙니다. 로컬 Supabase CLI는 http://localhost:54321/mcp 엔드포인트를 엽니다. Supabase 스스로 프로덕션 DB에 연결하지 말라고 하므로, 개발 프로젝트에 읽기 전용으로 붙이는 것이 표준입니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Supabase 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://supabase.com/docs/guides/ai-tools/mcp",
+    "repo": null,
+    "install": "https://mcp.supabase.com/mcp",
+    "caveats": [
+      "프로덕션 DB 연결 금지 권고 — read_only=true·project_ref 사용"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Supabase MCP docs",
+        "url": "https://supabase.com/docs/guides/ai-tools/mcp"
+      },
+      {
+        "label": "Supabase blog: remote MCP",
+        "url": "https://supabase.com/blog/remote-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-neon-mcp",
+    "name": "Neon MCP",
+    "vendor": "Neon",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "브랜치·스키마 diff·마이그레이션용 Neon MCP",
+    "description": "Neon 공식 원격 OAuth MCP로, 프로젝트·브랜치·SQL·스키마 비교·마이그레이션을 다루며 읽기 전용 모드와 로컬 API 키 방식도 있습니다. Claude 디렉터리에는 create_branch·compare_database_schema·complete_query_tuning 등 35개 도구가 올라 있습니다. 개발·테스트용이며 프로덕션 연결은 권장되지 않습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Neon 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.neon.tech/mcp",
+    "caveats": [
+      "개발·테스트용 — 프로덕션 연결 비권장"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Claude directory: Neon",
+        "url": "https://claude.ai/directory/33e1b084-f45e-4fa3-951a-b08ad61101c9"
+      },
+      {
+        "label": "mcpservers.org: Neon",
+        "url": "https://mcpservers.org/remote-mcp-servers/neon"
+      },
+      {
+        "label": "Archestra 카탈로그",
+        "url": "https://archestra.ai/mcp-catalog/neondatabase__mcp-server-neon"
+      }
+    ]
+  },
+  {
+    "id": "web-planetscale-mcp",
+    "name": "PlanetScale MCP",
+    "vendor": "PlanetScale",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "Postgres·MySQL에 인증 접근하는 원격 MCP",
+    "description": "PlanetScale 공식 원격 MCP로, Postgres와 MySQL 데이터베이스에 인증된 접근을 제공합니다. planetscale_list_databases·planetscale_get_branch_schema·planetscale_execute_read_query 같은 도구가 Claude 디렉터리에 올라 있습니다. 스키마 확인이나 읽기 쿼리로 데이터를 살필 때 적합합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 추가 비용 없음, 계정 요금 별도",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.pscale.dev/mcp/planetscale",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: PlanetScale",
+        "url": "https://claude.ai/directory/97efeba5-ffd8-4b9c-a1d9-35978d0fdb9f"
+      }
+    ]
+  },
+  {
+    "id": "web-turso-mcp",
+    "name": "Turso MCP",
+    "vendor": "Turso",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "읽기 전용 동의 범위를 고르는 Turso 원격 MCP",
+    "description": "Turso의 원격 MCP로, OAuth 2.1 동의 화면에서 토큰을 조직이나 그룹 하나로 한정하고 권한을 읽기 전용·전체·사용자 지정 중에서 고릅니다. DB 목록·생성·브랜치(시점 복구 포함)와 읽기·쓰기·삭제·스키마로 나뉜 SQL 도구를 제공하며 파괴적 작업에는 표시가 붙습니다. Claude Code·Codex용 플러그인이 있어 설치 후 /mcp에서 인증만 하면 됩니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Turso 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-09",
+    "homepage": "https://docs.turso.tech/integrations/mcp.md",
+    "repo": "tursodatabase/turso-mcp",
+    "install": "/plugin install turso@turso",
+    "caveats": [],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Turso docs: MCP",
+        "url": "https://docs.turso.tech/integrations/mcp.md"
+      },
+      {
+        "label": "tursodatabase/turso-mcp",
+        "url": "https://github.com/tursodatabase/turso-mcp"
+      },
+      {
+        "label": "tursodatabase/agent-skills",
+        "url": "https://github.com/tursodatabase/agent-skills"
+      }
+    ]
+  },
+  {
+    "id": "web-tursodb-mcp",
+    "name": "tursodb --mcp",
+    "vendor": "Turso",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "로컬 SQLite 파일을 바로 MCP로 여는 CLI",
+    "description": "SQLite를 Rust로 다시 쓴 Turso 데이터베이스 CLI의 내장 MCP 모드로, 로컬 DB 파일을 도구 9개로 노출합니다. claude mcp add my-database -- tursodb ./path/to/db --mcp 처럼 등록하면 Claude Code가 파일 DB를 직접 조회합니다. 클라우드 계정 없이 로컬 데이터로 실험할 때 좋습니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료(로컬 실행)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 25000,
+    "updated": null,
+    "homepage": "https://github.com/tursodatabase/turso",
+    "repo": "tursodatabase/turso",
+    "install": "tursodb your_database.db --mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "tursodatabase/turso README",
+        "url": "https://github.com/tursodatabase/turso"
+      }
+    ]
+  },
+  {
+    "id": "web-upstash-mcp",
+    "name": "Upstash MCP",
+    "vendor": "Upstash",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "Redis·QStash·Vector를 한 원격 MCP로",
+    "description": "Upstash의 원격 OAuth MCP로, Redis·QStash·Workflow·Vector·Search·Box·Blob을 다룹니다. CI에서는 Authorization: Basic 헤더(이메일:API 키)도 받습니다. 기존 로컬 stdio 서버는 유지보수가 끝났으니 이 원격 서버를 써야 합니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Upstash 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://github.com/upstash/mcp-server",
+    "repo": "upstash/mcp-server",
+    "install": "claude mcp add --scope user --transport http upstash https://mcp.upstash.com/mcp",
+    "caveats": [
+      "공식 레지스트리 등록이 2026-10-23으로 매우 신규",
+      "로컬 npx 서버는 유지보수 중단"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "upstash/mcp-server",
+        "url": "https://github.com/upstash/mcp-server"
+      },
+      {
+        "label": "MCP Registry: upstash",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=upstash"
+      }
+    ]
+  },
+  {
+    "id": "web-prisma-mcp",
+    "name": "Prisma MCP server",
+    "vendor": "Prisma",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "Prisma Postgres·Compute를 다루는 원격 MCP",
+    "description": "Prisma의 원격 MCP로, Prisma Postgres(DB 관리·SQL·백업 복원)·Prisma Compute(배포·로그·환경 변수)·Object Storage·Composer·문서 검색을 다룹니다. Prisma 계정과 워크스페이스 승인으로 인증하며 VS Code·Codex·Cursor·Claude Code·ChatGPT·Gemini CLI 등에서 씁니다. Prisma 호스팅 제품용이므로, 다른 DB의 ORM 스키마·마이그레이션은 에이전트 가드레일이 있는 Prisma CLI와 prisma/skills로 처리합니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Prisma 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.prisma.io/docs/ai/tools/mcp-server",
+    "repo": null,
+    "install": "claude mcp add --transport http prisma https://mcp.prisma.io/mcp",
+    "caveats": [
+      "CLI의 파괴적 명령 차단 가드레일은 MCP 도구 호출엔 미적용",
+      "구 prisma/mcp 저장소는 아카이브"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Prisma docs: MCP server",
+        "url": "https://www.prisma.io/docs/ai/tools/mcp-server"
+      },
+      {
+        "label": "GitHub API: prisma/mcp(아카이브)",
+        "url": "https://api.github.com/repos/prisma/mcp"
+      },
+      {
+        "label": "prisma/skills",
+        "url": "https://github.com/prisma/skills"
+      }
+    ]
+  },
+  {
+    "id": "web-convex-mcp",
+    "name": "Convex MCP server",
+    "vendor": "Convex",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "기본은 dev 배포, Convex CLI 내장 MCP",
+    "description": "Convex CLI에 내장된 로컬 MCP로, status·tables·data·runOneoffQuery·functionSpec·run·logs·insights·env 도구를 제공합니다. Convex 플러그인이 Claude Code·Cursor에서 서버를 자동으로 띄워 줍니다. 기본 대상이 dev 배포라 안전한 편이며, 프로덕션에 쓰려면 --dangerously-enable-production-deployments 플래그가 필요합니다.",
+    "connect": [
+      "local-mcp",
+      "plugin",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.convex.dev/ai/convex-mcp-server",
+    "repo": null,
+    "install": "npx -y convex@latest mcp start",
+    "caveats": [
+      "프로덕션 쓰기엔 --dangerously-enable-production-deployments 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Convex docs: MCP server",
+        "url": "https://docs.convex.dev/ai/convex-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-clerk-mcp",
+    "name": "Clerk MCP",
+    "vendor": "Clerk",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "인증·조직·결제 SDK 스니펫을 주는 Clerk MCP",
+    "description": "Clerk의 원격 MCP로 '인증·조직·결제 추가'를 내세우며, clerk_sdk_snippet·list_clerk_sdk_snippets 도구로 SDK 코드 조각을 제공합니다. 계정 관리보다는 문서·스니펫 중심이라 인증 구현 코드를 정확하게 쓰도록 돕습니다. Claude 디렉터리 커넥터로 바로 연결됩니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Clerk 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.clerk.com/mcp",
+    "caveats": [
+      "계정 관리 도구 아님(스니펫 위주)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Clerk",
+        "url": "https://claude.ai/directory/48a3eb31-a881-4d52-b179-1af31624356a"
+      }
+    ]
+  },
+  {
+    "id": "web-auth0-mcp",
+    "name": "Auth0 MCP Server",
+    "vendor": "Auth0",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "읽기 전용으로 범위를 좁히는 베타 Auth0 MCP",
+    "description": "Auth0 테넌트의 Management API를 에이전트에 여는 공식 로컬 MCP로, init 명령에 --client claude-code·cursor·windsurf·vscode·gemini를 지정해 설정합니다. OAuth 2.0 기기 인증 흐름을 쓰고 자격 증명은 시스템 키체인에 저장하며, Codex 설정과 Gemini CLI 확장도 문서화돼 있습니다. 아직 'AS IS' 베타이므로 --read-only나 --tools로 도구를 제한해 쓰는 게 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요(Auth0 테넌트 사용)",
+    "free": false,
+    "official": "official",
+    "status": "beta",
+    "stars": 121,
+    "updated": "2026-10",
+    "homepage": "https://auth0.com/docs/get-started/auth0-mcp-server",
+    "repo": "auth0/auth0-mcp-server",
+    "install": "npx @auth0/auth0-mcp-server init",
+    "caveats": [
+      "베타(0.1.0-beta.19), AS IS 제공",
+      "원격 엔드포인트 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "auth0/auth0-mcp-server",
+        "url": "https://github.com/auth0/auth0-mcp-server"
+      },
+      {
+        "label": "Auth0 docs",
+        "url": "https://auth0.com/docs/get-started/auth0-mcp-server"
+      },
+      {
+        "label": "npm @auth0/auth0-mcp-server",
+        "url": "https://www.npmjs.com/package/@auth0/auth0-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-workos-mcp",
+    "name": "WorkOS MCP",
+    "vendor": "WorkOS",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "샌드박스가 기본인 WorkOS 원격 MCP",
+    "description": "WorkOS의 원격 MCP로, WorkOS Connect OAuth로 내 대시보드 역할 그대로 조직·연결·사용자·브랜딩·SSO 디버깅·Directory Sync 상태·감사 로그 스트림을 다룹니다. 기본 환경이 샌드박스이고, 되돌릴 수 없는 작업은 확인을 받으며, 응답에서 시크릿을 지웁니다. Claude Code·Codex·Cursor·ChatGPT·Antigravity·VS Code·Zed 등에서 씁니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, WorkOS 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://workos.com/docs/mcp",
+    "repo": null,
+    "install": "claude mcp add --transport http workos https://mcp.workos.com/mcp",
+    "caveats": [
+      "MCP·프로덕션·쓰기 관리자 토글이 기본 ON"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "WorkOS docs: MCP",
+        "url": "https://workos.com/docs/mcp"
+      },
+      {
+        "label": "Claude directory: WorkOS",
+        "url": "https://claude.ai/directory/d3b03e81-aeaa-42bf-9c52-5270d5273b2d"
+      },
+      {
+        "label": "MCP Registry: workos",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=workos"
+      }
+    ]
+  },
+  {
+    "id": "web-resend-mcp",
+    "name": "Resend MCP",
+    "vendor": "Resend",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "이메일 발송·템플릿·연락처를 다루는 85개 도구",
+    "description": "Resend의 원격 MCP로, 브로드캐스트·템플릿·연락처·세그먼트·자동화·이메일 취소·API 키 생성까지 85개 도구를 제공합니다. Claude 커넥터 디렉터리에 등록돼 Claude 구독으로 바로 연결합니다. 앱의 이메일 기능을 에이전트가 설정·점검할 때 유용하지만, 브로드캐스트처럼 실제로 메일이 나가는 도구가 있으니 승인 설정을 꼼꼼히 하세요.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Resend 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.resend.com/",
+    "caveats": [
+      "세부 정보는 Claude 디렉터리 기준(벤더 문서 미확인)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Resend",
+        "url": "https://claude.ai/directory/b770b020-8081-435f-8e05-4bee9c2a8772"
+      }
+    ]
+  },
+  {
+    "id": "web-stripe-mcp",
+    "name": "Stripe MCP",
+    "vendor": "Stripe",
+    "domain": "web",
+    "category": "데이터·인증·결제",
+    "tagline": "결제 API·문서·구현 플래너를 담은 Stripe MCP",
+    "description": "Stripe의 원격 MCP로, stripe_api_search/details/read/write, 문서 검색, stripe_implementation_planner, 분석(프리뷰), Treasury 자금 이동(퍼블릭 프리뷰) 도구를 제공합니다. stripe agent setup이 설치된 에이전트를 감지해 MCP와 Stripe 스킬을 한 번에 설정하고, OAuth 권한은 샌드박스와 라이브 모드에 따로 줄 수 있습니다. 환불과 외부 송금은 URL을 통한 사람 확인을 거쳐야 합니다.",
+    "connect": [
+      "remote-mcp",
+      "skills",
+      "cli",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Stripe 계정 요금 별도",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.stripe.com/mcp",
+    "repo": null,
+    "install": "npm i -g @stripe/cli && stripe agent setup",
+    "caveats": [
+      "2026-11-30부터 전체 권한 시크릿 키·비에이전트 제한 키 거부 — agent API 키나 OAuth로 전환",
+      "관리자는 환경별로 MCP를 끌 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Stripe MCP docs",
+        "url": "https://docs.stripe.com/mcp"
+      },
+      {
+        "label": "mcpservers.org: agent-toolkit",
+        "url": "https://mcpservers.org/servers/stripe/agent-toolkit"
+      }
+    ]
+  },
+  {
+    "id": "web-next-devtools-mcp",
+    "name": "Next.js DevTools MCP (next-devtools-mcp)",
+    "vendor": "Vercel",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "Next.js 16 개발 서버의 /_next/mcp를 잇는 브리지",
+    "description": "실행 중인 Next.js 16+ 개발 서버를 찾아 기본으로 켜진 /_next/mcp 엔드포인트를 프록시하는 Vercel 공식 로컬 MCP로, nextjs_index·nextjs_call(오류·라우트·로그·서버 액션)·nextjs_docs 도구를 제공합니다. Claude Code·Codex·Cursor·Gemini·Antigravity·VS Code에서 쓰며 Node v20.19+가 필요합니다. v0.4.0부터 문서와 업그레이드·Cache Components 워크플로는 에이전트 스킬로 옮겨졌습니다.",
+    "connect": [
+      "local-mcp",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "claude mcp add next-devtools npx next-devtools-mcp@latest",
+    "caveats": [
+      "내장 업그레이드 도구를 설명하는 디렉터리 목록은 오래된 정보"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "next-devtools-mcp v0.4.0 README",
+        "url": "https://cdn.jsdelivr.net/npm/next-devtools-mcp@0.4.0/README.md"
+      },
+      {
+        "label": "mcpservers.org(오래된 목록)",
+        "url": "https://mcpservers.org/servers/vercel/next-devtools-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-angular-cli-mcp",
+    "name": "Angular CLI MCP server",
+    "vendor": "Angular (Google)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "ng mcp로 여는 Angular 공식 MCP",
+    "description": "Angular CLI에 들어 있는 공식 로컬 MCP로, ai_tutor·devserver_start/stop·get_best_practices·list_projects·onpush_zoneless_migration·run_target·search_documentation 도구를 제공합니다. --read-only와 --local-only 플래그로 범위를 줄일 수 있습니다. 문서에는 Cursor·Antigravity·JetBrains AI·VS Code가 클라이언트로 나옵니다.",
+    "connect": [
+      "local-mcp",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://angular.dev/ai/mcp",
+    "repo": null,
+    "install": "npx -y @angular/cli mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Angular docs: MCP",
+        "url": "https://angular.dev/ai/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-svelte-mcp",
+    "name": "Svelte MCP (@sveltejs/mcp)",
+    "vendor": "Svelte",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "Svelte 문서를 에이전트에 주는 공식 MCP",
+    "description": "Svelte 팀의 공식 MCP로, Svelte 문서에 MCP 인터페이스를 제공합니다. 임베딩 기능에는 Voyage API 키가 필요하고, 테스트용 로컬 Streamable HTTP 모드가 있습니다. 학습 데이터보다 최신 문서를 근거로 Svelte 코드를 쓰게 할 때 유용합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "임베딩엔 Voyage API 키 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "mcpservers.org: sveltejs/mcp",
+        "url": "https://mcpservers.org/servers/sveltejs/mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-astro-docs-mcp",
+    "name": "Astro Docs MCP",
+    "vendor": "Astro",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "설치 없이 쓰는 Astro 공식 무료 문서 MCP",
+    "description": "Astro의 공식 원격 문서 MCP로, kapa.ai API 기반이며 무료·오픈소스이고 로컬 설치가 필요 없습니다. Claude Code·Codex·Cursor·VS Code·Gemini CLI·Claude.ai·Antigravity·Copilot Coding Agent 등에서 URL만 추가하면 됩니다. astro@7부터는 AI 에이전트를 감지하면 astro dev·preview를 백그라운드로 실행하고 /_astro/status를 엽니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 67,
+    "updated": "2025-10",
+    "homepage": "https://docs.astro.build/en/guides/build-with-ai/",
+    "repo": "withastro/docs-mcp",
+    "install": "claude mcp add --transport http astro-docs https://mcp.docs.astro.build/mcp",
+    "caveats": [
+      "백그라운드 dev 서버는 ASTRO_DEV_BACKGROUND=0으로 끔"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Astro docs: Build with AI",
+        "url": "https://docs.astro.build/en/guides/build-with-ai/"
+      },
+      {
+        "label": "GitHub API: withastro/docs-mcp",
+        "url": "https://api.github.com/repos/withastro/docs-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-nuxt-mcp",
+    "name": "Nuxt MCP server",
+    "vendor": "Nuxt",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "Nuxt 문서·모듈·배포 정보 공식 원격 MCP",
+    "description": "Nuxt의 공식 원격 문서 MCP로, 문서 페이지(3.x/4.x/5.x)·블로그·배포 프로바이더 리소스와 list-documentation-pages·get-documentation-page·list-modules 등 도구를 제공합니다. Claude Code·Cursor·Windsurf가 클라이언트로 명시돼 있습니다. 컴포넌트와 아이콘은 별도의 Nuxt UI MCP가 맡습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 공개(요금 언급 없음)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://nuxt.com/raw/docs/4.x/guide/ai/mcp.md",
+    "repo": null,
+    "install": "https://nuxt.com/mcp",
+    "caveats": [
+      "예전 mcp.nuxt.com 주소의 현재 상태는 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Nuxt docs: MCP Server",
+        "url": "https://nuxt.com/raw/docs/4.x/guide/ai/mcp.md"
+      },
+      {
+        "label": "nuxt.com/llms.txt",
+        "url": "https://nuxt.com/llms.txt"
+      }
+    ]
+  },
+  {
+    "id": "web-nuxt-mcp-dev",
+    "name": "nuxt-mcp-dev / vite-plugin-mcp",
+    "vendor": "Anthony Fu (antfu)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "Nuxt·Vite 개발 서버를 MCP로 여는 실험 플러그인",
+    "description": "Anthony Fu의 저장소로, Nuxt 모듈 nuxt-mcp-dev와 Vite 플러그인 vite-plugin-mcp를 담아 개발 서버의 런타임 컨텍스트를 에이전트에 제공합니다. Vite·Vue에는 공식 MCP가 없어 사실상 주요 선택지이지만 'Experimental. Use with caution.'으로 표시돼 있습니다. 앱용 MCP 서버를 만들려면 @nuxtjs/mcp-toolkit을 쓰라고 안내합니다.",
+    "connect": [
+      "local-mcp",
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "experimental",
+    "stars": 912,
+    "updated": "2026-03",
+    "homepage": "https://github.com/antfu/nuxt-mcp-dev",
+    "repo": "antfu/nuxt-mcp-dev",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: antfu/nuxt-mcp-dev",
+        "url": "https://github.com/antfu/nuxt-mcp-dev"
+      },
+      {
+        "label": "GitHub API",
+        "url": "https://api.github.com/repos/antfu/nuxt-mcp-dev"
+      }
+    ]
+  },
+  {
+    "id": "web-vite-plugin-vue-mcp",
+    "name": "vite-plugin-vue-mcp",
+    "vendor": "webfansplz (커뮤니티)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "Vue 컴포넌트 트리·Pinia 상태를 보는 Vite 플러그인",
+    "description": "Vite 플러그인으로 Vue 앱의 컴포넌트 트리·컴포넌트 상태·라우트·Pinia 상태를 get-component-tree, get-component-state 같은 MCP 도구로 노출합니다. 표준 MCP라 Claude Code 등 구독 클라이언트에 그대로 붙습니다. 다만 2025년 4월 이후 업데이트가 없어 최신 Vue·Vite와 호환되는지 확인이 필요합니다.",
+    "connect": [
+      "local-mcp",
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 578,
+    "updated": "2025-04",
+    "homepage": "https://github.com/webfansplz/vite-plugin-vue-mcp",
+    "repo": "webfansplz/vite-plugin-vue-mcp",
+    "install": null,
+    "caveats": [
+      "2025-04 이후 업데이트 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: vite-plugin-vue-mcp",
+        "url": "https://github.com/webfansplz/vite-plugin-vue-mcp"
+      },
+      {
+        "label": "GitHub API",
+        "url": "https://api.github.com/repos/webfansplz/vite-plugin-vue-mcp"
+      }
+    ]
+  },
+  {
+    "id": "web-laravel-boost",
+    "name": "Laravel Boost",
+    "vendor": "Laravel",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "가이드라인·스킬·MCP를 묶은 Laravel 공식 도구",
+    "description": "설치된 패키지와 버전에 맞춘 Laravel 공식 AI 가이드라인에 Agent Skills·프로젝트 규칙·MCP까지 묶은 도구입니다. 13.x 문서는 Laravel 10.x~13.x와 Livewire·Flux UI·Folio·Herd·Inertia 가이드라인을 다루며, boost:update와 --discover로 새 패키지를 반영합니다. 구독 에이전트가 Laravel 관례에 맞는 코드를 쓰게 만드는 기본 장치입니다.",
+    "connect": [
+      "local-mcp",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://laravel.com/docs/13.x/boost",
+    "repo": null,
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Laravel 13.x Boost docs",
+        "url": "https://laravel.com/docs/13.x/boost"
+      },
+      {
+        "label": "Laravel blog: Boost 발표",
+        "url": "https://blog.laravel.com/announcing-laravel-boost"
+      }
+    ]
+  },
+  {
+    "id": "web-tidewave-rails",
+    "name": "Tidewave Rails",
+    "vendor": "Dashbit (Tidewave)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "gem 버전에 맞춘 문서까지 주는 Rails용 MCP",
+    "description": "Dashbit의 무료 오픈소스 MCP gem으로, development 그룹에 추가하면 localhost의 /tidewave/mcp에서 런타임 도구를 제공하며 내 gem 버전에 정확히 맞춘 문서 조회도 포함합니다. Claude Code·Codex·OpenCode·Copilot 등 대부분의 코딩 에이전트에서 Tidewave 구독 없이 쓸 수 있습니다. Rails 핵심 팀의 MCP가 없는 상황에서 가장 잘 갖춰진 선택지입니다.",
+    "connect": [
+      "local-mcp",
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot"
+    ],
+    "aiCost": "plan",
+    "price": "MCP 무료, Tidewave 앱은 Free·$8·$12/사용자/월",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": 476,
+    "updated": "2026-09",
+    "homepage": "https://tidewave.ai",
+    "repo": "tidewave-ai/tidewave_rails",
+    "install": "gem \"tidewave\", group: :development",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "tidewave-ai/tidewave_rails",
+        "url": "https://github.com/tidewave-ai/tidewave_rails"
+      },
+      {
+        "label": "Tidewave pricing",
+        "url": "https://tidewave.ai/pricing"
+      },
+      {
+        "label": "tidewave.ai",
+        "url": "https://tidewave.ai"
+      }
+    ]
+  },
+  {
+    "id": "web-rails-mcp-server",
+    "name": "rails-mcp-server",
+    "vendor": "maquina-app (커뮤니티)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "여러 Rails 프로젝트와 문서를 다루는 커뮤니티 gem",
+    "description": "STDIO(기본)나 HTTP 모드로 도는 Ruby gem MCP로, 여러 Rails 프로젝트를 함께 다루고 Rails·Turbo·Stimulus·Kamal 문서에 접근합니다. 표준 MCP라 구독 클라이언트에서 그대로 실행됩니다. Tidewave Rails와 함께 Rails의 대표 선택지이며 2026년 10월에도 활발히 갱신됩니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 573,
+    "updated": "2026-10",
+    "homepage": "https://github.com/maquina-app/rails-mcp-server",
+    "repo": "maquina-app/rails-mcp-server",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: rails-mcp-server",
+        "url": "https://github.com/maquina-app/rails-mcp-server"
+      },
+      {
+        "label": "RubyGems",
+        "url": "https://rubygems.org/gems/rails-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-django-mcp-server",
+    "name": "django-mcp-server",
+    "vendor": "gts360 (커뮤니티)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "Django 모델을 MCP 도구로 노출하는 커뮤니티 앱",
+    "description": "INSTALLED_APPS에 추가하고 ModelQueryToolset·MCPToolset으로 Django 모델을 MCP 도구로 노출하는 커뮤니티 패키지(MIT)입니다. README에는 'Claude AI 원격 통합으로 검증됨' 배지가 붙어 있습니다. Django에는 공식 MCP가 없고 Tidewave Python도 아카이브됐으니, 모델 쓰기 도구를 노출하는 패키지는 꼼꼼히 검토해야 합니다.",
+    "connect": [
+      "library",
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 383,
+    "updated": "2026-03",
+    "homepage": "https://github.com/gts360/django-mcp-server",
+    "repo": "gts360/django-mcp-server",
+    "install": null,
+    "caveats": [
+      "모델 쓰기 도구 노출 여부 점검 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: django-mcp-server",
+        "url": "https://github.com/gts360/django-mcp-server"
+      },
+      {
+        "label": "GitHub API",
+        "url": "https://api.github.com/repos/gts360/django-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-mcp-django",
+    "name": "mcp-django",
+    "vendor": "joshuadavidthomas (커뮤니티)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "읽기 전용 리소스 중심 Django 프로젝트 MCP",
+    "description": "Django 프로젝트 구조를 들여다보는 커뮤니티 MCP로, 읽기 전용 리소스와 선택형 셸을 제공합니다. 모델 쓰기 도구를 노출하는 패키지보다 보수적으로 쓸 수 있습니다. 규모는 작지만 2026년 10월에도 갱신되고 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(로컬 실행)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 40,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "joshuadavidthomas/mcp-django",
+    "install": null,
+    "caveats": [
+      "선택형 셸은 임의 코드를 실행할 수 있어 켤 때 주의"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub API: mcp-django",
+        "url": "https://api.github.com/repos/joshuadavidthomas/mcp-django"
+      }
+    ]
+  },
+  {
+    "id": "web-tidewave-python",
+    "name": "Tidewave Python",
+    "vendor": "Dashbit (Tidewave)",
+    "domain": "web",
+    "category": "프레임워크",
+    "tagline": "아카이브됨 — Django·FastAPI·Flask 지원 중단",
+    "description": "Django·FastAPI·Flask용 Tidewave 패키지였지만 저장소가 아카이브됐습니다(마지막 푸시 2026-06-14). 아카이브 이유는 확인되지 않았습니다. Django 사용자는 django-mcp-server 같은 커뮤니티 패키지로 옮겨야 합니다.",
+    "connect": [
+      "local-mcp",
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "plan",
+    "price": "무료(아카이브됨)",
+    "free": true,
+    "official": "third-party",
+    "status": "archived",
+    "stars": null,
+    "updated": "2026-06",
+    "homepage": null,
+    "repo": "tidewave-ai/tidewave_python",
+    "install": null,
+    "caveats": [
+      "신규 도입 비권장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub API: tidewave_python",
+        "url": "https://api.github.com/repos/tidewave-ai/tidewave_python"
+      }
+    ]
+  },
+  {
+    "id": "web-wordpress-mcp-adapter",
+    "name": "WordPress MCP Adapter",
+    "vendor": "WordPress",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "코어 Abilities API를 MCP로 여는 공식 플러그인",
+    "description": "WordPress 6.9 코어에 들어간 Abilities API(입출력 스키마와 권한 검사를 갖춘 사이트 기능 레지스트리)를 MCP 도구·리소스·프롬프트로 바꿔 HTTP와 STDIO로 노출하는 공식 플러그인입니다. 노출은 meta.mcp.public 등으로 기능마다 옵트인해야 하므로 기본적으로 안전합니다. WP 6.8+가 필요하고(6.9+ 권장), MCP 클라이언트가 로그인한 WP 사용자로 동작하니 최소 권한 역할을 쓰세요.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(wordpress.org 플러그인)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "클라이언트가 로그인 사용자 권한으로 동작 — 최소 권한 역할 사용",
+      "기능별 옵트인 설정 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "WordPress Developer Blog",
+        "url": "https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/"
+      },
+      {
+        "label": "wordpress.org 플러그인",
+        "url": "https://wordpress.org/plugins/?p=374872"
+      },
+      {
+        "label": "InstaWP 리뷰",
+        "url": "https://instawp.com/wordpress-mcp-adapter-review/"
+      }
+    ]
+  },
+  {
+    "id": "web-sanity-mcp",
+    "name": "Sanity MCP server",
+    "vendor": "Sanity",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "스키마 배포·문서 생성까지, GA된 원격 MCP",
+    "description": "Sanity의 원격 MCP로 GA 상태이며, 문서·스키마·릴리스·미디어 생성 등 40개 이상 도구를 제공합니다. Claude 디렉터리에는 deploy_schema·create_documents_from_markdown·create_dataset·add_cors_origin 같은 도구가 올라 있습니다. 프런트엔드를 짜는 같은 세션에서 스키마를 배포하고 콘텐츠를 채울 수 있지만, 쓰기 범위는 조심해야 합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.sanity.io/blog/sanity-remote-mcp-server-is-generally-available",
+    "repo": null,
+    "install": "https://mcp.sanity.io",
+    "caveats": [
+      "구 로컬 @sanity/mcp-server는 deprecated"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Sanity blog: remote MCP GA",
+        "url": "https://www.sanity.io/blog/sanity-remote-mcp-server-is-generally-available"
+      },
+      {
+        "label": "Sanity 출시 글",
+        "url": "https://www.sanity.io/blog/introducing-sanity-model-context-protocol-server"
+      },
+      {
+        "label": "Claude directory: Sanity",
+        "url": "https://claude.ai/directory/118aa78d-5b78-4e2b-9191-7a6af7cf822e"
+      }
+    ]
+  },
+  {
+    "id": "web-contentful-mcp",
+    "name": "Contentful MCP",
+    "vendor": "Contentful",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "엔트리·에셋·콘텐츠 타입을 다루는 70개 도구",
+    "description": "Contentful의 원격 MCP로, 엔트리·에셋·콘텐츠 타입·AI Actions·택소노미 개념을 다루는 70개 도구를 제공합니다. Claude 디렉터리 커넥터로 연결하며 오픈소스 로컬 버전도 있습니다. 헤드리스 사이트의 콘텐츠 모델과 데이터를 에이전트가 함께 관리할 때 좋습니다.",
+    "connect": [
+      "remote-mcp",
+      "local-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.contentful.com/mcp",
+    "caveats": [
+      "원격 MCP 플랜 조건 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Contentful",
+        "url": "https://claude.ai/directory/caf98118-2da7-45bd-8ce8-ea7b49220782"
+      },
+      {
+        "label": "Glama: Contentful MCP",
+        "url": "https://glama.ai/mcp/servers/tflwnv2g4w"
+      }
+    ]
+  },
+  {
+    "id": "web-storyblok-mcp",
+    "name": "Storyblok MCP",
+    "vendor": "Storyblok",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "search·describe·execute 패턴의 원격 MCP",
+    "description": "Storyblok의 원격 MCP로, OAuth나 API 키로 연결해 Management API를 search/describe/execute 패턴으로 노출합니다. 적은 도구 수로 전체 API에 접근하는 구조라 컨텍스트를 아낍니다. 출처가 제3자 정리 자료라 세부 사항은 공식 문서로 확인하는 게 좋습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.storyblok.com/mcp",
+    "caveats": [
+      "제3자 자료 기준 — 공식 문서 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Developers Digest",
+        "url": "https://www.developersdigest.tech/mcp-servers/storyblok"
+      }
+    ]
+  },
+  {
+    "id": "web-strapi-mcp",
+    "name": "Strapi MCP server",
+    "vendor": "Strapi",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "Strapi에 내장된 무료 MCP, Admin 토큰으로 제어",
+    "description": "Strapi 코어에 내장된 무료 MCP로, config/server에서 mcp: { enabled: true }를 켜면 http://localhost:1337/mcp에서 Content Manager의 생성·조회·수정·삭제·게시를 AI 클라이언트에 엽니다. 모든 작업은 Admin 토큰 권한으로 제한되고, 토큰 권한에 따라 보이는 도구가 달라집니다. 별도의 Docs MCP와 공식 스킬(strapi/skills)도 있어 Claude Code·Codex·Cursor에서 쓰기 좋습니다.",
+    "connect": [
+      "local-mcp",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 기능",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.strapi.io/cms/features/strapi-mcp-server.md",
+    "repo": null,
+    "install": "claude mcp add strapi-mcp --transport http http://localhost:1337/mcp -H \"Authorization: Bearer YOUR_ADMIN_TOKEN\"",
+    "caveats": [
+      "에이전트 권한 = 토큰 권한 — 에이전트별 최소 권한 토큰 사용",
+      "Claude 디렉터리엔 없음 — 웹에서 쓰려면 공개 URL 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Strapi docs: MCP server",
+        "url": "https://docs.strapi.io/cms/features/strapi-mcp-server.md"
+      },
+      {
+        "label": "Strapi docs llms.txt",
+        "url": "https://docs.strapi.io/llms.txt"
+      },
+      {
+        "label": "strapi/skills",
+        "url": "https://github.com/strapi/skills"
+      }
+    ]
+  },
+  {
+    "id": "web-payload-mcp",
+    "name": "Payload MCP plugin",
+    "vendor": "Payload",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "컬렉션별 권한을 고르는 Payload 공식 MCP 플러그인",
+    "description": "완전 오픈소스인 @payloadcms/plugin-mcp로, /api/mcp 엔드포인트에 컬렉션별 find/create/update/delete 토글을 두고 커스텀 프롬프트·도구·리소스를 추가할 수 있습니다. 모든 요청에 MCP → API Keys 컬렉션의 Bearer 키가 필요하며, 키 소유자의 접근 규칙과 훅이 그대로 적용됩니다. VS Code·Cursor·Claude Code에서 주로 mcp-remote로 연결하고, payloadcms/skills 스킬도 있습니다.",
+    "connect": [
+      "local-mcp",
+      "library",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 45500,
+    "updated": "2026-10",
+    "homepage": "https://payloadcms.com/docs/plugins/mcp",
+    "repo": "payloadcms/payload",
+    "install": "pnpm add @payloadcms/plugin-mcp",
+    "caveats": [
+      "키 소유자 권한으로 동작 — 에이전트별 최소 권한 키 사용",
+      "베타/정식 표기 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Payload docs: MCP Plugin",
+        "url": "https://payloadcms.com/docs/plugins/mcp"
+      },
+      {
+        "label": "npm @payloadcms/plugin-mcp",
+        "url": "https://www.npmjs.com/package/@payloadcms/plugin-mcp"
+      },
+      {
+        "label": "payloadcms/skills",
+        "url": "https://github.com/payloadcms/skills"
+      }
+    ]
+  },
+  {
+    "id": "web-shopify-dev-mcp",
+    "name": "Shopify Dev MCP",
+    "vendor": "Shopify",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "인증 없이 쓰는 Shopify 문서·스키마 검증 MCP",
+    "description": "인증 없이 로컬에서 도는 Shopify 공식 MCP로, 문서·API 스키마 조회와 GraphQL·Liquid·Extensions 코드 검증을 제공합니다. 권장 설치 방법은 Claude Code·Codex·Antigravity CLI·Cursor·VS Code용 Shopify AI Toolkit 플러그인입니다. Shopify 앱이나 테마를 만들 때 구독 에이전트가 정확한 API를 쓰게 해 줍니다.",
+    "connect": [
+      "local-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료(인증 불필요)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://shopify.dev/docs/apps/build/devmcp",
+    "repo": null,
+    "install": "npx -y @shopify/dev-mcp@latest",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Shopify Dev MCP docs",
+        "url": "https://shopify.dev/docs/apps/build/devmcp"
+      }
+    ]
+  },
+  {
+    "id": "web-shopify-storefront-mcp",
+    "name": "Shopify Storefront MCP (UCP)",
+    "vendor": "Shopify",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "스토어별 카탈로그·카트·체크아웃 커머스 MCP",
+    "description": "스토어마다 열리는 Shopify의 에이전트 커머스용 MCP로, UCP 카탈로그 도구는 https://{shop}.myshopify.com/api/ucp/mcp에서 에이전트 프로필과 함께 동작합니다. UCP는 에이전트·판매자·PSP·자격 증명 제공자를 위한 개방형 표준이며, Shopify는 Catalog·Cart·Checkout·Order MCP를 제공합니다. 대부분의 UCP 용도에는 Catalog MCP가 권장됩니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://shopify.dev/docs/agents/catalog/storefront-mcp",
+    "repo": null,
+    "install": "https://{shop}.myshopify.com/api/ucp/mcp",
+    "caveats": [
+      "에이전트 프로필 필요",
+      "Checkout MCP 가용성(파트너 한정설)은 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Shopify Storefront MCP",
+        "url": "https://shopify.dev/docs/agents/catalog/storefront-mcp"
+      },
+      {
+        "label": "Shopify agents docs",
+        "url": "https://shopify.dev/docs/agents"
+      }
+    ]
+  },
+  {
+    "id": "web-shopify-store-connector",
+    "name": "Shopify store management connector",
+    "vendor": "Shopify",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "상품·주문·고객을 다루는 Claude용 Shopify 커넥터",
+    "description": "Claude 커넥터 디렉터리에 등록된 Shopify 스토어 관리 커넥터로, 상품·주문·고객을 다룹니다. Claude 구독에서 바로 연결해 스토어 운영 작업을 대화로 처리할 수 있습니다. 앱 개발용 Dev MCP나 구매 흐름용 Storefront MCP와는 용도가 다릅니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://setup.shopify.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Shopify",
+        "url": "https://claude.ai/directory/80917cb7-3071-4fca-b053-a4262d356c60"
+      }
+    ]
+  },
+  {
+    "id": "web-wix-mcp",
+    "name": "Wix MCP",
+    "vendor": "Wix",
+    "domain": "web",
+    "category": "CMS·커머스",
+    "tagline": "Wix 문서 검색과 사이트 관리 원격 MCP",
+    "description": "Wix의 원격 MCP로, WDS·REST·SDK·Headless·앱 빌드 문서 검색이 중심이고 사이트 관리 기능도 있습니다. Claude 커넥터 디렉터리로 바로 연결합니다. Wix 사이트나 Wix 기반 헤드리스 앱을 만들 때 정확한 API를 찾는 데 유용합니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": "https://mcp.wix.com/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude directory: Wix",
+        "url": "https://claude.ai/directory/780a3621-8271-4822-bd0b-b9cab309375d"
+      }
+    ]
+  },
+  {
+    "id": "web-sentry-mcp",
+    "name": "Sentry MCP",
+    "vendor": "Sentry",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "이슈·오류·Seer 분석을 가져오는 Sentry MCP",
+    "description": "Sentry의 원격 OAuth MCP로, 이슈·오류·프로젝트·Seer 분석을 에이전트에 가져오며 Sentry가 프로덕션 준비 완료라고 밝힌 서버입니다. find_issues·find_releases·get_issue_details 같은 도구로 오류를 찾아 Claude Code에서 바로 고치는 흐름에 맞습니다. 스타터 스택이 권하는 오류 분류 단계입니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요(Sentry 계정 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.sentry.io/ai/mcp/",
+    "repo": "getsentry/sentry-mcp",
+    "install": "claude mcp add sentry --transport http https://mcp.sentry.dev/mcp",
+    "caveats": [],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Sentry docs: MCP",
+        "url": "https://docs.sentry.io/ai/mcp/"
+      },
+      {
+        "label": "Claude directory: Sentry",
+        "url": "https://claude.ai/directory/46d6322a-5f75-4822-b739-f49261805e9c"
+      }
+    ]
+  },
+  {
+    "id": "web-posthog-mcp",
+    "name": "PostHog MCP",
+    "vendor": "PostHog",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "HogQL·플래그·실험·오류 추적 57개 도구",
+    "description": "PostHog의 원격 OAuth MCP로, HogQL 쿼리·인사이트·대시보드·기능 플래그·실험·오류 추적 등 57개 도구를 제공하고 OAuth가 US/EU 리전을 자동으로 고릅니다. 위저드가 Claude Code·Cursor·Claude Desktop·Codex·VS Code·Zed에 설치해 주며, Claude Code 플러그인은 /posthog:flags·/posthog:errors 명령을 더합니다. 일부 AI 도구는 PostHog AI 사용량으로 과금될 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요(PostHog 계정 필요)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://posthog.com/docs/model-context-protocol",
+    "repo": null,
+    "install": "npx @posthog/wizard mcp add",
+    "caveats": [
+      "일부 AI 도구는 PostHog AI 사용량으로 과금",
+      "프롬프트 인젝션 주의 경고"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "PostHog MCP docs",
+        "url": "https://posthog.com/docs/model-context-protocol"
+      },
+      {
+        "label": "PostHog Claude Code docs",
+        "url": "https://posthog.com/docs/model-context-protocol/claude-code"
+      },
+      {
+        "label": "Claude directory: PostHog",
+        "url": "https://claude.ai/directory/50688846-553c-4a12-bc21-df94d2173734"
+      }
+    ]
+  },
+  {
+    "id": "web-grafana-cloud-mcp",
+    "name": "Grafana Cloud MCP",
+    "vendor": "Grafana Labs",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "PromQL·LogQL·Web Vitals용 호스팅 MCP",
+    "description": "Grafana Cloud 전용 호스팅 MCP로, 대시보드·PromQL/LogQL·Tempo 트레이스·Pyroscope·Frontend Observability(Web Vitals·브라우저 오류)·Kubernetes·인시던트·알림·Assistant 조사까지 다룹니다. Grafana RBAC 기반 사용자별 권한으로, 브라우저 로그인으로 연결합니다. 배포 후 Web Vitals가 회복됐는지 확인하는 단계에 쓰입니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요(Grafana Cloud 계정)",
+    "free": false,
+    "official": "official",
+    "status": "preview",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "이미 연결됨",
+      "프리뷰 — 지원이 제한되고 호환성이 바뀔 수 있음",
+      "Cloud 전용(셀프호스트는 mcp-grafana)"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Grafana Cloud MCP docs",
+        "url": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/"
+      },
+      {
+        "label": "Grafana MCP servers overview",
+        "url": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers.md"
+      }
+    ]
+  },
+  {
+    "id": "web-mcp-grafana",
+    "name": "mcp-grafana",
+    "vendor": "Grafana Labs",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "셀프호스트 Grafana에도 쓰는 오픈소스 MCP",
+    "description": "Grafana Labs의 오픈소스 MCP로, 서비스 계정 토큰으로 인증하며 셀프호스트 Grafana에서도 동작합니다. uvx로 로컬에서 실행해 구독 클라이언트에 붙입니다. 호스팅 Cloud MCP를 쓸 수 없는 자체 운영 환경의 대안입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers.md",
+    "repo": null,
+    "install": "uvx mcp-grafana",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Grafana MCP servers overview",
+        "url": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers.md"
+      },
+      {
+        "label": "Grafana Cloud MCP docs",
+        "url": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/"
+      }
+    ]
+  },
+  {
+    "id": "web-datadog-mcp",
+    "name": "Datadog MCP server",
+    "vendor": "Datadog",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "APM·로그·메트릭·모니터를 다루는 Datadog MCP",
+    "description": "Datadog의 공식 원격 MCP로, 사용자 본인의 Datadog 권한으로 APM·로그·메트릭·모니터·대시보드·보안 툴셋을 쓰며 toolsets·omit_tools로 필요한 것만 켭니다. Cursor·Codex·Claude Code·VS Code·Copilot CLI·ChatGPT·Claude 등에서 연결하고, Claude 디렉터리에는 182개 도구가 올라 있습니다. HIPAA 적격이지만 GovCloud는 지원하지 않으며 '대규모 개발 중'인 서버입니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요(Datadog 계정)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.datadoghq.com/bits_ai/mcp_server/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "공정 사용 한도: 10초당 50요청, 월 10만 도구 호출",
+      "엔드포인트·인증 설정 페이지는 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Datadog MCP docs",
+        "url": "https://docs.datadoghq.com/bits_ai/mcp_server/"
+      },
+      {
+        "label": "Claude directory: Datadog",
+        "url": "https://claude.ai/directory/68268024-1a91-4316-a9e1-14ecb814cb18"
+      }
+    ]
+  },
+  {
+    "id": "web-google-analytics-mcp",
+    "name": "Google Analytics MCP",
+    "vendor": "Google",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "GA4 보고서를 읽는 구글 공식 실험적 MCP",
+    "description": "Google의 공식 Analytics MCP로, Admin·Data API로 계정·속성 정보와 기본·실시간·퍼널 보고서, 맞춤 측정기준을 읽기 전용으로 조회합니다. analytics.readonly 범위의 Application Default Credentials로 인증하는 로컬 서버입니다. 'Experimental' 표기가 붙어 있고, 이름이 비슷한 커뮤니티 서버와 혼동하지 마세요.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "무료(오픈소스)",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": 3500,
+    "updated": "2026-10",
+    "homepage": null,
+    "repo": "googleanalytics/google-analytics-mcp",
+    "install": null,
+    "caveats": [
+      "커뮤니티 surendranb/google-analytics-mcp와 혼동 주의"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "README(Glama)",
+        "url": "https://glama.ai/mcp/servers/@googleanalytics/google-analytics-mcp/blob/c3a6cad432881d911c26429a40dc9efd17a0ca5c/README.md"
+      },
+      {
+        "label": "Google developer docs",
+        "url": "https://developers.google.cn/analytics/devguides/MCP?hl=bn"
+      },
+      {
+        "label": "GitHub: googleanalytics",
+        "url": "https://github.com/googleanalytics"
+      }
+    ]
+  },
+  {
+    "id": "web-search-console-mcp",
+    "name": "search-console-mcp",
+    "vendor": "saurabhsharma2u (커뮤니티)",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "GSC·Bing·GA4를 함께 보는 인기 커뮤니티 MCP",
+    "description": "Google Search Console 공식 MCP가 없는 가운데 가장 인기 있는 커뮤니티 서버로, GSC·Bing Webmaster Tools·GA4·AdSense를 함께 다룹니다. 사이트맵 제출·삭제 같은 쓰기 도구는 명시적인 webmasters 쓰기 범위가 있어야 동작합니다. Google OAuth 토큰을 다루므로 도입 전에 코드를 검토하세요.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 307,
+    "updated": "2026-10",
+    "homepage": "https://github.com/saurabhsharma2u/search-console-mcp",
+    "repo": "saurabhsharma2u/search-console-mcp",
+    "install": null,
+    "caveats": [
+      "Google OAuth 토큰을 다룸 — 코드 검토 필수"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: search-console-mcp",
+        "url": "https://github.com/saurabhsharma2u/search-console-mcp"
+      },
+      {
+        "label": "MCP Registry: search-console",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=search-console"
+      }
+    ]
+  },
+  {
+    "id": "web-mcp-server-gsc",
+    "name": "mcp-server-gsc",
+    "vendor": "ahonn (커뮤니티)",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "사이트·검색 분석·URL 검사용 GSC MCP",
+    "description": "사이트·검색 분석·URL 검사·사이트맵을 다루는 커뮤니티 Search Console MCP입니다. 표준 로컬 MCP라 구독 클라이언트에서 실행하며, Coupler.io 같은 호스팅 브리지도 대안으로 있습니다. 라이선스 표기가 없으니 업무에 쓰기 전에 확인이 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료(라이선스 미표기)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 281,
+    "updated": "2026-09",
+    "homepage": null,
+    "repo": "ahonn/mcp-server-gsc",
+    "install": null,
+    "caveats": [
+      "라이선스 필드 없음",
+      "Google OAuth 토큰을 다룸 — 코드 검토"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama: mcp-server-gsc",
+        "url": "https://glama.ai/mcp/servers/ahonn/mcp-server-gsc"
+      },
+      {
+        "label": "GitHub API",
+        "url": "https://api.github.com/repos/ahonn/mcp-server-gsc"
+      },
+      {
+        "label": "Coupler.io 브리지",
+        "url": "https://www.coupler.io/mcp/google-search-console"
+      }
+    ]
+  },
+  {
+    "id": "web-ahrefs-mcp",
+    "name": "Ahrefs MCP",
+    "vendor": "Ahrefs",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "Lite 이상 플랜용 Ahrefs 공식 원격 MCP",
+    "description": "Ahrefs의 호스팅 MCP로 Lite 플랜 이상이면 연결할 수 있으며, Claude 디렉터리에는 Brand Radar AI 응답 도구와 일괄 분석을 포함해 약 61개 도구가 올라 있습니다. Claude Desktop/Web·Claude Code·ChatGPT·Lovable 등의 설정 가이드가 있고, 호출은 직접 API처럼 월 API 유닛을 소모합니다. 커스텀 스크립트·브리지·독립 JSON-RPC 클라이언트로 호출하는 것은 약관상 금지입니다.",
+    "connect": [
+      "remote-mcp",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "Lite 플랜 이상(API 유닛 소모)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+    "repo": null,
+    "install": "https://api.ahrefs.com/mcp/mcp",
+    "caveats": [
+      "OAuth 키당 월 20만 유닛 기본 한도",
+      "스크립트·브리지로 직접 호출 금지(약관)",
+      "구 로컬 서버 저장소는 아카이브"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Ahrefs docs: MCP",
+        "url": "https://docs.ahrefs.com/en/mcp/docs/introduction"
+      },
+      {
+        "label": "Claude directory: Ahrefs",
+        "url": "https://claude.ai/directory/098cb32a-ba21-4770-97dd-78bb54655419"
+      },
+      {
+        "label": "GitHub API: 구 로컬 서버(아카이브)",
+        "url": "https://api.github.com/repos/ahrefs/ahrefs-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "web-semrush-mcp",
+    "name": "Semrush MCP",
+    "vendor": "Semrush",
+    "domain": "web",
+    "category": "관측·분석·SEO",
+    "tagline": "읽기 전용 Semrush MCP와 SEO 감사 스킬",
+    "description": "Semrush의 공식 원격 MCP로, OAuth 2.1(또는 API 키)로 연결하는 읽기 전용 서버이며 키워드·백링크·도메인·오가닉 리서치 도구를 제공합니다. Semrush One Starter·One Pro+·SEO Classic Pro·Guru 플랜에 API 50,000유닛이 포함되고, ChatGPT·Claude·Perplexity용 공식 앱도 있습니다. technical-seo-audit 같은 semrush/skills를 함께 설치하면 감사 작업을 바로 돌릴 수 있습니다.",
+    "connect": [
+      "remote-mcp",
+      "skills",
+      "connector"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "일부 플랜에 API 50,000유닛 포함",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.semrush.com/kb/1618-mcp",
+    "repo": null,
+    "install": "claude mcp add semrush https://mcp.semrush.com/v2/mcp -t http",
+    "caveats": [
+      "Claude 디렉터리 커넥터 URL은 /claude/v1/mcp로 다름",
+      "트래픽·시장 데이터는 Trends API 플랜 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Semrush KB: MCP",
+        "url": "https://www.semrush.com/kb/1618-mcp"
+      },
+      {
+        "label": "Semrush Developer docs",
+        "url": "https://developer.semrush.com/api/v3/introduction/semrush-mcp/"
+      },
+      {
+        "label": "semrush/skills",
+        "url": "https://github.com/semrush/skills"
+      }
+    ]
+  }
+]

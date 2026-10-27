@@ -1,0 +1,630 @@
+[
+ {
+  "id": "pd-coderabbit",
+  "name": "CodeRabbit",
+  "vendor": "CodeRabbit",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "PR과 로컬 변경을 AI가 리뷰, 에이전트가 수정",
+  "description": "GitHub 같은 저장소의 PR에 자동으로 리뷰 코멘트를 달고, CodeRabbit CLI로 커밋 전 로컬 변경도 리뷰해 주는 서비스입니다. Claude Code용 공식 플러그인이 있어 `/coderabbit:coderabbit-review`로 리뷰를 돌리고 지적 사항을 Claude가 바로 고치게 할 수 있습니다. Codex·Cursor 연동 가이드와 `coderabbit skills`도 제공합니다. 리뷰는 CodeRabbit 요금제로 돌아가고, Claude·ChatGPT 구독은 지적 사항을 고치는 데 쓰입니다. 추천자는 리뷰 품질을 높게 평가했고, PR 코멘트를 모아 에이전트에게 다시 넘기는 방식으로 씁니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "cli",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "공개 저장소 무료 · Essentials $24/인/월(연간)부터",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.coderabbit.ai",
+  "repo": null,
+  "install": "claude plugin install coderabbit",
+  "caveats": [
+   "플러그인을 쓰기 전에 CodeRabbit CLI를 설치하고 `coderabbit auth login` 필요",
+   "무료 CLI는 기본 정적 분석만 되고 하루 사용량 제한이 있음",
+   "한도를 넘긴 리뷰는 파일당 $0.25 종량제(월 상한 설정 가능)"
+  ],
+  "korea": "설정 파일에서 `language: ko-KR`로 리뷰 언어를 한국어로 지정 가능",
+  "starter": true,
+  "sources": [
+   {
+    "label": "CodeRabbit 요금제",
+    "url": "https://www.coderabbit.ai/pricing"
+   },
+   {
+    "label": "Claude Code 연동 문서",
+    "url": "https://docs.coderabbit.ai/cli/claude-code-integration"
+   },
+   {
+    "label": "@saqoosha 추천 글",
+    "url": "https://zenn.dev/saqoosha/articles/ai-coding-journey-2025"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@oikon48, @saqoosha)"
+ },
+ {
+  "id": "pd-openrouter",
+  "name": "OpenRouter",
+  "vendor": "OpenRouter",
+  "domain": "general",
+  "category": "검색·실행 환경",
+  "tagline": "API 키 하나로 500개 넘는 모델을 쓰는 게이트웨이",
+  "description": "80개 이상 제공사의 500개 넘는 모델을 API 키 하나와 선불 크레딧으로 호출하는 LLM 게이트웨이입니다. Claude Code의 `ANTHROPIC_BASE_URL`을 `https://openrouter.ai/api`로, `ANTHROPIC_AUTH_TOKEN`을 OpenRouter 키로 바꾸면 다른 모델로도 돌릴 수 있습니다. 다만 이때는 Claude 구독이 아니라 OpenRouter 크레딧에서 토큰 단위로 빠집니다. 직접 만드는 앱이나 스크립트에 여러 모델을 붙이거나, 구독 밖에서 값싼 모델을 시험해 볼 때 유용합니다.",
+  "connect": [
+   "byok",
+   "library"
+  ],
+  "worksWith": [],
+  "aiCost": "apikey",
+  "price": "모델 정가 + 크레딧 구매 시 수수료 5.5% · 무료 모델 하루 50회",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://openrouter.ai",
+  "repo": null,
+  "install": "export ANTHROPIC_BASE_URL=\"https://openrouter.ai/api\"",
+  "caveats": [
+   "Claude·ChatGPT 구독과 별도로 크레딧을 충전해 토큰 단위로 과금",
+   "Claude Code에 연결할 때는 `ANTHROPIC_API_KEY`를 빈 값으로 둬야 함",
+   "무료 모델은 분당 20회, 하루 50회 제한($10 이상 충전하면 하루 1,000회)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "OpenRouter 요금제",
+    "url": "https://openrouter.ai/pricing"
+   },
+   {
+    "label": "Claude Code 연동 가이드",
+    "url": "https://openrouter.ai/docs/guides/guides/claude-code-integration"
+   },
+   {
+    "label": "@nityeshaga 추천 저장소(Dictate)",
+    "url": "https://github.com/nityeshaga/dictate"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou, @nityeshaga)"
+ },
+ {
+  "id": "pd-ghostty",
+  "name": "Ghostty",
+  "vendor": "Ghostty",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "GPU 가속을 쓰는 빠른 네이티브 터미널",
+  "description": "플랫폼 네이티브 UI와 GPU 가속을 쓰는 오픈소스 터미널 에뮬레이터입니다. 멀티 윈도·탭·분할 창과 Kitty 그래픽 프로토콜 같은 최신 기능을 지원합니다. 자체 AI 기능은 없지만 Claude Code·Codex CLI를 띄워 두는 터미널로 많이 쓰입니다. 렌더링 라이브러리 `libghostty`는 cmux 같은 에이전트용 터미널의 기반이기도 합니다. 추천자들은 설정 없이도 기본값이 좋고 화면 그리기가 매우 빠르다는 점을 꼽습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 62644,
+  "updated": "2026-10",
+  "homepage": "https://ghostty.org",
+  "repo": "ghostty-org/ghostty",
+  "install": "brew install --cask ghostty",
+  "caveats": [
+   "AI 연동이 없는 터미널(분야의 주요 도구라서 수록)",
+   "공식 배포는 macOS 13 이상과 Linux",
+   "Homebrew cask는 커뮤니티가 관리"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/ghostty-org/ghostty"
+   },
+   {
+    "label": "Ghostty 다운로드",
+    "url": "https://ghostty.org/download"
+   },
+   {
+    "label": "@ai_masaou 추천 글",
+    "url": "https://note.com/masa_wunder/n/n545739331e84"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou, @midudev, @saqoosha)"
+ },
+ {
+  "id": "pd-cmux",
+  "name": "cmux",
+  "vendor": "Manaflow",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "에이전트 알림과 세로 탭을 갖춘 Ghostty 기반 터미널",
+  "description": "libghostty로 만든 macOS 네이티브 터미널입니다. 에이전트가 입력을 기다리면 창에 알림 링이 켜지고, 세로 탭 사이드바에 git 브랜치·PR 상태·포트가 표시됩니다. Claude Code·Codex 같은 터미널 에이전트를 그대로 실행하므로 쓰던 구독을 그대로 씁니다. `cmux claude-teams`로 Claude Code 팀 모드를 분할 창으로 띄우거나, `cmux hooks setup`으로 세션 재개를 연결할 수 있습니다. CLI·소켓 API와 스크립트로 조작하는 내장 브라우저가 있어 에이전트가 창 분할이나 개발 서버 확인까지 직접 할 수 있고, 기존 Ghostty 설정도 그대로 읽습니다.",
+  "connect": [
+   "app",
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "none",
+  "price": "무료 (GPL-3.0+) · Founder's Edition 후원은 선택",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 28546,
+  "updated": "2026-10",
+  "homepage": "https://cmux.com",
+  "repo": "manaflow-ai/cmux",
+  "install": "brew tap manaflow-ai/cmux && brew install --cask cmux",
+  "caveats": [
+   "macOS 전용(iOS 동반 앱은 베타)",
+   "서버 쪽 구성요소(web/ 등)는 BUSL-1.1 라이선스",
+   "cmux AI·Cloud VM은 Founder's Edition 조기 접근으로만 제공"
+  ],
+  "korea": "한국어 README 제공",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/manaflow-ai/cmux"
+   },
+   {
+    "label": "cmux 공식 사이트",
+    "url": "https://cmux.com"
+   },
+   {
+    "label": "@ai_masaou 추천 글",
+    "url": "https://note.com/masa_wunder/n/n545739331e84"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou)"
+ },
+ {
+  "id": "pd-beads",
+  "name": "Beads",
+  "vendor": "Gas Town Hall",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "코딩 에이전트용 의존성 그래프 이슈 트래커",
+  "description": "Dolt 기반의 로컬 이슈 트래커(`bd` CLI)입니다. 작업을 의존성 그래프로 저장해 두면 에이전트가 `bd ready`로 막힌 데 없는 일만 고르고, `bd update --claim`으로 먼저 맡습니다. `bd setup claude`·`bd setup codex`가 Claude Code 훅과 Codex 스킬·AGENTS.md 안내를 설치해, 세션이 시작될 때 `bd prime`으로 작업 맥락과 메모를 넣어 줍니다. 그래서 쓰던 Claude·ChatGPT 구독의 에이전트가 세션이 바뀌어도 일을 이어 갑니다. 마크다운 TODO 대신 긴 작업을 쪼개 여러 에이전트에게 나눠 맡길 때 좋고, MCP 서버(beads-mcp)도 있습니다.",
+  "connect": [
+   "cli",
+   "skills",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 28236,
+  "updated": "2026-10",
+  "homepage": "https://beads.gascity.com",
+  "repo": "gastownhall/beads",
+  "install": "brew install beads",
+  "caveats": [
+   "`bd init`이 AGENTS.md와 에이전트 설정을 바꾸므로, 업무 저장소에서는 `--stealth` 모드를 검토",
+   "업그레이드 때 스키마 마이그레이션 절차를 따라야 함",
+   "`bd remember` 메모는 전부 주입되므로 짧게 유지(추천자 경험)"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/gastownhall/beads"
+   },
+   {
+    "label": "@ai_masaou 추천 글",
+    "url": "https://note.com/masa_wunder/n/n4d7c89c71584"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou)"
+ },
+ {
+  "id": "pd-vibe-kanban",
+  "name": "Vibe Kanban",
+  "vendor": "BloopAI (커뮤니티 유지)",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "칸반 이슈로 여러 코딩 에이전트를 병렬 운용",
+  "description": "칸반 보드에 이슈를 만들고, 이슈마다 브랜치·터미널·개발 서버가 딸린 워크스페이스에서 코딩 에이전트를 돌리는 도구입니다. diff에 인라인 코멘트로 피드백하고 PR까지 만들 수 있습니다. Claude Code·Codex·Gemini CLI·GitHub Copilot·Cursor 등 10여 개 에이전트를 각자 로그인한 상태 그대로 불러 쓰므로 Claude·ChatGPT 구독이 그대로 쓰입니다. 로컬 MCP 서버(`vibe-kanban --mcp`)를 켜면 Claude Desktop 같은 클라이언트에서도 이슈와 워크스페이스를 다룰 수 있습니다.",
+  "connect": [
+   "app",
+   "cli",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 28478,
+  "updated": "2026-10",
+  "homepage": "https://www.vibekanban.com",
+  "repo": "BloopAI/vibe-kanban",
+  "install": "npx vibe-kanban",
+  "caveats": [
+   "개발사 bloop가 문을 닫아(2026-04 발표) 원격 서비스가 종료되고 커뮤니티 유지보수로 전환, README에 'sunsetting' 공지",
+   "쓰려는 에이전트를 미리 설치하고 로그인해 둬야 함"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/BloopAI/vibe-kanban"
+   },
+   {
+    "label": "종료 공지",
+    "url": "https://www.vibekanban.com/blog/shutdown"
+   },
+   {
+    "label": "@katsuhisa__ 추천 글",
+    "url": "https://zenn.dev/katsuhisa_/articles/vibe-kanban-ai-coding-management"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@katsuhisa__)"
+ },
+ {
+  "id": "pd-happy",
+  "name": "Happy",
+  "vendor": "slopus",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "휴대폰에서 Claude Code·Codex 세션을 이어서 조작",
+  "description": "Claude Code·Codex(와 Grok)를 한 앱에서 다루는 오픈소스 하네스입니다. 이미 결제 중인 Claude·ChatGPT 구독으로 로그인하므로 따로 내는 요금이 없습니다. 원래의 CLI는 `happy claude`·`happy codex`로 터미널 세션을 감싸, iOS·Android 앱에서 같은 세션을 이어 보고 조작하게 해 줍니다. 기기 사이 통신은 종단간 암호화됩니다. macOS·Windows·Linux 데스크톱 앱에서는 여러 모델을 섞은 세션과, 동료를 초대해 같은 에이전트를 함께 보는 기능도 씁니다.",
+  "connect": [
+   "app",
+   "cli",
+   "signin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 24345,
+  "updated": "2026-10",
+  "homepage": "https://happy.engineering",
+  "repo": "slopus/happy",
+  "install": "npm install -g happy",
+  "caveats": [
+   "작업할 컴퓨터에 Claude Code나 Codex를 설치하고 로그인해 둬야 함",
+   "여러 모델·팀 기능은 원래 CLI가 아닌 데스크톱 앱(Happy Harness)에서 제공"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/slopus/happy"
+   },
+   {
+    "label": "Happy 공식 사이트",
+    "url": "https://happy.engineering/"
+   },
+   {
+    "label": "@ai_masaou 추천 트윗",
+    "url": "https://x.com/AI_masaou/status/2021534064709455921"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou)"
+ },
+ {
+  "id": "pd-kimi-code-cli",
+  "name": "Kimi Code CLI",
+  "vendor": "Moonshot AI",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "Moonshot이 만든 오픈소스 터미널 코딩 에이전트",
+  "description": "Moonshot AI의 터미널 코딩 에이전트로, 단일 바이너리로 설치됩니다. 화면 녹화·영상 입력, coder·explore·plan 서브에이전트, 대화로 하는 MCP 설정(`/mcp-config`), 플러그인·스킬 마켓플레이스, 훅을 지원합니다. 기본 모델은 Kimi이며 `/login`에서 Kimi Code 멤버십 OAuth나 Kimi Platform API 키를 고릅니다. 설정 파일로 Anthropic·OpenAI·Google API 키도 붙일 수 있지만, Claude·ChatGPT 구독 로그인은 문서에 없습니다. `kimi acp`로 Zed·JetBrains 같은 ACP 에디터에서 세션을 돌릴 수 있어, Claude Code 옆에 두고 다른 모델의 에이전트를 비교해 보기 좋습니다.",
+  "connect": [
+   "cli",
+   "ide",
+   "byok"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "CLI 무료 (MIT) · 모델은 Kimi Code 멤버십 또는 API 종량제",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 8038,
+  "updated": "2026-10",
+  "homepage": "https://www.kimi.com/code/docs/",
+  "repo": "MoonshotAI/kimi-code",
+  "install": "curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash",
+  "caveats": [
+   "모델을 쓰려면 Kimi Code 멤버십이나 Kimi Platform API 키 필요(무료 등급 언급 없음)",
+   "예전 Python판 kimi-cli는 아카이브됨",
+   "중국 내(api.kimi.com)와 해외(api.kimi.ai) 엔드포인트가 나뉘어 있음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/MoonshotAI/kimi-code"
+   },
+   {
+    "label": "Kimi Code 문서",
+    "url": "https://www.kimi.com/code/docs/"
+   },
+   {
+    "label": "@dr_cintas 추천 트윗",
+    "url": "https://x.com/dr_cintas/status/2078560229802066262"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@dr_cintas)"
+ },
+ {
+  "id": "pd-hermes-agent",
+  "name": "Hermes Agent",
+  "vendor": "Nous Research",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "메신저에 상주하며 스스로 스킬을 늘리는 에이전트",
+  "description": "터미널 TUI와 Telegram·Discord·Slack·WhatsApp·Signal 게이트웨이로 늘 대화할 수 있는 오픈소스 에이전트입니다. 작업 경험에서 스킬을 만들고 메모리·세션 검색으로 사용자를 익히며, cron 예약 작업·서브에이전트·MCP 서버 연결을 지원합니다. 모델은 `hermes model`로 고릅니다. OpenAI Codex 제공자로 ChatGPT 구독에 로그인하거나, OpenRouter·각사 API 키, Ollama 같은 로컬 엔드포인트를 쓸 수 있습니다. 집 PC·WSL이나 작은 VPS에 띄워 두고 일정·메일 요약 같은 반복 업무를 맡기기 좋습니다.",
+  "connect": [
+   "cli",
+   "signin",
+   "byok"
+  ],
+  "worksWith": [
+   "chatgpt",
+   "copilot",
+   "local"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 257631,
+  "updated": "2026-10",
+  "homepage": "https://hermes-agent.nousresearch.com",
+  "repo": "NousResearch/hermes-agent",
+  "install": "curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash",
+  "caveats": [
+   "Claude Pro 구독으로는 못 쓰고, Max도 추가 사용량 크레딧으로만 과금",
+   "GitHub Copilot 로그인은 labs 플러그인으로 분리됨",
+   "Gemini 소비자 구독으로는 로그인할 수 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/NousResearch/hermes-agent"
+   },
+   {
+    "label": "모델 제공자 문서",
+    "url": "https://hermes-agent.nousresearch.com/docs/integrations/providers"
+   },
+   {
+    "label": "@yun_kohiya 추천 글",
+    "url": "https://note.com/yun_kohiya/n/ne8d7b5ba1184"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@yun_kohiya)"
+ },
+ {
+  "id": "pd-exe-dev",
+  "name": "exe.dev",
+  "vendor": "exe.dev",
+  "domain": "general",
+  "category": "검색·실행 환경",
+  "tagline": "SSH 한 줄로 HTTPS가 붙은 영구 VM 만들기",
+  "description": "`ssh exe.dev`로 영구 디스크·HTTPS·인증이 붙은 Linux VM을 만들고 공유하는 호스팅 서비스입니다. 기본 이미지에 `claude`·`codex`·`pi`가 미리 설치돼 있어 VM에서 바로 에이전트를 돌릴 수 있습니다. 원격 MCP 서버와 공식 Claude 플러그인·ChatGPT 앱이 있어, OAuth로 계정을 연결한 뒤 Claude나 ChatGPT에서 VM 조회·생성·명령 실행을 맡길 수 있습니다. 내장 웹 에이전트 Shelley는 exe.dev LLM 게이트웨이 크레딧이나 ChatGPT 구독·API 키로 돌아갑니다. 개인 프로토타입이나 에이전트 작업용 샌드박스로 알맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "skills",
+   "connector",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "Personal $15/월 · Work $75/월(첫 3개월 $37.50)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 165,
+  "updated": "2026-10",
+  "homepage": "https://exe.dev",
+  "repo": "boldsoftware/exe.dev",
+  "install": "claude plugin install exe-dev --marketplace boldsoftware/exe.dev",
+  "caveats": [
+   "VM 생성은 exe.dev 플랜으로 과금",
+   "Personal 플랜은 VM들이 2 vCPU/4GiB 풀을 나눠 써서 부하가 큰 서비스에는 맞지 않음",
+   "Shelley의 LLM 사용량은 플랜 크레딧에서 빠지고, 모자라면 추가 구매"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "exe.dev 요금제",
+    "url": "https://exe.dev/pricing"
+   },
+   {
+    "label": "Claude 플러그인 README",
+    "url": "https://github.com/boldsoftware/exe.dev/tree/main/exe-claude-plugin"
+   },
+   {
+    "label": "@katsuhisa__ 추천 글",
+    "url": "https://zenn.dev/katsuhisa_/articles/exe-dev-guide"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@katsuhisa__)"
+ },
+ {
+  "id": "pd-openai-dots",
+  "name": "dots",
+  "vendor": "OpenAI",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "ChatGPT 안에서 늘 일하는 개인 에이전트",
+  "description": "ChatGPT Pro·Business Premium에 들어 있는 상시 실행형 개인 에이전트입니다. 대화가 끝난 뒤에도 목표를 이어서 수행하며, 자체 클라우드 컴퓨터·브라우저와 4,000개 넘는 앱 플러그인을 씁니다. ChatGPT 데스크톱·웹·모바일과 Slack·Teams에서 메시지나 통화로 일을 맡길 수 있습니다. 대화 중에 Codex 스레드를 열어 구현을 넘기거나 Sites로 결과물을 게시할 수도 있습니다. 허락하면 내 노트북에서도 작업하므로, 일정·작업 관리처럼 꾸준히 챙길 일을 따로 설정하지 않고 맡기기 좋습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "ChatGPT Pro(월 $100부터)·Business Premium에 1개 포함",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://openai.com/index/introducing-dots/",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "EEA·스위스·영국의 Pro 사용자는 제외",
+   "추가 dot과 속도·용량 확장은 나중에 별도 요금으로 나올 예정",
+   "로컬 PC 접근은 기본으로 꺼져 있고, 데스크톱 앱에서 허용해야 함"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "SiliconANGLE 출시 기사",
+    "url": "https://siliconangle.com/2026/09/29/openai-launches-dots-always-on-ai-agents-in-chatgpt-with-their-own-cloud-computers/"
+   },
+   {
+    "label": "@suna_gaku 추천 글",
+    "url": "https://note.com/suna_gaku/n/n85eac6320d79"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@ai_masaou, @suna_gaku)"
+ },
+ {
+  "id": "pd-grok-bot",
+  "name": "Grok Bot",
+  "vendor": "xAI",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "역할별 봇을 여럿 두는 xAI 상시 에이전트",
+  "description": "xAI의 상시 실행형 AI 동료 앱입니다. 각 봇이 자체 클라우드 컴퓨터에서 앱·메일·웹사이트를 직접 다루고, 결정이 필요할 때만 사용자에게 묻습니다. 역할별로 봇을 여러 개 만들어 그룹 채팅·봇 사이 메시지로 일을 나누고, 사용자가 하는 작업을 보고 루틴으로 저장해 반복합니다. Claude·ChatGPT 구독과는 연결되지 않습니다. X Subscription(Premium 이상)이나 기존 Cursor 유료 플랜의 사용량으로 돌아가며, 로그인은 Cursor 계정으로 합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [
+   "cursor"
+  ],
+  "aiCost": "credits",
+  "price": "X Subscription Premium $30/월부터",
+  "free": false,
+  "official": "official",
+  "status": "beta",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.x.ai/grok-bot/bots",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "Claude·ChatGPT 구독으로는 쓸 수 없음",
+   "봇들이 같은 컴퓨터와 로그인을 공유해 봇별로 격리되지 않음",
+   "모델을 직접 고를 수 없고 작업마다 자동으로 선택됨"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "xAI Grok Bot 발표",
+    "url": "https://x.ai/news/introducing-grok-bot"
+   },
+   {
+    "label": "X Subscription 요금",
+    "url": "https://docs.x.ai/x-subscription/pricing"
+   },
+   {
+    "label": "@suna_gaku 추천 글",
+    "url": "https://note.com/suna_gaku/n/n85eac6320d79"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@petergyang, @suna_gaku)"
+ },
+ {
+  "id": "pd-chatgpt-sites",
+  "name": "ChatGPT Sites",
+  "vendor": "OpenAI",
+  "domain": "web",
+  "category": "앱 빌더",
+  "tagline": "ChatGPT 대화로 웹앱을 만들고 바로 게시",
+  "description": "ChatGPT Work에서 @Sites를 불러 웹사이트나 가벼운 웹앱을 만들고, 미리보기로 다듬은 뒤 `<사이트>.<워크스페이스>.chatgpt.site` 주소로 호스팅까지 해 주는 기능입니다. dots나 Codex에서도 결과물을 Sites로 게시할 수 있습니다. ChatGPT 유료 플랜에 포함돼 쓰던 구독으로 돌아가고, 공개 범위는 본인·지정한 사람·워크스페이스·전체 공개 중에서 고릅니다. 추천자는 GPT Pro로 만든 HTML 목업을 그대로 올려 링크로 공유하고, 직접 만져 보면서 요구사항을 정리하는 데 씁니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "ChatGPT 유료 플랜에 포함(Free·Go 제외, 베타)",
+  "free": false,
+  "official": "official",
+  "status": "beta",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://help.openai.com/en/articles/20001339",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "출시 시점 기준 EEA·스위스·영국에서는 제공되지 않음",
+   "베타 한도에 닿으면 새 사이트 생성이나 공개 유지가 막힐 수 있음",
+   "결제 처리와 카드 데이터 취급은 약관상 금지(제3자 정리 기준)"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "ChatGPT Sites 해설(Playcode)",
+    "url": "https://playcode.io/blog/chatgpt-sites-explained"
+   },
+   {
+    "label": "@suna_gaku 추천 글",
+    "url": "https://note.com/suna_gaku/n/n64f5402a287e"
+   }
+  ],
+  "foundVia": "pen.dev 소개자 추천 (@furoku, @suna_gaku)"
+ }
+]

@@ -1,0 +1,2358 @@
+[
+ {
+  "id": "biz-stripe-atlas",
+  "name": "Stripe Atlas",
+  "vendor": "Stripe",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "미국 델라웨어 법인 설립·EIN·지분 발행 일괄",
+  "description": "몇 번의 클릭으로 델라웨어 C corp 또는 LLC를 설립하고 EIN 발급, 창업자 지분 발행, 83(b) 신고, SAFE 작성까지 처리하는 서비스입니다. Atlas 자체에는 MCP나 AI 연동이 없어 웹에서 직접 진행해야 하는 분야 대표 서비스로 수록했습니다. 설립 후 Stripe 결제·Treasury 계좌와 바로 이어지는 점이 장점입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "설립 $500 일회성, 2년차부터 연 $100",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://stripe.com/atlas",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동(MCP) 없음 — 웹 대시보드에서 직접 진행",
+   "90일 내 Stripe Treasury에 $5,000 입금 시 설립비 환급 조건"
+  ],
+  "korea": "미국 법인 설립용이며 한국 법인 설립은 온라인법인설립시스템 등 별도 절차가 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Stripe Atlas 페이지",
+    "url": "https://stripe.com/atlas"
+   }
+  ]
+ },
+ {
+  "id": "biz-clerky",
+  "name": "Clerky",
+  "vendor": "Clerky",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "스타트업 표준 델라웨어 C corp 설립 서류",
+  "description": "델라웨어 C corp 설립, 이사 선임·정관·지분 발행 등 설립 후 셋업, 스톡옵션 플랜과 투자 서류를 표준 양식으로 처리하는 서비스입니다. AI 연동은 없어 웹에서 직접 쓰는 분야 대표 도구로 수록했습니다. 미국 스타트업 변호사들이 함께 쓰는 서류 플랫폼이라는 점이 특징입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "설립 패키지 $819 일회성(설립만 $427)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.clerky.com/pricing",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동 없음",
+   "해외 주 등록(foreign qualification) 비용 별도"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Clerky 요금",
+    "url": "https://www.clerky.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-firstbase",
+  "name": "Firstbase",
+  "vendor": "Firstbase",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "델라웨어·와이오밍 법인 설립과 컴플라이언스",
+  "description": "델라웨어 또는 와이오밍 법인 설립, EIN, 은행 계좌 개설 연결, 등록 대리인·우편함·회계(AI+사람 기장)를 묶어 제공하는 서비스입니다. MCP나 Claude 커넥터는 확인되지 않아 웹에서 직접 쓰는 도구로 분류했습니다. 설립 이후 미국 법인 유지 업무를 한곳에서 관리하려는 해외 창업자에게 맞습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "설립 $399(프로모션 $99) 일회성, Firstbase One 월 $199(연납)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.firstbase.io/pricing",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동(MCP) 없음",
+   "프로모션 가격은 변동 가능 — 결제 전 확인"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Firstbase 요금",
+    "url": "https://www.firstbase.io/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-legalzoom-connector",
+  "name": "LegalZoom",
+  "vendor": "LegalZoom",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "Claude 커넥터로 계약서 위험 검토·변호사 연결",
+  "description": "Anthropic 검증 Claude 커넥터로, 대화 중 법률 문서를 스캔해 위험 조항을 짚고 변호사 상담이 필요한 시점을 알려주며 LegalZoom 변호사 네트워크로 연결합니다. Claude 구독에서 커넥터를 추가하고 LegalZoom 계정으로 로그인해 씁니다. 미국 LLC·법인 설립 서비스도 함께 제공합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "LLC 설립 $0+주 수수료부터, 법인 $149+",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.legalzoom.com/business/business-formation/",
+  "repo": null,
+  "install": "https://www.legalzoom.com/mcp/claude/v1",
+  "caveats": [
+   "미국 관할 중심 — 한국법 검토에는 부적합",
+   "로그인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: LegalZoom",
+    "url": "https://claude.com/connectors/legalzoom"
+   },
+   {
+    "label": "LegalZoom 법인 설립",
+    "url": "https://www.legalzoom.com/business/business-formation/"
+   }
+  ]
+ },
+ {
+  "id": "biz-docusign-mcp",
+  "name": "Docusign MCP Server",
+  "vendor": "Docusign",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "전자서명 봉투 생성·발송·계약 조회 원격 MCP",
+  "description": "Docusign 계약 데이터와 전자서명 봉투, 템플릿, 워크플로를 AI에서 조회·생성·실행하는 공식 원격 MCP 서버로 2026년 9월 30일 GA가 되었습니다. Claude 커넥터 디렉터리에 있고 Docusign은 ChatGPT·Gemini·Copilot 등 모든 MCP 클라이언트를 지원한다고 밝혔습니다. 갱신일·의무 조항 확인과 NDA 발송 자동화에 적합합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "Docusign 플랜 별도(확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-09",
+  "homepage": "https://www.docusign.com/products/mcp",
+  "repo": null,
+  "install": "https://mcp.docusign.com/mcp",
+  "caveats": [
+   "createEnvelope 등 쓰기 도구 포함 — 발송 전 사람 승인 권장",
+   "플랜별 Iris·워크플로 기능 차이 확인 필요"
+  ],
+  "korea": "한국어 UI를 제공하지만 국내 전자서명 실무는 모두싸인 등과 비교해 보세요.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Docusign",
+    "url": "https://claude.com/connectors/docusign"
+   },
+   {
+    "label": "Docusign 블로그(GA)",
+    "url": "https://www.docusign.com/de-de/blog/die-agreement-layer-fuer-das-moderne-agentische-unternehmen"
+   }
+  ]
+ },
+ {
+  "id": "biz-dropbox-sign-api",
+  "name": "Dropbox Sign API",
+  "vendor": "Dropbox",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "앱에 전자서명을 넣는 API, 테스트 모드 무료",
+  "description": "자체 서비스에 전자서명 요청·템플릿·임베디드 서명을 붙이는 API입니다. 공식 MCP는 확인되지 않아 Claude Code나 Codex가 SDK·REST로 연동 코드를 작성하는 방식으로 씁니다. 무료 테스트 모드로 개발하고 운영 시 월 요청 건수 기반 플랜을 고릅니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "API 테스트 모드 무료, Essentials 월 $75~",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://sign.dropbox.com/products/dropbox-sign-api/pricing",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 MCP 없음(레지스트리엔 제3자 래퍼만)",
+   "운영 플랜은 월 서명 요청 건수 기준"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Dropbox Sign API 요금",
+    "url": "https://sign.dropbox.com/products/dropbox-sign-api/pricing"
+   },
+   {
+    "label": "MCP Registry 검색",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dropbox-sign"
+   }
+  ]
+ },
+ {
+  "id": "biz-pandadoc-mcp",
+  "name": "PandaDoc MCP",
+  "vendor": "PandaDoc",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "견적·계약서 작성·발송·서명 추적 원격 MCP",
+  "description": "템플릿이나 마크다운에서 문서를 만들고 발송·상태 변경·감사 기록 조회까지 하는 PandaDoc 공식 원격 MCP입니다. Claude 커넥터 디렉터리와 공식 MCP 레지스트리에 등재되어 있어 OAuth 로그인만으로 연결됩니다. 영업 제안서·NDA를 대화로 처리하려는 팀에 맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "PandaDoc 플랜 별도(확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 2,
+  "updated": "2026-10",
+  "homepage": "https://developers.pandadoc.com/docs/getting-started-with-mcp",
+  "repo": "PandaDoc/mcp-server-guide",
+  "install": "https://mcp.pandadoc.com/v1/mcp",
+  "caveats": [
+   "문서 발송 도구 포함 — 수신자 확인 후 실행",
+   "요금 페이지 확인 불가(확인 필요)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: PandaDoc",
+    "url": "https://claude.com/connectors/pandadoc"
+   },
+   {
+    "label": "GitHub mcp-server-guide",
+    "url": "https://github.com/PandaDoc/mcp-server-guide"
+   }
+  ]
+ },
+ {
+  "id": "biz-signnow-mcp",
+  "name": "SignNow MCP",
+  "vendor": "airSlate",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "템플릿 기반 서명 요청·상태 추적 원격 MCP",
+  "description": "SignNow 계정의 템플릿으로 문서를 만들고 미리 채워 서명 요청을 보내며 진행 상태와 서명 완료 파일을 가져오는 공식 원격 MCP입니다. Claude 커넥터로 추가해 로그인하면 대화만으로 전자서명 흐름을 관리할 수 있습니다. 비용을 줄이려는 소규모 팀의 Docusign 대안으로 검토할 만합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.signnow.com",
+  "repo": null,
+  "install": "https://mcp-server.signnow.com/mcp",
+  "caveats": [
+   "요금 미확인",
+   "서명 요청 발송은 되돌리기 어려움"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: SignNow",
+    "url": "https://claude.com/connectors/signnow"
+   }
+  ]
+ },
+ {
+  "id": "biz-spellbook",
+  "name": "Spellbook",
+  "vendor": "Spellbook",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "Word 안에서 계약서 검토·초안 AI",
+  "description": "Microsoft Word 애드인으로 계약서 검토·초안·질의·벤치마크를 하고 다문서 에이전트 Associate로 여러 문서를 함께 처리하는 법률 AI입니다. Claude·ChatGPT 구독과 별개인 자체 AI 요금으로 동작하며 MCP 연동은 확인되지 않았습니다. 법무팀·로펌용 전문 도구로 분야 대표성 때문에 수록했습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "데모 후 견적, 7일 무료 체험",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.spellbook.legal/pricing",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 구독과 별도 과금",
+   "MCP·커넥터 없음"
+  ],
+  "korea": "영미권 계약 중심 서비스로 한국어 계약서 지원 여부는 확인이 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Spellbook 요금",
+    "url": "https://www.spellbook.legal/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-harvey-connector",
+  "name": "Harvey",
+  "vendor": "Harvey",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "로펌용 법률 AI를 Claude에서 호출",
+  "description": "Harvey의 법률 질의, Vault 프로젝트 분석, 지식 소스 리서치를 Claude 안에서 호출하는 공식 커넥터로 미국·EU·호주 엔드포인트가 따로 있습니다. Harvey 계정이 있어야 하며 Harvey 자체 AI 이용료가 별도로 듭니다. 공식 가격은 비공개이고 제3자 추정으로 좌석 최소 조건이 있어 소규모 스타트업에는 현실적으로 쓰기 어렵습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "credits",
+  "price": "비공개(엔터프라이즈 영업)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://claude.com/connectors/harvey",
+  "repo": null,
+  "install": "https://api.harvey.ai/hosted_mcp/mcp",
+  "caveats": [
+   "가격 비공개, 제3자 추정 좌석 20~25석 최소",
+   "Harvey 고객 계정 필수"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Harvey",
+    "url": "https://claude.com/connectors/harvey"
+   },
+   {
+    "label": "Harvey 가격 추정(제3자)",
+    "url": "https://www.vaquill.ai/blog/harvey-legora-cocounsel-pricing-reality-2026"
+   }
+  ]
+ },
+ {
+  "id": "biz-modusign-mcp",
+  "name": "모두싸인 MCP",
+  "vendor": "모두싸인",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "국내 전자계약 API·문서를 원격 MCP로",
+  "description": "모두싸인이 developers.modusign.co.kr/mcp에서 제공하는 공식 원격 MCP로, 문서 검색과 모두싸인 API 호출·연동 코드 생성을 AI에서 할 수 있습니다. Claude Desktop은 커스텀 커넥터, Claude Code는 HTTP MCP로 추가하고, 계정 데이터 접근 시 이메일:API 키를 base64로 만든 Basic 인증 헤더를 넣습니다. 국내 근로계약서·용역계약 전자서명을 자동화하려는 창업자에게 적합합니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "PERSONAL 월 14,900원, TEAM 월 55,000원(연납 31,900원)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-03",
+  "homepage": "https://developers.modusign.co.kr/docs/mcp",
+  "repo": null,
+  "install": "claude mcp add --transport http modusign-server https://developers.modusign.co.kr/mcp",
+  "caveats": [
+   "API 연동은 맞춤형·연동형 요금제(문의) 필요",
+   "API 키가 헤더에 들어가므로 설정 파일 공유 주의"
+  ],
+  "korea": "한국어 서비스이며 원화 요금제를 제공합니다. llms.txt도 공개되어 있습니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "모두싸인 MCP 가이드",
+    "url": "https://developers.modusign.co.kr/docs/mcp"
+   },
+   {
+    "label": "모두싸인 요금",
+    "url": "https://modusign.co.kr/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-korean-law-mcp",
+  "name": "Korean Law MCP",
+  "vendor": "chrisryugj (커뮤니티)",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "법제처 법령·판례·해석례 조회와 인용 검증",
+  "description": "법제처 Open API 42종을 10개 도구로 묶어 법령, 판례, 행정규칙, 자치법규, 조약, 국세청 해석례 조회와 AI 답변의 인용 검증을 제공하는 MCP 서버입니다. Claude.ai 커넥터 URL 한 줄, Claude Code 플러그인, ChatGPT 연결을 지원하며 무료 법제처 API 키(OC)만 있으면 됩니다. 계약서·정관 검토 전에 근거 조문을 확인하는 데 유용합니다.",
+  "connect": [
+   "remote-mcp",
+   "local-mcp",
+   "plugin",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료(법제처 API 키 무료 발급)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 2774,
+  "updated": "2026-10",
+  "homepage": "https://github.com/chrisryugj/korean-law-mcp",
+  "repo": "chrisryugj/korean-law-mcp",
+  "install": "/plugin marketplace add chrisryugj/korean-law-mcp",
+  "caveats": [
+   "법률 자문 대체 불가 — 원문 확인 필수",
+   "원격 URL에 API 키(oc)가 쿼리로 포함됨",
+   "호스팅 서버는 개인 운영"
+  ],
+  "korea": "한국 법령 전용 도구로 한국어로 질의합니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub korean-law-mcp",
+    "url": "https://github.com/chrisryugj/korean-law-mcp"
+   },
+   {
+    "label": "npm korean-law-mcp",
+    "url": "https://www.npmjs.com/package/korean-law-mcp"
+   }
+  ]
+ },
+ {
+  "id": "biz-lawtalk",
+  "name": "로톡",
+  "vendor": "로앤컴퍼니",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "변호사 검색·법률 상담 연결 플랫폼",
+  "description": "법률 문제를 검색하고 변호사를 찾아 상담을 연결하는 국내 대표 법률 플랫폼으로 2014년 출시됐습니다. MCP나 API는 확인되지 않아 AI에서 직접 조작할 수는 없고 분야 대표성 때문에 수록했습니다. AI로 쟁점을 정리한 뒤 실제 변호사 상담이 필요할 때 이용하는 흐름이 현실적입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "확인 필요(변호사별 상담료)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.lawtalk.co.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동·API 없음"
+  ],
+  "korea": "국내 변호사 상담 플랫폼입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "로톡",
+    "url": "https://www.lawtalk.co.kr"
+   },
+   {
+    "label": "디지털데일리 로앤컴퍼니 기사",
+    "url": "https://www.ddaily.co.kr/page/view/2026031713171708252"
+   }
+  ]
+ },
+ {
+  "id": "biz-superlawyer",
+  "name": "슈퍼로이어",
+  "vendor": "로앤컴퍼니",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "변호사 전용 판례 기반 법률 AI",
+  "description": "530만 건 이상의 판례 DB를 바탕으로 모든 답변에 출처를 달고 인용 적절성을 검증하는 변호사 전용 법률 AI입니다. Amazon Bedrock 기반 자체 서비스로 Claude·ChatGPT 구독과 연결되지 않으며 변호사 등 법률 자격자만 가입할 수 있습니다. 창업자가 직접 쓰기보다 자문 변호사가 쓰는 도구라는 점을 참고하세요.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": null,
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "법률 자격자만 가입 가능",
+   "MCP·API 없음"
+  ],
+  "korea": "2026-03 기준 법률 전문가 2만5천 명 이상이 가입했다고 보도됐습니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "디지털데일리 2026-03-17",
+    "url": "https://www.ddaily.co.kr/page/view/2026031713171708252"
+   }
+  ]
+ },
+ {
+  "id": "biz-startbiz",
+  "name": "온라인법인설립시스템",
+  "vendor": "중소벤처기업부·창업진흥원",
+  "domain": "startup",
+  "category": "법인·법무",
+  "tagline": "정부 온라인 법인 설립등기·사업자등록",
+  "description": "방문 없이 온라인으로 법인 설립등기와 사업자등록 절차를 진행하는 정부 시스템으로, 등록면허세는 위택스와 연계해 납부합니다. 모든 구성원의 공동인증서 전자서명이 필요해 AI가 대신 진행할 수 없고, AI는 정관·서류 준비와 절차 점검을 돕는 역할에 그칩니다. 사업자등록이 시스템 안에서 끝나는지 국세청에서 이어지는지는 자료마다 달라 최신 안내 확인이 필요합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "확인 필요(등록면허세 등 세금 별도)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.startbiz.go.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "모든 구성원 공동인증서 필요",
+   "AI 연동 없음 — 본인 직접 진행"
+  ],
+  "korea": "한국 법인 설립 공식 경로이며 상호 중복은 인터넷등기소에서 미리 확인합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "KB Think 온라인 법인설립 안내",
+    "url": "https://kbthink.com/main/asset-management/for-manager/establishment-content/2024/establishment-content-241029.html"
+   },
+   {
+    "label": "zuzu 비교 가이드",
+    "url": "https://zuzu.network/resource/guide/government-system-vs-zuzu-online-incorporation-2026/"
+   }
+  ]
+ },
+ {
+  "id": "biz-quickbooks-connector",
+  "name": "Intuit QuickBooks (Claude·ChatGPT)",
+  "vendor": "Intuit",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "손익·현금흐름 분석과 인보이스 발송 공식 커넥터",
+  "description": "Claude 커넥터와 ChatGPT 플러그인으로 QuickBooks 데이터를 분석하고 인보이스·견적·결제 링크를 만들어 보내는 Intuit 공식 원격 MCP입니다. 2026년 7월 확장으로 읽기 전용을 넘어 발송 작업과 급여·직원 조회가 가능해졌고, 보내기 전 미리보기와 확인을 거칩니다. 계정이 없어도 CSV·PDF를 올려 분석할 수 있어 미국 법인 장부 관리에 적합합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "커넥터 무료, QuickBooks 구독 별도(확인 필요)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-07",
+  "homepage": "https://claude.com/connectors/quickbooks",
+  "repo": null,
+  "install": "https://ai-inc.quickbooks.intuit.com/v1/mcp",
+  "caveats": [
+   "인보이스 발송·결제 링크 등 쓰기 작업 포함",
+   "지원 국가·플랜 범위 확인 필요"
+  ],
+  "korea": "미국 등 해외 법인 장부용입니다. 한국 세무 신고·전자세금계산서 지원 여부는 확인이 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: QuickBooks",
+    "url": "https://claude.com/connectors/quickbooks"
+   },
+   {
+    "label": "Insightful Accountant 2026-07-28",
+    "url": "https://blog.insightfulaccountant.com/intuit-announces-expansion-of-claude-and-chatgpt-connectivity"
+   }
+  ]
+ },
+ {
+  "id": "biz-quickbooks-mcp-oss",
+  "name": "QuickBooks Online MCP Server",
+  "vendor": "Intuit",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "QBO 145개 도구, 샌드박스 지원 로컬 MCP",
+  "description": "Intuit이 공개한 로컬 stdio MCP 서버로 29개 엔터티 CRUD와 11개 재무 보고서를 145개 도구로 제공합니다. Claude Code나 Codex에서 실행하며 Intuit Developer 앱 등록과 OAuth가 필요하고 샌드박스 회사로 먼저 테스트할 수 있습니다. 회계 자동화를 직접 만들려는 개발자에게 맞습니다.",
+  "connect": [
+   "local-mcp",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(오픈소스)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 434,
+  "updated": "2026-09",
+  "homepage": "https://github.com/intuit/quickbooks-online-mcp-server",
+  "repo": "intuit/quickbooks-online-mcp-server",
+  "install": null,
+  "caveats": [
+   "운영 환경 OAuth는 공개 HTTPS 콜백 필요",
+   "100일 리프레시 주기마다 재인증",
+   "라이선스 표기 불일치(GitHub Apache-2.0, README MIT)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub quickbooks-online-mcp-server",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server"
+   }
+  ]
+ },
+ {
+  "id": "biz-xero-mcp",
+  "name": "Xero MCP",
+  "vendor": "Xero",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "손익·미수금 조회 읽기 전용 커넥터+로컬 서버",
+  "description": "Claude 커넥터(mcp.xero.com)로 손익, 현금 상황, 미수·미지급금, 인보이스를 읽기 전용으로 조회하며 데이터는 세션 간 저장되지 않습니다. 쓰기까지 필요하면 공식 오픈소스 로컬 서버를 npx로 실행해 Custom Connection이나 Bearer 토큰으로 연결합니다. Demo Company로 먼저 테스트할 수 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "MCP 무료, Xero 구독 별도(미국 Established 월 $97)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 385,
+  "updated": "2026-06",
+  "homepage": "https://github.com/XeroAPI/xero-mcp-server",
+  "repo": "XeroAPI/xero-mcp-server",
+  "install": "https://mcp.xero.com/mcp",
+  "caveats": [
+   "원격 커넥터는 읽기 전용",
+   "급여 기능은 NZ·UK 리전만"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Xero",
+    "url": "https://claude.com/connectors/xero"
+   },
+   {
+    "label": "GitHub xero-mcp-server",
+    "url": "https://github.com/XeroAPI/xero-mcp-server"
+   }
+  ]
+ },
+ {
+  "id": "biz-ramp-mcp",
+  "name": "Ramp MCP",
+  "vendor": "Ramp",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "법인카드·지출·청구서 데이터 조회 MCP와 CLI",
+  "description": "Ramp의 거래, 경비, 청구서, 구매주문, 카드, 거래처 데이터를 AI에서 조회·분석하는 공식 원격 MCP로 데모 데이터용 엔드포인트도 있습니다. Claude 디렉터리, ChatGPT 앱, Cursor에서 연결되고 Claude Code·Codex에서는 Ramp CLI를 씁니다. 응답은 100행으로 제한되고 영수증 업로드는 MCP로 되지 않습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "Free $0/사용자, Plus 월 $15/사용자",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://agents.ramp.com/docs/connectors/claude-desktop",
+  "repo": null,
+  "install": "https://mcp.ramp.com/mcp",
+  "caveats": [
+   "디렉터리 원클릭은 운영 데이터 연결 — 테스트는 demo-mcp.ramp.com/mcp",
+   "구 오픈소스 ramp_mcp 저장소는 보관(archived)"
+  ],
+  "korea": "미국 법인 대상 서비스로 한국 법인 가입 가능 여부는 확인이 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Ramp 에이전트 문서",
+    "url": "https://agents.ramp.com/docs/connectors/claude-desktop"
+   },
+   {
+    "label": "Claude 커넥터: Ramp",
+    "url": "https://claude.com/connectors/ramp"
+   },
+   {
+    "label": "Ramp 요금",
+    "url": "https://ramp.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-brex-mcp",
+  "name": "Brex MCP",
+  "vendor": "Brex",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "법인카드·경비 정책·한도 조회 공식 커넥터",
+  "description": "Brex의 카드, 경비, 한도, 경비 정책, 사용자 정보를 Claude에서 조회하는 공식 원격 MCP입니다. 재무팀은 컴플라이언스 점검과 질의를, 직원은 메모 작성 안내와 정책 답변을 받을 수 있고 권한 기반으로 접근이 제한됩니다. Brex는 Capital One 자회사입니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "Essentials $0/사용자, Premium 월 $12/사용자",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.brex.com/pricing",
+  "repo": null,
+  "install": "https://api.brex.com/mcp",
+  "caveats": [
+   "ChatGPT 지원 여부 미확인"
+  ],
+  "korea": "미국 법인 대상 서비스로 한국 법인 가입 가능 여부는 확인이 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Brex",
+    "url": "https://claude.com/connectors/brex"
+   },
+   {
+    "label": "Brex 요금",
+    "url": "https://www.brex.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-mercury-mcp",
+  "name": "Mercury MCP",
+  "vendor": "Mercury",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "스타트업 은행 잔액·거래·명세서 조회 MCP(베타)",
+  "description": "Mercury 계좌 잔액, 거래, 명세서, 카드 정보를 AI에서 검색·분석하는 공식 원격 MCP로 현재 베타입니다. 선택적 쓰기 권한을 주면 송금·내부 이체 요청을 만들 수 있지만 실제 실행은 Mercury 앱에서 승인해야 합니다. Claude와 ChatGPT에서 OAuth로 연결합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "은행 기능 월 $0",
+  "free": true,
+  "official": "official",
+  "status": "beta",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://docs.mercury.com/docs/what-is-mercury-mcp",
+  "repo": null,
+  "install": "https://mcp.mercury.com/mcp",
+  "caveats": [
+   "베타 서비스",
+   "쓰기 권한은 재승인 필요 — 이체 요청은 앱에서 최종 승인"
+  ],
+  "korea": "미국 법인용 은행입니다. 한국 법인·거주자 가입 조건은 확인이 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Mercury MCP 문서",
+    "url": "https://docs.mercury.com/docs/what-is-mercury-mcp"
+   },
+   {
+    "label": "Claude 커넥터: Mercury",
+    "url": "https://claude.com/connectors/mercury"
+   },
+   {
+    "label": "Mercury 요금",
+    "url": "https://mercury.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-bill-mcp",
+  "name": "BILL MCP",
+  "vendor": "BILL",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "미지급·미수금·지출 현황 읽기 전용 MCP",
+  "description": "BILL의 청구서, 지급, 인보이스, 카드 거래를 검색하고 지급 예정·미수 현황을 요약하는 공식 원격 MCP입니다. 접근은 읽기 전용이며 로그인한 사용자 권한과 동일하게 동작합니다. 매입·매출 채권 관리를 대화로 점검하려는 미국 법인에 맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "Team 월 $65/사용자 등",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.bill.com/pricing",
+  "repo": null,
+  "install": "https://gateway.prod.bill.com/ai-mcp-server/v1",
+  "caveats": [
+   "읽기 전용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: BILL",
+    "url": "https://claude.com/connectors/bill"
+   },
+   {
+    "label": "BILL 요금",
+    "url": "https://www.bill.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-expensify-mcp",
+  "name": "Expensify MCP",
+  "vendor": "Expensify",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "경비·영수증·환급 데이터 검색 MCP",
+  "description": "Expensify 계정의 경비, 보고서, 환급, 영수증, 출장, 인보이스, 지출 추세를 Claude에서 질의하는 공식 원격 MCP입니다. 커넥터를 추가해 로그인하면 바로 쓸 수 있습니다. 경비 정산 현황을 빠르게 확인하는 용도에 적합합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.expensify.com",
+  "repo": null,
+  "install": "https://www.expensify.com/mcp",
+  "caveats": [
+   "요금 미확인"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Expensify",
+    "url": "https://claude.com/connectors/expensify"
+   }
+  ]
+ },
+ {
+  "id": "biz-digits-mcp",
+  "name": "Digits MCP",
+  "vendor": "Digits Financial",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "AI 기장 장부를 Claude로 조회·보고 자동화",
+  "description": "AI 기장·결산 서비스 Digits의 거래, 잔액, 재무제표를 Claude에서 조회하고 주간 현금 요약이나 번레이트 알림 같은 반복 작업을 자동화하는 공식 원격 MCP입니다. Digits는 개발자 API와 MCP를 무료로 개방한다고 밝힙니다. 초기 스타트업 장부를 AI 중심으로 운영하려는 경우 검토할 만합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "Essentials 월 $65, Core $100, Pro $250",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://digits.com/pricing",
+  "repo": null,
+  "install": "https://api.digits.com/mcp",
+  "caveats": [
+   "미국 법인 중심 서비스"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Digits",
+    "url": "https://claude.com/connectors/digits"
+   },
+   {
+    "label": "Digits 요금",
+    "url": "https://digits.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-rillet-mcp",
+  "name": "Rillet MCP",
+  "vendor": "Rillet",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "AI 네이티브 ERP 총계정원장 조회·분개 생성",
+  "description": "실시간 총계정원장을 가진 AI 네이티브 ERP Rillet에 Claude를 연결해 매출 추세, SaaS 지표, 번레이트, 런웨이를 묻고 프롬프트로 분개를 만들 수 있는 공식 원격 MCP입니다. 커넥터 추가 후 로그인해 씁니다. 성장 단계 SaaS의 결산 자동화에 맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://claude.com/connectors/rillet",
+  "repo": null,
+  "install": "https://api.rillet.com/mcp",
+  "caveats": [
+   "분개 생성 등 쓰기 도구 포함",
+   "요금 미확인"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Rillet",
+    "url": "https://claude.com/connectors/rillet"
+   }
+  ]
+ },
+ {
+  "id": "biz-hometax",
+  "name": "국세청 홈택스",
+  "vendor": "국세청",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "사업자등록·부가세·종소세 신고 공식 사이트",
+  "description": "사업자등록 신청·정정, 부가가치세·종합소득세 신고, 전자세금계산서 발급 등 국내 세무 업무의 공식 창구입니다. 공식 API나 MCP가 없어 로그인·인증·최종 제출은 본인이 해야 하며, AI는 홈택스 도움 스킬 같은 도구로 준비 자료 점검과 화면 안내를 돕습니다. 사업자 상태 조회는 공공데이터 API로 자동화할 수 있습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.hometax.go.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 API·MCP 없음",
+   "인증서 로그인과 제출은 본인 직접"
+  ],
+  "korea": "국내 개인사업자·법인 모두 사용하는 필수 사이트입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "홈택스",
+    "url": "https://www.hometax.go.kr"
+   },
+   {
+    "label": "홈택스 도움 스킬 README",
+    "url": "https://github.com/lbiz-partners/hometax-doum"
+   }
+  ]
+ },
+ {
+  "id": "biz-hometax-doum",
+  "name": "홈택스 도움 스킬",
+  "vendor": "lbiz-partners (커뮤니티)",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "부가세·종소세·세금계산서 준비를 돕는 AI 스킬",
+  "description": "개인사업자·프리랜서의 홈택스 업무 24개 묶음을 안내하는 Agent Skills 모음으로 무료판 6종이 공개되어 있습니다. Claude Code 플러그인, .skill 업로드, Codex 폴더 스킬로 설치해 구독 중인 AI에서 바로 씁니다. 부가세 신고 준비, 지출 분류, 미수금 점검처럼 신고 전 자료 정리에 유용합니다.",
+  "connect": [
+   "skills",
+   "plugin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "Free 6종 무료, Pro 별도",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 73,
+  "updated": "2026-10",
+  "homepage": "https://github.com/lbiz-partners/hometax-doum",
+  "repo": "lbiz-partners/hometax-doum",
+  "install": "/plugin marketplace add lbiz-partners/hometax-doum",
+  "caveats": [
+   "법인세는 범위 밖",
+   "로그인·인증·최종 제출은 본인",
+   "라이선스 표기 불명확(NOASSERTION)"
+  ],
+  "korea": "국내 개인사업자 세무 전용 한국어 스킬입니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub hometax-doum",
+    "url": "https://github.com/lbiz-partners/hometax-doum"
+   }
+  ]
+ },
+ {
+  "id": "biz-samjjeomsam",
+  "name": "삼쩜삼",
+  "vendor": "삼쩜삼",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "종합소득세 환급 조회·간편신고",
+  "description": "숨은 세금 환급액을 조회하고 종합소득세를 간편 신고하는 국내 대표 환급 플랫폼으로 누적 신고 고객이 700만 명을 넘습니다. MCP나 API는 없어 AI에서 직접 조작할 수 없고 분야 대표성 때문에 수록했습니다. 세무대리가 아닌 세무 처리 도움 서비스라는 점을 유의하세요.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "확인 필요(신고 수수료)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.3o3.co.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동·API 없음",
+   "세무대리 서비스 아님"
+  ],
+  "korea": "프리랜서·개인사업자 대상 국내 서비스입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "삼쩜삼",
+    "url": "https://www.3o3.co.kr"
+   }
+  ]
+ },
+ {
+  "id": "biz-jobis",
+  "name": "자비스",
+  "vendor": "자비스앤빌런즈",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "인공지능 경리와 세무 기장·신고 대행",
+  "description": "영수증 입력, 세무 기장·신고, 급여 관리를 묶어 제공하는 인공지능 경리 서비스로 제휴 회계사의 세무대행을 함께 씁니다. 외부 AI 구독과 연결되는 MCP나 공개 API는 확인되지 않았습니다. 초기 법인의 기장을 외부에 맡기려는 경우 선택지입니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "세무대행 월 8만원부터",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://jobis.co",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·공개 API 없음"
+  ],
+  "korea": "국내 법인·개인사업자용 원화 요금 서비스입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "자비스",
+    "url": "https://jobis.co"
+   }
+  ]
+ },
+ {
+  "id": "biz-cashnote",
+  "name": "캐시노트",
+  "vendor": "한국신용데이터",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "사장님 매출·비용 관리와 캐시노트 AI",
+  "description": "카드·현금 매출과 비용, 리뷰, 상권 정보를 모아 보여주는 소상공인 경영관리 앱으로 자체 '캐시노트 AI' 질의 기능이 있습니다. 외부 AI 구독과 연결되는 MCP·API는 확인되지 않았습니다. 오프라인 매장을 함께 운영하는 창업자에게 유용합니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "무료 시작, 캐시노트플러스 멤버십 별도",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://cashnote.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP·공개 API 없음"
+  ],
+  "korea": "국내 소상공인 전용 서비스입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "캐시노트",
+    "url": "https://cashnote.kr"
+   }
+  ]
+ },
+ {
+  "id": "biz-douzone-smarta",
+  "name": "더존 Smart A 10",
+  "vendor": "더존비즈온",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "국내 표준 회계·세무 프로그램",
+  "description": "세무사 사무실과 기업이 널리 쓰는 더존비즈온의 회계·세무 프로그램으로, 더존은 ONE AI·WEHAGO 등 자체 AI·클라우드 제품도 함께 제공합니다. 외부 AI 구독과 연결되는 공식 MCP는 확인되지 않았습니다. 세무대리인과 데이터를 주고받을 때 사실상 표준이라 분야 대표로 수록했습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "확인 필요(구매 상담)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.douzone.com/product/smarta",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 MCP 없음"
+  ],
+  "korea": "국내 세무 실무 표준 프로그램입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "더존 제품 페이지",
+    "url": "https://www.douzone.com/product/smarta"
+   }
+  ]
+ },
+ {
+  "id": "biz-bizplay",
+  "name": "비즈플레이",
+  "vendor": "비즈플레이",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "법인카드 경비·출장·식대 관리",
+  "description": "법인카드 사용 내역을 전자 증빙으로 수집하고 경비 결의, 출장, 복지, 식대를 관리해 회계 전표까지 연결하는 지출 관리 솔루션입니다. MCP나 공개 AI 연동은 확인되지 않았고 대기업·공공기관 중심 서비스입니다. 국내 경비 관리 분야 대표로 수록했습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "도입 문의",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.bizplay.co.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동 없음",
+   "대규모 조직 중심"
+  ],
+  "korea": "국내 법인카드·전자증빙 기반 서비스입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "비즈플레이",
+    "url": "https://www.bizplay.co.kr"
+   }
+  ]
+ },
+ {
+  "id": "biz-popbill",
+  "name": "팝빌 API",
+  "vendor": "링크허브",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "전자세금계산서·현금영수증·홈택스 수집 API",
+  "description": "전자세금계산서, 현금영수증, 홈택스 수집, 사업자등록 상태조회, 계좌조회, 카카오톡·문자 발송을 한 번에 연동하는 국내 API 서비스입니다. 공식 MCP는 없지만 Claude Code·Codex가 SDK로 연동 코드를 작성할 수 있고, 커뮤니티 K-MCP의 팝빌 서버로 AI에서 직접 발행·조회할 수도 있습니다. 자체 서비스에 세금계산서 발행을 넣으려는 개발자에게 맞습니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "확인 필요(건별 과금)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.popbill.com",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 MCP 없음(커뮤니티 MCP는 별도 검증 필요)",
+   "세금계산서 발행은 취소·수정 절차가 번거로움"
+  ],
+  "korea": "국세청 연계 국내 전용 API입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "팝빌",
+    "url": "https://www.popbill.com"
+   },
+   {
+    "label": "K-MCP 팝빌 서버",
+    "url": "https://github.com/groove79/kmcp"
+   }
+  ]
+ },
+ {
+  "id": "biz-toss-business",
+  "name": "토스 비즈니스",
+  "vendor": "토스",
+  "domain": "startup",
+  "category": "재무·회계·세무",
+  "tagline": "하나의 아이디로 토스 사업자 서비스 관리",
+  "description": "토스의 사업자용 서비스를 하나의 아이디로 시작·관리하는 비즈니스 포털입니다. 확인된 범위에서는 MCP나 공개 API가 없어 AI에서 직접 다룰 수 없습니다. 결제 연동은 토스페이먼츠 MCP를, 미니앱 출시는 앱인토스 AX를 참고하세요.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://business.toss.im",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동 확인 안 됨",
+   "제공 서비스 범위 상세 미확인"
+  ],
+  "korea": "국내 토스 사업자 고객용 포털입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "토스 비즈니스",
+    "url": "https://business.toss.im"
+   }
+  ]
+ },
+ {
+  "id": "biz-gusto-mcp",
+  "name": "Gusto MCP",
+  "vendor": "Gusto",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "미국 급여·인사 데이터 조회와 급여 실행 커넥터",
+  "description": "Gusto의 급여, 직원, 계약자, 근태 데이터를 Claude에서 질의·리포트하고 자격이 되는 고객은 급여 실행까지 할 수 있는 공식 원격 MCP입니다. Claude 디렉터리에서 추가하며 Gusto는 ChatGPT 플러그인도 안내합니다. 미국 직원·계약자 급여를 운영하는 법인에 적합합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "Gusto 플랜 별도(확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://gusto.com/product/agents",
+  "repo": null,
+  "install": "https://mcp.api.gusto.com/anthropic",
+  "caveats": [
+   "run_payroll 등 실제 급여에 영향 주는 도구 포함",
+   "다른 MCP 서버와 섞지 말고 분리 사용 권고"
+  ],
+  "korea": "미국 급여 서비스로 한국 직원 급여에는 쓸 수 없습니다(국내는 플렉스·시프티 등).",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Gusto",
+    "url": "https://claude.com/connectors/gusto"
+   },
+   {
+    "label": "Gusto for AI(검색 결과)",
+    "url": "https://gusto.com/product/agents"
+   }
+  ]
+ },
+ {
+  "id": "biz-deel-mcp",
+  "name": "Deel MCP",
+  "vendor": "Deel",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "해외 계약자·EOR 고용·급여를 대화로 관리",
+  "description": "Deel의 계약, EOR 고용, 인사 데이터, 휴가, 인보이스·지급, 급여명세를 AI에서 조회·실행하는 공식 원격 MCP로 OAuth 동적 클라이언트 등록을 씁니다. Claude 디렉터리 커넥터와 Cursor 플러그인이 있고 고용 비용·실수령액 계산 도구도 포함합니다. 해외 개발자·계약자를 쓰는 한국 창업자에게 실용적입니다.",
+  "connect": [
+   "remote-mcp",
+   "connector",
+   "plugin"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "계약자 월 $49~, EOR 직원 월 $599~",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 0,
+  "updated": "2026-10",
+  "homepage": "https://developer.deel.com/mcp/introduction",
+  "repo": "deel-public/deel-public-mcp",
+  "install": "https://api.letsdeel.com/mcp",
+  "caveats": [
+   "계약 수정·오프사이클 지급 등 돈이 움직이는 쓰기 도구 — 승인 안내는 기술적 통제가 아님",
+   "토큰 1시간 만료"
+  ],
+  "korea": "해외 인력 계약·EOR에 유용하며 한국 소재 직원 EOR 조건은 확인이 필요합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "deel-public-mcp",
+    "url": "https://github.com/deel-public/deel-public-mcp"
+   },
+   {
+    "label": "Claude 커넥터: Deel",
+    "url": "https://claude.com/connectors/deel"
+   },
+   {
+    "label": "Deel 요금",
+    "url": "https://www.deel.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-rippling-community-mcp",
+  "name": "rippling-mcp (커뮤니티)",
+  "vendor": "bifrost-mcp (커뮤니티)",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "Rippling 직원·부서·휴가 조회 커뮤니티 MCP",
+  "description": "Rippling HR·IT·재무 플랫폼의 직원, 부서, 휴가, 그룹, 회사 데이터를 18개 도구로 조회하는 커뮤니티 로컬 MCP입니다. Rippling 공식 MCP나 Claude 커넥터는 확인되지 않아 API 토큰으로 직접 연결해야 합니다. 별이 적은 초기 프로젝트라 운영 데이터 연결 전 코드 검토가 필요합니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(오픈소스), Rippling 구독 별도",
+  "free": true,
+  "official": "community",
+  "status": "experimental",
+  "stars": 4,
+  "updated": "2026-02",
+  "homepage": "https://github.com/bifrost-mcp/rippling-mcp",
+  "repo": "bifrost-mcp/rippling-mcp",
+  "install": null,
+  "caveats": [
+   "비공식 커뮤니티 코드",
+   "직원 개인정보 취급 — 권한 최소화"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub rippling-mcp",
+    "url": "https://github.com/bifrost-mcp/rippling-mcp"
+   }
+  ]
+ },
+ {
+  "id": "biz-carta-mcp",
+  "name": "Carta MCP",
+  "vendor": "Carta",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "캡테이블·409A·지분 시나리오 조회 커넥터",
+  "description": "Carta의 캡테이블 지분, 409A 가치평가, 주주 정보를 Claude에서 조회하고 프로포마 라운드와 엑싯 시나리오를 분석하는 공식 원격 MCP입니다. 투자자 측은 펀드 성과와 투자 지표도 볼 수 있습니다. Carta 문서상 읽기 전용이지만 제3자 리뷰에서 이견이 있어 권한을 확인하고 쓰세요.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "Carta 플랜 별도(확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://carta.com",
+  "repo": null,
+  "install": "https://mcp.app.carta.com/mcp",
+  "caveats": [
+   "읽기 전용 여부에 대한 제3자 이견",
+   "요금 페이지 확인 불가"
+  ],
+  "korea": "미국 법인 캡테이블 관리용입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Carta",
+    "url": "https://claude.com/connectors/carta"
+   },
+   {
+    "label": "Carta MCP 문서(검색 결과)",
+    "url": "https://docs.carta.com/api-platform/docs/carta-mcp"
+   }
+  ]
+ },
+ {
+  "id": "biz-pulley",
+  "name": "Pulley",
+  "vendor": "Pulley",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "초기 스타트업 캡테이블·SAFE·옵션 관리",
+  "description": "캡테이블, 주권, SAFE·스톡옵션·RSA 계약 발송과 서명, 투자 라운드 모델링을 제공하는 지분 관리 서비스입니다. MCP나 Claude 커넥터는 확인되지 않아 웹에서 직접 씁니다. Carta보다 가벼운 초기 단계용 대안으로 분야 대표성 때문에 수록했습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "Startup 연 $1,200(주주 25명), Growth 연 $3,500",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://pulley.com/pricing",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동(MCP) 없음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Pulley 요금",
+    "url": "https://pulley.com/pricing"
+   }
+  ]
+ },
+ {
+  "id": "biz-angellist-mcp",
+  "name": "AngelList MCP",
+  "vendor": "AngelList",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "펀드 자본계정·분배·문서 조회 커넥터",
+  "description": "AngelList에서 운용하는 펀드의 캐피털콜, LP 보유 내역, 분배, 문서를 Claude에서 질의하는 공식 원격 MCP로 재무 데이터가 매일 갱신됩니다. 주로 펀드 운용사(GP)용이지만 엔젤 투자·SPV를 운영하는 창업자에게도 쓸모가 있습니다. 커넥터 추가 후 한 번 인증하면 됩니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.angellist.com",
+  "repo": null,
+  "install": "https://mcp.angellist.com/mcp",
+  "caveats": [
+   "펀드 운용사 중심 기능",
+   "요금 미확인"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: AngelList",
+    "url": "https://claude.com/connectors/angellist"
+   },
+   {
+    "label": "AngelList",
+    "url": "https://www.angellist.com"
+   }
+  ]
+ },
+ {
+  "id": "biz-shiftee",
+  "name": "시프티",
+  "vendor": "Shiftee Inc.",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "근태·스케줄·휴가 관리 솔루션",
+  "description": "출퇴근 기록, 근무 스케줄, 휴가, 근태 정산을 관리하는 국내 근태관리 솔루션으로 ERP·HRIS 연동용 Open API를 제공합니다. MCP는 확인되지 않았지만 Claude Code나 Codex가 Open API로 연동 스크립트를 작성할 수 있습니다. 교대 근무나 매장 인력을 운영하는 창업자에게 맞습니다.",
+  "connect": [
+   "library",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "무료 체험, 요금 문의",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://shiftee.io",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 MCP 없음",
+   "직원 위치·근태 개인정보 취급"
+  ],
+  "korea": "한국어를 지원하는 국내 서비스로 ISO 27001 인증을 보유합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "시프티",
+    "url": "https://shiftee.io"
+   }
+  ]
+ },
+ {
+  "id": "biz-flex",
+  "name": "플렉스(flex)",
+  "vendor": "플렉스",
+  "domain": "startup",
+  "category": "인사·급여·지분",
+  "tagline": "근태·계약·급여·비용을 아는 HR AI 플랫폼",
+  "description": "근태, 계약, 급여, 비용 관리 등 HR 핵심 업무를 자동화하고 조직 데이터를 아는 자체 AI 에이전트를 제공하는 국내 HR 플랫폼입니다. 외부 Claude·ChatGPT 구독과 연결되는 MCP는 확인되지 않았습니다. 국내 직원 급여·근로계약을 처리하는 대표 HR SaaS로 수록했습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "credits",
+  "price": "도입 문의",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://flex.team",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP 없음(동명 해외 'Flex MCP'와 무관)"
+  ],
+  "korea": "국내 노무·급여 실무에 맞춘 한국어 서비스입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "flex",
+    "url": "https://flex.team"
+   }
+  ]
+ },
+ {
+  "id": "biz-tosspayments-mcp",
+  "name": "토스페이먼츠 연동가이드 MCP",
+  "vendor": "토스페이먼츠",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "결제 연동 문서를 AI에 주는 공식 MCP",
+  "description": "토스페이먼츠 v1·v2 연동 문서와 정책·용어 문서를 키워드로 검색·조회해 AI가 결제창·정기결제 연동 코드를 정확히 짜도록 돕는 공식 로컬 MCP입니다. Claude Code, Codex, Cursor에서 npx로 실행하며 llms.txt도 함께 제공합니다. 회원가입·사업자번호 없이 테스트 키로 결제를 시험할 수 있어 연동 학습에 좋습니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-09",
+  "homepage": "https://docs.tosspayments.com/guides/v2/get-started/llms-guide",
+  "repo": null,
+  "install": "npx -y @tosspayments/integration-guide-mcp@latest",
+  "caveats": [
+   "문서 조회 전용 — 실결제 API 호출 도구 없음",
+   "Node.js 필요, 사내망에서 npm 차단 시 동작 안 함"
+  ],
+  "korea": "국내 PG 중 처음 MCP를 도입했다고 밝힌 한국어 문서 서버입니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "npm @tosspayments/integration-guide-mcp",
+    "url": "https://www.npmjs.com/package/@tosspayments/integration-guide-mcp"
+   },
+   {
+    "label": "LLM 연동 가이드",
+    "url": "https://docs.tosspayments.com/guides/v2/get-started/llms-guide"
+   },
+   {
+    "label": "토스페이먼츠 블로그",
+    "url": "https://www.tosspayments.com/blog/articles/mcp-tosspayments"
+   }
+  ]
+ },
+ {
+  "id": "biz-portone-mcp",
+  "name": "포트원 MCP 서버",
+  "vendor": "포트원",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "PG 통합 문서+콘솔 결제·정산 조회 MCP",
+  "description": "포트원 개발자센터·헬프센터 문서를 AI에 제공하고 콘솔 로그인 후 채널 조회, 테스트 채널 추가, 결제 내역·거래대사·정산 조회까지 할 수 있는 공식 MCP입니다. npx 또는 DXT로 Claude Desktop·Cursor에 설치합니다. 여러 PG를 한 번에 붙이려는 국내 서비스 개발에 적합합니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 28,
+  "updated": "2026-10",
+  "homepage": "https://github.com/portone-io/mcp-server",
+  "repo": "portone-io/mcp-server",
+  "install": "npx -y @portone/mcp-server@latest",
+  "caveats": [
+   "조회 데이터가 AI 서비스로 전달·저장될 수 있음(개인정보 일부 자동 제거)",
+   "기본 연결 대상이 운영 환경"
+  ],
+  "korea": "국내 PG 통합 서비스로 한국어 문서를 제공합니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub portone-io/mcp-server",
+    "url": "https://github.com/portone-io/mcp-server"
+   }
+  ]
+ },
+ {
+  "id": "biz-nicepay-mcp",
+  "name": "NICEPAY Developers MCP",
+  "vendor": "나이스페이",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "나이스페이 PG 문서를 오프라인으로 주는 MCP",
+  "description": "나이스페이 개발자센터의 인증·비인증 결제, 취소, 빌링, 가상계좌, 결과 코드 문서 스냅샷을 패키지에 담아 오프라인으로 검색·조회하는 공식 MCP입니다. Claude Code·Desktop, Codex, Cursor, VS Code에서 npx로 실행하고 Streamable HTTP 모드도 지원합니다. 나이스페이 연동 시 파라미터·서명 규칙을 확인하는 데 유용합니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-09",
+  "homepage": "https://developers.nicepay.co.kr/docs/mcp/intro",
+  "repo": null,
+  "install": "npx -y @nicepay/developers-mcp",
+  "caveats": [
+   "문서 조회 전용",
+   "생성 코드는 가맹점 테스트 환경에서 재검증 필요"
+  ],
+  "korea": "국내 PG 한국어 문서입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "npm @nicepay/developers-mcp",
+    "url": "https://www.npmjs.com/package/@nicepay/developers-mcp"
+   },
+   {
+    "label": "NICEPAY MCP 연동하기",
+    "url": "https://developers.nicepay.co.kr/docs/mcp/intro"
+   }
+  ]
+ },
+ {
+  "id": "biz-kakaopay-mcp",
+  "name": "카카오페이 MCP",
+  "vendor": "카카오페이",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "결제 준비·승인·취소를 함수 호출로 하는 MCP",
+  "description": "카카오페이 오픈 API의 단건 결제 준비·승인·취소·조회와 정기결제 요청·비활성화를 MCP 도구로 제공하는 공식 서버입니다. Claude Desktop·Cursor에서 npx로 실행하고 테스트 가맹점 코드 TC0ONETIME으로 먼저 시험할 수 있습니다. 카카오페이 간편결제를 붙이는 개발 과정에 유용합니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(가맹점 수수료 별도)",
+  "free": true,
+  "official": "official",
+  "status": "stale",
+  "stars": 90,
+  "updated": "2025-08",
+  "homepage": "https://developers.kakaopay.com/docs/payment/online/ai",
+  "repo": "kakaopay-develop/agent-toolkit",
+  "install": "npx -y @kakaopay-develop/mcp --tools=all --cid=TC0ONETIME",
+  "caveats": [
+   "실 시크릿 키 사용 시 실제 결제·취소 발생",
+   "2025-08 이후 업데이트 없음",
+   "결과 정확성 보증 안 함(면책)"
+  ],
+  "korea": "국내 간편결제 공식 도구입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "npm @kakaopay-develop/mcp",
+    "url": "https://www.npmjs.com/package/@kakaopay-develop/mcp"
+   },
+   {
+    "label": "GitHub agent-toolkit",
+    "url": "https://github.com/kakaopay-develop/agent-toolkit"
+   }
+  ]
+ },
+ {
+  "id": "biz-bootpay-mcp",
+  "name": "Bootpay MCP",
+  "vendor": "부트페이",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "결제 연동 문서·관리자·커머스 도구 MCP",
+  "description": "부트페이 결제·커머스 개발 문서 검색, 관리자 도구 71개, 알림톡 도구 36개를 stdio로 제공하고 원격 엔드포인트로 문서와 커머스 운영 도구 95개를 여는 공식 MCP입니다. Claude, Codex, Cursor에서 npx 또는 원격 URL로 연결합니다. 국내 결제와 쇼핑몰 운영을 함께 자동화하려는 경우 검토할 만합니다.",
+  "connect": [
+   "local-mcp",
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(결제 수수료 별도)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 2,
+  "updated": "2026-10",
+  "homepage": "https://github.com/bootpay/bootpay-mcp",
+  "repo": "bootpay/bootpay-mcp",
+  "install": "npx -y @bootpay/mcp@latest",
+  "caveats": [
+   "관리자 도구는 stdio에서만 — 키 노출 주의",
+   "@latest 없이 실행하면 구버전 캐시 실행"
+  ],
+  "korea": "국내 결제 플랫폼의 한국어 MCP입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub bootpay-mcp",
+    "url": "https://github.com/bootpay/bootpay-mcp"
+   }
+  ]
+ },
+ {
+  "id": "biz-apps-in-toss-ax",
+  "name": "앱인토스 AX",
+  "vendor": "토스",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "토스 미니앱 개발 문서·스캐폴딩 MCP/CLI",
+  "description": "토스 앱 안에 미니앱을 출시하는 앱인토스 개발 문서와 토스 디자인 시스템(TDS) 문서를 AI가 검색·조회하도록 돕는 공식 MCP·CLI입니다. Homebrew나 npm으로 설치한 뒤 ax mcp로 Claude·Cursor에 연결합니다. 토스 사용자에게 서비스를 바로 선보이려는 창업자에게 유용합니다.",
+  "connect": [
+   "local-mcp",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 28,
+  "updated": "2026-07",
+  "homepage": "https://developers-apps-in-toss.toss.im",
+  "repo": "toss/apps-in-toss-ax",
+  "install": "npm install -g @apps-in-toss/ax",
+  "caveats": [
+   "기본으로 사용 통계 수집(--disable-usage-stats로 끔)"
+  ],
+  "korea": "토스 앱 내 배포 채널용 국내 전용 도구입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub apps-in-toss-ax",
+    "url": "https://github.com/toss/apps-in-toss-ax"
+   },
+   {
+    "label": "npm @apps-in-toss/ax",
+    "url": "https://www.npmjs.com/package/@apps-in-toss/ax"
+   }
+  ]
+ },
+ {
+  "id": "biz-cafe24-mcp",
+  "name": "Cafe24 Mall·Catalog MCP",
+  "vendor": "카페24",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "쇼핑몰 상품 검색·결제 링크 생성 MCP",
+  "description": "카페24가 몰마다 제공하는 Mall MCP로 상품 검색·상세 조회·결제 URL 생성을, Catalog MCP로 카탈로그 상품과 카테고리 검색을 할 수 있습니다. Claude Desktop이나 Cursor에 mcp-remote로 원격 URL을 추가해 씁니다. 내 카페24 몰을 AI 쇼핑 에이전트에 노출하려는 판매자에게 맞습니다.",
+  "connect": [
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(카페24 몰 운영비 별도)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 2,
+  "updated": "2026-02",
+  "homepage": "https://developers.cafe24.com",
+  "repo": "cafe24-oss/cafe24-mcp-demo",
+  "install": "https://mcp-catalog.cafe24.com/api/mcp",
+  "caveats": [
+   "구매자용 조회·결제 링크 도구 — 상품 등록·재고 관리 도구 아님",
+   "개발자센터 MCP 문서 내용은 직접 확인 필요"
+  ],
+  "korea": "국내 대표 쇼핑몰 솔루션의 공식 MCP입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub cafe24-mcp-demo",
+    "url": "https://github.com/cafe24-oss/cafe24-mcp-demo"
+   },
+   {
+    "label": "Cafe24 Developers",
+    "url": "https://developers.cafe24.com"
+   }
+  ]
+ },
+ {
+  "id": "biz-naver-commerce-api",
+  "name": "네이버 커머스API",
+  "vendor": "네이버",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "스마트스토어 상품·주문·정산 REST API",
+  "description": "스마트스토어 판매자가 상품, 주문, 정산, 문의를 프로그램으로 관리하는 공식 REST API로 커머스API센터에서 애플리케이션을 등록해 client ID·secret을 받습니다. 공식 MCP는 없어 Claude Code·Codex가 연동 코드를 작성하거나 커뮤니티 K-MCP의 스마트스토어 서버를 씁니다. 여러 판매자 스토어를 대행하려면 솔루션마켓·대행사 자격이 필요합니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": 120,
+  "updated": "2026-09",
+  "homepage": "https://apicenter.commerce.naver.com",
+  "repo": "commerce-api-naver/commerce-api",
+  "install": null,
+  "caveats": [
+   "공식 MCP 없음",
+   "client_secret 공개 게시 금지, 호출 IP 등록 필요"
+  ],
+  "korea": "국내 최대 오픈마켓 판매자용 API입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub commerce-api",
+    "url": "https://github.com/commerce-api-naver/commerce-api"
+   },
+   {
+    "label": "커머스API 토론(등록 절차)",
+    "url": "https://github.com/commerce-api-naver/commerce-api/discussions/3463"
+   }
+  ]
+ },
+ {
+  "id": "biz-coupang-open-api",
+  "name": "쿠팡 Open API",
+  "vendor": "쿠팡",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "쿠팡 윙 상품·주문·물류·반품 API",
+  "description": "대형 셀러와 통합 사업자가 상품, 프로모션, 주문, 물류, 반품을 관리하는 쿠팡 공식 Open API로 Wing에서 Access·Secret 키를 발급하고 IP를 등록해 씁니다. 공식 MCP는 없어 AI 코딩 에이전트가 Mock 엔드포인트로 먼저 연동 코드를 시험하는 방식이 적합합니다. 2026-10에 구 개발자 포털 v1 운영 종료 공지가 있었습니다.",
+  "connect": [
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://developers.coupangcorp.com",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "공식 MCP 없음",
+   "IP 허용 목록 등록 필요"
+  ],
+  "korea": "국내 쿠팡 셀러 전용 API입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "Coupang Developer Center",
+    "url": "https://developers.coupangcorp.com"
+   }
+  ]
+ },
+ {
+  "id": "biz-kmcp",
+  "name": "K-MCP",
+  "vendor": "groove79 (커뮤니티)",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "스마트스토어·쿠팡·카페24·팝빌 한국 MCP 묶음",
+  "description": "스마트스토어, 쿠팡 윙, 카페24, 토스페이먼츠 조회·취소, 팝빌 세금계산서·알림톡, 카카오톡, HWP, 공공데이터, 택배 조회, 세무 일정 MCP 서버를 묶은 커뮤니티 툴킷입니다. 쓰기 도구는 미리보기 후 채팅이나 카카오톡 승인을 기다리며, 읽기 전용 도구는 원격 URL을 Claude·ChatGPT 커스텀 커넥터로 추가해 쓸 수 있습니다. 국내 커머스 운영 자동화를 빠르게 시험해 보기에 좋습니다.",
+  "connect": [
+   "local-mcp",
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(원격은 IP당 하루 100회)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 0,
+  "updated": "2026-10",
+  "homepage": "https://okagent.kr",
+  "repo": "groove79/kmcp",
+  "install": "https://okagent.kr/api/mcp",
+  "caveats": [
+   "신생 커뮤니티 프로젝트 — 판매자 API 키 연결 전 코드 검토",
+   "환불·재고 변경 등 쓰기 도구는 승인 후 실행"
+  ],
+  "korea": "한국 플랫폼 전용 MCP 모음이며 공식 MCP 레지스트리(io.github.groove79)에 등재되어 있습니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub kmcp",
+    "url": "https://github.com/groove79/kmcp"
+   },
+   {
+    "label": "MCP Registry 검색",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=groove79"
+   }
+  ]
+ },
+ {
+  "id": "biz-paypal-mcp",
+  "name": "PayPal MCP",
+  "vendor": "PayPal",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "해외 결제·인보이스·상품 관리 원격 MCP",
+  "description": "PayPal 계정 정보, 거래, 상품, 인보이스 등 결제 플랫폼 기능을 AI에서 다루는 공식 원격 MCP로 Claude 커넥터 디렉터리에 있습니다. 해외 고객에게 결제를 받거나 인보이스를 보내는 업무를 대화로 처리할 수 있습니다. 해외 판매를 하는 한국 창업자에게 쓸모가 있습니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "PayPal 수수료 별도(확인 필요)",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://claude.com/connectors/paypal",
+  "repo": null,
+  "install": "https://mcp.paypal.com/mcp",
+  "caveats": [
+   "결제 처리 도구 포함 — 실행 전 확인",
+   "한국 계정 기능 범위 확인 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: PayPal",
+    "url": "https://claude.com/connectors/paypal"
+   }
+  ]
+ },
+ {
+  "id": "biz-airwallex-dev-mcp",
+  "name": "Airwallex Developer MCP",
+  "vendor": "Airwallex",
+  "domain": "startup",
+  "category": "결제·커머스",
+  "tagline": "글로벌 송금 API 문서·샌드박스 시뮬레이션 MCP",
+  "description": "Airwallex 문서와 API 레퍼런스, 샌드박스 테스트 도구(송금 생성·결과 시뮬레이션·수취인 목록)를 Claude에 제공하는 공식 원격 MCP입니다. 샌드박스 자격 증명으로 시작해 지식 검색, 트러블슈팅, 라이브 전 테스트까지 지원합니다. 해외 송금·다통화 결제를 붙이는 개발에 적합합니다.",
+  "connect": [
+   "remote-mcp",
+   "connector"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "확인 필요",
+  "free": false,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://claude.com/connectors/airwallex",
+  "repo": null,
+  "install": "https://mcp-demo.airwallex.com/developer",
+  "caveats": [
+   "개발자용 샌드박스 중심 — 운영 계정 관리용 아님"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Claude 커넥터: Airwallex",
+    "url": "https://claude.com/connectors/airwallex"
+   }
+  ]
+ },
+ {
+  "id": "biz-ir-search",
+  "name": "ir-search",
+  "vendor": "djfksjd (커뮤니티)",
+  "domain": "startup",
+  "category": "한국 창업 지원",
+  "tagline": "정부 지원사업 전수조사·자격 검증 에이전트 스킬",
+  "description": "K-Startup, 기업마당, NIPA, KOCCA, SMTECH의 모집 중 공고를 수집해 내 아이템의 창업 단계·지역·필요에 맞는 사업을 고르고 원문으로 자격을 검증해 A·B·C 그룹 보고서를 만드는 플러그인/스킬입니다. Claude Code, Codex, Gemini CLI, Antigravity, Cursor에서 설치해 구독 중인 AI로 실행합니다. 모든 공고에 원문 URL을 붙이고 불명확한 정보는 '불명'으로 남깁니다.",
+  "connect": [
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 393,
+  "updated": "2026-07",
+  "homepage": "https://github.com/djfksjd/ir-search",
+  "repo": "djfksjd/ir-search",
+  "install": "claude plugin marketplace add djfksjd/ir-search",
+  "caveats": [
+   "크롤링 기반 — 사이트 구조 변경 시 누락 가능",
+   "curl_cffi 등 파이썬 의존성 설치 필요"
+  ],
+  "korea": "한국 정부·공공기관 지원사업 전용입니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub ir-search",
+    "url": "https://github.com/djfksjd/ir-search"
+   }
+  ]
+ },
+ {
+  "id": "biz-kstartup",
+  "name": "K-Startup",
+  "vendor": "창업진흥원",
+  "domain": "startup",
+  "category": "한국 창업 지원",
+  "tagline": "창업지원사업 공고 포털과 무료 오픈 API",
+  "description": "창업진흥원이 운영하는 창업지원 통합 포털로, 공공데이터포털에서 사업 공고·사업 소개·콘텐츠를 조회하는 오픈 API를 무료·자동승인으로 제공합니다. 공식 MCP는 없지만 Claude Code나 Codex가 API 키로 공고 조회 스크립트를 쓰거나 ir-search 스킬이 이 API를 활용합니다. 예비창업패키지 등 주요 공고를 놓치지 않는 데 필수입니다.",
+  "connect": [
+   "library",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2025-06",
+  "homepage": "https://www.k-startup.go.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "개발 계정 트래픽 10,000건 제한",
+   "MCP 없음 — API 키(data.go.kr) 발급 필요"
+  ],
+  "korea": "국내 창업자 필수 포털입니다.",
+  "starter": true,
+  "sources": [
+   {
+    "label": "공공데이터포털 K-Startup API",
+    "url": "https://www.data.go.kr/data/15125364/openapi.do"
+   },
+   {
+    "label": "K-Startup",
+    "url": "https://www.k-startup.go.kr"
+   }
+  ]
+ },
+ {
+  "id": "biz-bizinfo",
+  "name": "기업마당",
+  "vendor": "중소벤처기업부",
+  "domain": "startup",
+  "category": "한국 창업 지원",
+  "tagline": "전 부처·지자체 중소기업 지원사업 통합 공고",
+  "description": "중소벤처기업부가 운영하는 중앙부처·지자체 중소기업 지원사업 통합 공고 포털로, 조회 시점 기준 신청 가능한 지원사업이 1,418건 게시되어 있었습니다. 공식 API는 기업마당이 발급하는 별도 인증키(crtfcKey)가 필요하고 MCP는 없습니다. ir-search 같은 스킬이 기업마당 공고를 함께 수집합니다.",
+  "connect": [
+   "app",
+   "library"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "무료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.bizinfo.go.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "MCP 없음",
+   "API는 data.go.kr 키와 다른 별도 인증키 필요"
+  ],
+  "korea": "국내 중소기업 지원사업 포털입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "기업마당",
+    "url": "https://www.bizinfo.go.kr"
+   },
+   {
+    "label": "ir-search README(기업마당 API 설명)",
+    "url": "https://github.com/djfksjd/ir-search"
+   }
+  ]
+ },
+ {
+  "id": "biz-tips",
+  "name": "TIPS(팁스)",
+  "vendor": "TIPS 운영사·중소벤처기업부 등",
+  "domain": "startup",
+  "category": "한국 창업 지원",
+  "tagline": "민간투자주도형 기술창업지원 프로그램",
+  "description": "민간 투자사(운영사)와 협력해 기술 창업기업을 선별하고 R&D 자금, 멘토링, 글로벌 마케팅을 패키지로 지원하는 민간투자주도형 정부 창업지원 프로그램입니다. AI 연동은 없고 운영사 목록, 공고, 팁스타운 입주 정보를 웹에서 확인합니다. 법인 설립과 시드 투자 이후 다음 단계로 노리는 대표 프로그램이라 수록했습니다.",
+  "connect": [
+   "app"
+  ],
+  "worksWith": [],
+  "aiCost": "none",
+  "price": "무료(선정 시 지원)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": null,
+  "homepage": "https://www.jointips.or.kr",
+  "repo": null,
+  "install": null,
+  "caveats": [
+   "AI 연동 없음",
+   "운영사 투자 유치가 선행 조건"
+  ],
+  "korea": "국내 기술 창업 대표 지원 프로그램입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "TIPS 공식 사이트",
+    "url": "https://www.jointips.or.kr"
+   }
+  ]
+ },
+ {
+  "id": "biz-data-go-mcp",
+  "name": "data-go-mcp-servers",
+  "vendor": "Koomook (커뮤니티)",
+  "domain": "startup",
+  "category": "한국 창업 지원",
+  "tagline": "사업자 진위확인·국민연금 가입내역 공공데이터 MCP",
+  "description": "공공데이터포털 API를 MCP로 감싼 파이썬 패키지 모음으로 국세청 사업자등록 진위확인·상태조회, 국민연금 사업장 가입내역, 나라장터 입찰, 금융위 기업 재무정보 등을 조회합니다. uv나 pip로 설치해 Claude Desktop 등에 등록하고 data.go.kr 서비스키를 넣어 씁니다. 거래처 사업자 확인이나 경쟁사 고용 규모 파악에 유용합니다.",
+  "connect": [
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "무료",
+  "free": true,
+  "official": "community",
+  "status": "stale",
+  "stars": 364,
+  "updated": "2025-09",
+  "homepage": "https://github.com/Koomook/data-go-mcp-servers",
+  "repo": "Koomook/data-go-mcp-servers",
+  "install": "uv pip install data-go-mcp.nts-business-verification",
+  "caveats": [
+   "2025-09 이후 업데이트 없음",
+   "data.go.kr 서비스키 별도 신청"
+  ],
+  "korea": "한국 공공데이터 전용 MCP입니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub data-go-mcp-servers",
+    "url": "https://github.com/Koomook/data-go-mcp-servers"
+   }
+  ]
+ }
+]

@@ -1,0 +1,3375 @@
+[
+  {
+    "id": "game-unity-cli",
+    "name": "Unity CLI",
+    "vendor": "Unity Technologies",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Unity 공식 무료 CLI, 에디터 제어와 MCP 제공",
+    "description": "Unity Hub가 자동으로 설치해 주는 무료 공식 명령줄 도구로, Pipeline 패키지를 통해 실행 중인 Unity 에디터를 제어하고 빌드·테스트·프로젝트 생성을 처리합니다. Claude Code나 Codex 같은 에이전트가 셸에서 `unity` 명령을 직접 호출하므로 Unity AI 구독 없이 기존 AI 요금제만 씁니다. 셸을 못 쓰는 클라이언트는 `unity mcp`가 띄우는 로컬 MCP 서버로 연결하며, `unity test`가 NUnit 보고서와 종료 코드 8로 실패를 알려 주어 에이전트 검증 루프에 잘 맞습니다.",
+    "connect": [
+      "cli",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://docs.unity.com/en-us/unity-cli",
+    "repo": null,
+    "install": "brew install --cask unity-cli",
+    "caveats": [
+      "실행 중인 에디터 제어는 Unity 6.0 LTS 이상 필요",
+      "실험적 단계(1.0.0-beta.14)라 명령이 바뀔 수 있음",
+      "macOS 14 이상 필요"
+    ],
+    "korea": "Unite Seoul에서 처음 소개됐다는 2차 보도가 있음",
+    "starter": true,
+    "sources": [
+      {
+        "label": "Unity CLI 릴리스 노트",
+        "url": "https://docs.unity.com/en-us/unity-cli/release-notes"
+      },
+      {
+        "label": "Unity 문서: MCP 서버를 CLI로 대체",
+        "url": "https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli"
+      },
+      {
+        "label": "Unity CLI 사용법",
+        "url": "https://docs.unity.com/en-us/unity-cli/use-unity-cli"
+      }
+    ]
+  },
+  {
+    "id": "game-unity-agent-plugin",
+    "name": "unity-agent-plugin",
+    "vendor": "Unity Technologies",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Claude Code·Codex용 Unity 공식 스킬 32종",
+    "description": "Unity가 직접 만든 Claude Code·Codex·Grok·Antigravity용 플러그인으로, Shader Graph·URP·2D 타일·멀티플레이·인앱 결제 등 32개 스킬을 담고 있습니다. MCP 서버 없이 스킬만 제공하며, 에디터를 다루는 스킬은 Unity CLI를 통해 열린 에디터에서 C#을 실행합니다. 기존 Claude나 ChatGPT 구독만으로 Unity 6 이상 프로젝트 작업에 쓸 수 있고, `unity setup claude` 명령으로도 설치됩니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "beta",
+    "stars": 555,
+    "updated": "2026-10",
+    "homepage": "https://docs.unity.com/en-us/ai/unity-plugin/claude-code",
+    "repo": "Unity-Technologies/unity-agent-plugin",
+    "install": "claude plugin marketplace add Unity-Technologies/unity-agent-plugin && claude plugin install unity@unity-agent-plugin",
+    "caveats": [
+      "모든 변경이 기록·되돌리기 되지는 않으니 큰 작업 전 커밋 필요",
+      "단순 uGUI 작업에는 이점이 적다고 Unity가 직접 언급",
+      "Unity Companion License 적용"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/Unity-Technologies/unity-agent-plugin"
+      },
+      {
+        "label": "Unity 문서: Claude Code 플러그인",
+        "url": "https://docs.unity.com/en-us/ai/unity-plugin/claude-code"
+      },
+      {
+        "label": "Unity 블로그: Codex 플러그인",
+        "url": "https://unity.com/blog/unity-plugin-codex"
+      }
+    ]
+  },
+  {
+    "id": "game-unity-mcp-deprecated",
+    "name": "Unity MCP (com.unity.ai.assistant)",
+    "vendor": "Unity Technologies",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "지원 중단된 Unity 에디터 내장 MCP 서버",
+    "description": "AI Assistant 패키지(`com.unity.ai.assistant`)에 들어 있던 에디터 내장 MCP 서버로, 릴레이 바이너리를 통해 Claude Code·Cursor 등에서 씬·스크립트·콘솔을 다룰 수 있었습니다. Unity는 2.18.0-pre.2(2026년 8월 18일)에서 이 서버를 지원 중단으로 표시하고 Unity CLI의 `unity mcp`로 옮기라고 안내합니다. 기존 방식은 Unity AI 체험판이나 구독이 필요했지만 대체 경로인 CLI는 무료이므로, 새 프로젝트에서는 쓰지 않는 것이 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Unity AI 체험판 또는 구독 필요",
+    "free": false,
+    "official": "official",
+    "status": "deprecated",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": "https://docs.unity3d.com/Packages/com.unity.ai.assistant@2.18/manual/integration/unity-mcp-landing.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2.18.0-pre.2부터 지원 중단, 제거 시점은 미발표",
+      "Convai Unity SDK의 44개 도구가 이 서버에 의존",
+      "AI Assistant 2.13 미만은 Unity CLI와 연결 충돌"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Unity 2.18 변경 로그",
+        "url": "https://docs.unity3d.com/Packages/com.unity.ai.assistant@2.18/changelog/CHANGELOG.html"
+      },
+      {
+        "label": "Unity 문서: MCP 서버를 CLI로 대체",
+        "url": "https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli"
+      },
+      {
+        "label": "Unity 블로그: Unity MCP 시작하기",
+        "url": "https://unity.com/blog/unity-ai-mcp-how-to-get-started"
+      }
+    ]
+  },
+  {
+    "id": "game-unity-ai",
+    "name": "Unity AI",
+    "vendor": "Unity Technologies",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Unity 자체 크레딧으로 쓰는 에디터 내 AI",
+    "description": "Muse를 대체한 Unity의 에디터 내 AI 기능(Assistant·Generators)으로, Unity 자체 크레딧으로 과금됩니다. 2차 출처에 따르면 Personal은 14일 1,000크레딧 체험 후 월 $10에 1,000크레딧이고, Pro 이상 좌석에는 크레딧이 포함됩니다. AI Gateway로 Claude·GPT 같은 외부 모델을 부르면 Unity 크레딧이 차감되지 않는다고 하지만, 외부 에이전트 연동은 무료인 Unity CLI 쪽이 더 단순합니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Personal 체험 후 월 $10 (1,000크레딧)",
+    "free": false,
+    "official": "official",
+    "status": "beta",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "가격은 일본 2차 출처 기준",
+      "2026년 9월 기준 베타",
+      "Muse 실험 패키지는 종료됨"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "issoh.co.jp 가이드 (2차)",
+        "url": "https://www.issoh.co.jp/tech/details/8536/"
+      },
+      {
+        "label": "CG Channel: Muse 대체",
+        "url": "https://www.cgchannel.com/?p=169508"
+      },
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-coplaydev-unity-mcp",
+    "name": "MCP for Unity",
+    "vendor": "CoplayDev",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "1.5만 스타의 대표 커뮤니티 Unity MCP",
+    "description": "Unity 2021.3 LTS부터 6.x까지 지원하는 커뮤니티 MCP 서버로, 50개의 MCP 도구 진입점으로 에디터 작업을 처리합니다. Claude Desktop·Claude Code·Cursor·VS Code·Gemini CLI·Codex와 로컬 LLM까지 연결되며, Window > MCP for Unity 메뉴에서 감지된 클라이언트를 한 번에 설정합니다. Unity 내장 MCP 지원 중단과 무관하게 계속 쓸 수 있어 Unity 6 이전 버전 프로젝트에도 적합합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 15400,
+    "updated": "2026-10",
+    "homepage": "https://github.com/CoplayDev/unity-mcp",
+    "repo": "CoplayDev/unity-mcp",
+    "install": "openupm add com.coplaydev.unity-mcp",
+    "caveats": [
+      "Unity 공식 제품 아님 (Aura가 후원·유지)",
+      "Python 3.10 이상과 uv 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/CoplayDev/unity-mcp"
+      },
+      {
+        "label": "Unity 문서: 서드파티 패키지 영향 없음",
+        "url": "https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli"
+      }
+    ]
+  },
+  {
+    "id": "game-ivanmurzak-unity-mcp",
+    "name": "Unity-MCP",
+    "vendor": "IvanMurzak",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "빌드된 게임 안에서도 도는 런타임 Unity MCP",
+    "description": "70개 이상의 기본 도구와 Animation·Cinemachine·Terrain·Tilemap 등 10개 확장 패키지를 제공하는 커뮤니티 Unity MCP 서버입니다. 컴파일된 게임 안에서 MCP를 실행하는 런타임 모드가 있어, 에이전트가 실제 플레이 상태를 보며 검증할 수 있습니다. Claude Code·Codex·Cursor·GitHub Copilot·Gemini·Antigravity 등 다양한 클라이언트를 지원하고, C# 속성으로 사용자 도구를 추가할 수 있습니다.",
+    "connect": [
+      "local-mcp",
+      "cli",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 4500,
+    "updated": null,
+    "homepage": "https://github.com/IvanMurzak/Unity-MCP",
+    "repo": "IvanMurzak/Unity-MCP",
+    "install": "openupm add com.ivanmurzak.unity.mcp",
+    "caveats": [
+      "ai-game.dev 클라우드 로그인 요금은 문서에 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/IvanMurzak/Unity-MCP"
+      }
+    ]
+  },
+  {
+    "id": "game-unreal-mcp",
+    "name": "Unreal MCP",
+    "vendor": "Epic Games",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "UE 5.8에 내장된 Epic 공식 MCP 플러그인",
+    "description": "Unreal Engine 5.8에 포함된 1차 MCP 플러그인으로, 에디터 안에서 `http://127.0.0.1:8000/mcp` 서버를 띄우고 All Toolsets 플러그인의 씬·액터·머티리얼 도구를 노출합니다. `ModelContextProtocol.GenerateClientConfig` 콘솔 명령이 Claude Code·Cursor·VS Code·Gemini·Codex용 설정을 만들어 주므로 기존 구독 그대로 연결됩니다. Blueprint 같은 바이너리 에셋은 파일로 직접 고치기 어려워 C++ 외 작업에서는 사실상 필수 경로이며, 기본으로 켜진 Tool Search가 도구 목록을 메타 도구 3개로 줄여 토큰을 아낍니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (엔진 포함)",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": "2026-06",
+    "homepage": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor",
+    "repo": null,
+    "install": "ModelContextProtocol.GenerateClientConfig ClaudeCode",
+    "caveats": [
+      "인증 계층이 없어 로컬 머신 밖으로 노출 금지",
+      "HTTP/SSE만 지원하고 stdio는 미지원",
+      "새 도구를 추가하면 에디터 재시작 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Epic 문서: Unreal MCP",
+        "url": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor"
+      },
+      {
+        "label": "Pixels Design 해설",
+        "url": "https://www.pixelsdesign.it/blog/unreal-engine-mcp-claude-code-explained.html"
+      }
+    ]
+  },
+  {
+    "id": "game-uefn-mcp",
+    "name": "UEFN MCP",
+    "vendor": "Epic Games",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "포트나이트 UEFN에서 Verse 작성·컴파일",
+    "description": "Unreal MCP를 Unreal Editor for Fortnite로 확장한 공식 기능으로, 에이전트가 Verse 코드를 작성·컴파일하고 Creative 기기를 배치하며 플레이 세션을 시작·종료할 수 있습니다. 프로젝트 루트의 `.mcp.json`이 `http://127.0.0.1:8000/mcp`를 가리키게 하면 Claude Code·Cursor가 붙고, VS Code·Gemini(JSON)·Codex CLI(TOML) 설정법도 문서에 있습니다. Sessions 도구로 플레이 테스트까지 돌릴 수 있어 Verse 반복 개발에 유용합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": "https://dev.epicgames.com/documentation/en-us/fortnite/uefn-mcp",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "도구 호출 중 에디터가 끊기거나 멈출 수 있음",
+      "Python 도구는 XYZ 좌표라 UEFN 좌표계와 어긋남",
+      "UE 5.8 도구 일부는 아직 UEFN에서 미동작"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Epic 문서: UEFN MCP",
+        "url": "https://dev.epicgames.com/documentation/en-us/fortnite/uefn-mcp"
+      },
+      {
+        "label": "Inven Global 보도",
+        "url": "https://www.invenglobal.com/articles/24955/speeding-up-development-with-ai-uefn-supports-unreal-mcp-plugin-starting-aug-20"
+      }
+    ]
+  },
+  {
+    "id": "game-chongdashu-unreal-mcp",
+    "name": "unreal-mcp",
+    "vendor": "chongdashu",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Python 서버와 C++ 플러그인 기반 무료 UE MCP",
+    "description": "외부 Python MCP 서버와 Unreal 에디터용 C++ 플러그인이 TCP로 통신하는 커뮤니티 프로젝트입니다. 무료이며 MCP를 지원하는 클라이언트라면 기존 AI 구독으로 연결할 수 있습니다. Epic 공식 플러그인과 별도로 쓸 수 있는 대표적인 무료 대안입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 2031,
+    "updated": null,
+    "homepage": null,
+    "repo": "chongdashu/unreal-mcp",
+    "install": null,
+    "caveats": [
+      "스타 수는 2026년 4월 집계 사이트 스냅샷"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Pixels Design 비교",
+        "url": "https://www.pixelsdesign.it/blog/unreal-engine-mcp-claude-code-explained.html"
+      },
+      {
+        "label": "SkillsLLM 집계",
+        "url": "https://skillsllm.com/skill/chongdashu-unreal-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-flopperam-unreal-engine-mcp",
+    "name": "unreal-engine-mcp",
+    "vendor": "flopperam",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "2026년 5월 이후 정체된 커뮤니티 UE MCP",
+    "description": "Unreal Engine을 MCP로 제어하는 무료 커뮤니티 서버로, MCP 클라이언트에서 기존 AI 구독으로 사용할 수 있습니다. 2026년 5월 2일 이후 푸시가 없어 최신 엔진 버전과의 호환성은 직접 확인해야 합니다. 새로 시작한다면 Epic의 UE 5.8 공식 플러그인을 먼저 검토하는 편이 안전합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 878,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": "flopperam/unreal-engine-mcp",
+    "install": null,
+    "caveats": [
+      "스타·푸시 정보는 집계 사이트 기준"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "gittrend 집계",
+        "url": "https://gittrend.io/repo/flopperam/unreal-engine-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-pixelsdesign-claude-assistant",
+    "name": "Claude Assistant",
+    "vendor": "Pixels Design",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "UE 에디터 안에서 Claude Code 구동, $49.90",
+    "description": "FAB에서 판매하는 Unreal 플러그인으로, 에디터 안에서 Claude Code CLI를 실행하고 내장 MCP 브리지로 26개 카테고리 351개 도구를 연결합니다. Claude Pro/Max 구독을 그대로 쓰거나 API 키를 넣을 수 있어 별도 AI 크레딧이 들지 않습니다. 일회성 구매에 C++ 소스 전체가 포함돼 필요에 맞게 고쳐 쓸 수 있습니다.",
+    "connect": [
+      "signin",
+      "byok",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "$49.90 일회성",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.fab.com/listings/4f537f12-452b-4abc-8f1a-c2b5d5eb246b",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "도구 수는 판매사 주장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "FAB 상품 페이지",
+        "url": "https://www.fab.com/listings/4f537f12-452b-4abc-8f1a-c2b5d5eb246b"
+      },
+      {
+        "label": "Pixels Design 해설",
+        "url": "https://www.pixelsdesign.it/blog/unreal-engine-mcp-claude-code-explained.html"
+      }
+    ]
+  },
+  {
+    "id": "game-strayspark-unreal-mcp",
+    "name": "StraySpark Unreal MCP Server",
+    "vendor": "StraySpark",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "인증·스코프 제어를 갖춘 유료 UE MCP 서버",
+    "description": "455개 이상의 도구를 64개 카테고리로 묶은 상용 Unreal MCP 서버로, 전체 소스와 평생 업데이트가 포함됩니다. 공식 플러그인에 없는 Bearer 인증, 스코프 게이트, 바인드 주소 제어, DNS 리바인딩 방어를 제공합니다. MCP 클라이언트에 연결해 기존 AI 구독으로 쓰며, 카탈로그 모드로 도구 스키마를 줄여 세션당 토큰을 아낀다고 주장합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "$129부터",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "도구 수·토큰 절감 수치는 판매사 주장",
+      "출처가 경쟁 제품 비교 블로그"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "StraySpark 블로그",
+        "url": "https://www.strayspark.studio/blog/epic-official-mcp-plugin-ue5-8-vs-third-party"
+      }
+    ]
+  },
+  {
+    "id": "game-ludus-ai",
+    "name": "Ludus AI",
+    "vendor": "Ludus AI",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "UE 5.4~5.8 에디터 내 AI, 자체 크레딧 과금",
+    "description": "Unreal Engine 5.4~5.8 에디터 안에서 Blueprint와 C++를 읽고 작업하는 AI 어시스턴트입니다. 자체 모델과 크레딧으로 동작해 Claude나 ChatGPT 구독은 쓸 수 없고 별도 요금이 듭니다. 14일 Pro 체험(50,000크레딧)으로 먼저 써 볼 수 있습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Pro 월 $25 (연간 결제 시 월 $20), 월 70,000크레딧",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://ludusengine.com/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "월 크레딧은 매달 초기화, 충전팩은 만료 없음",
+      "Studio $80·Ultimate $180은 좌석당 요금"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Ludus AI 사이트",
+        "url": "https://ludusengine.com/"
+      },
+      {
+        "label": "Ludus 블로그",
+        "url": "https://ludusengine.com/blog/unreal-engine-built-in-ai-assistant"
+      },
+      {
+        "label": "StraySpark 비용 비교",
+        "url": "https://www.strayspark.studio/blog/ai-agent-unreal-engine-cost-credits-pricing-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-aura",
+    "name": "Aura",
+    "vendor": "Ramen",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Claude 기반 UE·Unity 에이전트, 자체 구독",
+    "description": "Anthropic Applied AI 엔지니어와 함께 만든 'Claude 기반' 게임 개발 에이전트로, Unreal과 Unity를 지원합니다. 15.0에서는 게임을 직접 플레이하고 테스트를 돌려 버그를 보고하는 검증 에이전트, Sandbox Mode, Aura Skills가 추가됐습니다. Claude Code와 연동된다고 소개되지만 과금은 Aura 자체 구독으로 따로 이뤄집니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Indie 월 $10 (연 $120)",
+    "free": false,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "기본 모드는 무제한이지만 프리미엄 모델은 사용량 한도",
+      "보도자료마다 출시일이 달라 확인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Game Developer 보도자료",
+        "url": "https://www.gamedeveloper.com/press-release/aura-15-0-releases-with-new-features-and-unlimited-usage-for-unreal-engine-and-unity"
+      },
+      {
+        "label": "Unreal 포럼 소개",
+        "url": "https://forums.unrealengine.com/t/ramen-vr-aura-build-playtest-verify/2769839"
+      },
+      {
+        "label": "StraySpark 비용 비교",
+        "url": "https://www.strayspark.studio/blog/ai-agent-unreal-engine-cost-credits-pricing-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-roblox-studio-mcp",
+    "name": "Roblox Studio MCP Server",
+    "vendor": "Roblox",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Studio에 내장된 공식 MCP, 플레이 테스트 지원",
+    "description": "Roblox Studio에 기본 탑재된 MCP 서버로, Assistant 설정에서 'Enable Studio as MCP server'를 켜면 외부 에이전트가 Studio를 조작할 수 있습니다. `run_script_in_play_mode`, `start_stop_play`, `get_console_output` 같은 플레이 테스트 도구로 실행부터 로그 확인까지 검증 루프를 닫을 수 있습니다. Claude Code·Codex·Cursor에서 기존 구독으로 쓰며, 한 클라이언트가 여러 Studio 인스턴스를 동시에 다룰 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": "https://devforum.roblox.com/t/assistant-updates-studio-built-in-mcp-server-and-playtest-automation/4474643",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "2026년 8월 `set_active_studio` 제거, 모든 호출에 `studio_id` 필요",
+      "플레이 테스트 중에는 편집 도구가 실패",
+      "Studio는 macOS·Windows에서만 실행"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "DevForum: 내장 MCP 서버",
+        "url": "https://devforum.roblox.com/t/assistant-updates-studio-built-in-mcp-server-and-playtest-automation/4474643"
+      },
+      {
+        "label": "DevForum: 2026년 2월 업데이트",
+        "url": "https://devforum.roblox.com/t/studio-mcp-server-updates-and-external-llm-support-for-assistant/4415631"
+      },
+      {
+        "label": "DevForum: 2026년 8월 업데이트",
+        "url": "https://devforum.roblox.com/t/studio-mcp-multi-agent-improvements-and-connected-ai-clients/4820583"
+      }
+    ]
+  },
+  {
+    "id": "game-roblox-studio-agent-plugin",
+    "name": "Roblox Studio Agent Plugin",
+    "vendor": "Roblox",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Claude Code·Codex용 Roblox 공식 플러그인",
+    "description": "Studio 내장 MCP 서버에 연결하는 설정과 스킬만 담은 공식 플러그인으로, 자체 코드는 없습니다. Claude Code, Claude 데스크톱(Cowork), ChatGPT 데스크톱, Codex CLI를 지원해 기존 구독으로 Roblox 개발을 할 수 있습니다. Claude Code에서는 `/plugin`에서 'Roblox Studio'를 검색해 설치합니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 16,
+    "updated": null,
+    "homepage": "https://github.com/Roblox/roblox-studio-agent-plugin",
+    "repo": "Roblox/roblox-studio-agent-plugin",
+    "install": "codex plugin marketplace add Roblox/roblox-studio-agent-plugin",
+    "caveats": [
+      "claude.ai 웹·ChatGPT 웹/모바일에서는 연결 불가",
+      "Studio가 macOS·Windows에서 실행 중이어야 함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/Roblox/roblox-studio-agent-plugin"
+      }
+    ]
+  },
+  {
+    "id": "game-roblox-assistant",
+    "name": "Roblox Assistant",
+    "vendor": "Roblox",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Studio 내 AI, 외부 모델은 API 키로만 연결",
+    "description": "Roblox Studio에 들어 있는 AI 어시스턴트로, Assistant에서 쓰는 MCP 도구는 내장 MCP 서버로도 그대로 노출됩니다. 외부 모델은 Anthropic·OpenAI·Google Gemini API 키를 직접 등록하는 BYOK 방식만 지원해 Claude나 ChatGPT 구독 로그인은 쓸 수 없습니다. 구독을 활용하려면 Studio MCP 서버에 Claude Code나 Codex를 붙이는 편이 낫습니다.",
+    "connect": [
+      "app",
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "Studio 무료, 외부 모델은 API 종량제",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-02",
+    "homepage": "https://devforum.roblox.com/t/studio-mcp-server-updates-and-external-llm-support-for-assistant/4415631",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "API 키는 기기에 저장됨",
+      "구독 로그인·OpenRouter·로컬 모델 요청은 아직 미반영"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "DevForum: 외부 LLM 지원",
+        "url": "https://devforum.roblox.com/t/studio-mcp-server-updates-and-external-llm-support-for-assistant/4415631"
+      }
+    ]
+  },
+  {
+    "id": "game-godot-ai",
+    "name": "Godot AI",
+    "vendor": "hi-godot",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "인증된 로컬 연결의 Godot 4.7+ MCP",
+    "description": "Godot 4.7 이상용 커뮤니티 MCP 애드온으로, 46개 도구와 120여 개 작업을 에디터 독에서 제공하고 Configure 버튼으로 클라이언트를 설정합니다. GDScript는 파싱 검증 후 핫 리로드되며, 인증된 로컬 HTTP/WebSocket 전송을 씁니다. Claude Code·Claude Desktop·Codex·Antigravity·Cursor·VS Code 등에서 기존 구독으로 연결되고 게임 테스트 가이드도 들어 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 3200,
+    "updated": null,
+    "homepage": "https://github.com/hi-godot/godot-ai",
+    "repo": "hi-godot/godot-ai",
+    "install": null,
+    "caveats": [
+      "C#은 텍스트로만 다루며 빌드 피드백 없음",
+      "uv 필요, 텔레메트리는 옵트아웃 방식"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/hi-godot/godot-ai"
+      },
+      {
+        "label": "Godot 기여 정책 2026",
+        "url": "https://godotengine.org/article/contribution-policy-2026/"
+      }
+    ]
+  },
+  {
+    "id": "game-coding-solo-godot-mcp",
+    "name": "godot-mcp",
+    "vendor": "Coding-Solo",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "에디터 실행·디버그 출력 캡처용 Godot MCP",
+    "description": "Godot 에디터를 띄우고 프로젝트를 실행해 디버그 출력을 가져오는 커뮤니티 MCP 서버입니다. npx 한 줄로 Claude Code에 추가할 수 있어 기존 구독으로 바로 쓸 수 있습니다. 스타 수는 많지만 2026년 4월 이후 업데이트가 없다는 집계가 있어, 활발한 대안인 godot-ai도 함께 검토하는 것이 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 3965,
+    "updated": "2026-04",
+    "homepage": null,
+    "repo": "Coding-Solo/godot-mcp",
+    "install": "claude mcp add godot -- npx @coding-solo/godot-mcp",
+    "caveats": [
+      "스타·업데이트 정보는 집계 사이트 기준"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Enterprise DNA 디렉터리",
+        "url": "https://enterprisedna.co/directories/mcp/coding-solo-godot-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-godot-mcp-pro",
+    "name": "godot-mcp-pro",
+    "vendor": "youichi-uda",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "셰이더·입력 시뮬레이션 포함 Godot 도구 162개",
+    "description": "셰이더 작업과 입력 시뮬레이션을 포함해 162개 MCP 도구를 제공하는 Godot용 서버입니다. MCP 클라이언트에 연결해 기존 AI 구독으로 사용합니다. 라이선스가 명시되지 않았고(NOASSERTION) 가격 조건도 확인되지 않았으니 도입 전에 저장소를 확인하세요.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": 633,
+    "updated": null,
+    "homepage": "https://github.com/youichi-uda/godot-mcp-pro",
+    "repo": "youichi-uda/godot-mcp-pro",
+    "install": null,
+    "caveats": [
+      "라이선스 NOASSERTION, 가격 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/youichi-uda/godot-mcp-pro"
+      }
+    ]
+  },
+  {
+    "id": "game-ziva",
+    "name": "Ziva",
+    "vendor": "Ziva",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Claude Code·Codex 구독으로 로그인하는 Godot AI",
+    "description": "Godot 4.2 이상 기본 에디터 안에서 동작하는 AI 에이전트로, 기존 Claude Code나 ChatGPT Codex 구독을 연결해 그 사용량으로 작업할 수 있습니다. 구독 연결은 무료 Hobby 플랜에서도 되며, Ziva 호스팅 모델이나 Ollama·LM Studio 로컬 모델도 고를 수 있습니다. 로컬 MCP 서버를 함께 띄워 다른 에이전트도 붙을 수 있고, Pro·Ultra 플랜에는 플레이 테스트 에이전트가 들어 있습니다.",
+    "connect": [
+      "signin",
+      "app",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "Hobby 무료 (자체 구독 연결), Basic 월 $20",
+    "free": true,
+    "official": "third-party",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://ziva.sh",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Pro·Ultra 가격은 미공개",
+      "Unity 베타·Unreal 파일럿은 Enterprise 대상"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "ziva.sh",
+        "url": "https://ziva.sh"
+      }
+    ]
+  },
+  {
+    "id": "game-godot-ai-assistant-hub",
+    "name": "AI Assistant Hub",
+    "vendor": "FlamxGames",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "로컬 LLM 우선의 Godot AI 플러그인",
+    "description": "Godot 에디터 안에서 스크립트·씬·리소스를 다루는 에이전트 도구를 제공하는 커뮤니티 플러그인입니다. Ollama·llama.cpp 같은 로컬 모델을 우선 지원하고 Gemini·OpenRouter·xAI는 API 키로 연결하지만, Anthropic·OpenAI 제공자나 MCP 서버는 없습니다. Apple Silicon에서 무료 로컬 모델로 Godot 작업을 하려는 경우에 맞고, Claude·ChatGPT 구독자에게는 MCP 서버나 Ziva가 더 적합합니다.",
+    "connect": [
+      "byok"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "none",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 319,
+    "updated": "2026-09",
+    "homepage": "https://github.com/FlamxGames/godot-ai-assistant-hub",
+    "repo": "FlamxGames/godot-ai-assistant-hub",
+    "install": null,
+    "caveats": [
+      "Claude·ChatGPT 구독 경로 없음",
+      "원격 제공자는 API 키 종량제",
+      "Godot 4.7 권장"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/FlamxGames/godot-ai-assistant-hub"
+      }
+    ]
+  },
+  {
+    "id": "game-playcanvas-editor-mcp",
+    "name": "PlayCanvas Editor MCP Server",
+    "vendor": "PlayCanvas",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "열린 PlayCanvas 에디터를 조작하는 공식 MCP",
+    "description": "열려 있는 PlayCanvas 에디터 세션에 연결해 엔티티·에셋·머티리얼·스크립트·씬과 에셋 스토어를 다루는 공식 MCP 서버입니다. npx로 실행하며 Claude Code·Codex·Cursor·Claude Desktop 설정이 문서화돼 있어 기존 구독으로 연결됩니다. 브라우저 에디터에서 웹 3D 게임을 만들면서 반복 작업을 에이전트에게 맡기기에 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developer.playcanvas.com/user-manual/editor/mcp-server/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Node.js 22.18 이상 필요",
+      "한 번에 에디터 1개만 연결, 포트 52000",
+      "크롬 확장 방식의 옛 가이드는 구버전일 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "PlayCanvas 문서: MCP 서버",
+        "url": "https://developer.playcanvas.com/user-manual/editor/mcp-server/"
+      },
+      {
+        "label": "Glama 등록 정보",
+        "url": "https://glama.ai/mcp/servers/playcanvas/editor-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "game-phaser-editor-mcp",
+    "name": "Phaser Editor MCP Server",
+    "vendor": "Phaser",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Phaser Editor에 번들된 개발 중인 MCP",
+    "description": "Phaser Editor 설치에 함께 들어 있는 Node.js 기반 MCP 서버로, 에디터의 AI 메뉴에서 찾을 수 있습니다. 현재는 기본적인 씬 생성·관리만 지원하며 공식 문서도 '아직 개발 중'이라고 밝힙니다. MCP 클라이언트에 연결해 기존 AI 구독으로 씬 작업을 맡길 수 있고, Phaser 코드는 텍스트라 MCP 없이도 에이전트가 편집할 수 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Phaser Editor 포함 (가격 확인 필요)",
+    "free": false,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.phaser.io/phaser-editor/ai/mcp-server",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "기능이 기본 씬 작업으로 제한적"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Phaser 문서: MCP 서버",
+        "url": "https://docs.phaser.io/phaser-editor/ai/mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "game-babylonjs-mcp-servers",
+    "name": "@babylonjs/mcp-servers",
+    "vendor": "Babylon.js",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Babylon.js 노드 그래프 에디터용 공식 MCP 7종",
+    "description": "Node Material, Node Geometry, Render Graph, Particle, GUI, Flow Graph, Smart Filter 에디터의 그래프를 만들고 검증하며 실시간 동기화하는 7개의 공식 stdio MCP 서버입니다. npx로 원하는 서버를 띄우면 MCP 클라이언트에서 기존 AI 구독으로 셰이더·파티클·GUI 그래프를 작성할 수 있습니다. 씬 전체를 제어하는 도구는 아니므로 게임 코드는 일반 파일 편집과 개발 서버 실행으로 다루면 됩니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-10",
+    "homepage": "https://github.com/BabylonJS/Babylon.js/tree/master/packages/public/@babylonjs/mcp-servers",
+    "repo": "BabylonJS/Babylon.js",
+    "install": "npx -y @babylonjs/mcp-servers nme",
+    "caveats": [
+      "씬이 아닌 노드 그래프만 편집",
+      "라이브 세션은 127.0.0.1에 바인딩되고 15분 미사용 시 종료"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Babylon.js 저장소 README",
+        "url": "https://github.com/BabylonJS/Babylon.js/tree/master/packages/public/@babylonjs/mcp-servers"
+      },
+      {
+        "label": "npm 패키지",
+        "url": "https://www.npmjs.com/package/@babylonjs/mcp-servers"
+      }
+    ]
+  },
+  {
+    "id": "game-pmndrs-docs-mcp",
+    "name": "pmndrs docs MCP",
+    "vendor": "pmndrs",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "R3F·drei·zustand 공식 문서 원격 MCP",
+    "description": "react-three-fiber, drei, zustand 공식 문서와 예제 갤러리를 검색·조회하는 pmndrs의 원격 MCP 서버(`https://docs.pmnd.rs/api/mcp`)입니다. 문서·예제 스킬을 함께 묶은 Claude Code 플러그인으로 설치할 수 있고, 다른 MCP 클라이언트도 URL로 연결할 수 있습니다. 문서를 실시간으로 가져와 5분마다 갱신하므로 오래된 API를 쓰는 실수를 줄여 줍니다.",
+    "connect": [
+      "remote-mcp",
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 6,
+    "updated": "2026-10",
+    "homepage": "https://github.com/pmndrs/claude-code-plugin",
+    "repo": "pmndrs/claude-code-plugin",
+    "install": "/plugin marketplace add pmndrs/claude-code-plugin",
+    "caveats": [
+      "스타 수는 Claude Code 플러그인 저장소 기준",
+      "설치 후 `/plugin install pmndrs@pmndrs` 필요"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub: pmndrs Claude Code 플러그인",
+        "url": "https://github.com/pmndrs/claude-code-plugin"
+      },
+      {
+        "label": "MCP Registry 등록 정보",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pmndrs"
+      }
+    ]
+  },
+  {
+    "id": "game-threejs-llms-txt",
+    "name": "three.js llms.txt",
+    "vendor": "three.js",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "LLM을 위한 three.js 공식 문서 진입점",
+    "description": "three.js 저장소에 2026년 2월 추가된 공식 `llms.txt`로, TSL까지 포함한 전체 문서 `llms-full.txt`를 가리킵니다. MCP 없이도 Claude Code·Codex·Cursor 같은 에이전트가 이 문서를 읽고 최신 API에 맞춰 코드를 쓰게 할 수 있습니다. 문서는 커스텀 셰이더·머티리얼에 `WebGPURenderer`와 TSL을 쓰도록 안내합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-02",
+    "homepage": "https://threejs.org/docs/llms.txt",
+    "repo": "mrdoob/three.js",
+    "install": null,
+    "caveats": [
+      "공식 MCP 서버나 SKILL.md는 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "three.js 저장소 llms.txt",
+        "url": "https://github.com/mrdoob/three.js/blob/dev/llms.txt"
+      },
+      {
+        "label": "threejs-skills README",
+        "url": "https://github.com/CloudAI-X/threejs-skills"
+      }
+    ]
+  },
+  {
+    "id": "game-threejs-skills",
+    "name": "threejs-skills",
+    "vendor": "CloudAI-X",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "버전을 고정한 three.js·R3F 스킬 팩",
+    "description": "three.js r186, R3F 9.8·drei 10.7, gltf-transform 4.5를 기준으로 작성된 커뮤니티 SKILL.md 모음입니다. `npx skills add`나 `~/.claude/skills/` 복사로 설치하며, SKILL.md 형식이라 기존 구독의 코딩 에이전트에서 그대로 씁니다. three.js 문서가 권하는 `WebGPURenderer`와 TSL 방식을 반영해 최신 API로 코드를 쓰게 돕습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 3705,
+    "updated": "2026-10",
+    "homepage": "https://github.com/CloudAI-X/threejs-skills",
+    "repo": "CloudAI-X/threejs-skills",
+    "install": "npx skills add cloudai-x/threejs-skills",
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/CloudAI-X/threejs-skills"
+      }
+    ]
+  },
+  {
+    "id": "game-threejs-game-skills",
+    "name": "threejs-game-skills",
+    "vendor": "majidmanzarpour",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "플레이 가능한 three.js 브라우저 게임용 스킬",
+    "description": "완성도 있는 three.js 브라우저 게임을 만들기 위한 커뮤니티 스킬 팩으로, QA와 선택적인 AI 생성 3D·이미지·오디오 에셋 흐름까지 다룹니다. SKILL.md 형식이라 Claude Code나 Codex 같은 에이전트에서 기존 구독으로 사용할 수 있습니다. 웹 게임 프로토타입을 빠르게 만들 때 유용합니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 2580,
+    "updated": null,
+    "homepage": null,
+    "repo": "majidmanzarpour/threejs-game-skills",
+    "install": null,
+    "caveats": [
+      "AI 생성 에셋을 게임에 넣어 출시하면 Steam 공개 대상"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 검색 결과",
+        "url": "https://github.com/search?q=threejs-skills"
+      }
+    ]
+  },
+  {
+    "id": "game-threejs-devtools-mcp",
+    "name": "threejs-devtools-mcp",
+    "vendor": "DmitriyGolub",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "실행 중인 three.js 씬을 실시간 점검·편집",
+    "description": "개발 서버를 프록시하고 Chrome이나 Edge를 띄워 실행 중인 three.js 씬의 머티리얼·셰이더·조명을 실시간으로 점검하고 수정하는 커뮤니티 MCP 서버입니다. npx로 stdio 실행하므로 MCP 클라이언트에서 기존 구독으로 쓸 수 있습니다. 코드만 고쳐서는 확인하기 어려운 화면 결과를 에이전트가 직접 살펴볼 수 있게 해 줍니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 126,
+    "updated": "2026-10",
+    "homepage": "https://github.com/DmitriyGolub/threejs-devtools-mcp",
+    "repo": "DmitriyGolub/threejs-devtools-mcp",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/DmitriyGolub/threejs-devtools-mcp"
+      },
+      {
+        "label": "MCP Registry 등록 정보",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=three"
+      }
+    ]
+  },
+  {
+    "id": "game-bevy-brp-mcp",
+    "name": "bevy_brp_mcp",
+    "vendor": "natepiano",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Bevy Remote Protocol로 실행 중인 앱 제어",
+    "description": "Rust 게임 엔진 Bevy 앱을 실행하고 Bevy Remote Protocol로 컴포넌트를 실시간 조회·수정하는 커뮤니티 MCP 서버입니다. `bevy_brp_extras`를 더하면 스크린샷, 키보드·마우스 입력, 진단까지 가능해 에이전트가 직접 실행하며 검증할 수 있습니다. stdio MCP라 Claude Code 등 기존 구독 클라이언트에서 사용합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.rs/crate/bevy_brp_mcp/0.22.3",
+    "repo": null,
+    "install": "cargo install bevy_brp_mcp",
+    "caveats": [
+      "앱에 `bevy::remote::RemotePlugin` 추가 필요",
+      "한 디렉터리에 'ARCHIVED' 표시가 있어 저장소 이전 여부 확인 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "docs.rs 0.22.3",
+        "url": "https://docs.rs/crate/bevy_brp_mcp/0.22.3"
+      },
+      {
+        "label": "mcpservers.org 목록",
+        "url": "https://mcpservers.org/fr/servers/natepiano/bevy_brp_mcp-ARCHIVED"
+      }
+    ]
+  },
+  {
+    "id": "game-defold-mcp",
+    "name": "defold-mcp",
+    "vendor": "Fulviuus",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "에디터 없이 Defold 빌드·실행·핫 리로드",
+    "description": "에디터 없이 Defold 프로젝트를 헤드리스로 빌드·번들·실행·핫 리로드하고, 실행 중인 엔진을 조작하며 API 레퍼런스를 검색하는 커뮤니티 MCP 서버입니다. MCP 클라이언트에 연결해 기존 AI 구독으로 사용합니다. 실행 결과를 에이전트가 직접 확인할 수 있어 Defold 게임의 반복 개발에 적합합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/Fulviuus/defold-mcp",
+    "repo": "Fulviuus/defold-mcp",
+    "install": null,
+    "caveats": [
+      "초기 단계 커뮤니티 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/Fulviuus/defold-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-defold-ai",
+    "name": "defold-ai",
+    "vendor": "estebanrfp",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "godot-ai를 Defold로 옮긴 라이브 에디터 MCP",
+    "description": "Godot용 godot-ai를 Defold로 포팅한 커뮤니티 프로젝트로, 실행 중인 Defold 에디터와 연결해 작업합니다. MCP 클라이언트에서 기존 AI 구독으로 사용할 수 있습니다. 에디터 없이 빌드·실행하는 defold-mcp와 달리 라이브 에디터 연동이 필요할 때 고려할 만합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/estebanrfp/defold-ai",
+    "repo": "estebanrfp/defold-ai",
+    "install": null,
+    "caveats": [
+      "초기 단계 커뮤니티 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/estebanrfp/defold-ai"
+      }
+    ]
+  },
+  {
+    "id": "game-cocos-mcp-server",
+    "name": "cocos-mcp-server",
+    "vendor": "caravanglory",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Cocos Creator 3.8용 130개 이상 도구 MCP",
+    "description": "Cocos Creator 3.8.x용 커뮤니티 MCP 서버로 130개가 넘는 도구를 제공합니다. MCP 클라이언트에서 기존 AI 구독으로 Cocos Creator 에디터 작업을 맡길 수 있습니다. 비슷한 DaxianLee/cocos-mcp-server는 Claude CLI·Cursor에서 테스트됐고, VberAI의 유료 Pro 버전(231개 작업, 3.8.6 이상)도 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/caravanglory/cocos-mcp-server",
+    "repo": "caravanglory/cocos-mcp-server",
+    "install": null,
+    "caveats": [
+      "초기 단계 커뮤니티 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub: caravanglory",
+        "url": "https://github.com/caravanglory/cocos-mcp-server"
+      },
+      {
+        "label": "GitHub: DaxianLee",
+        "url": "https://github.com/DaxianLee/cocos-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "game-gamemaker-mcp",
+    "name": "GameMaker-MCP-Server",
+    "vendor": "darkw3bb",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "GameMaker 프로젝트·GML 생성 커뮤니티 MCP",
+    "description": "@bscotch/yy를 이용해 GameMaker YYP 프로젝트와 GML 스크립트·오브젝트·스프라이트를 만드는 커뮤니티 MCP 서버로, Cursor 사용 예가 소개돼 있습니다. GameMaker 공식 AI나 MCP는 없으며, gm-forge-mcp(v0.1.0)와 읽기 전용 분석용 GMS2 MCP Server 같은 대안도 초기 단계입니다. 파일만 다루고 게임을 실행해 검증하지는 못하니 작업 전에 백업해 두세요.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "experimental",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/darkw3bb/GameMaker-MCP-Server",
+    "repo": "darkw3bb/GameMaker-MCP-Server",
+    "install": null,
+    "caveats": [
+      "파일 전용이라 실행 검증 루프 없음",
+      "공식 GameMaker MCP 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/darkw3bb/GameMaker-MCP-Server"
+      },
+      {
+        "label": "Glama GameMaker 통합 목록",
+        "url": "https://glama.ai/mcp/servers/integrations/gamemaker"
+      }
+    ]
+  },
+  {
+    "id": "game-pico8-mcp",
+    "name": "pico8-mcp",
+    "vendor": "smartfrog",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "PICO-8 카트를 프레임 단위로 제어하는 MCP",
+    "description": "에이전트가 실제 PICO-8 카트를 프레임 단위로 조작하고 변수·메모리를 읽으며 리셋·리플레이할 수 있는 커뮤니티 MCP 서버로, 브라우저 실시간 보기도 제공합니다. MCP 클라이언트에서 기존 AI 구독으로 쓰며, 실행 결과를 직접 확인하는 검증 루프를 만들 수 있습니다. PICO-8 실행 파일 경로를 `PICO8_BIN`으로 지정해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://mcp.so/server/pico8-mcp/smartfrog",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "PICO-8 본체가 별도로 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "mcp.so 등록 정보",
+        "url": "https://mcp.so/server/pico8-mcp/smartfrog"
+      }
+    ]
+  },
+  {
+    "id": "game-mcpfabric",
+    "name": "MCPFabric",
+    "vendor": "denfry",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Minecraft Fabric 모드형 MCP, 50개 이상 도구",
+    "description": "Minecraft Java의 Fabric 모드와 MCP 서버를 묶은 커뮤니티 프로젝트로, 50개 이상의 도구를 제공하고 1.21.1~26.2 버전을 지원합니다. Claude Code가 지원 클라이언트로 명시돼 있어 기존 구독으로 게임 안에 에이전트를 연결할 수 있습니다. chapmanjw의 Fabric API MCP Server(MIT, Claude Code 플러그인 포함)나 ClaudeCraft MCP 같은 비슷한 모드도 있습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://modrinth.com/mod/mcpfabric",
+    "repo": null,
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Modrinth 페이지",
+        "url": "https://modrinth.com/mod/mcpfabric"
+      },
+      {
+        "label": "chapmanjw Fabric MCP (ecosyste.ms)",
+        "url": "https://awesome.ecosyste.ms/projects/github.com%2Fchapmanjw%2Fminecraft-java-fabric-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "game-minecraft-mcp-server",
+    "name": "minecraft-mcp-server",
+    "vendor": "yuniko-software",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Mineflayer 봇이 플레이어로 접속하는 MCP",
+    "description": "Mineflayer 봇이 플레이어로 Minecraft 서버에 접속해 에이전트 대신 움직이는 커뮤니티 MCP 서버입니다. 1.21.8과 1.21.11에서 테스트됐고 Claude Desktop 연결이 안내돼 있어 기존 구독으로 쓸 수 있습니다. 서버에서의 동작을 시험하거나 반복 작업을 자동화할 때 유용합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://glama.ai/mcp/servers/yuniko-software/minecraft-mcp-server",
+    "repo": "yuniko-software/minecraft-mcp-server",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama 등록 정보",
+        "url": "https://glama.ai/mcp/servers/yuniko-software/minecraft-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "game-construct3-mcp",
+    "name": "construct3-mcp",
+    "vendor": "liauw-media",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "Construct 3 프로젝트 안전 편집과 런타임 제어",
+    "description": "Construct 3 프로젝트를 읽고 분석하며 백업·검증을 거쳐 에디터와 같은 방식으로 수정하는 커뮤니티 MCP 서버입니다. v1.10.0은 디스크의 프로젝트를 추적해 오래된 쓰기를 막고, Chrome DevTools Protocol로 실행 중인 게임에 입력을 보내고 스크린샷을 찍습니다. Claude·Cursor 등 MCP 클라이언트에서 기존 구독으로 쓸 수 있으며, Scirra의 공식 AI 도구는 없습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 22,
+    "updated": "2026-09",
+    "homepage": "https://github.com/liauw-media/construct3-mcp",
+    "repo": "liauw-media/construct3-mcp",
+    "install": null,
+    "caveats": [
+      "Node.js 22 필요",
+      "에이전트가 파일을 쓴 뒤 에디터를 다시 불러와야 함"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/liauw-media/construct3-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-rpgmaker-mz-mcp",
+    "name": "rpgmaker-mz-mcp",
+    "vendor": "Redseb",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "RPG Maker MZ 데이터를 다루는 128개 도구",
+    "description": "RPG Maker MZ 프로젝트의 액터·직업·스킬·아이템·적·공통 이벤트·맵·타일셋을 읽고 쓰는 128개 도구의 커뮤니티 MCP 서버입니다. Claude Code 플러그인으로 설치하거나, 다른 클라이언트에서는 npx와 `RPGMAKER_PROJECT_PATH`로 실행해 기존 구독으로 씁니다. 프로젝트가 디스크의 JSON이라 에디터 브리지 없이도 편집할 수 있지만, 쓰기 후에는 에디터를 다시 불러와야 합니다.",
+    "connect": [
+      "local-mcp",
+      "plugin"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 23,
+    "updated": "2026-09",
+    "homepage": "https://github.com/Redseb/rpgmaker-mz-mcp",
+    "repo": "Redseb/rpgmaker-mz-mcp",
+    "install": "claude plugin marketplace add Redseb/rpgmaker-mz-mcp && claude plugin install rpgmaker-mz@rpgmaker-mz-mcp",
+    "caveats": [
+      "Node 20 이상 필요",
+      "Gotcha Gotcha Games의 공식 AI 도구는 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/Redseb/rpgmaker-mz-mcp"
+      },
+      {
+        "label": "MCP Registry 등록 정보",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=rpg"
+      }
+    ]
+  },
+  {
+    "id": "game-love2d-mcp",
+    "name": "love2d-mcp",
+    "vendor": "shayarnett",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "LÖVE 게임에 Lua 브리지를 넣는 MCP",
+    "description": "TypeScript stdio MCP 서버와 게임 안에 넣는 Lua TCP 브리지로 LÖVE 게임을 실시간 조회하고 Lua 코드를 실행하는 커뮤니티 프로젝트입니다. MCP 클라이언트에서 기존 AI 구독으로 쓸 수 있습니다. 2025년 10월 이후 업데이트가 없으니 입력·스크린샷·핫 리로드를 추가한 포크 lovepilot도 함께 보세요.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 12,
+    "updated": "2025-10",
+    "homepage": "https://github.com/shayarnett/love2d-mcp",
+    "repo": "shayarnett/love2d-mcp",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/shayarnett/love2d-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-lovepilot",
+    "name": "lovepilot",
+    "vendor": "InfiniteLoopRD",
+    "domain": "game",
+    "category": "엔진",
+    "tagline": "입력·스크린샷·핫 리로드를 더한 LÖVE MCP",
+    "description": "love2d-mcp를 포크해 `send_input`, `get_screenshot`, 상태 변화를 푸시하는 `watch_game_state`, 코드 핫 리로드 `reload_code`를 더한 커뮤니티 MCP 서버입니다. 에이전트가 게임에 입력을 보내고 화면을 확인할 수 있어 기존 구독만으로 검증 루프를 닫을 수 있습니다. 2026년 9월에 만들어진 신생 프로젝트라 안정성은 직접 확인해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 0,
+    "updated": "2026-09",
+    "homepage": "https://github.com/InfiniteLoopRD/lovepilot",
+    "repo": "InfiniteLoopRD/lovepilot",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/InfiniteLoopRD/lovepilot"
+      }
+    ]
+  },
+  {
+    "id": "game-gdevelop-ai",
+    "name": "GDevelop AI agent",
+    "vendor": "GDevelop",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "자연어로 오브젝트·이벤트를 만드는 GDevelop AI",
+    "description": "오픈소스 노코드 엔진 GDevelop에 내장된 AI 에이전트로, 자연어로 오브젝트·비헤이비어·이벤트를 만들어 씬에 배치합니다. GDevelop 자체 크레딧으로 동작해 Claude나 ChatGPT 구독은 쓸 수 없고, Build 작업 하나에 약 15~20크레딧이 듭니다. 게임 전체보다 구체적인 작업에 강하며, 결과는 편집 가능한 프로젝트로 웹·Android·iOS·데스크톱에 내보낼 수 있습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료 월 40크레딧, Silver·Gold·Pro 주 200·1,000·3,000크레딧",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://wiki.gdevelop.io/gdevelop5/interface/ai/agent/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "크레딧 수치가 공식 페이지 간에도 상충",
+      "2026년 1월 신규 구독 가격 20% 인상"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GDevelop 위키: AI 에이전트",
+        "url": "https://wiki.gdevelop.io/gdevelop5/interface/ai/agent/"
+      },
+      {
+        "label": "GDevelop 요금제",
+        "url": "https://gdevelop.io/pricing"
+      },
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-rosebud-ai",
+    "name": "Rosebud AI",
+    "vendor": "Rosebud AI",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "프롬프트로 만드는 브라우저 2D·3D 게임",
+    "description": "프롬프트로 Phaser(2D)와 Three.js(3D) 기반 JavaScript 브라우저 게임을 만드는 플랫폼입니다. 자체 모델과 크레딧을 쓰므로 기존 AI 구독과는 별도로 과금됩니다. 무료 티어는 주 약 20회 프롬프트에 상업적 권리가 없고, 판매하려면 유료 티어가 필요합니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "무료 주 약 20프롬프트, 유료 티어는 확인 필요",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "코드 내보내기 가능 티어($30 10X Dev vs $50 Pro)가 출처마다 다름",
+      "무료 티어는 상업적 이용 불가"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      },
+      {
+        "label": "Summer Engine 리뷰",
+        "url": "https://www.summerengine.com/blog/is-rosebud-ai-worth-it"
+      },
+      {
+        "label": "Ai Miracle 리뷰",
+        "url": "https://www.aimiracle.ai/ai-tool-review/rosebud-ai-review"
+      }
+    ]
+  },
+  {
+    "id": "game-astrocade",
+    "name": "Astrocade",
+    "vendor": "Astrocade",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "즉시 공유하는 캐주얼 게임, 코드 내보내기 없음",
+    "description": "프롬프트로 캐주얼 게임을 만들어 바로 공유하는 소셜 플랫폼으로, 만들기는 무료이고 상위 제작자는 플랫폼에서 보상을 받습니다. 자체 모델로 동작해 기존 AI 구독과는 연결되지 않습니다. 코드 내보내기가 없는 강한 종속 구조라, 나중에 엔진으로 옮길 프로젝트에는 맞지 않습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "코드 내보내기 불가, 플랫폼 종속"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      },
+      {
+        "label": "Soonlab 대안 정리",
+        "url": "https://www.soonlab.ai/blog/astrocade-alternatives/"
+      }
+    ]
+  },
+  {
+    "id": "game-ludo-ai",
+    "name": "Ludo.ai",
+    "vendor": "Ludo.ai",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "게임 아이디어 발굴과 에셋 생성 도구",
+    "description": "게임 기획 아이디어 발굴과 에셋 생성을 돕는 플랫폼으로, 완성된 게임을 만들어 주지는 않습니다. 자체 모델로 동작해 기존 AI 구독과는 별도로 이용합니다. 기획 초기에 콘셉트를 넓히는 용도로 적합합니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "완성 게임 제작 도구가 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-buildbox",
+    "name": "Buildbox 4",
+    "vendor": "Buildbox",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "하이퍼캐주얼 모바일용 노코드 AI 엔진",
+    "description": "주로 하이퍼캐주얼 모바일 게임을 위한 노코드 엔진으로, AI로 에셋과 노드를 생성합니다. 자체 구독으로 동작하며 가격은 가입 후에야 공개됩니다. HTML5 내보내기는 되지만 엔진에 묶여 있어 다른 엔진이나 에이전트 워크플로로 옮기기 어렵습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "구독제 (가격은 가입 후 공개)",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "엔진 종속"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-seele",
+    "name": "SEELE",
+    "vendor": "SEELE",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "AI 2D·3D 게임 생성, Unity 6·Three.js로 내보내기",
+    "description": "2D·3D 게임과 에셋을 함께 생성하는 플랫폼으로, 결과를 Unity 6나 Three.js 프로젝트로 내보낼 수 있습니다. 자체 크레딧으로 과금되며 상업적 권리는 Pro 플랜이 필요합니다. 표준 프로젝트로 내보낼 수 있어 프로토타입 뒤 Claude Code나 MCP 워크플로로 넘어가기 쉽습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "크레딧제, 상업 이용은 Pro 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "상업적 이용은 Pro 플랜 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-jabali",
+    "name": "Jabali",
+    "vendor": "Jabali",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "프롬프트로 게임 생성, Sparks 크레딧제",
+    "description": "프롬프트로 플레이 가능한 게임과 AI 캐릭터를 만드는 소비자용 플랫폼입니다. 자체 'Sparks' 크레딧으로 과금되고 남은 크레딧은 이월되지 않으며, 사용 모델이나 BYO 키·MCP 옵션은 공개돼 있지 않습니다. 소스 코드 접근을 내세운 Jabali Studio 에디터는 아직 대기자 명단 단계입니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Premium 월 $9.99 ~ Pro 월 $99.99",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.jabali.ai/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "Studio(소스 코드 접근)는 대기자 명단",
+      "Sparks는 다음 달로 이월 안 됨",
+      "상업적 권리·내보내기 조건 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Jabali 요금제",
+        "url": "https://www.jabali.ai/pricing"
+      },
+      {
+        "label": "Jabali 홈페이지",
+        "url": "https://www.jabali.ai/"
+      }
+    ]
+  },
+  {
+    "id": "game-project-genie",
+    "name": "Project Genie",
+    "vendor": "Google DeepMind",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "Genie 3 월드 모델 체험, 미국 Ultra 전용",
+    "description": "Genie 3와 Nano Banana Pro, Gemini를 묶은 Google Labs 프로토타입 웹 앱으로, 프롬프트로 탐험 가능한 세계를 생성합니다. Google AI Ultra 구독자(미국, 18세 이상)만 쓸 수 있고 생성은 60초로 제한됩니다. 개발자 API가 없어 출시용 게임 제작보다는 탐색용 장난감에 가깝습니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "gemini"
+    ],
+    "aiCost": "plan",
+    "price": "Google AI Ultra 구독 필요",
+    "free": false,
+    "official": "official",
+    "status": "experimental",
+    "stars": null,
+    "updated": "2026-01",
+    "homepage": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "개발자 API·SDK 없음",
+      "API 접근을 내세우는 비공식 클론 사이트 주의"
+    ],
+    "korea": "미국 사용자 전용으로 출시돼 한국에서는 이용할 수 없음 (2026년 초 기준)",
+    "starter": false,
+    "sources": [
+      {
+        "label": "Google 블로그: Project Genie",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/"
+      },
+      {
+        "label": "Gigazine 보도",
+        "url": "https://gigazine.net/gsc_news/en/20260130-google-project-genie"
+      }
+    ]
+  },
+  {
+    "id": "game-orca-engine",
+    "name": "Orca Engine",
+    "vendor": "Orca Engine",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "AI 에이전트를 코어에 넣은 Godot 포크",
+    "description": "에디터 코어에 AI 에이전트를 넣은 Godot 포크로, 사용자가 자신의 API 키를 넣어 씁니다. 정액 구독이 아니라 토큰 종량제로 과금되는 BYOK 방식입니다. 비상업 라이선스이므로 상업 프로젝트라면 조건을 꼭 확인해야 합니다.",
+    "connect": [
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "확인 필요 (비상업 라이선스)",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "비상업 라이선스"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-summer-engine",
+    "name": "Summer Engine",
+    "vendor": "Summer Engine",
+    "domain": "game",
+    "category": "게임 제작 플랫폼",
+    "tagline": "실제 Godot 4 프로젝트를 만드는 AI 플랫폼",
+    "description": "프롬프트로 실제 Godot 4 프로젝트를 생성하는 AI 게임 제작 플랫폼입니다. 자체 모델만 쓰고 원하는 모델을 연결할 수 없어 기존 AI 구독과 별도로 요금이 듭니다. 결과가 표준 Godot 프로젝트라 나중에 Godot MCP나 Claude Code 워크플로로 옮길 수 있습니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "Pro 월 $20, Pro+ $60, Ultra $200",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "판매사가 자사를 1위로 둔 비교 글을 게시"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Cinevva 비교 가이드",
+        "url": "https://app.cinevva.com/guides/ai-game-generators-2026"
+      }
+    ]
+  },
+  {
+    "id": "game-awesome-gamedev-agent-skills",
+    "name": "awesome-gamedev-agent-skills",
+    "vendor": "gamedev-skills",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "엔진 10종을 아우르는 게임 개발 스킬 74개",
+    "description": "Godot, Unity, Unreal, Phaser, PixiJS, three.js, Bevy, pygame, LÖVE, Roblox를 다루는 74개 스킬을 라우터와 함께 묶은 커뮤니티 SKILL.md 모음입니다. Claude Code, Cursor, Kiro, Codex, Copilot, Gemini CLI에서 실행돼 어떤 구독을 쓰든 그대로 재사용할 수 있습니다. 여러 엔진을 오가는 개발자가 엔진별 모범 사례를 에이전트에 주입할 때 좋습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (Apache-2.0)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 3735,
+    "updated": null,
+    "homepage": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+    "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills"
+      },
+      {
+        "label": "GitHub 검색 결과",
+        "url": "https://github.com/search?q=threejs-skills"
+      }
+    ]
+  },
+  {
+    "id": "game-claude-code-game-studios",
+    "name": "Claude-Code-Game-Studios",
+    "vendor": "Donchitos",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "게임 스튜디오 조직을 본뜬 에이전트 49개",
+    "description": "게임 스튜디오의 직무 체계를 본떠 49개 에이전트와 72개 워크플로 스킬을 구성한 Claude Code용 커뮤니티 프로젝트입니다. Claude 구독으로 Claude Code에서 역할별 에이전트에게 작업을 나눠 맡기는 방식으로 씁니다. 집계 사이트 기준 2만 7천여 개의 스타를 받은 인기 프로젝트입니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 27200,
+    "updated": null,
+    "homepage": "https://github.com/donchitos/claude-code-game-studios",
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "install": null,
+    "caveats": [
+      "스타 수는 집계 사이트 기준"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/donchitos/claude-code-game-studios"
+      },
+      {
+        "label": "SkillsLLM 집계",
+        "url": "https://skillsllm.com/skill/claude-code-game-studios"
+      }
+    ]
+  },
+  {
+    "id": "game-claude-game-playtest-skills",
+    "name": "claude-game-playtest-skills",
+    "vendor": "jrejaud",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "녹화한 플레이를 버그 표와 수정 커밋으로",
+    "description": "해설을 곁들인 플레이 녹화를 타임스탬프·스크린샷이 담긴 버그 표로 바꾸고, 승인을 받은 뒤 항목마다 따로 커밋하며 게임을 직접 조작해 수정을 검증하는 Claude Code 플러그인입니다. 다른 스킬은 휴대폰·태블릿 에뮬레이션에서 실제 마우스·키보드·멀티터치로 브라우저 게임을 조작합니다. Claude 구독만으로 플레이테스트 피드백을 수정 작업까지 이어 줍니다.",
+    "connect": [
+      "plugin",
+      "skills"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/jrejaud/claude-game-playtest-skills",
+    "repo": "jrejaud/claude-game-playtest-skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/jrejaud/claude-game-playtest-skills"
+      }
+    ]
+  },
+  {
+    "id": "game-hermeticormus-game-development",
+    "name": "claude-code-game-development",
+    "vendor": "HermeticOrmus",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "게임 플러그인 22개와 81쪽 게임 개발 매뉴얼",
+    "description": "Godot·Unity·Unreal·멀티플레이·오디오·셰이더용 게임 플러그인 22개와 일반 개발 플러그인 65개, 81쪽짜리 게임 개발 매뉴얼을 담은 Claude Code 마켓플레이스입니다. Claude 구독으로 Claude Code에 설치해 씁니다. 플레이테스트 플러그인은 게임을 직접 플레이하는 에이전트가 아니라 세션 설계·텔레메트리·사망 히트맵·퍼널·A/B 테스트 같은 분석 중심입니다.",
+    "connect": [
+      "plugin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (라이선스 미확인)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://github.com/HermeticOrmus/claude-code-game-development",
+    "repo": "HermeticOrmus/claude-code-game-development",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/HermeticOrmus/claude-code-game-development"
+      },
+      {
+        "label": "claudepluginhub 플레이테스트 플러그인",
+        "url": "https://www.claudepluginhub.com/plugins/hermeticormus-playtesting-plugins-playtesting"
+      }
+    ]
+  },
+  {
+    "id": "game-shadereye",
+    "name": "shadereye",
+    "vendor": "zajalist",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "GLSL·WGSL·HLSL 컴파일·변환 실험 MCP",
+    "description": "GLSL·WGSL·HLSL 셰이더를 컴파일·렌더·디버그하고 브라우저에서 실행·테스트하며 언어 간 변환까지 하는 커뮤니티 MCP 서버입니다. 여러 셰이더 언어를 아우르는 MCP로는 사실상 유일하며, MCP 클라이언트에서 기존 구독으로 쓸 수 있습니다. 스타 1개의 실험 단계라 실무에 쓰기 전에 검증이 필요합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "experimental",
+    "stars": 1,
+    "updated": "2026-05",
+    "homepage": null,
+    "repo": "zajalist/shadereye",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 검색 결과",
+        "url": "https://github.com/search?q=shader+mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-shadertoy-mcp",
+    "name": "ShaderToy-MCP",
+    "vendor": "wilsonchenghy",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "ShaderToy 검색·참조용 MCP (업데이트 정체)",
+    "description": "Claude가 ShaderToy 페이지를 조회하고 셰이더를 검색해 더 복잡한 셰이더를 작성할 때 참고하도록 돕는 커뮤니티 MCP 서버입니다. MCP 클라이언트에서 기존 구독으로 쓸 수 있지만, 셰이더를 컴파일하거나 실행하지는 않는 참조 도구입니다. 2025년 5월 이후 업데이트가 없습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "stale",
+    "stars": 50,
+    "updated": "2025-05",
+    "homepage": null,
+    "repo": "wilsonchenghy/ShaderToy-MCP",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Glama README",
+        "url": "https://glama.ai/mcp/servers/@wilsonchenghy/ShaderToy-MCP/blob/c89f16514e72fb88c0cc493785be4e178dca0631/README.md"
+      },
+      {
+        "label": "GitHub 검색 결과",
+        "url": "https://github.com/search?q=shader+mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-unity-shader-agent-skills",
+    "name": "unity-shader-agent-skills",
+    "vendor": "adevra",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "모바일·WebGL용 Unity 셰이더 에이전트 스킬",
+    "description": "모바일과 WebGL 대상 Unity 셰이더 작성을 돕는 커뮤니티 에이전트 스킬 모음입니다. 에이전트 스킬 형식이라 기존 구독의 코딩 에이전트에서 쓸 수 있습니다. Unity 공식 플러그인의 Shader Graph·URP 스킬과 함께 쓰면 모바일·WebGL 셰이더 작업을 보완할 수 있습니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 15,
+    "updated": null,
+    "homepage": null,
+    "repo": "adevra/unity-shader-agent-skills",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 검색 결과",
+        "url": "https://github.com/search?q=shader+mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-machinations",
+    "name": "Machinations",
+    "vendor": "Machinations",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "게임 경제 모델링 SaaS, MCP는 없음",
+    "description": "게임 경제와 루프를 다이어그램으로 모델링하고 시뮬레이션하는 대표 SaaS로, 이제 말로 설명하면 플레이 가능한 다이어그램으로 바꿔 주는 AI 기능을 내세웁니다. 하지만 MCP나 에이전트 API는 보이지 않아 Claude나 ChatGPT 구독과 직접 연결할 방법은 없습니다. 밸런스 작업은 Claude Code나 Codex에게 독립 시뮬레이션이나 엔진 Play Mode 테스트를 짜게 한 뒤 수치를 반복 조정하는 방식이 현실적입니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://machinations.io/",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "MCP·에이전트 API 없음",
+      "AI 기능 요금과 외부 API 여부 미확인"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "machinations.io",
+        "url": "https://machinations.io/"
+      }
+    ]
+  },
+  {
+    "id": "game-tycoon-economy-skill",
+    "name": "tycoon-game-economy-design-agent-skill",
+    "vendor": "dungnotnull",
+    "domain": "game",
+    "category": "게임 로직·스킬",
+    "tagline": "타이쿤 게임 경제 밸런싱용 Claude Code 스킬",
+    "description": "타이쿤 장르 게임의 경제 밸런싱을 위한 Claude Code용 커뮤니티 하네스입니다. Claude 구독으로 Claude Code에서 실행합니다. 성숙한 밸런스 시뮬레이션 MCP가 없는 상황에서 참고할 만한 소규모 예시입니다.",
+    "connect": [
+      "skills"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 8,
+    "updated": null,
+    "homepage": null,
+    "repo": "dungnotnull/tycoon-game-economy-design-agent-skill",
+    "install": null,
+    "caveats": [
+      "스타 8개의 소규모 프로젝트"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 검색 결과",
+        "url": "https://github.com/search?q=game+balance+simulation+mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-ink",
+    "name": "Ink",
+    "vendor": "inkle",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "inkle의 오픈소스 분기형 내러티브 언어",
+    "description": "inkle이 만든 MIT 라이선스 분기형 내러티브 스크립트 언어로, 편집기 Inky와 CLI 컴파일러 inklecate, Unity 통합 패키지를 제공합니다. 평범한 텍스트 파일이라 Claude Code나 Codex가 저장소의 .ink 파일을 직접 쓰고 inklecate로 컴파일해 확인할 수 있어 별도 MCP가 필요 없습니다. inkcheck와 함께 쓰면 분기 탐색과 죽은 콘텐츠 검사까지 자동화할 수 있습니다.",
+    "connect": [
+      "library",
+      "cli"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": 5000,
+    "updated": null,
+    "homepage": "https://github.com/inkle/ink",
+    "repo": "inkle/ink",
+    "install": null,
+    "caveats": [
+      "inkjs는 커뮤니티 유지보수라 보통 한 메이저 버전 뒤처짐",
+      "출시되는 AI 작성 텍스트는 Steam 공개 대상"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/inkle/ink"
+      }
+    ]
+  },
+  {
+    "id": "game-inkcheck",
+    "name": "inkcheck",
+    "vendor": "chaoz23",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "AI 없이 Ink 스토리를 컴파일·분기 검사",
+    "description": "ink 공식 컴파일러로 컴파일을 검사하고, 분기를 범위 내에서 탐색하며 런타임 오류 재현 경로와 죽은 콘텐츠를 찾아 주는 기계적 QA 도구입니다. CLI, MCP 서버, 에이전트용 SKILL.md로 제공돼 어떤 코딩 에이전트에서든 기존 구독으로 돌릴 수 있습니다. 도구 자체는 AI를 쓰지 않아, 문장을 생성하지 않고 검증만 맡기고 싶은 팀에 맞습니다.",
+    "connect": [
+      "cli",
+      "local-mcp",
+      "skills"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 3,
+    "updated": "2026-10",
+    "homepage": "https://github.com/chaoz23/inkcheck",
+    "repo": "chaoz23/inkcheck",
+    "install": "npx -y inkcheck",
+    "caveats": [],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/chaoz23/inkcheck"
+      }
+    ]
+  },
+  {
+    "id": "game-yarn-spinner",
+    "name": "Yarn Spinner",
+    "vendor": "Yarn Spinner",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "생성형 AI를 거부하는 대화 스크립트 도구",
+    "description": "게임 대화를 텍스트 스크립트(.yarn)로 작성하는 도구로, 팀은 2026년 1월 13일 공식 글에서 제품에 생성형 AI 기능이 없고 개발에도 코드 생성 도구를 쓰지 않으며 AI 생성물이 든 기여는 받지 않는다고 밝혔습니다. 사용자의 AI 사용을 금지하지는 않으므로 Claude Code 같은 에이전트가 기존 구독으로 .yarn 파일을 편집할 수는 있습니다. 다만 1차 AI 도구나 AI로 만든 기여 수용은 기대하지 않는 것이 좋습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (유료 애드온 있음)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-01",
+    "homepage": "https://www.yarnspinner.dev",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "공식 AI 기능·MCP 없음, 앞으로도 계획 없음",
+      "AI 생성 기여는 받지 않음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Yarn Spinner 블로그: Why We Don't Use AI",
+        "url": "https://yarnspinner.dev/blog/why-we-dont-use-ai/"
+      },
+      {
+        "label": "공동 창업자 블로그 (2025)",
+        "url": "https://hey.paris/posts/genai/"
+      }
+    ]
+  },
+  {
+    "id": "game-articy-draft-x",
+    "name": "articy:draft X",
+    "vendor": "articy Software",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "OpenAI 키로 쓰는 AI 확장, 추가 요금 없음",
+    "description": "분기 대화와 플로를 설계하는 내러티브 디자인 도구로, AI Extensions가 바크·대화·미리보기 이미지를 만들고 별도 VO Extension이 AI 보이스오버를 돕습니다. 사용자가 자신의 OpenAI 계정을 연결하는 BYOK 방식이며 articy는 추가 요금이나 수수료를 받지 않고, FREE 버전에도 적용됩니다. MCP 서버가 없어 Claude Code 같은 에이전트에서 직접 조작할 수는 없습니다.",
+    "connect": [
+      "byok"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "FREE 버전 있음, AI 확장 추가 요금 없음",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.articy.com/help/adx/Services_AI.html",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "OpenAI API 비용은 별도",
+      "MCP 서버 없음",
+      "멀티유저 서버 관리자가 AI 확장을 막을 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "articy 도움말: AI Extensions",
+        "url": "https://www.articy.com/help/adx/Services_AI.html"
+      },
+      {
+        "label": "articy 기능 목록",
+        "url": "https://www.articy.com/en/articydraft/feature-list/"
+      }
+    ]
+  },
+  {
+    "id": "game-twine-mcp",
+    "name": "twine-mcp",
+    "vendor": "Unveil-gg",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "Twine 스토리를 편집하는 비공식 MCP",
+    "description": "Twine 스토리 편집을 위한 비공식 커뮤니티 MCP 서버로, stdio로 MCP 클라이언트에 연결해 기존 구독으로 씁니다. Twine의 텍스트 형식인 Twee와 Tweego·Extwee 같은 CLI 컴파일러를 함께 쓰면 MCP 없이도 에이전트가 스토리를 다룰 수 있습니다. 예전에 알려졌던 Claude Twine Bridge 저장소가 삭제돼 현재의 대안입니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 5,
+    "updated": "2026-10",
+    "homepage": "https://github.com/Unveil-gg/twine-mcp",
+    "repo": "Unveil-gg/twine-mcp",
+    "install": null,
+    "caveats": [
+      "Twine 공식 제품 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/Unveil-gg/twine-mcp"
+      },
+      {
+        "label": "awesome-twine",
+        "url": "https://github.com/vorpalhex/awesome-twine"
+      }
+    ]
+  },
+  {
+    "id": "game-twine-play-mcp",
+    "name": "twine-play-mcp",
+    "vendor": "adorablelovelymia",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "Twine HTML 게임을 플레이하며 QA하는 MCP",
+    "description": "완성된 Twine HTML 게임을 직접 플레이하며 테스트와 QA를 하는 커뮤니티 MCP 서버입니다. MCP 클라이언트에서 기존 구독으로 에이전트에게 분기 확인을 맡길 수 있습니다. 스타 0개의 초기 프로젝트라 안정성은 직접 확인해야 합니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 0,
+    "updated": null,
+    "homepage": "https://github.com/adorablelovelymia/twine-play-mcp",
+    "repo": "adorablelovelymia/twine-play-mcp",
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/adorablelovelymia/twine-play-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-arcweave-mcp",
+    "name": "Arcweave MCP server",
+    "vendor": "Arcweave",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "내러티브 툴 중 유일한 공식 원격 MCP",
+    "description": "분기형 게임 내러티브를 시각적으로 설계하는 Arcweave의 공식 원격 MCP 서버(`https://arcweave.com/mcp`)로, 프로젝트·분기·요소·연결을 읽고 쓰며 읽기와 쓰기 권한을 따로 지정합니다. Arcweave API 키를 Bearer 헤더로 보내는 방식이라 Claude Code, Claude 웹·데스크톱, Codex, Cursor, VS Code Copilot, Gemini CLI 등에서 기존 구독으로 연결됩니다. Unity·Unreal·Godot 엔진 내보내기는 모든 플랜에 있지만 MCP와 REST API는 Team 플랜 이상에서만 쓸 수 있습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "Team 멤버당 월 $25(연간)~$30",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://docs.arcweave.com/integrations/mcp",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "ChatGPT 웹은 헤더를 못 보내 연결 불가 (데스크톱은 Codex 경유)",
+      "OAuth가 아닌 API 키 인증",
+      "공식 MCP Registry에는 미등록"
+    ],
+    "korea": null,
+    "starter": true,
+    "sources": [
+      {
+        "label": "Arcweave 문서: MCP 서버",
+        "url": "https://docs.arcweave.com/integrations/mcp"
+      },
+      {
+        "label": "Arcweave 요금제",
+        "url": "https://arcweave.com/pricing"
+      }
+    ]
+  },
+  {
+    "id": "game-dialogic",
+    "name": "Dialogic 2",
+    "vendor": "dialogic-godot",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "Godot용 오픈소스 대화 시스템 애드온",
+    "description": "Godot 4.5 이상에서 쓰는 MIT 라이선스 대화 시스템 애드온으로, 자체 AI나 MCP 기능은 없습니다. 텍스트 기반 프로젝트 파일을 코딩 에이전트가 직접 편집하는 방식으로 기존 구독을 활용할 수 있고, Godot MCP 서버와 함께 써도 됩니다. Godot 게임에 대화 시스템을 빠르게 붙일 때 적합합니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor",
+      "local"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 6100,
+    "updated": null,
+    "homepage": "https://github.com/dialogic-godot/dialogic",
+    "repo": "dialogic-godot/dialogic",
+    "install": null,
+    "caveats": [
+      "알파·베타 릴리스 사이에 코드가 바뀔 수 있음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/dialogic-godot/dialogic"
+      }
+    ]
+  },
+  {
+    "id": "game-worldanvil-mcp",
+    "name": "worldanvil-mcp",
+    "vendor": "wlcarden",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "World Anvil 문서·지도·연표용 Claude Code 플러그인",
+    "description": "세계관 위키 서비스 World Anvil의 문서·지도·연표를 다루는 Claude Code용 커뮤니티 플러그인입니다. Claude 구독으로 Claude Code에서 설정집을 정리하고 갱신하는 데 쓸 수 있습니다. World Anvil API 접근 권한이 필요하며, 다른 구현인 datagen24의 World-Anvil-MCP는 Grandmaster 길드 멤버십과 API 키·사용자 토큰을 요구합니다.",
+    "connect": [
+      "plugin",
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT), World Anvil API 접근 필요",
+    "free": false,
+    "official": "community",
+    "status": "active",
+    "stars": 11,
+    "updated": "2026-06",
+    "homepage": "https://github.com/wlcarden/worldanvil-mcp",
+    "repo": "wlcarden/worldanvil-mcp",
+    "install": null,
+    "caveats": [
+      "World Anvil API 권한이 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/wlcarden/worldanvil-mcp"
+      },
+      {
+        "label": "Glama: World-Anvil-MCP",
+        "url": "https://glama.ai/mcp/servers/@datagen24/World-Anvil-MCP"
+      }
+    ]
+  },
+  {
+    "id": "game-mcp-obsidian",
+    "name": "mcp-obsidian",
+    "vendor": "MarkusPfundstein",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "Obsidian 볼트를 스토리 바이블로 쓰는 MCP",
+    "description": "Obsidian Local REST API 플러그인(127.0.0.1:27124)을 통해 볼트의 노트를 목록화·조회·검색·수정·추가·삭제하는 커뮤니티 MCP 서버입니다. Claude Desktop 설정이 문서화돼 있고 다른 MCP 클라이언트에서도 기존 구독으로 쓸 수 있습니다. 캐릭터·설정·연표를 Obsidian에 모아 둔 팀이 이를 스토리 바이블로 에이전트에 연결할 때 좋습니다.",
+    "connect": [
+      "local-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "무료 (MIT)",
+    "free": true,
+    "official": "community",
+    "status": "active",
+    "stars": 4500,
+    "updated": null,
+    "homepage": "https://github.com/MarkusPfundstein/mcp-obsidian",
+    "repo": "MarkusPfundstein/mcp-obsidian",
+    "install": null,
+    "caveats": [
+      "Obsidian Local REST API 플러그인 필요",
+      "삭제 도구가 있으니 도구 승인에 주의"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "GitHub 저장소",
+        "url": "https://github.com/MarkusPfundstein/mcp-obsidian"
+      }
+    ]
+  },
+  {
+    "id": "game-novelcrafter",
+    "name": "NovelCrafter",
+    "vendor": "Novelcrafter",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "API 키로 모델을 고르는 소설·설정 관리 앱",
+    "description": "소설 원고와 코덱스(설정집)를 관리하며 AI 글쓰기를 돕는 앱으로, OpenRouter 같은 제공사나 로컬 모델을 직접 연결하는 BYOK 방식입니다. 플랫폼 요금과 AI 제공사 요금을 따로 내야 해 Claude·ChatGPT 구독을 그대로 쓸 수는 없습니다. Claude Desktop용 비공식 novelcrafter-mcp가 있었지만 2024년 12월 이후 멈췄습니다.",
+    "connect": [
+      "byok"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "apikey",
+    "price": "월 $4~$20 (2차 출처), AI 사용료 별도",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://novelcrafter.com/help/faq/ai-and-prompting/ai-cost",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "요금 정보는 2차 출처 기준",
+      "MCP 연동은 오래된 비공식 프로젝트뿐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "NovelCrafter FAQ: AI 비용",
+        "url": "https://novelcrafter.com/help/faq/ai-and-prompting/ai-cost"
+      },
+      {
+        "label": "요금 비교 (2차)",
+        "url": "https://neilchasefilm.com/sudowrite-alternatives"
+      },
+      {
+        "label": "novelcrafter-mcp (정체)",
+        "url": "https://github.com/deadshot465/novelcrafter-mcp"
+      }
+    ]
+  },
+  {
+    "id": "game-novelai",
+    "name": "NovelAI",
+    "vendor": "NovelAI",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "GLM 4.6 스토리·이미지 생성, 상업권 불명확",
+    "description": "GLM 4.6 기반 스토리 생성과 NovelAI Diffusion V5 이미지 생성을 제공하는 구독형 서비스입니다. 자체 모델로 동작해 기존 AI 구독과는 별개이며, MCP는 이미지 생성용 커뮤니티 서버만 있고 공식 MCP나 텍스트 생성 MCP는 없습니다. 약관이 상업적 이용을 명시적으로 허락하지 않고 허용되지 않은 자동화를 금지하므로, 출시용 게임 텍스트나 자동화 파이프라인에 쓰기에는 위험합니다.",
+    "connect": [
+      "app"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "월 $10부터",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://novelai.net",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "상업적 이용을 명시적으로 허락하지 않음",
+      "약관 §9.1.6이 자동화 시스템 사용 금지",
+      "MCP는 커뮤니티 이미지용뿐"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "NovelAI 홈페이지",
+        "url": "https://novelai.net"
+      },
+      {
+        "label": "NovelAI 이용약관",
+        "url": "https://novelai.net/terms"
+      },
+      {
+        "label": "GitHub 검색: novelai mcp",
+        "url": "https://github.com/search?q=novelai+mcp&type=repositories"
+      }
+    ]
+  },
+  {
+    "id": "game-claude-projects",
+    "name": "Claude Projects",
+    "vendor": "Anthropic",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "파일과 지침을 담는 Claude 스토리 바이블",
+    "description": "Claude의 프로젝트 기능으로, 설정 파일(프로젝트 지식)과 지침을 묶어 세계관·캐릭터 자료를 스토리 바이블처럼 유지할 수 있습니다. 모든 플랜에서 쓸 수 있고, 유료 플랜은 컨텍스트 한도에 가까워지면 RAG로 전환해 용량을 최대 10배까지 늘립니다. Team·Enterprise에서는 프로젝트를 보기·편집 권한으로 공유할 수 있어 작가 팀 협업에 맞습니다.",
+    "connect": [
+      "signin"
+    ],
+    "worksWith": [
+      "claude"
+    ],
+    "aiCost": "plan",
+    "price": "모든 플랜 (무료는 프로젝트 5개까지)",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://support.claude.com/en/articles/9517075-what-are-projects",
+    "repo": null,
+    "install": null,
+    "caveats": [],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Claude 도움말: Projects",
+        "url": "https://support.claude.com/en/articles/9517075-what-are-projects"
+      }
+    ]
+  },
+  {
+    "id": "game-aistoryhub-mcp",
+    "name": "AIStoryHub MCP",
+    "vendor": "AIStoryHub",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "스토리·챕터·스토리 바이블 원격 MCP",
+    "description": "스토리·챕터·스토리 바이블·Voiceprints·AI 생성을 다루는 픽션 플랫폼 AIStoryHub의 원격 MCP 서버(`https://aistoryhub.co/mcp/mcp`)입니다. 2026년 8월 공식 MCP Registry에 v1.0.0으로 등록됐으며 MCP 클라이언트에서 연결할 수 있습니다. 게임 대화 전용 도구가 아닌 소설 플랫폼이고, 요금과 약관은 확인되지 않았습니다.",
+    "connect": [
+      "remote-mcp"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "copilot",
+      "cursor"
+    ],
+    "aiCost": "plan",
+    "price": "확인 필요",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-08",
+    "homepage": null,
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "요금·성숙도·약관 미확인",
+      "게임 대화 전용 도구 아님"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "MCP Registry 검색: story",
+        "url": "https://registry.modelcontextprotocol.io/v0/servers?search=story"
+      }
+    ]
+  },
+  {
+    "id": "game-campfire",
+    "name": "Campfire",
+    "vendor": "Campfire",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "AI·API·MCP가 없는 집필·세계관 앱",
+    "description": "원고 편집기, 캐릭터, 지도, 연표, 달력, 종족, 인공어 빌더 등 18개 모듈을 갖춘 집필·세계관 정리 앱입니다. 홈페이지에 AI 기능·AI 정책·API·MCP가 전혀 언급되지 않아 Claude나 ChatGPT 구독과 연결할 방법이 없습니다. AI 없이 설정을 정리할 때는 쓸 만하지만, 에이전트 연동이 필요하면 Obsidian이나 Claude Projects가 낫습니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "무료 계정(제한), 유료 월 $0.50부터",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://www.campfirewriting.com",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "AI·API·MCP 없음"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Campfire 홈페이지",
+        "url": "https://www.campfirewriting.com"
+      }
+    ]
+  },
+  {
+    "id": "game-inworld",
+    "name": "Inworld",
+    "vendor": "Inworld AI",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "NPC 스튜디오에서 음성·LLM 인프라로 전환",
+    "description": "한때 플러그 앤 플레이 NPC 스튜디오였지만, 지금은 실시간 TTS·LLM 추론·Realtime Router를 파는 B2B AI 인프라로 방향을 바꿨습니다. API와 SDK를 코드로 호출하는 방식이라 사용량만큼 Inworld 요금이 들고, 코딩 어시스턴트용 'Inworld skill'은 있지만 MCP 서버는 없습니다. 게임 실행 중 생성되는 NPC 대사·음성은 Steam의 Live-Generated 공개 대상입니다.",
+    "connect": [
+      "library",
+      "skills"
+    ],
+    "worksWith": [],
+    "aiCost": "apikey",
+    "price": "TTS-2 100만 자당 $25 (On-Demand), 월 $25~$1,500 플랜",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-06",
+    "homepage": "https://inworld.ai/pricing",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "MCP 서버 없음",
+      "실시간 생성 콘텐츠는 Steam 공개와 가드레일 설명 필요"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Inworld 요금제",
+        "url": "https://inworld.ai/pricing"
+      },
+      {
+        "label": "Cinevva NPC 가이드",
+        "url": "https://app.cinevva.com/guides/ai-npcs-dialogue"
+      },
+      {
+        "label": "Business Wire 발표",
+        "url": "https://www.morningstar.com/news/business-wire/20260610968386/inworld-cuts-prices-to-take-down-the-biggest-wall-in-consumer-ai-cost"
+      }
+    ]
+  },
+  {
+    "id": "game-convai",
+    "name": "Convai",
+    "vendor": "Convai",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "분석용 MCP를 갖춘 NPC 대화 플랫폼",
+    "description": "Unity·Unreal·three.js·웹을 지원하는 클라우드 기반 NPC 대화 플랫폼입니다. 읽기 전용 Analytics MCP를 stdio로 제공해 Claude Desktop·Cursor·Codex에서 기존 구독으로 대화 데이터를 조회할 수 있고, Unity SDK는 Unity 내장 MCP 서버에 44개 도구를 추가합니다. 런타임 NPC 사용은 Convai 크레딧으로 과금되며 Professional 플랜에 월 99,000크레딧이 포함됩니다.",
+    "connect": [
+      "local-mcp",
+      "library"
+    ],
+    "worksWith": [
+      "claude",
+      "chatgpt",
+      "cursor"
+    ],
+    "aiCost": "credits",
+    "price": "사용량 기반 크레딧, Professional 월 99,000크레딧",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-05",
+    "homepage": "https://convai.com/blog/query-your-convai-analytics-data-with-claude-cursor-codex-or-any-mcp-client",
+    "repo": null,
+    "install": "npx -y @convai/analytics-mcp@latest",
+    "caveats": [
+      "Unity 도구는 지원 중단된 Unity 내장 MCP에 의존",
+      "Analytics MCP는 읽기 전용",
+      "Professional 월 $99는 문서 도우미 답변 기준으로 미확정"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Convai 블로그: Analytics MCP",
+        "url": "https://convai.com/blog/query-your-convai-analytics-data-with-claude-cursor-codex-or-any-mcp-client"
+      },
+      {
+        "label": "Convai Unity 코딩 어시스턴트 문서",
+        "url": "https://docs.convai.com/api-docs/plugins-and-integrations/convai-unity-sdk/ai-coding-assistant.md"
+      },
+      {
+        "label": "Convai 크레딧·결제 문서",
+        "url": "https://docs.convai.com/api-docs/credits-and-billing/convai-credits/credit-balance-and-billing-cycle.md"
+      }
+    ]
+  },
+  {
+    "id": "game-charisma-ai",
+    "name": "Charisma.ai",
+    "vendor": "Charisma.ai",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "스토리 중심 대화형 AI, 크레딧 종량제",
+    "description": "스크립트 플로 도구와 음성 인식, AI 음성 라이브러리, 생성형 대화를 갖춘 스토리 중심 대화형 AI 플랫폼으로, 엔진에는 SDK로 붙입니다. PRO는 50,000크레딧(체험 시간 약 200분)당 $5인 종량제이며 MCP는 언급되지 않습니다. 정해진 줄거리 안에서 반응하는 캐릭터를 만들 때 적합하지만, 실행 중 생성되는 대사는 Steam 공개 대상입니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [],
+    "aiCost": "credits",
+    "price": "PRO 50,000크레딧당 $5",
+    "free": false,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://charisma.ai/pricing",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "MCP 없음",
+      "Enterprise는 설정비와 월 요금 별도"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Charisma.ai 요금제",
+        "url": "https://charisma.ai/pricing"
+      }
+    ]
+  },
+  {
+    "id": "game-nvidia-ace",
+    "name": "NVIDIA ACE",
+    "vendor": "NVIDIA",
+    "domain": "game",
+    "category": "내러티브·대화",
+    "tagline": "온디바이스 NPC 음성·LLM·얼굴 애니메이션",
+    "description": "Nemotron ASR, Chatterbox·Qwen 3 TTS, Nemotron·Qwen LLM, Audio2Face-3D, Game Agent SDK(베타), NVIGI 인게임 추론 SDK로 구성된 NPC 기술 묶음으로, 대부분 기기 안에서 실행됩니다. 클라우드 구독 대신 로컬 모델을 쓰며, 게임 코드에 SDK와 UE 플러그인으로 통합합니다. 문서에 macOS 언급이 없어 Mac 개발 환경에는 맞지 않습니다.",
+    "connect": [
+      "library"
+    ],
+    "worksWith": [
+      "local"
+    ],
+    "aiCost": "none",
+    "price": "무료·혼합 라이선스",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": null,
+    "homepage": "https://developer.nvidia.com/ace",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "macOS 지원 언급 없음",
+      "구성 요소마다 라이선스가 다름",
+      "MCP 서버 없음"
+    ],
+    "korea": "inZOI, PUBG(AI 팀원), MIR5 등 국내 게임사 타이틀이 출시·파트너 사례로 소개됨",
+    "starter": false,
+    "sources": [
+      {
+        "label": "NVIDIA ACE 개발자 페이지",
+        "url": "https://developer.nvidia.com/ace"
+      }
+    ]
+  },
+  {
+    "id": "game-steam-ai-disclosure",
+    "name": "Steamworks Content Survey (AI 공개)",
+    "vendor": "Valve",
+    "domain": "game",
+    "category": "정책·라이선스",
+    "tagline": "플레이어가 접하는 AI 콘텐츠는 공개 필수",
+    "description": "Steamworks 콘텐츠 설문의 생성형 AI 항목은 게임과 함께 출시돼 플레이어가 소비하는 Pre-Generated 콘텐츠와 게임 실행 중 만들어지는 Live-Generated 콘텐츠를 공개하도록 요구하며, 후자는 불법 콘텐츠를 막는 가드레일도 설명해야 합니다. 개발 환경의 AI 도구로 얻는 효율 향상은 대상이 아니라고 밝혀, Claude Code로 Unity를 자동화하는 것만으로는 공개 의무가 생기지 않는다고 해석됩니다. 반면 AI가 만든 스프라이트·음성·음악·현지화와 에이전트가 코드 파일에 써 넣은 대사 문자열처럼 플레이어가 접하는 콘텐츠는 공개해야 합니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "해당 없음",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2026-01",
+    "homepage": "https://partner.steamgames.com/doc/gettingstarted/contentsurvey",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "페이지는 코드 어시스턴트를 직접 언급하지 않음 (언론은 면제로 해석)",
+      "승인 후 AI 답변 수정은 Steam 지원팀 문의 필요",
+      "Live-Generated 성인 전용 성적 콘텐츠는 현재 불허"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "Steamworks 콘텐츠 설문",
+        "url": "https://partner.steamgames.com/doc/gettingstarted/contentsurvey"
+      },
+      {
+        "label": "Gigazine: 2026년 1월 개정",
+        "url": "https://gigazine.net/gsc_news/en/20260120-steam-updates-ai-disclosure-guidelines"
+      }
+    ]
+  },
+  {
+    "id": "game-sag-aftra-ai-rules",
+    "name": "SAG-AFTRA 2025 Interactive Media Agreement",
+    "vendor": "SAG-AFTRA",
+    "domain": "game",
+    "category": "정책·라이선스",
+    "tagline": "성우 디지털 복제와 실시간 생성 동의 규정",
+    "description": "SAG-AFTRA의 2025 인터랙티브 미디어(비디오 게임) 협약은 가맹 스튜디오가 성우의 목소리·얼굴·동작을 디지털 복제할 때 별도의 서면 동의를 받도록 합니다. 복제 음성으로 NPC나 챗봇 대사를 실시간 생성(Real-Time Generation)하려면 동의서에 그 용도를 밝히고 최저 임금의 7.5배 이상을 지급해야 하며, 게임에 들어간 뒤에는 파업 중에도 동의를 철회할 수 없고 출시 후 90일 안에 사용 내역을 보고해야 합니다. 협약은 2028년 10월 31일까지 유효하며, 비가맹 인디는 계약상 구속되지 않지만 음성 벤더 약관을 통해 비슷한 동의 의무를 집니다.",
+    "connect": [],
+    "worksWith": [],
+    "aiCost": "none",
+    "price": "해당 없음",
+    "free": true,
+    "official": "official",
+    "status": "active",
+    "stars": null,
+    "updated": "2025-07",
+    "homepage": "https://www.sagaftra.org/contracts-industry-resources/interactive/2025-interactive-media-video-game-agreement",
+    "repo": null,
+    "install": null,
+    "caveats": [
+      "조항 문구는 검색 발췌와 로펌 분석 기준 (원문 직접 확인 불가)",
+      "노이즈 제거·피치 보정 같은 처리 작업은 제외"
+    ],
+    "korea": null,
+    "starter": false,
+    "sources": [
+      {
+        "label": "SAG-AFTRA 이사회 승인 발표",
+        "url": "https://www.sagaftra.org/sag-aftra-national-board-approves-interactive-media-agreement"
+      },
+      {
+        "label": "FKKS 법률 분석",
+        "url": "https://technologylaw.fkks.com/post/102mewu/inside-the-new-sag-aftra-interactive-media-agreement-new-standards-for-ai-and-di"
+      },
+      {
+        "label": "SAG-AFTRA 협약 페이지",
+        "url": "https://www.sagaftra.org/contracts-industry-resources/interactive/2025-interactive-media-video-game-agreement"
+      }
+    ]
+  }
+]

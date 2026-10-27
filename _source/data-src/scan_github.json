@@ -1,0 +1,1992 @@
+[
+ {
+  "id": "gh-cloudflare-security-audit-skill",
+  "name": "Cloudflare security-audit skill",
+  "vendor": "Cloudflare",
+  "domain": "general",
+  "category": "보안",
+  "tagline": "코딩 에이전트를 6단계 보안 감사관으로",
+  "description": "Cloudflare 취약점 탐지 하네스의 출발점이 된 에이전트 스킬로, 정찰→커버리지 기반 탐색→후보 검증→구조화 출력→독립 재검증→보고서까지 6단계 감사를 격리된 서브에이전트들로 진행합니다. npx skills로 코딩 에이전트에 설치하면 쓰던 에이전트 구독으로 실행되고, 결과는 report-schema.json으로 검증한 findings.json과 REPORT.md로 남습니다. 도구 사용과 병렬 서브에이전트를 지원하는 모델이 필요하므로 중요한 저장소를 깊게 감사할 때 쓰기 좋습니다.",
+  "connect": [
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 43561,
+  "updated": "2026-09",
+  "homepage": "https://blog.cloudflare.com/build-your-own-vulnerability-harness",
+  "repo": "cloudflare/security-audit-skill",
+  "install": "npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --global",
+  "caveats": [
+   "도구 사용·병렬 서브에이전트를 지원하는 모델 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/cloudflare/security-audit-skill"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/cloudflare/security-audit-skill"
+   }
+  ],
+  "foundVia": "GitHub Trending (daily)"
+ },
+ {
+  "id": "gh-nvidia-openshell",
+  "name": "OpenShell",
+  "vendor": "NVIDIA",
+  "domain": "general",
+  "category": "검색·실행 환경",
+  "tagline": "자율 에이전트용 커널 수준 격리 런타임",
+  "description": "NVIDIA가 만든 자율 AI 에이전트용 샌드박스 런타임으로, 정책에 적은 파일·시스템 콜·네트워크 접근만 허용하고 실제 자격 증명은 승인된 엔드포인트로 가는 요청에만 붙여 줍니다. 정책 변경은 적용 전에 형식 검증(formal verification)으로 무엇이 허용되는지 확인합니다. 공개 Agent Skills를 설치하면 쓰던 코딩 에이전트가 OpenShell CLI 조작, 샌드박스 정책 작성, 게이트웨이 디버깅을 대신 처리합니다.",
+  "connect": [
+   "cli",
+   "skills",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 19254,
+  "updated": "2026-10",
+  "homepage": "https://docs.nvidia.com/openshell/latest/",
+  "repo": "NVIDIA/OpenShell",
+  "install": "curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh",
+  "caveats": [
+   "Linux·Apple Silicon macOS 지원, Windows WSL 2는 실험적",
+   "Docker·Podman 또는 호스트 가상화 필요",
+   "기본 샌드박스 이미지에는 에이전트가 없어 따로 설치"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/NVIDIA/OpenShell"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/NVIDIA/OpenShell"
+   }
+  ],
+  "foundVia": "GitHub Trending (daily)"
+ },
+ {
+  "id": "gh-aws-agent-toolkit",
+  "name": "Agent Toolkit for AWS",
+  "vendor": "AWS",
+  "domain": "web",
+  "category": "배포·인프라",
+  "tagline": "AWS 공식 MCP·스킬·플러그인 묶음",
+  "description": "AI 코딩 에이전트가 AWS 서비스 선택, CDK/CloudFormation, 서버리스·컨테이너 배포, 관측·비용 관리까지 다루도록 AWS MCP 서버 설정과 에이전트 스킬을 플러그인으로 묶은 공식 툴킷입니다. Claude Code에서는 기본 등록된 claude-plugins-official 마켓플레이스에서 aws-core를 바로 설치하고, Codex는 플러그인 마켓플레이스로, 다른 에이전트는 npx skills로 붙여 쓰던 구독으로 씁니다. Bedrock·AgentCore용 aws-agents, aws-data-analytics 등 용도별 플러그인이 따로 있습니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "remote-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0), AWS 리소스 요금 별도",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 3029,
+  "updated": "2026-10",
+  "homepage": "https://docs.aws.amazon.com/agent-toolkit/latest/userguide/",
+  "repo": "aws/agent-toolkit-for-aws",
+  "install": "/plugin install aws-core@claude-plugins-official",
+  "caveats": [
+   "Plugin not found가 뜨면 /plugin marketplace update claude-plugins-official 먼저 실행"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/aws/agent-toolkit-for-aws"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/aws/agent-toolkit-for-aws"
+   }
+  ],
+  "foundVia": "GitHub Trending (daily)"
+ },
+ {
+  "id": "gh-hallmark",
+  "name": "Hallmark",
+  "vendor": "Together AI",
+  "domain": "web",
+  "category": "디자인→코드",
+  "tagline": "AI 티 안 나는 웹페이지 디자인 스킬",
+  "description": "Together AI가 만든 디자인 스킬로, 48개 테마 중 3개를 골라 페이지의 목적(예약·판매·구독)에 맞춰 구성하고, 실제 브라우저에서 'AI가 만든 티'(헤딩 위 eyebrow, 헤드라인 한 단어만 색칠 등)를 린트합니다. Claude Code·Codex·Cursor·OpenCode·GitHub Copilot에 npx skills로 넣거나 Claude Code 플러그인으로 설치해 쓰던 구독으로 돌립니다. 대비·포커스·모바일 레이아웃 같은 바닥 기준(Floor)은 절대 통과시키지 않는 단계별 게이트를 둡니다.",
+  "connect": [
+   "skills",
+   "plugin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 31729,
+  "updated": "2026-10",
+  "homepage": "https://www.usehallmark.com",
+  "repo": "Nutlope/hallmark",
+  "install": "npx skills add nutlope/hallmark -g",
+  "caveats": [
+   "Node 18+ 필요, 브라우저 검사는 puppeteer-core와 Chrome 추가 설치 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/Nutlope/hallmark"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/Nutlope/hallmark"
+   }
+  ],
+  "foundVia": "GitHub Trending (daily)"
+ },
+ {
+  "id": "gh-impeccable",
+  "name": "Impeccable",
+  "vendor": "Paul Bakaus",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "AI 코딩 에이전트용 디자인 언어·감지 규칙",
+  "description": "Anthropic frontend-design 스킬에서 출발한 디자인 가이드 스킬로, polish·audit·critique 등 24개 명령과 AI가 만든 프런트엔드의 전형적 흔적을 잡는 62개 결정론적 감지 규칙을 제공합니다. npx impeccable install 후 Claude Code·Codex·Cursor·Gemini CLI·GitHub Copilot에서 /impeccable init으로 제품 맥락을 PRODUCT.md에 기록하고 쓰던 구독으로 작업합니다. 감지 규칙은 CLI와 브라우저 확장에서 LLM·API 키 없이 돌아가 배포된 페이지 점검에도 쓸 수 있습니다.",
+  "connect": [
+   "skills",
+   "plugin",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "gemini",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 86068,
+  "updated": "2026-10",
+  "homepage": "https://impeccable.style",
+  "repo": "pbakaus/impeccable",
+  "install": "npx impeccable install",
+  "caveats": [
+   "Codex는 설치 후 /hooks에서 프로젝트 훅을 직접 승인해야 함",
+   "Cursor 스킬은 Nightly 채널 설정 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/pbakaus/impeccable"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/pbakaus/impeccable"
+   }
+  ],
+  "foundVia": "GitHub Trending (daily)"
+ },
+ {
+  "id": "gh-rea",
+  "name": "REA (Reverse Engineer Anything)",
+  "vendor": "morluto",
+  "domain": "general",
+  "category": "보안",
+  "tagline": "앱 동작부터 바이너리까지 리버싱 MCP",
+  "description": "바이너리, 애플리케이션, 런타임 동작을 하나의 MCP로 분석하는 리버스 엔지니어링 도구로, 에이전트가 MCP 도구로 대상을 검사하고 관련 코드를 추적합니다. npx rea-agents setup이 Claude Code·Codex·Cursor·Gemini CLI 등에 MCP 서버와 조사 지침 스킬을 등록하므로 쓰던 구독으로 돌아갑니다. IDA 연동 같은 외부 분석 도구 provider도 지원해 '이 기능은 어떻게 동작할까'를 파헤칠 때 유용합니다.",
+  "connect": [
+   "local-mcp",
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "gemini"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 376936,
+  "updated": "2026-10",
+  "homepage": "https://rea.tools",
+  "repo": "morluto/rea",
+  "install": "npx rea-agents setup",
+  "caveats": [
+   "분석 대상의 라이선스·약관이 리버싱을 허용하는지 직접 확인 필요",
+   "2026년 4월 생성 저장소치고 스타 수가 매우 많음 — 인기 지표로만 참고"
+  ],
+  "korea": "README 한국어 번역 제공",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/morluto/rea"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/morluto/rea"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ },
+ {
+  "id": "gh-ruflo",
+  "name": "Ruflo",
+  "vendor": "rUv (ruvnet)",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "Claude Code·Codex용 에이전트 메타 하네스",
+  "description": "Claude Code와 Codex 위에 스웜·라우팅·메모리·정책을 얹는 에이전트 메타 하네스로, ruvnet의 claude-flow 저장소에서 이어진 프로젝트입니다. Claude Code에서는 ruflo-core·console·mods 플러그인으로 에이전트 콘솔과 런타임 정책을 더하고, Codex 등 MCP 클라이언트에서는 npx ruflo mcp start로 도구를 붙여 쓰던 구독으로 실행합니다. 실행 로그 검색·리플레이·비교 콘솔이 있어 다중 에이전트 실험에 맞습니다.",
+  "connect": [
+   "plugin",
+   "local-mcp",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 78950,
+  "updated": "2026-10",
+  "homepage": "https://github.com/ruvnet/ruflo",
+  "repo": "ruvnet/ruflo",
+  "install": "npx ruflo@latest init wizard",
+  "caveats": [
+   "Claude Code 플러그인은 2.1.287 이상 필요",
+   "mods 플러그인은 계정 권한으로 실행되니 코드 검토 후 설치(README 권고)"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/ruvnet/ruflo"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/ruvnet/ruflo"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ },
+ {
+  "id": "gh-orca",
+  "name": "Orca",
+  "vendor": "Stably AI",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "Claude Code·Codex를 워크트리별로 병렬 실행",
+  "description": "Codex, Claude Code, OpenCode, Pi 같은 코딩 에이전트를 각자 git 워크트리에서 나란히 돌리고 한곳에서 추적하는 데스크톱 오케스트레이터입니다. 각 에이전트는 이미 로그인한 자기 구독으로 돌아가며, Claude·Codex 사용량과 한도 리셋 시각을 보고 다시 로그인하지 않고 계정을 바꿀 수 있습니다. 한 프롬프트를 여러 에이전트에 뿌려 결과를 비교·병합하고, iOS·Android 컴패니언 앱으로 폰에서 완료 알림을 받고 후속 지시를 보낼 수 있습니다.",
+  "connect": [
+   "app",
+   "signin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 104654,
+  "updated": "2026-10",
+  "homepage": "https://www.onorca.dev",
+  "repo": "stablyai/orca",
+  "install": "brew install --cask stablyai/orca/orca",
+  "caveats": [],
+  "korea": "README 한국어 번역 제공",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/stablyai/orca"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/stablyai/orca"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ },
+ {
+  "id": "gh-ai-memory",
+  "name": "ai-memory",
+  "vendor": "Fabio Akita (akitaonrails)",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "에이전트를 바꿔도 이어지는 장기 기억",
+  "description": "Claude Code·Codex·Cursor·Gemini CLI 등 20여 개 에이전트 하네스가 하나의 기억을 공유하게 해, Claude Code에서 하던 작업을 Codex로 넘겨도 아키텍처·실패한 시도·남은 질문을 다시 설명할 필요가 없게 합니다. Claude Code와 Codex는 마켓플레이스 플러그인으로 붙어 쓰던 구독 그대로 쓰고, ai-memory run codex로 같은 작업 흐름을 이어 받을 수 있습니다. 기억은 직접 운영하는 서버에 두므로 여러 기기·팀원과 공유할 수 있고, 팀 기능과 감사 로그도 유료 등급 없이 포함됩니다.",
+  "connect": [
+   "plugin",
+   "cli",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "gemini"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 13204,
+  "updated": "2026-10",
+  "homepage": "https://aimemory.sh",
+  "repo": "akitaonrails/ai-memory",
+  "install": "claude plugin marketplace add akitaonrails/ai-memory && claude plugin install ai-memory@ai-memory",
+  "caveats": [
+   "Codex는 /hooks에서 훅 신뢰 승인 필요"
+  ],
+  "korea": "한·중·일 텍스트를 띄어쓰기 없이도 LLM 없이 검색 지원(README)",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/akitaonrails/ai-memory"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/akitaonrails/ai-memory"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ },
+ {
+  "id": "gh-graphify",
+  "name": "Graphify",
+  "vendor": "Graphify Labs",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "코드베이스를 질의 가능한 지식 그래프로",
+  "description": "AI 코딩 도우미에서 /graphify를 입력하면 코드·문서·PDF·이미지·영상을 지식 그래프로 묶어 grep 대신 질의할 수 있게 해 주는 스킬+CLI입니다. 코드는 tree-sitter AST로 로컬에서 LLM 없이 파싱하고, 문서·이미지 등의 의미 분석은 쓰던 어시스턴트의 모델(또는 별도 API 키)로 처리합니다. Claude Code·Codex·Gemini CLI·GitHub Copilot·Cursor 등 20여 개 플랫폼에 graphify install로 붙습니다.",
+  "connect": [
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0), Graphify Cloud 14일 무료 체험",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 134261,
+  "updated": "2026-10",
+  "homepage": "https://www.graphify.com",
+  "repo": "Graphify-Labs/graphify",
+  "install": "uv tool install graphifyy",
+  "caveats": [
+   "PyPI 패키지 이름이 graphifyy(y 두 개)",
+   "Codex에서는 /graphify 대신 $graphify로 호출"
+  ],
+  "korea": "README 한국어 번역 제공",
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/Graphify-Labs/graphify"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/Graphify-Labs/graphify"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ },
+ {
+  "id": "gh-cli-anything",
+  "name": "CLI-Anything",
+  "vendor": "HKUDS",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "어떤 소프트웨어든 에이전트용 CLI로 감싸기",
+  "description": "사람용 GUI 소프트웨어를 AI 에이전트가 다룰 수 있는 CLI 하네스로 바꾸는 프로젝트로, 커뮤니티가 만든 CLI를 CLI-Hub에서 찾아 설치할 수 있습니다. Claude Code 플러그인 마켓플레이스, Codex 스킬, npx skills로 배포돼 쓰던 구독의 에이전트가 생성된 CLI로 CAD·3D 장면·다이어그램·자막 같은 실제 산출물을 만듭니다. Kdenlive, Safari 등 앱별 CLI가 계속 추가되고 있습니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 56787,
+  "updated": "2026-09",
+  "homepage": "https://clianything.cc/",
+  "repo": "HKUDS/CLI-Anything",
+  "install": "npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y",
+  "caveats": [
+   "Windows에서는 Git for Windows(bash) 필요",
+   "Codex 통합은 실험적 커뮤니티 지원"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/HKUDS/CLI-Anything"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/HKUDS/CLI-Anything"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ },
+ {
+  "id": "gh-voicestudio",
+  "name": "VoiceStudio",
+  "vendor": "debpalash",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "로컬에서 도는 ElevenLabs 대안 음성 스튜디오",
+  "description": "음성 복제·음성 디자인·영상 더빙·받아쓰기·전사·오디오북 제작을 내 컴퓨터에서 처리하는 오픈소스 앱으로, 646개 언어를 지원한다고 밝힙니다. 로컬 API와 MCP 서버, npx skills로 설치하는 에이전트 스킬이 있어 Claude Code·Codex·Cursor에서 쓰던 구독으로 더빙·배치 작업을 시킬 수 있습니다. Apple Silicon에서는 Metal(MPS) 가속을 쓰고 원격 서비스는 선택 사항입니다.",
+  "connect": [
+   "app",
+   "local-mcp",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (AGPL-3.0)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 84469,
+  "updated": "2026-10",
+  "homepage": "https://voicestudio.sh",
+  "repo": "debpalash/VoiceStudio",
+  "install": "curl -fsSL https://voicestudio.sh/install | sh",
+  "caveats": [
+   "AGPL-3.0 — 수정본을 네트워크 서비스로 제공하면 소스 공개 의무",
+   "Intel Mac은 UI만 동작, 원격 백엔드 연결 필요",
+   "사용 통계는 동의 시에만 수집"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/debpalash/VoiceStudio"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/debpalash/VoiceStudio"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-paperclip",
+  "name": "Paperclip",
+  "vendor": "Paperclip",
+  "domain": "startup",
+  "category": "자동화·노코드",
+  "tagline": "AI 에이전트 팀으로 회사를 굴리는 관리 앱",
+  "description": "여러 AI 에이전트에 목표·예산·조직도·권한을 주고 한 대시보드에서 작업과 비용을 추적하는 오픈소스 오케스트레이션 서버(Node.js+React UI)입니다. 에이전트마다 Claude Code·Codex·Cursor·Gemini CLI 등 하네스와 모델을 고를 수 있고, 로컬 Claude·Codex 구독 로그인을 지원해 API 키 없이도 돌릴 수 있습니다. GitHub·Notion·Railway나 자체 MCP 서버를 연결하고 액션마다 허용/먼저 묻기/끄기를 정할 수 있습니다.",
+  "connect": [
+   "app",
+   "signin",
+   "byok",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "gemini"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT), Paperclip Cloud는 대기자 명단",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 106823,
+  "updated": "2026-10",
+  "homepage": "https://paperclip.ing",
+  "repo": "paperclipai/paperclip",
+  "install": "npx paperclipai@latest onboard --yes",
+  "caveats": [
+   "로컬 Claude·Codex 구독 로그인에는 Python 3 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/paperclipai/paperclip"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/paperclipai/paperclip"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-hindsight",
+  "name": "Hindsight",
+  "vendor": "Vectorize",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "경험에서 배우는 에이전트 메모리",
+  "description": "대화 기록을 떠올리는 데서 그치지 않고 에이전트가 경험에서 배우도록 설계된 메모리 시스템으로, 서버마다 메모리 뱅크별 MCP 엔드포인트(retain·recall·reflect)를 기본 제공합니다. 메모리 처리용 LLM으로 claude-code(Claude Pro/Max), openai-codex(ChatGPT Plus/Pro), github-copilot 같은 기존 구독을 API 키 없이 지정할 수 있습니다. npx 한 줄로 감지된 코딩 에이전트에 붙이며, 직접 호스팅하거나 사용량 기반 Hindsight Cloud를 쓸 수 있습니다.",
+  "connect": [
+   "local-mcp",
+   "library",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "cursor",
+   "local"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT, 셀프호스팅), Hindsight Cloud는 사용량 과금",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 53371,
+  "updated": "2026-10",
+  "homepage": "https://hindsight.vectorize.io/",
+  "repo": "vectorize-io/hindsight",
+  "install": "npx @vectorize-io/hindsight-coding-agents install claude-code",
+  "caveats": [
+   "셀프호스팅은 Docker 등으로 Hindsight 서버를 띄워야 함"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/vectorize-io/hindsight"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/vectorize-io/hindsight"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-context-mode",
+  "name": "Context Mode",
+  "vendor": "Mert Koseoglu (mksglu)",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "도구 출력을 샌드박스해 컨텍스트 절약",
+  "description": "MCP 도구 호출이 쏟아내는 원본 데이터(Playwright 스냅숏, 이슈 목록, 로그 등)를 샌드박스에서 처리해 컨텍스트 창에 들어가는 양을 줄이고(README는 98% 감소 주장), 압축 뒤에도 편집 중인 파일과 진행 작업을 세션 메모리로 유지하는 MCP 서버입니다. Claude Code는 플러그인 마켓플레이스로 훅·슬래시 명령까지 자동 설치되고, Codex CLI·Gemini CLI·Cursor·Copilot 등도 지원해 쓰던 구독의 사용량을 아낄 수 있습니다. MCP만 먼저 써 보려면 claude mcp add 한 줄로 11개 도구만 붙일 수 있습니다.",
+  "connect": [
+   "plugin",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "copilot",
+   "cursor"
+  ],
+  "aiCost": "none",
+  "price": "무료 (Elastic License 2.0)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 32095,
+  "updated": "2026-10",
+  "homepage": "https://context-mode.com",
+  "repo": "mksglu/context-mode",
+  "install": "claude mcp add context-mode -- npx -y context-mode",
+  "caveats": [
+   "Elastic License 2.0 — 호스팅·관리형 서비스로 제3자에게 제공 금지",
+   "Codex·Gemini 경로는 Node.js 22.5 이상 필요"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/mksglu/context-mode"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/mksglu/context-mode"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-text-to-cad",
+  "name": "text-to-cad",
+  "vendor": "earthtojake",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "에이전트가 STEP·STL 3D 모델을 직접 설계",
+  "description": "코딩 에이전트에 로컬 CAD 워크플로를 붙여 STEP·GLB·STL·3MF 3D 모델을 만들고, 제조성(DFM) 점검과 도면 생성, 3D 프린팅·판금·CNC 가공 서비스 연결까지 해 주는 플러그인입니다. Claude Code·Codex 플러그인 마켓플레이스와 skills 프레임워크로 설치되고, Claude Desktop에는 cadgen MCP 서버로 붙어 쓰던 구독으로 모델링합니다. Codex 앱에서는 사이드바 CAD 뷰어도 함께 제공됩니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "gemini"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 22892,
+  "updated": "2026-10",
+  "homepage": "https://www.texttocad.dev",
+  "repo": "earthtojake/text-to-cad",
+  "install": "claude plugin marketplace add earthtojake/text-to-cad#latest",
+  "caveats": [
+   "사용 통계·크래시 리포트가 기본 전송됨 — uvx cadgen telemetry off로 끔"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/earthtojake/text-to-cad"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/earthtojake/text-to-cad"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-t3code",
+  "name": "T3 Code",
+  "vendor": "T3 Tools",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "폰·웹·데스크톱에서 코딩 에이전트 조종",
+  "description": "내 컴퓨터에 설치된 Claude Code·Codex·Cursor·Grok Build·OpenCode·Antigravity를 모바일 앱(iOS·Android), 웹 앱, Electron 데스크톱 앱에서 조종하는 '에이전트 하네스 제어판'입니다. 각 CLI에 로그인된 구독을 그대로 쓰며, 개발팀은 따로 파는 상품이 없다고 밝힙니다. MCP로 외부 에이전트를 연결하고 Codex·Claude 다중 계정도 관리할 수 있습니다.",
+  "connect": [
+   "app",
+   "signin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 29791,
+  "updated": "2026-10",
+  "homepage": "https://t3.codes",
+  "repo": "pingdotgg/t3code",
+  "install": "brew install --cask t3-code",
+  "caveats": [
+   "사용 전 codex login 또는 claude auth login으로 공급자 인증 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/pingdotgg/t3code"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/pingdotgg/t3code"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-ecc",
+  "name": "ECC",
+  "vendor": "affaan-m",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "스킬·메모리·보안 스캔 담은 하네스 최적화 팩",
+  "description": "Claude Code·Codex·Kimi Code 등에 스킬, 인스팅트, 메모리, 보안, 리서치 우선 개발 워크플로를 한 번에 까는 에이전트 하네스 최적화 시스템입니다. npx ecc-universal setup의 안내형 설치가 하네스별 설치 위치를 미리 점검한 뒤 Claude Code에는 ecc@ecc 플러그인, Codex에는 네이티브 마켓플레이스 플러그인으로 넣어 쓰던 구독으로 돌립니다. 프롬프트·훅·MCP 설정·권한·비밀값을 검사하는 AgentShield가 포함돼 있습니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료, ECC Pro(비공개 저장소) $19/좌석·월부터",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 287826,
+  "updated": "2026-10",
+  "homepage": "https://ecc.tools",
+  "repo": "affaan-m/ECC",
+  "install": "npx ecc-universal@2.2.3 setup",
+  "caveats": [
+   "공식 채널(GitHub·npm ecc-universal·ecc@ecc) 외 재배포본은 악성코드 위험 경고",
+   "Node.js 18+, Claude Code 2.1+ 필요"
+  ],
+  "korea": "README 한국어 번역 제공",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/affaan-m/ECC"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/affaan-m/ECC"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-claude-mem",
+  "name": "Claude-Mem",
+  "vendor": "thedotmack",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "세션 간 맥락을 자동 압축·주입하는 메모리",
+  "description": "에이전트가 세션 중 쓴 도구 사용 내역을 자동으로 기록해 의미 요약을 만들고, 다음 세션에 관련 맥락을 넣어 주는 Claude Code용 영구 메모리 플러그인입니다. 4개 MCP 검색 도구로 토큰을 아끼는 3단계 방식의 기억 검색을 하며, OpenCode·T3 Code·Antigravity 등에도 npx claude-mem install --ide로 설치됩니다. Claude Desktop용 스킬로 데스크톱 대화에서도 기억을 찾을 수 있습니다.",
+  "connect": [
+   "plugin",
+   "local-mcp",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0), 호스팅형 CMEM Pro 별도",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 102743,
+  "updated": "2026-10",
+  "homepage": "https://claude-mem.ai",
+  "repo": "thedotmack/claude-mem",
+  "install": "npx claude-mem install",
+  "caveats": [
+   "Grok Bot 연동은 기본값이 호스팅형 CMEM Pro(로컬은 --provider host)"
+  ],
+  "korea": "README 한국어 번역 제공",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/thedotmack/claude-mem"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/thedotmack/claude-mem"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-pageindex",
+  "name": "PageIndex",
+  "vendor": "Vectify AI",
+  "domain": "finance",
+  "category": "리서치 에이전트",
+  "tagline": "벡터DB 없이 추론으로 찾는 장문 문서 RAG",
+  "description": "청킹이나 벡터 DB 없이 문서를 트리 인덱스로 만들고 LLM 추론으로 탐색하는 RAG 라이브러리로, 재무 보고서·규제 공시·법률 문서 같은 긴 전문 문서에 맞춰져 있습니다. pageindex[claude]로 설치하면 Claude Code를 거쳐 Claude 구독으로 모델을 호출해 API 키가 필요 없고, 다른 모델은 자체 API 키나 PageIndex Cloud를 씁니다. 10-K 40건 기반 금융 QA 벤치마크를 공개하고 있어 사업보고서 분석 에이전트를 만들 때 참고할 만합니다.",
+  "connect": [
+   "library",
+   "byok"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT), PageIndex Cloud는 별도 API 키",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 39607,
+  "updated": "2026-10",
+  "homepage": "https://pageindex.ai",
+  "repo": "VectifyAI/PageIndex",
+  "install": "pip install -U \"pageindex[claude]\"",
+  "caveats": [
+   "MCP 서버는 클라우드 모드에서만 제공"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/VectifyAI/PageIndex"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/VectifyAI/PageIndex"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-tuios",
+  "name": "TUIOS",
+  "vendor": "Gaurav Gosain",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "에이전트 상태를 아는 터미널 윈도 매니저",
+  "description": "Go로 만든 터미널 멀티플렉서·타일링 윈도 매니저로, 데몬이 재시작 뒤에도 세션을 살려 두고 패널 안 코딩 에이전트가 상태를 보고하고 서로 메시지를 주고받게 합니다. tuios mcp로 같은 기능을 MCP 도구로 노출하고, tmux 셈(shim)으로 Claude Code 에이전트 팀처럼 tmux를 쓰는 도구를 tuios 패널에서 띄웁니다. 여러 에이전트의 승인 요청을 Inbox 한곳에서 처리할 수 있습니다.",
+  "connect": [
+   "cli",
+   "local-mcp"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 5738,
+  "updated": "2026-10",
+  "homepage": "https://tuios.dev",
+  "repo": "Gaurav-Gosain/tuios",
+  "install": "brew install tuios",
+  "caveats": [
+   "X(트위터)의 @tuiosdev 계정은 사칭이라고 공지"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/Gaurav-Gosain/tuios"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/Gaurav-Gosain/tuios"
+   }
+  ],
+  "foundVia": "GitHub Trending (monthly)"
+ },
+ {
+  "id": "gh-wshobson-agents",
+  "name": "wshobson/agents",
+  "vendor": "Seth Hobson",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "94개 플러그인·185개 스킬 멀티 하네스 모음",
+  "description": "Claude Code·Codex CLI·Cursor·OpenCode·GitHub Copilot·Pi 등에서 공통으로 쓰는 플러그인·에이전트·스킬·명령 모음으로, 94개 플러그인에 에이전트 202개, 스킬 185개, 명령 105개가 들어 있습니다. Claude Code와 Codex는 각자 플러그인 마켓플레이스로 python-development처럼 필요한 플러그인만 골라 설치해 쓰던 구독으로 씁니다. 파이썬·JS 개발, 코드 리뷰, 테스트, 인프라, 보안 등 분야별로 나뉘어 있습니다.",
+  "connect": [
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 41626,
+  "updated": "2026-10",
+  "homepage": "https://github.com/wshobson/agents",
+  "repo": "wshobson/agents",
+  "install": "/plugin marketplace add wshobson/agents",
+  "caveats": [
+   "하네스마다 쓸 수 있는 구성요소가 다름"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/wshobson/agents"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/wshobson/agents"
+   }
+  ],
+  "foundVia": "GitHub Trending (python)"
+ },
+ {
+  "id": "gh-harvey-sales",
+  "name": "Harvey (ethanplusai)",
+  "vendor": "ethanplusai",
+  "domain": "startup",
+  "category": "세일즈·CRM",
+  "tagline": "구독으로 도는 자율 콜드메일 영업 에이전트",
+  "description": "영업할 업체를 찾고 각 업체의 구체적인 정보를 읽어 맞춤 콜드메일을 쓰고 보내며, 답장을 처리해 미팅까지 끌고 가는 자율 영업 에이전트입니다(동명의 법률 AI Harvey와는 다른 제품). 모델 호출은 Claude Code(Claude Pro/Max)나 Codex(ChatGPT 플랜)의 구독 CLI로 처리해 API 키·토큰 과금이 없고, 하루 구독 사용 비율 상한도 정할 수 있습니다. 저장소의 CLAUDE.md가 Claude Code를 설치 마법사로 만들어 '하비 설정해 줘'라고 하면 단계별로 세팅을 안내합니다.",
+  "connect": [
+   "cli",
+   "signin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT), 발송용 메일함 별도(Google Workspace 약 $7/월)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 2421,
+  "updated": "2026-10",
+  "homepage": "https://github.com/ethanplusai/harvey",
+  "repo": "ethanplusai/harvey",
+  "install": "git clone https://github.com/ethanplusai/harvey.git",
+  "caveats": [
+   "Python 3.11+ 필요",
+   "Codex 경로는 macOS·Linux 전용, 검증된 Codex 버전 고정"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/ethanplusai/harvey"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/ethanplusai/harvey"
+   }
+  ],
+  "foundVia": "GitHub Trending (python)"
+ },
+ {
+  "id": "gh-franco",
+  "name": "Franco",
+  "vendor": "Gortex",
+  "domain": "startup",
+  "category": "세일즈·CRM",
+  "tagline": "구독으로 도는 아웃바운드 영업 메일 에이전트",
+  "description": "계정 목록을 돌며 연락할 이유를 찾거나 가져와 내 메일함에서 짧은 이메일 시퀀스를 보내고 답장까지 처리하는 아웃바운드 영업 에이전트로, 사용한 모든 사실에 출처를 기록합니다. 모델 호출은 Claude Code(Pro/Max)나 격리된 Codex 런타임(ChatGPT 로그인)으로만 처리해 API 요금이 없고, Codex API 키 로그인은 거부합니다. 기본적으로 발송 전 모든 메일을 사람이 검토하며, 승인된 문구를 그대로 보내는 templates 모드도 있습니다.",
+  "connect": [
+   "cli",
+   "signin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT), 일부 데이터 소스 유료(DataForSEO 1천 건당 $0.372 등)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 566,
+  "updated": "2026-10",
+  "homepage": "https://gortex.ai",
+  "repo": "GortexAI/franco",
+  "install": "pipx install franco",
+  "caveats": [
+   "Python 3.11+ 필요",
+   "Codex는 0.159.3 버전만 허용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/GortexAI/franco"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/GortexAI/franco"
+   }
+  ],
+  "foundVia": "Trendshift"
+ },
+ {
+  "id": "gh-voice-pro",
+  "name": "Voice-Pro",
+  "vendor": "ABUS (abus-aikorea)",
+  "domain": "video",
+  "category": "아바타·더빙·자막",
+  "tagline": "음성 인식·번역·다국어 더빙 로컬 웹UI",
+  "description": "YouTube 영상 다운로드, 음성 분리, Whisper 계열 음성 인식, 100개 이상 언어 번역, TTS·제로샷 음성 복제(F5-TTS·E2-TTS·CosyVoice)를 하나로 묶은 Gradio 웹 앱입니다. 처리는 로컬 모델로 하므로 AI 구독 연동은 없고, Azure 번역·TTS는 본인 키로 선택해 씁니다. v3.2부터 전체 코드를 공개하고 완전 무료로 전환했습니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (GPL-3.0)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 13347,
+  "updated": "2026-07",
+  "homepage": "https://github.com/abus-aikorea/voice-pro",
+  "repo": "abus-aikorea/voice-pro",
+  "install": "git clone https://github.com/abus-aikorea/voice-pro.git",
+  "caveats": [
+   "Windows+NVIDIA GPU 중심, Mac 지원 안내는 README 안에서 엇갈림",
+   "기본 번역은 Google 무료 웹 엔드포인트 사용"
+  ],
+  "korea": "한국어 README를 첫 언어로 제공하고, Fun-CosyVoice3로 한국어 음성 복제를 지원합니다.",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/abus-aikorea/voice-pro"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/abus-aikorea/voice-pro"
+   }
+  ],
+  "foundVia": "GitHub Trending (python)"
+ },
+ {
+  "id": "gh-supoclip",
+  "name": "SupoClip",
+  "vendor": "FujiwaraChoki",
+  "domain": "video",
+  "category": "숏폼·유튜브",
+  "tagline": "긴 영상에서 쇼츠를 뽑는 OpusClip 대안",
+  "description": "팟캐스트·강연·스트림 VOD 같은 긴 영상에서 바이럴할 만한 구간을 골라 점수를 매기고, 얼굴 중심 크롭·단어 단위 자막·후킹 제목을 넣은 9:16 세로 클립으로 렌더링하는 오픈소스 도구입니다. 셀프호스팅하려면 Docker와 AssemblyAI 키, LLM 공급자 키(Google·OpenAI·Anthropic 또는 로컬 Ollama)가 필요하고, 호스팅 웹·iOS 앱도 있습니다. 포함된 MCP 서버로 Claude·Cursor에서 클립 작업을 맡길 수 있습니다.",
+  "connect": [
+   "local-mcp",
+   "byok",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "cursor"
+  ],
+  "aiCost": "apikey",
+  "price": "셀프호스팅 무료 (AGPL-3.0), 호스팅판 가격 확인 필요",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 1821,
+  "updated": "2026-10",
+  "homepage": "https://www.supoclip.com/",
+  "repo": "FujiwaraChoki/supoclip",
+  "install": "git clone https://github.com/FujiwaraChoki/supoclip.git",
+  "caveats": [
+   "AGPL-3.0 라이선스",
+   "전사에 AssemblyAI API 키 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/FujiwaraChoki/supoclip"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/FujiwaraChoki/supoclip"
+   }
+  ],
+  "foundVia": "GitHub Trending (python)"
+ },
+ {
+  "id": "gh-openui",
+  "name": "OpenUI",
+  "vendor": "Thesys",
+  "domain": "web",
+  "category": "UI 컴포넌트",
+  "tagline": "모델이 스트리밍으로 그리는 생성형 UI 표준",
+  "description": "모델이 만드는 UI를 위한 압축형 스트리밍 언어 OpenUI Lang과 React·Vue·Svelte·Angular 런타임, React 컴포넌트·채팅 인터페이스를 제공하는 생성형 UI 프레임워크로, JSON보다 토큰을 최대 67% 적게 쓴다고 밝힙니다. 개발할 때는 Agent Skill을 설치해 Claude Code·Codex·Cursor·Copilot이 OpenUI 앱 스캐폴딩·빌드·디버깅을 돕게 할 수 있습니다. 만든 앱이 어떤 모델을 부를지는 개발자가 정합니다.",
+  "connect": [
+   "library",
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 13576,
+  "updated": "2026-10",
+  "homepage": "https://www.openui.com",
+  "repo": "thesysdev/openui",
+  "install": "npx @openuidev/cli@latest create --name genui-chat-app",
+  "caveats": [
+   "OpenUI 이름을 쓴 코인·토큰은 프로젝트와 무관하다고 공지"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/thesysdev/openui"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/thesysdev/openui"
+   }
+  ],
+  "foundVia": "GitHub Trending (typescript)"
+ },
+ {
+  "id": "gh-ponytail",
+  "name": "Ponytail",
+  "vendor": "DietrichGebert",
+  "domain": "general",
+  "category": "공통 MCP·스킬",
+  "tagline": "코드를 덜 쓰게 하는 '게으른 시니어' 스킬",
+  "description": "50줄을 보고 1줄로 바꾸는 노련한 시니어 개발자처럼 에이전트가 생각하게 만드는 스킬·플러그인으로, Claude Code 벤치마크에서 코드 53%, 시간 41%, 비용 26%, 토큰 45% 감소를 주장합니다. Claude Code와 Codex 플러그인 마켓플레이스로 설치해 쓰던 구독 그대로 쓰며, 위험한 로직에는 테스트를 붙이도록 유도합니다. Claude Code에서는 지난 세션의 비용·에이전트 시간·토큰을 보드로 가져와 비교할 수 있습니다.",
+  "connect": [
+   "plugin",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 175328,
+  "updated": "2026-10",
+  "homepage": "https://ponytail.dev",
+  "repo": "DietrichGebert/ponytail",
+  "install": "/plugin marketplace add DietrichGebert/ponytail",
+  "caveats": [
+   "Codex는 /hooks에서 라이프사이클 훅 2개를 신뢰 승인해야 함"
+  ],
+  "korea": "README 한국어 번역 제공",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/DietrichGebert/ponytail"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/DietrichGebert/ponytail"
+   }
+  ],
+  "foundVia": "GitHub Trending (javascript)"
+ },
+ {
+  "id": "gh-ux-ui-agent-skills",
+  "name": "UX/UI Agent Skills (XIAS)",
+  "vendor": "plugin87",
+  "domain": "design",
+  "category": "디자인 시스템·에셋",
+  "tagline": "DTCG 토큰·WCAG 게이트 갖춘 UX/UI 스킬",
+  "description": "Claude를 디자인 시스템·접근성 전문가처럼 일하게 하는 스킬 키트로, DTCG 디자인 토큰, 52개 컴포넌트, WCAG 2.2 AA~AAA 기준, 138개 브랜드급 디자인 시스템, 50개 객관적 품질 게이트를 담았습니다. Claude Code 플러그인(권장), Codex·Cursor·Copilot용 AGENTS.md, MCP 클라이언트용 ux-ui-gates 서버로 제공돼 쓰던 구독으로 프레임워크와 무관하게 토큰 기반 UI를 만듭니다. Homebrew·npx로 CLI도 설치할 수 있습니다.",
+  "connect": [
+   "plugin",
+   "skills",
+   "local-mcp",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 2954,
+  "updated": "2026-10",
+  "homepage": "https://plugin87.github.io/ux-ui-agent-skills/",
+  "repo": "plugin87/ux-ui-agent-skills",
+  "install": "/plugin marketplace add plugin87/ux-ui-agent-skills",
+  "caveats": [],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/plugin87/ux-ui-agent-skills"
+   }
+  ],
+  "foundVia": "GitHub Trending (javascript)"
+ },
+ {
+  "id": "gh-taste-skill",
+  "name": "Taste Skill",
+  "vendor": "Leonxlnx",
+  "domain": "web",
+  "category": "디자인→코드",
+  "tagline": "뻔한 랜딩 대신 아트 디렉션 있는 화면",
+  "description": "코딩 에이전트가 흔한 랜딩 페이지를 조립하는 대신 아트 디렉션을 정하고, 공개 아카이브의 실제 사진을 찾아 크레딧과 함께 쓰며, 실제 브라우저에서 결과를 스스로 점검하게 하는 Agent Skill입니다. npx skills나 Claude Code·Codex 플러그인 마켓플레이스로 설치하며 API 키 없이 쓰던 구독으로 돌아갑니다. 네트워크는 사진을 찾을 때만 씁니다.",
+  "connect": [
+   "skills",
+   "plugin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 101907,
+  "updated": "2026-10",
+  "homepage": "https://tasteskill.dev",
+  "repo": "Leonxlnx/taste-skill",
+  "install": "npx skills add https://github.com/Leonxlnx/taste-skill --skill \"design-taste-frontend\"",
+  "caveats": [
+   "Node 22+와 Chrome·Edge·Chromium 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/Leonxlnx/taste-skill"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/Leonxlnx/taste-skill"
+   }
+  ],
+  "foundVia": "GitHub Trending (javascript)"
+ },
+ {
+  "id": "gh-open-computer-use",
+  "name": "open-computer-use",
+  "vendor": "iFurySt",
+  "domain": "general",
+  "category": "검색·실행 환경",
+  "tagline": "Codex Computer Use의 오픈소스 MCP 대안",
+  "description": "macOS·Linux·Windows에서 화면을 보고 클릭·입력하는 Computer Use 기능을 MCP 서비스로 감싼 오픈소스 프로젝트로, 접근성(Accessibility) API 기반의 비침투형 방식입니다. Codex 앱·Codex CLI에는 공식 Computer Use와 같은 경험으로 설치되고, Claude Code·Gemini CLI 같은 MCP 클라이언트도 쓰던 구독으로 데스크톱 앱을 조작할 수 있습니다.",
+  "connect": [
+   "local-mcp",
+   "skills",
+   "plugin",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 2666,
+  "updated": "2026-10",
+  "homepage": "https://github.com/iFurySt/open-computer-use",
+  "repo": "iFurySt/open-computer-use",
+  "install": "npm i -g open-computer-use",
+  "caveats": [
+   "macOS 14 이상, 첫 실행 때 손쉬운 사용·화면 기록 권한 필요",
+   "에이전트가 실제 데스크톱을 조작하므로 민감한 앱은 닫아 둘 것"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/iFurySt/open-computer-use"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/iFurySt/open-computer-use"
+   }
+  ],
+  "foundVia": "GitHub Trending (swift)"
+ },
+ {
+  "id": "gh-xtool",
+  "name": "xtool",
+  "vendor": "xtool-org",
+  "domain": "mobile",
+  "category": "iOS",
+  "tagline": "SwiftPM으로 iOS 앱 빌드·서명·설치 CLI",
+  "description": "Xcode 기능을 개방형 표준으로 다시 구현한 크로스플랫폼 도구로, SwiftPM 패키지를 iOS 앱으로 빌드하고 서명·설치하며 Apple Developer 서비스를 프로그램으로 다룹니다. AI 기능은 없지만 xtool new·dev·install 같은 명령형 CLI라 Claude Code·Codex가 터미널에서 iOS 빌드·배포 루프를 돌리기 좋습니다. Linux·WSL에서도 iOS 앱을 만들 수 있는 점이 특징입니다.",
+  "connect": [
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 13523,
+  "updated": "2026-10",
+  "homepage": "https://xtool.sh",
+  "repo": "xtool-org/xtool",
+  "install": null,
+  "caveats": [
+   "설치 방법은 OS별 문서(xtool.sh) 참고"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/xtool-org/xtool"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/xtool-org/xtool"
+   }
+  ],
+  "foundVia": "GitHub Trending (swift)"
+ },
+ {
+  "id": "gh-sim-use",
+  "name": "sim-use",
+  "vendor": "LY Corporation (lycorp-jp)",
+  "domain": "mobile",
+  "category": "테스트·QA",
+  "tagline": "에이전트에 iOS 시뮬레이터·안드로이드 조작을",
+  "description": "iOS 시뮬레이터와 Android 에뮬레이터·기기 화면을 LLM이 읽기 쉬운 압축 개요(sim-use ui)로 바꾸고, 좌표 없이 별칭으로 탭(sim-use tap @9)하게 해 주는 CLI입니다. 번들 에이전트 스킬을 sim-use init --client claude로 설치하면 Claude Code가 방금 빌드한 앱을 직접 조작·검증하는 루프를 쓰던 구독으로 돌립니다. Apple 접근성 API·시뮬레이터 HID·Android AccessibilityService를 한 명령 체계로 묶어 한 번 왕복에 수백 ms 수준으로 동작합니다.",
+  "connect": [
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "none",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 1482,
+  "updated": "2026-10",
+  "homepage": "https://github.com/lycorp-jp/sim-use",
+  "repo": "lycorp-jp/sim-use",
+  "install": "brew install lycorp-jp/tap/sim-use",
+  "caveats": [
+   "macOS 14+ 필요, 비디오 캡처·뷰어·init은 macOS 전용",
+   "Xcode 27 베타는 Beta 4부터 지원"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/lycorp-jp/sim-use"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/lycorp-jp/sim-use"
+   }
+  ],
+  "foundVia": "GitHub Trending (swift)"
+ },
+ {
+  "id": "gh-xerj",
+  "name": "XERJ",
+  "vendor": "xerj-org",
+  "domain": "general",
+  "category": "검색·실행 환경",
+  "tagline": "로컬 러스트 검색엔진 겸 에이전트용 MCP",
+  "description": "Rust 단일 바이너리로 코드·문서·로그·JSONL/CSV·PDF를 인덱싱해 BM25 전문 검색, 벡터·하이브리드 검색, 코드 검색, 에이전트 메모리를 Elasticsearch 호환 API와 MCP로 제공하는 로컬 우선 검색엔진입니다. xerj init 한 번으로 Claude Code·Cursor에 MCP와 스킬을 연결하고, Codex는 TOML 설정으로 붙여 쓰던 구독의 에이전트가 출처 달린 검색 결과를 받게 합니다. README 벤치마크는 grep 기반 에이전트보다 적은 토큰으로 같은 정답률을 냈다고 밝힙니다.",
+  "connect": [
+   "local-mcp",
+   "skills",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "none",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 15210,
+  "updated": "2026-10",
+  "homepage": "https://xerj.org",
+  "repo": "xerj-org/xerj",
+  "install": "curl -fsSL https://xerj.org/get | sh",
+  "caveats": [
+   "README 표에서 Claude Code·Codex 연동은 'untested'로 표기"
+  ],
+  "korea": "README 한국어 번역 제공",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/xerj-org/xerj"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/xerj-org/xerj"
+   }
+  ],
+  "foundVia": "GitHub Trending (rust)"
+ },
+ {
+  "id": "gh-openpencil",
+  "name": "OpenPencil",
+  "vendor": "ZSeven-W",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "에이전트 팀이 함께 그리는 오픈소스 벡터 디자인",
+  "description": "프롬프트로 UI를 생성하고 여러 에이전트 팀이 동시에 캔버스를 편집하는 오픈소스 AI 네이티브 벡터 디자인 도구로, 디자인을 코드(.op 파일)로 다룹니다. 내장 MCP 서버를 Claude Code·Codex·OpenCode·Kiro·Copilot CLI에 원클릭으로 설치해 터미널에서 디자인을 읽고 고칠 수 있고, 앱 안에서는 Claude Code를 로컬 OAuth(Claude Agent SDK)로 연결해 구독으로 씁니다. .pen 파일 UI 키트 가져오기, P2P 공동 편집, 한국어 포함 15개 언어 UI를 지원합니다.",
+  "connect": [
+   "app",
+   "local-mcp",
+   "signin",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 6539,
+  "updated": "2026-10",
+  "homepage": "https://op.zseven.tech",
+  "repo": "ZSeven-W/openpencil",
+  "install": "brew tap zseven-w/openpencil && brew install --cask openpencil",
+  "caveats": [
+   "README 상단에 저가 API 중계 서비스 스폰서 광고가 있음 — 공식 구독·API 사용 권장"
+  ],
+  "korea": "인터페이스 한국어 지원, README 한국어 번역 제공",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/ZSeven-W/openpencil"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/ZSeven-W/openpencil"
+   }
+  ],
+  "foundVia": "GitHub Trending (rust)"
+ },
+ {
+  "id": "gh-codync",
+  "name": "Codync",
+  "vendor": "leepokai",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "코딩 에이전트를 메신저 봇처럼 폰에서 지시",
+  "description": "내 컴퓨터의 Claude Code·Codex·Cursor·Gemini·Copilot·OpenCode 등 40여 개 에이전트를 메시지로 일을 시킬 수 있는 팀원(봇)으로 만들어 iPhone·Mac·Windows에서 대화로 지시하는 앱입니다. 이미 로그인된 에이전트를 실행할 뿐 사용자 로그인으로 공급자 API를 직접 부르지 않으므로 Claude 플랜·ChatGPT 플랜이 그대로 쓰입니다. 위젯·메뉴바에서 Claude·Codex 사용량 한도를 퍼센트로 볼 수 있고, 유료 등급 없이 모든 기능이 무료입니다.",
+  "connect": [
+   "app",
+   "signin"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor",
+   "gemini",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 782,
+  "updated": "2026-10",
+  "homepage": "https://www.codync.dev",
+  "repo": "leepokai/Codync",
+  "install": "brew install --cask leepokai/codync/codync",
+  "caveats": [
+   "Claude Code·Codex·Pi는 ACP 어댑터를 npx로 받아 Node.js 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/leepokai/Codync"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/leepokai/Codync"
+   }
+  ],
+  "foundVia": "GitHub Trending (rust)"
+ },
+ {
+  "id": "gh-gws",
+  "name": "gws (Google Workspace CLI)",
+  "vendor": "googleworkspace",
+  "domain": "startup",
+  "category": "자동화·노코드",
+  "tagline": "Drive·Gmail·캘린더를 한 CLI로, 스킬 포함",
+  "description": "Drive·Gmail·Calendar·Sheets·Docs·Chat·Admin 등 모든 Workspace API를 하나의 CLI로 다루는 도구로, Google Discovery Service를 런타임에 읽어 명령 체계를 동적으로 만들고 결과를 구조화된 JSON으로 냅니다. API별 SKILL.md와 Gmail·Drive·Docs·Calendar·Sheets 레시피 등 100개 이상의 Agent Skills를 제공해 npx skills로 Claude Code·Codex에 넣거나 Gemini CLI 확장으로 설치합니다. API 응답을 Google Cloud Model Armor로 검사해 프롬프트 인젝션을 거르는 옵션도 있습니다.",
+  "connect": [
+   "cli",
+   "skills"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini"
+  ],
+  "aiCost": "none",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "official",
+  "status": "beta",
+  "stars": 31846,
+  "updated": "2026-10",
+  "homepage": "https://developers.google.com/workspace",
+  "repo": "googleworkspace/cli",
+  "install": "npm install -g @googleworkspace/cli",
+  "caveats": [
+   "README에 'Google 공식 지원 제품 아님' 명시",
+   "OAuth용 Google Cloud 프로젝트 필요(gws auth setup)",
+   "v1.0 전까지 호환성 깨지는 변경 예고"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/googleworkspace/cli"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/googleworkspace/cli"
+   }
+  ],
+  "foundVia": "GitHub Trending (rust)"
+ },
+ {
+  "id": "gh-agentsview",
+  "name": "agentsview",
+  "vendor": "kenn-io",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "코딩 에이전트 세션 검색·비용 분석 로컬 앱",
+  "description": "Claude Code·Codex 등 50개 이상 코딩 에이전트의 세션 기록을 내 컴퓨터에 모아 검색하고 토큰 사용량과 비용 추정치를 분석하는 로컬 우선 도구입니다. Claude Code·Codex 네이티브 플러그인과 읽기 전용 MCP 도구 8개로 에이전트가 과거 결정을 찾아 인용하게 할 수 있고, Claude.ai 채팅 동기화와 Codex 클라우드 채팅 가져오기(옵트인)도 지원합니다. 비용은 LiteLLM·OpenRouter 요율로 추정합니다.",
+  "connect": [
+   "app",
+   "plugin",
+   "local-mcp",
+   "cli"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot",
+   "gemini",
+   "cursor"
+  ],
+  "aiCost": "none",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 6254,
+  "updated": "2026-10",
+  "homepage": "https://agentsview.io",
+  "repo": "kenn-io/agentsview",
+  "install": "brew install --cask agentsview",
+  "caveats": [
+   "Claude.ai 채팅 동기화는 Chrome을 통해 동작"
+  ],
+  "korea": "한국어 인터페이스 지원",
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/kenn-io/agentsview"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/kenn-io/agentsview"
+   }
+  ],
+  "foundVia": "GitHub Trending (go)"
+ },
+ {
+  "id": "gh-pentagi",
+  "name": "PentAGI",
+  "vendor": "VXControl",
+  "domain": "general",
+  "category": "보안",
+  "tagline": "자율 에이전트 팀이 수행하는 침투 테스트",
+  "description": "복잡한 침투 테스트 작업을 자율 AI 에이전트 팀(펜테스터·코더·설치 담당 등)이 나눠 수행하는 셀프호스팅 시스템으로, 대화형 설치 프로그램이 Docker Compose로 세팅합니다. OpenAI·Anthropic·Gemini·Bedrock·Ollama·DeepSeek 등 10여 개 LLM 공급자를 본인 API 키로 연결하는 방식이라 AI 구독이 아니라 토큰 요금이 듭니다. 로컬 vLLM 모델로 운영하는 가이드도 있습니다.",
+  "connect": [
+   "app",
+   "byok"
+  ],
+  "worksWith": [
+   "local"
+  ],
+  "aiCost": "apikey",
+  "price": "무료 (MIT), LLM API 요금 별도",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 32266,
+  "updated": "2026-10",
+  "homepage": "https://pentagi.com",
+  "repo": "vxcontrol/pentagi",
+  "install": null,
+  "caveats": [
+   "허가받은 대상에만 사용",
+   "Docker 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/vxcontrol/pentagi"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/vxcontrol/pentagi"
+   }
+  ],
+  "foundVia": "GitHub Trending (go)"
+ },
+ {
+  "id": "gh-humanlayer",
+  "name": "HumanLayer",
+  "vendor": "HumanLayer",
+  "domain": "general",
+  "category": "호스트·에이전트",
+  "tagline": "팀이 함께 쓰는 멀티플레이어 코딩 에이전트 IDE",
+  "description": "Claude Code·Codex·OpenCode·Pi 같은 코딩 에이전트를 내 머신과 원격 데몬에서 돌리고, 팀이 작업·세션·계획 문서·리뷰를 데스크톱·웹·모바일에서 함께 조종하는 멀티플레이어 에이전트 IDE입니다. 에이전트는 기존 Claude·Codex 구독이나 API 키(BYOK)로 돌아가 HumanLayer 자체 토큰 요금이 없다고 밝힙니다. 조사→계획→구현(RPI) 흐름과 계획 문서 댓글 협업으로 큰 코드베이스 작업을 나눠 처리하는 데 맞습니다.",
+  "connect": [
+   "app",
+   "plugin",
+   "signin",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "Starter 무료(3인·월 200세션), Pro $100/사용자·월",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 12311,
+  "updated": "2026-10",
+  "homepage": "https://humanlayer.dev/code",
+  "repo": "humanlayer/humanlayer",
+  "install": "brew install humanlayer/humanlayer/humanlayer",
+  "caveats": [
+   "설치 전 brew trust humanlayer/humanlayer 실행 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/humanlayer/humanlayer"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/humanlayer/humanlayer"
+   },
+   {
+    "label": "HumanLayer 홈페이지·가격",
+    "url": "https://humanlayer.dev/code"
+   }
+  ],
+  "foundVia": "Trendshift"
+ },
+ {
+  "id": "gh-sandbox-runtime",
+  "name": "Anthropic Sandbox Runtime (srt)",
+  "vendor": "Anthropic",
+  "domain": "general",
+  "category": "보안",
+  "tagline": "컨테이너 없이 OS 수준 파일·네트워크 제한",
+  "description": "macOS의 sandbox-exec, Linux의 bubblewrap 같은 OS 기본 샌드박스와 프록시 기반 네트워크 필터로 임의 프로세스의 파일시스템·네트워크 접근을 제한하는 경량 도구입니다. Claude Code 샌드박싱을 위해 개발된 리서치 프리뷰로, .mcp.json에서 로컬 MCP 서버나 bash 명령을 srt로 감싸 쓰기 금지 경로 등을 강제할 수 있습니다. AI 기능은 없고, 쓰던 에이전트를 더 안전하게 자율 실행하도록 돕습니다.",
+  "connect": [
+   "cli",
+   "library"
+  ],
+  "worksWith": [
+   "claude"
+  ],
+  "aiCost": "none",
+  "price": "무료 (Apache-2.0)",
+  "free": true,
+  "official": "official",
+  "status": "beta",
+  "stars": 6387,
+  "updated": "2026-10",
+  "homepage": "https://docs.claude.com/en/docs/claude-code/sandboxing",
+  "repo": "anthropics/sandbox-runtime",
+  "install": "npm install -g @anthropic-ai/sandbox-runtime",
+  "caveats": [
+   "베타 리서치 프리뷰 — API·설정 형식이 바뀔 수 있음"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/anthropics/sandbox-runtime"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/anthropics/sandbox-runtime"
+   }
+  ],
+  "foundVia": "Trendshift"
+ },
+ {
+  "id": "gh-3d-model-anything",
+  "name": "3D Model Anything",
+  "vendor": "Wes Bos",
+  "domain": "design",
+  "category": "3D·공간 디자인",
+  "tagline": "아이폰 LiDAR 스캔을 Three.js 방으로 재구성",
+  "description": "LiDAR 아이폰·아이패드로 방을 스캔해 치수와 사진을 기록하고, scan-to-threejs 에이전트 스킬이 코딩 에이전트를 이끌어 편집 가능한 Three.js 장면으로 재구성하는 워크플로입니다. 로컬 스킬을 지원하는 에이전트에서 저장소를 열고 스킬을 호출하면 쓰던 구독으로 측정·모델링·사진 대조 비교를 반복합니다. 원클릭 변환기가 아니라 반복형 재구성 방식이며 지금은 실내 공간에 초점을 둡니다.",
+  "connect": [
+   "skills",
+   "app",
+   "library"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (코드·스킬 MIT, 예제 에셋은 별도 약관)",
+  "free": true,
+  "official": "community",
+  "status": "experimental",
+  "stars": 1507,
+  "updated": "2026-10",
+  "homepage": "https://wesbos.github.io/3d-model-anything/",
+  "repo": "wesbos/3d-model-anything",
+  "install": null,
+  "caveats": [
+   "iPhone 앱은 App Store 미출시 — Xcode로 직접 빌드",
+   "스캔에는 LiDAR 탑재 iPhone·iPad 필요"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/wesbos/3d-model-anything"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/wesbos/3d-model-anything"
+   }
+  ],
+  "foundVia": "Trendshift"
+ },
+ {
+  "id": "gh-ppt-master",
+  "name": "PPT Master",
+  "vendor": "Hugo He (hugohe3)",
+  "domain": "design",
+  "category": "프레젠테이션·문서",
+  "tagline": "문서를 네이티브 파워포인트로 바꾸는 스킬",
+  "description": "문서나 주제를 넣으면 네이티브 도형과 전환 효과를 갖춘 편집 가능한 PowerPoint 덱을 만들어 주는 에이전트 워크플로로, Claude Code에서 가장 많이 테스트됐습니다. npx skills나 Claude Code 플러그인 마켓플레이스로 설치하고 Codex·Gemini CLI·Copilot 등에서도 쓰던 구독으로 돌릴 수 있으며, 이미지는 에이전트 자체 이미지 도구나 별도 이미지 API 키로 만듭니다. PPT 구독료 없이 모델 사용량만 든다는 점을 내세웁니다.",
+  "connect": [
+   "skills",
+   "plugin",
+   "byok"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "gemini",
+   "copilot"
+  ],
+  "aiCost": "plan",
+  "price": "무료 (MIT)",
+  "free": true,
+  "official": "community",
+  "status": "active",
+  "stars": 67352,
+  "updated": "2026-10",
+  "homepage": "https://hugohe3.github.io/ppt-master-examples/",
+  "repo": "hugohe3/ppt-master",
+  "install": "npx skills add hugohe3/ppt-master",
+  "caveats": [
+   "스킬 설치 후에도 pip install -r requirements.txt 필요(Python 3.10+)",
+   "README에 저가 API 중계 서비스 스폰서 광고가 있음"
+  ],
+  "korea": null,
+  "starter": true,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/hugohe3/ppt-master"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/hugohe3/ppt-master"
+   }
+  ],
+  "foundVia": "Trendshift"
+ },
+ {
+  "id": "gh-comfyui",
+  "name": "ComfyUI",
+  "vendor": "Comfy Org",
+  "domain": "design",
+  "category": "이미지 편집·생성",
+  "tagline": "노드 그래프로 짜는 로컬 생성형 AI 엔진",
+  "description": "확산 모델 등 생성형 AI 워크플로를 노드 그래프로 구성하는 모듈형 엔진으로, 데스크톱 앱·포터블 설치·Comfy Cloud로 쓸 수 있고 NVIDIA·AMD·Intel·Apple Silicon을 지원합니다. 자체 AI 구독 연동은 없지만 로컬 API와 comfy-cli가 있어 에이전트가 워크플로 실행을 자동화할 수 있고, 카탈로그의 comfy-mcp로 Claude 등에 붙일 수 있습니다. 코어는 완전 오프라인으로 돌고 유료 API 노드는 --offline으로 끌 수 있습니다.",
+  "connect": [
+   "app",
+   "cli",
+   "library"
+  ],
+  "worksWith": [
+   "local"
+  ],
+  "aiCost": "none",
+  "price": "무료 (GPL-3.0), Comfy Cloud·API 노드는 유료",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": 142555,
+  "updated": "2026-10",
+  "homepage": "https://www.comfy.org/",
+  "repo": "Comfy-Org/ComfyUI",
+  "install": "pip install comfy-cli",
+  "caveats": [
+   "GPL-3.0 라이선스",
+   "API 노드는 별도 유료 크레딧 사용"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "GitHub README",
+    "url": "https://github.com/Comfy-Org/ComfyUI"
+   },
+   {
+    "label": "GitHub API",
+    "url": "https://api.github.com/repos/Comfy-Org/ComfyUI"
+   }
+  ],
+  "foundVia": "GitHub Trending (weekly)"
+ }
+]
