@@ -1,3 +1,5 @@
 _source
 README.md
 .DS_Store
+.env*
+.vercel
