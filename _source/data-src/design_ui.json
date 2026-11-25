@@ -490,6 +490,54 @@
   ]
  },
  {
+  "id": "dsu-kite",
+  "name": "Kite",
+  "vendor": "Kite",
+  "domain": "design",
+  "category": "UI·프로토타입",
+  "tagline": "AI 에이전트와 팀이 같은 파일을 쓰는 디자인 툴",
+  "description": "Claude·ChatGPT·Cursor·Codex가 Kite의 호스팅 원격 MCP 서버로 접속해 프레임·텍스트·컴포넌트·오토 레이아웃 같은 실제 편집 가능한 레이어를 그리고, 팀은 같은 파일을 실시간으로 함께 편집합니다. Kite 쪽에는 AI 크레딧이 없어 AI 비용은 쓰던 구독에서 나갑니다. 프레임을 HTML·React·Tailwind로 복사하거나 Figma로 붙여넣을 수 있어 디자인을 코드로 넘기는 작업에 잘 맞습니다.",
+  "connect": [
+   "remote-mcp",
+   "plugin",
+   "app"
+  ],
+  "worksWith": [
+   "claude",
+   "chatgpt",
+   "cursor"
+  ],
+  "aiCost": "plan",
+  "price": "무료(편집자 무제한·파일 3개·에이전트 작업 하루 100회), Pro $16/편집자·월(연간)",
+  "free": true,
+  "official": "official",
+  "status": "active",
+  "stars": null,
+  "updated": "2026-11",
+  "homepage": "https://kite.new",
+  "repo": "kitedotnew/kite-agent-plugins",
+  "install": "https://kite.new/api/mcp",
+  "caveats": [
+   "무료 플랜은 파일 3개·에이전트 작업 하루 100회 제한"
+  ],
+  "korea": null,
+  "starter": false,
+  "sources": [
+   {
+    "label": "Kite",
+    "url": "https://kite.new"
+   },
+   {
+    "label": "Kite pricing",
+    "url": "https://kite.new/pricing"
+   },
+   {
+    "label": "GitHub kitedotnew/kite-agent-plugins",
+    "url": "https://github.com/kitedotnew/kite-agent-plugins"
+   }
+  ]
+ },
+ {
   "id": "dsu-flowstep-mcp",
   "name": "Flowstep MCP",
   "vendor": "Flowstep",
